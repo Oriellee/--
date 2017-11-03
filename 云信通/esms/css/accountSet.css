@@ -1,0 +1,36 @@
+.title-head{height:60px;border-bottom:1px solid #999;}
+.title-head .searchBy{height: 24px;width: 185px;margin: 17px 15px 0 20px;padding-left: 5px;float:left;}
+.title-head  a{margin-top:18px;}
+.ff{float:right;margin-right:10px;}
+table tr a{color:#3D83E9}
+.grey{color:#999}
+.lock-text{line-height: 30px;text-align: center;margin-top: 20px;margin-bottom: 10px;}
+#dialog-lock,#dialog-tip,#dialog-unwrap,#dialog-unlock,#dialog-reset,#add-blacklist,#admin- pwd,#remove-blacklist,#dialog-unbund,#admin-pwd{display:none;}
+#dialog-reset .pwd{text-align:center;}
+.toast{width:150px;padding:10px;border-radius:5px;line-height: 23px;text-align: center;background: #4cc1d2;color: #fff;position: absolute;left: 50%;display:none;}
+/*气泡提示框*/
+.bubble-box{ background:#4cc1d2; margin-bottom:30px;display:none; } 
+.bubble-box .wrap{ background:#4cc1d2; _position:relative; _z-index:10; } 
+.arrow-bottom{ border-left:20px solid #4cc1d2; border-bottom:20px solid #FFF; margin-left:20px;} 
+.arrow-bottom{ width:140px;top:7px;left:640px;position:absolute;} 
+.arrow-bottom .wrap{ width:180px; padding:12px 10px 12px 10px; margin-left:-40px;color:#fff;border-radius: 5px; } 
+/*气泡提示框*/
+.setId{vertical-align: middle;}
+.zhu{color: #8A8181;}
+#admin-pwd p{line-height:50px;}
+#admin-pwd input{width: 200px;height: 19px;}
+#admin-pwd .pwd-wrong{color:red;line-height:30px;}
+.pwd-wrong span{color:red}
+.login-fail{color:red}
+.right-date{float: right;width: 390px;margin-top: 20px;padding-right:10px}
+.date-search{float: right; margin-top: -2px!important;background:#4acee1}
+.ulHead{width: 70%;height: 50px;line-height: 50px;margin: 30px auto;}
+.ulHead li{float: left;width: 200px;text-align: center;border: 1px solid #ddd;cursor: pointer;}
+.ulHead .active{background:#4cc1d2;color:#fff;}
+.loginSet{width: 70%;margin: 0 auto;}
+.loginSet input{margin: 5px;}
+.loginSet p{line-height:42px;padding-left: 20px;}
+.save{width: 60px;height: 30px;outline: 0;background: #4acee1;color: #fff;margin: 40px 0 0 330px;
+	display: block;line-height: 30px; text-align: center;}
+.weakupDiv{display:none;}
+.setPhone,.setPc{vertical-align: middle;margin-right: 5px;}

@@ -1,0 +1,57 @@
+.service_title{
+	width: 98%;
+    height: 40px;
+    padding-left: 2%;
+    line-height: 40px;
+    font-size: 14px;
+    border-bottom: 1px solid #999;
+}
+.useinfo{
+	width: 98%;
+    height: 50px;
+    padding-left: 2%;
+    line-height: 50px;
+    font-size: 14px;
+    font-weight:bold;
+}
+.content{
+    min-height: 50px;
+	width: 96%;
+	margin-left: 2%;
+	border-top:1px solid #eee;
+	border-bottom:1px solid #eee;
+}
+.left{
+	background:#FAFAFA;
+	width:170px;
+	height:50px;
+	float:left;
+	border-right:1px solid #eee;
+	line-height:50px;
+	text-align: center;
+}
+.right{
+	float:left;
+	height: 50px;
+	line-height:50px;
+	padding-left:20px;
+}
+.red{
+	color:red;
+	margin-right:20px;
+}
+.red span{
+	color:red;
+}
+.extendNum{
+	display:inline-block;
+	margin-left: 200px;
+	color:#3D83E9;
+	outline:none;
+}
+#dialog{display:none;}
+#dialog .telphone{
+	height: 50px;
+    line-height: 50px;
+    text-align: center;
+}

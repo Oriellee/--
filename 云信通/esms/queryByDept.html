@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>按部门查询</title>
+	<link rel="stylesheet" href="css/main.css"/>
+	<link rel="stylesheet" href="css/phonenumberQuery.css"/>
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/phonenumberQuery.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<link rel="stylesheet" href="css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="js/jquery.ztree.core-3.5.js"></script>
+	<script type="text/javascript" src="js/jquery.ztree.excheck-3.5.js"></script>
+	<script type="text/javascript" src="js/jquery.ztree.exedit-3.5.js"></script>
+	<script type="text/javascript" src="js/tree.js"></script>
+</head>
+<body class="admin">
+<div class="header">
+		<div class="logo">
+			<a href=""><img src="images/logo.png" class="fl"/></a>
+		</div>
+		<div class="user_info">
+			<i class="sprite people"></i>
+			<span class="fl">账号：liuyingjie</span>
+			<a href="" class="back">退出</a>
+		</div>
+	</div>
+	<div class="container organization">
+		<div class="cont_left">
+			<div class="navigation_left h100 fl">
+				<ul>
+					<li><a href="Organization.html" class=""><i class="sprite orangise ml15"></i><span>组织结构</span></a></li>
+					<li><a href="addNews.html"><i class="sprite publish ml15"></i><span>内容发布</span></a></li>
+					<li class="visited"><a href="newImport.html"><i class="sprite2 ml15"></i><span>辅助功能</span></a></li>
+					<li><a href="admin.html"><i class="sprite system ml15"></i><span>系统设置</span></a></li>
+				</ul>
+			</div>
+			<div class="navigation_right h100 fl">
+				<div class="data_info">
+					<div class="news_list">
+						<div class="title">通讯录查询</div>
+						<a href="fastQuery.html">快速查询</a>
+						<a href="queryByDept.html" class="visited">按部门查询</a>	
+						<div class="btm_select"></div>
+						<a href="synthesizeQuery.html" >综合查询</a>							
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cont_right rel">
+			<i class="sprite left_icon top52"></i>
+			<div class="query-title">
+				<span class="query-label">按部门查询</span>
+				<input class="query-text"/>
+				<button class="search">查询</button>
+				<p class="tip">说明：输入部门名称，能快速帮你找出需要的信息</p>
+			</div>
+			<div class="tree-person-list">
+				<div class="personList">	
+				<div class="table_list">
+				<table class="queryDept">
+					<tbody>
+						<tr class="odd">
+							<th></th>	
+						</tr>
+						<tr>
+							<td><a href="queryByDeptMember.html" title="青岛--->市南区--->信通处">青岛--->市南区--->信通处</a></td>
+						</tr>
+						<tr>
+							<td><a href="queryByDeptMember.html"  title="">青岛--->市南区--->办公室--->信通处</a></td>
+						</tr>
+						<tr>
+							<td><a href="queryByDeptMember.html" title="">青岛--->市南区--->指挥处--->信息处--->信通处--->市南区--->指挥处--->信息处--->--->市南区--->指挥处--->信息处--->--->市南区--->指挥处--->信息处--->--->市南区--->指挥处--->信息处</a></td>
+						</tr>
+						<tr>
+							<td><a href="queryByDeptMember.html" title="">青岛--->崂山区--->信通处</a></td>
+						</tr>
+						<tr>
+							<td><a href="queryByDeptMember.html" title="">青岛--->即墨区--->信通处</a></td>
+						</tr>
+						<tr>
+							<td><a href="queryByDeptMember.html" title="">烟台--->信通处</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			</div>
+			<div class="pagination">
+				<div class="pagination_left fl">显示1-6条/共6条</div>
+				<div class="pagination_right fr">
+					<a href="javascript:;" class="btn default fl ">上一页</a>
+					<ul class="page fl">
+						<li><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="" class="current">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">5</a></li>
+					</ul>
+					<a href="javascript:;" class="btn default fl">下一页</a>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

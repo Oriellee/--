@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+<head>
+<meta charset=utf-8>
+<title>111</title>
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0,user-scalable=0"">
+<meta name="MobileOptimized" content="240">
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">  
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">  
+<META HTTP-EQUIV="Expires" CONTENT="0">
+<link href="css/blue.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+
+<style type="text/css">
+
+.none{display:none}
+.button:hover{background:#ffffff;opacity:0.3}
+.button{color:#ffffff}
+.center{margin-left:auto; margin-right:auto;}
+.fontType1{color:#979797}
+
+body{text-align:center;margin:0; padding:0;font-family:Microsoft YaHei;font-size:16px;background:#F3F3F3}
+
+#title{position:absolute;;top:5%;width:20%;height:5%;left:40%}
+#titleTime{position:absolute;;top:10%;width:50%;height:5%;left:25%}
+#choiceArea{position:relative;top:15.875%;width:95.6%;height:27.5%;background:#FFFFFF;border:1px solid #CECECE;}
+#choiceArea .mutiChoiceContent_m{position:relative;height:16.66%}
+#choiceArea .choiceDiv{position:relative;width:100%;top:8%;height:20%}
+#choiceArea .choiceImg{position:absolute;left:5%;top:5%;height:100%}
+#choiceArea .choiceISpan{position:absolute;left:15%;top:5%;height:100%;text-align:left;line-height: 160%;}
+#voteBtn{position:absolute;left:35%;top:48.75%;height:35px;width:30%;text-align:center;border-radius:3px;background:#4CC1D2}
+
+textarea{position:absolute;top:59.4%;width:93.0%;left:2.5%;height:20.19%;border:1px solid #CECECE;}
+#submitBtn{position:absolute;left:35%;top:85%;height:35px;width:30%;text-align:center;border-radius:3px;background:#4CC1D2}
+
+
+</style>
+
+<script>
+	function viewChoicePage()
+	{
+		$('#mainPage').css('display','none');
+		$('#choicePage').css('display','block');
+		wholeS('choicePage');
+	}
+
+	
+	function getResult()
+	{
+		$('#choicePage2').css('display','none');
+		$('#resultPage').css('display','block');
+		wholeS('resultPage');
+	}
+	
+	function viewSpage()
+	{
+		$('#resultPage').css('display','none');
+		$('#sharePage').css('display','block');
+		wholeS('sharePage');
+	}
+	function colSharePage()
+	{
+		$('#sharePage').css('display','none');
+		$('#resultPage').css('display','block');
+	}	
+
+	
+	var lineLink1 = window.location.href;
+	lineLink = lineLink1.indexOf("?") > 0 ? lineLink1.split("?")[0] : lineLink1;
+	tmpLineLink = lineLink.substring(0, lineLink.lastIndexOf('/') + 1);
+	var imgUrl=tmpLineLink+"img/1.jpg";
+	var link=window.location.href;
+	var desc="我的钞票竟然去这儿了？！点我立刻知道自己的钞票去哪儿了？！";
+	var title="钞票去哪儿了";
+</script>
+
+
+</head>
+<body  style="overflow-x:hidden;overflow-y:hidden;">
+		<div id="choicePage"  ontouchmove="event.preventDefault()"   style="position:absolute;left:0;top:0;width:100%;height:100%">
+			<span id="title">投票标题</span>
+			<span id="titleTime" class="fontType1">2014-11-22 10:12:32</span>
+			
+			<div id="choiceArea" class="center">
+				<div class="choiceDiv">
+					<img id="choiceImg1" class="choiceImg sigChoiceContent_m" src="img/choiceImg3.png" ></img>
+					<span id="choiceISpan1" class="choiceISpan">选项一</span>
+				</div>
+				<div class="choiceDiv">
+					<img id="choiceImg2" class="choiceImg sigChoiceContent_m" src="img/choiceImg3.png" ></img>
+					<span id="choiceISpan2" class="choiceISpan">选项二</span>
+				</div>
+				<div class="choiceDiv">
+					<img id="choiceImg3" class="choiceImg sigChoiceContent_m" src="img/choiceImg3.png" ></img>
+					<span id="choiceISpan3" class="choiceISpan">选项三</span>
+				</div>
+				
+				
+			</div>
+			<div id="voteBtn"  class="button" onclick="voteBtnFunc()"  style=" text-align:center;vertical-align:middle;line-height:35px">投票</div>
+			<textarea id="textarea1"  style=" color:#A3A3A3;font-size:14px" placeholder="说点什么"></textarea>
+			<div id="submitBtn" class="button" onclick="submit()"  style=" text-align:center;vertical-align:middle;line-height:35px">发表</div>
+		</div>
+		
+
+<script>
+
+	function submit()
+	{
+		alert($('#textarea1').val());
+	}
+	
+	var result ='';
+	$('.sigChoiceContent_m').click(
+		
+			function()
+			{//name=1表示已经勾选
+			//	var s=this.id;
+			//	if($('#'+this.id).attr("name") != 1)
+			//	{
+				//	$('.choiceImg').attr('src','img/choiceImg3.png');
+				//	$('.choiceImg').attr("name","0");
+				//	$('#'+this.id).attr("name","1");
+				//	$('#'+this.id).attr('src','img/choiceImg4.png');
+			//	}	
+			//	else 
+			//	{
+				//	$('#'+this.id).attr("name","0");
+				//	$('#'+this.id).attr('src','img/choiceImg3.png');
+				//}
+				//alert(s[s.length - 1]);
+				//result = $('#choiceISpan'+s[s.length - 1]).text();
+				var result_tmp ='';
+				if($(this).attr("name") != 1){
+					$(this).attr("name","1");
+					$(this).attr('src','img/choiceImg4.png');
+				
+				}else{
+					$(this).attr("name","0");
+					$(this).attr('src','img/choiceImg3.png');
+				}
+				
+				$(".sigChoiceContent_m[name=1]").each(function(i){
+				   result_tmp+=$(this).next('.choiceISpan').html()+',';
+				 });
+				
+				result = result_tmp;
+				
+			}
+	)
+	
+	
+	function voteBtnFunc()
+	{
+		alert(result);
+	}
+
+</script>
+</body>
+
+</html>

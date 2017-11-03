@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>调查详情页</title>
+	 <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no">
+	<link type="text/css" rel="stylesheet" href="../css/researchVoteDetail-pc.css"/>
+	<script type="text/javascript" src="../js/researchVoteDetail.js"></script>
+	<style>
+		body{display:none;}
+	</style>
+   <script>
+	$(function(){
+		var deviceWidth = document.documentElement.clientWidth;
+		if(deviceWidth > 640) deviceWidth = 640;
+		document.documentElement.style.fontSize = deviceWidth / 6.4 + 'px';	
+		$("body").show();		
+	});
+  
+    
+</script>
+</head>
+<body>		
+	<p class="vote-deadline">投票将在<span>06-18 24:00</span>结束</p>
+	<p class="vote-title">公司有多少人使用云信通？</p>
+	<p class="vote-from"><span class="publish-time">09:30</span><span>来自马宏明</span></p>
+	<div class="voteChoice-title">
+		<span class="vote-type">单选</span><span class="vote-name">(匿名投票)</span>
+	</div>
+	<div class="option-list">
+			<div class="option-box">
+				<label></label>
+				<input type="checkbox"/>
+				
+			</div>
+			<p>多选一</p>
+			<div class="option-box">
+				<label></label>
+				<input type="checkbox"/>
+			</div>
+			<p>多选二</p>
+			<div class="option-box">
+				<label></label>
+				<input type="checkbox"/>
+			</div>
+			<p>多选三</p>
+			<div class="option-radio">
+				<label></label>
+				<input type="radio" name="option-radio"/>
+			</div>
+			<p>单选一</p>
+			<div class="option-radio">
+				<label></label>
+				<input type="radio" name="option-radio"/>
+			</div>
+			<p>单选二</p>
+			<div class="option-radio">
+				<label></label>
+				<input type="radio" name="option-radio"/>
+			</div>
+			<p>单选三</p>
+			<div class="option-radio">
+				<label></label>
+				<input type="radio" name="option-radio"/>
+			</div>
+			<p>单选一</p>
+			<div class="option-radio">
+				<label></label>
+				<input type="radio" name="option-radio"/>
+			</div>
+			<p>单选二</p>
+			<div class="option-radio">
+				<label></label>
+				<input type="radio" name="option-radio"/>
+			</div>
+			<p>单选三</p>
+			<div class="option-radio">
+				<label></label>
+				<input type="radio" name="option-radio"/>
+			</div>
+			<p>单选一</p>
+			<div class="option-radio">
+				<label></label>
+				<input type="radio" name="option-radio"/>
+			</div>
+			<p>单选二</p>
+			<div class="option-radio">
+				<label></label>
+				<input type="radio" name="option-radio"/>
+			</div>
+			<p>单选三</p>
+	</div>
+	<div class="space"></div>
+	<!-- 投票按钮开始 -->
+	<div class="votePiao">
+		<button>投票</button>
+	</div>
+	<!-- 投票按钮结束 -->
+	<!--底部开始-->
+	<ul class="bottom">
+		<li class="reply">
+			<a href="voteCommentList.html"><img src="../images/reply.png"/>&nbsp;&nbsp;评论&nbsp;&nbsp;<span>3</span></a>
+		</li>	
+		<li class="praise">
+			<a href="viewVoteReply.html"><img src="../images/vote.png"/>&nbsp;&nbsp;已投&nbsp;&nbsp;<span>4</span></a>
+		</li>
+		<li class="praise">
+			<a href="viewVoteReply.html"><img src="../images/unvote.png"/>&nbsp;&nbsp;未投&nbsp;&nbsp;<span>4</span></a>
+		</li>
+	</ul>
+	<!--底部结束-->
+	
+	<!--未投票的提示框开始-->
+	<div class="unVoteTip">
+		您还没有选择任何选项！
+	</div>
+	<!--未投票的提示框结束-->
+</body>
+</html>

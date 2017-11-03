@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>点赞人员</title>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="../css/praisePerson.css">
+	<style>
+		body{display:none;}
+	</style>
+	<script>
+	$(function() {
+		var deviceWidth = document.documentElement.clientWidth;
+		if (deviceWidth > 640)
+			deviceWidth = 640;
+		document.documentElement.style.fontSize = deviceWidth / 6.4 + 'px';
+		$("body").show();
+		
+		//动态获取ul的高度
+		var length = $("li").length;
+		var num = Math.ceil(length/4);
+		$(".personList").height(num*1.8+"rem");
+		
+		//点击我要点赞按钮
+		var flag = 0;
+		$(".btn a").click(function(){
+			var text = $(".btn a").text();
+			if(text=="我要点赞" && flag ==0){
+				flag = 1;
+				$(".personList").append("<li><img src='../images/icon1.png' border='0'/><span>李妮</span></li>");
+				$(".btn a").text("取消点赞");
+				
+				//动态获取当前ul的高度
+				var length = $("li").length;
+				var num = Math.ceil(length/4);
+				$(".personList").height(num*1.8+"rem");
+			}else{
+				flag = 0;
+				$(".personList").find("li").last().remove();
+				$(".btn a").text("我要点赞");
+				
+				//动态获取当前ul的高度
+				var length = $("li").length;
+				var num = Math.ceil(length/4);
+				$(".personList").height(num*1.8+"rem");
+			}
+		});
+			
+	});
+	</script>
+  </head>
+  <body>
+   		<ul class="personList">
+   			<li><img src="../images/icon.png" border="0"/><span>李巍</span></li>
+   			<li><img src="../images/icon.png"/><span>高鹏</span></li>
+   			<li><img src="../images/icon.png"/><span>赵红杰</span></li>
+   			<li><img src="../images/icon1.png"/><span>李妮</span></li>
+   			<li><img src="../images/icon.png"/><span>李巍</span></li>
+   			<li><img src="../images/icon.png"/><span>高鹏</span></li>
+   			<li><img src="../images/icon.png"/><span>赵红杰</span></li>
+   			<li><img src="../images/icon1.png"/><span>李妮</span></li>
+   			<li><img src="../images/icon.png"/><span>赵红杰</span></li>
+   		</ul>
+   		<div class="space"></div>
+   		<div class="btn">
+   			<a href="#">我要点赞</a>
+   		</div>
+  </body>
+</html>

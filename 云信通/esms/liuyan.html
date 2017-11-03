@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+<meta charset=utf-8>
+<title>钞票去哪儿了</title>
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0,user-scalable=0"">
+<meta name="MobileOptimized" content="240">
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">  
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">  
+<META HTTP-EQUIV="Expires" CONTENT="0">
+<link href="css/blue.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+
+<style type="text/css">
+
+.none{display:none}
+.button:hover{background:#ffffff;opacity:0.3}
+.button{color:#ffffff}
+.center{margin-left:auto; margin-right:auto;}
+.fontType1{color:#979797}
+.fontType2{color:#616266;}
+
+
+body{text-align:center;margin:0; padding:0;font-family:Microsoft YaHei;font-size:16px;background:#F3F3F3}
+
+#title{position:absolute;;top:5%;width:60%;height:5%;left:20%}
+#titleTime{position:absolute;;top:10%;width:70%;height:5%;left:15%}
+#choiceAreaBorder{position:absolute;float:left;top:15.87%;width:95.6%;height:27.25%;left:2.2%;border:1px solid #CECECE;z-index:999}
+#choiceArea{position:relative;top:15.87%;width:95.6%;height:27.25%;background:#FFFFFF;}
+#choiceArea .mutiChoiceContent_m{position:relative;height:16.66%}
+#choiceArea .choiceDiv{position:relative;width:100%;top:5%;height:13%}
+#choiceArea .choiceDiv1{position:relative;width:100%;top:35%;height:13%}
+#choiceArea .choiceImg{position:absolute;left:5%;top:5%;height:100%}
+#choiceArea .choiceISpan{position:absolute;left:5%;top:5%;height:100%;text-align:left}
+#choiceArea .persent{position:absolute;left:20%;top:5%;height:100%;width:75%;text-align:right;font-size:14px;color:#A3A3A3}
+#choiceArea .persentDiv{position:relative;left:5%;top:10%;height:40%;width:90%;border:1px solid #ffffff;text-align:right;border-radius:8px;}
+#choiceArea .imgDiv{float:left;position:absolute;left:0%;top:0%;height:100%;width:100%;text-align:right;border:1px solid #4CC1D2;border-radius:8px;}
+#choiceArea .imgDiv1{float:left;position:absolute;left:-50%;top:0%;height:100%;width:100%;border:1px solid #4CC1D2;border-radius:8px;background:#4CC1D2}
+#choiceArea .imgDiv2{float:left;position:absolute;left:-99.8%;top:0%;height:150%;width:100%;background:#FFFFFF}
+#voteBtn{position:absolute;left:35%;top:58%;height:5%;width:30%;text-align:center;border-radius:3px;background:#4CC1D2}
+#messageAreaTop{position:relative;width:95.6%;left:2.2%;height:17%;}
+
+#messageAreaPage{position:relative;top:0%;width:95.6%;left:2.2%;height:41%;backgroud:red;overflow: scroll;overflow-x:hidden;}
+#messageArea{position:absolute;top:0%;width:95.6%;left:2.2%;height:16%;}
+#messageArea .userImg{position:absolute;top:5%;width:60px;left:0%;}
+#messageArea .name{position:absolute;top:5%;width:95.6%;height:25.5%;text-align:left;left:20%;}
+#messageArea .message{position:absolute;top:5%;width:75%;height:25.5%;left:20%;text-align:left}
+#messageArea .timeMessage{text-align:left;font-size:10px}
+
+
+#messageArea1{position:absolute;top:40%;width:95.6%;left:2.2%;height:16%;}
+#messageArea1 .userImg{position:absolute;top:5%;width:60px;left:0%;}
+#messageArea1 .name{position:absolute;top:5%;width:95.6%;height:25.5%;text-align:left;left:20%;}
+#messageArea1 .message{position:absolute;top:5%;width:75%;height:25.5%;left:20%;text-align:left}
+#messageArea1 .timeMessage{text-align:left;font-size:10px}
+
+#messageArea2{position:absolute;top:80%;width:95.6%;left:2.2%;height:16%;}
+#messageArea2 .userImg{position:absolute;top:5%;width:60px;left:0%;}
+#messageArea2 .name{position:absolute;top:5%;width:95.6%;height:25.5%;text-align:left;left:20%;}
+#messageArea2 .message{position:absolute;top:5%;width:75%;height:25.5%;left:20%;text-align:left}
+#messageArea2 .timeMessage{text-align:left;font-size:10px}
+
+
+
+textarea{position:absolute;top:85.4%;width:93.0%;left:2.5%;height:20.19%;border:1px solid #CECECE;}
+#submitBtn{position:absolute;left:35%;top:109%;height:35px;width:30%;border-radius:3px;background:#4CC1D2}
+
+#submit2{border-radius:5px;position:absolute;;top:87.6%;width:52.43%;height:8.9%;left:23.7%}
+p{margin:0}
+</style>
+</head>
+<body  style="overflow-x:hidden;overflow-y:hidden;">
+		<div id="choicePage"     style="position:absolute;left:0;top:0;width:100%;height:100%">
+			<span id="title">投票标题</span>
+			<span id="titleTime" class="fontType1">2014-11-22 10:12:32</span>
+			<div id="choiceAreaBorder"></div>
+			<div id="choiceArea" class="center">
+				<div class="choiceDiv">
+					<span class="choiceISpan">选项一</span>
+					<span class="persent">30%</span>
+					<br/>
+					
+					<div class="persentDiv">
+						<div class="imgDiv"></div>
+						<div class="imgDiv1"></div>
+						<div class="imgDiv2"></div>
+					</div>
+				</div>
+				<div class="choiceDiv1">
+					<span class="choiceISpan">选项一</span>
+					<span class="persent">30%</span>
+					<br/>
+					
+					<div class="persentDiv">
+						<div class="imgDiv"></div>
+						<div class="imgDiv1"></div>
+						<div class="imgDiv2"></div>
+					</div>
+				</div>
+				
+				
+			</div>
+			<div id="messageAreaTop"></div>
+			<div id="messageAreaPage">
+			<div id="messageArea">
+				<img class="userImg" src="img/userImg.png"></img>
+				<span class="name fontType2"> 李逵：</span>
+				<span class="message fontType2" > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;说到不如做到说到不如做到说到不如做到说到不如做到说到不如做<p  class="fontType1 timeMessage">10:12</p></span>
+			</div>
+			<div id="messageArea1">
+				<img class="userImg" src="img/userImg.png"></img>
+				<span class="name fontType2"> 李逵：</span>
+				<span class="message fontType2" > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;说到不如做到说到不如做到说到不如做到说到不如做到说到不如做<p  class="fontType1 timeMessage">10:12</p></span>
+			</div>
+			
+			<div id="messageArea2">
+				<img class="userImg" src="img/userImg.png"></img>
+				<span class="name fontType2"> 李逵：</span>
+				<span class="message fontType2" > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;说到不如做到说到不如做到说到不如做到说到不如做到说到不如做<p  class="fontType1 timeMessage">10:12</p></span>
+			</div>
+			</div>
+		
+			<textarea id="textarea1" style=" color:#A3A3A3;font-size:14px" placeholder="说点什么"></textarea>
+			<div id="submitBtn" class="button" onclick="submit()" style=" text-align:center;vertical-align:middle;line-height:35px">发表</div>
+			<div style="height:50px;width:100%;position:absolute;top:115%;"></div>
+			<div  style="position:absolute;width:2.2%;height:40%;top:0;background:#EEEEEE;left:0"></div>
+		</div>
+		
+<script>
+	if($(window).height() < 500)
+		$('.fontType2').css('font-size','14px');
+	
+	function submit()
+	{
+		alert($('#textarea1').val());
+	}
+	
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,508 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>企业信息</title>
+	<link rel="stylesheet" href="css/main.css"/>
+	<link rel="stylesheet" href="uploadify/uploadify.css"/>
+	<script type="text/javascript" charset="utf-8" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="uploadify/jquery.uploadify.js"></script>
+	<link rel="stylesheet" href="css/authorityManage.css"/>
+	<link rel="stylesheet" href="css/jquery-ui.css" />
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<link rel="stylesheet" href="css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="js/jquery.ztree.core-3.5.js"></script>
+	<script type="text/javascript" src="js/jquery.ztree.excheck-3.5.js"></script>
+	<script type="text/javascript" src="js/jquery.ztree.exedit-3.5.js"></script>
+	<script type="text/javascript" src="js/authManage.js"></script>
+	<!--jquery滚动条-->
+	<script type="text/javascript"  src="js/tinyscrollbar.js"></script>
+	<style>
+#scrollbar1{ clear: both; }
+#scrollbar1 .viewport { height: 205px; overflow: hidden; position: relative; overflow-y:scroll;}
+#scrollbar1 .overview { list-style: none; position: absolute; left: 0; top: 0; width:100%}
+#scrollbar1 .thumb .end,
+#scrollbar1 .thumb { background-color: #BBBBBB; }
+#scrollbar1 .scrollbar { position: relative; float: right; width: 10px;display:none }
+#scrollbar1 .track { background-color: #F3F3F3; height: 100%; width:8px; position: relative; padding: 0 1px; }
+#scrollbar1 .thumb { height: 20px; width: 8px; cursor: pointer; overflow: hidden; position: absolute; top: 0;border-radius:5px; }
+#scrollbar1 .thumb .end { overflow: hidden; height: 5px; width: 8px; }
+#scrollbar1 .disable{ display: none; }
+	</style>
+	<style>
+		.uploadify-button{
+			background-color: #4acee1;
+			color: #ffffff;
+			border:0px;
+			margin-left: 70px;
+			*margin-left: 10px;
+			margin-top: 10px;
+			*float: left;
+		}
+		.uploadify-button-text{
+			color: #ffffff;
+		}
+	</style>
+</head>
+<body>
+<div class="header">
+		<div class="logo">
+			<a href=""><img src="images/logo.png" class="fl"/></a>
+		</div>
+		<div class="user_info">
+			<i class="sprite people"></i>
+			<span class="fl">账号：liuyingjie</span>
+			<a href="" class="back">退出</a>
+		</div>
+	</div>
+	<div class="container organization">
+		<div class="cont_left">
+			<div class="navigation_left h100 fl">
+				<ul>
+					<li><a href="Organization.html" class=""><i class="sprite orangise ml15"></i><span>组织结构</span></a></li>
+					<li><a href="addNews.html"><i class="sprite publish ml15"></i><span>内容发布</span></a></li>
+					<li class="visited"><a href="admin.html"><i class="sprite system ml15"></i><span>系统设置</span></a></li>
+				</ul>
+			</div>
+			<div class="navigation_right h100 fl">
+				<div class="data_info">
+					<div class="news_list">
+						<a href="systemInfo.html" >企业信息</a>								
+						<a href="setSafety.html" >设备与安全</a>
+						<a href="rankSet.html" >职级设置</a>		
+						<a href="authorityManage.html"class="visited">权限管理</a>	
+						<div class="btm_select"></div>						
+						<a href="safetyCe.html">日志管理</a>
+						<a href="pwdSafety.html" >修改密码</a>
+						<a href="admin.html">管理员</a>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cont_right rel">
+			<i class="sprite left_icon top174"></i>
+			<p class="qx_title">权限管理</p>
+			<!--按照权限查看开始-->
+			<div class="authority" >
+				<p class="auth_title">按照权限查看</p><i class="select"></i>
+				<table class="table_head">
+					<tr>
+						<td width="25%">权限</td>
+						<td width="25%">授权数</td>
+						<td width="40%">授权人</td>
+						<td width="10%">操作</td>
+					</tr>
+				</table>
+				<div class="table_wrap" id="scrollbar1">
+					<div class="scrollbar">
+						<div class="track">
+							<div class="thumb"><div class="end"></div></div>
+						</div>
+					</div>
+				<div class="viewport">
+					<div class="overview">
+					<table>	
+						<tr>
+							<td width="25%">发通知</td>
+							<td width="25%">2</td>
+							<td width="40%">
+							<ul class="selected-list">
+							<li class="selected-item"><span class="item-name">李妮</span><span class="remove-h">×</span></li>
+							<li class="selected-item"><span class="item-name">李妮</span><span class="remove-h">×</span></li>
+							<li class="selected-item"><span class="item-name">李妮</span><span class="remove-h">×</span></li>
+							<li class="selected-item"><span class="item-name">李妮</span><span class="remove-h">×</span></li>
+							<li class="selected-item"><span class="item-name">李妮</span><span class="remove-h">×</span></li>
+							<li class="selected-item"><span class="item-name">杨杨</span><span class="remove-h">×</span></li>
+							<li class="selected-item"><span class="item-name">李妮</span><span class="remove-h">×</span></li>
+							<li class="selected-item"><span class="item-name">李妮</span><span class="remove-h">×</span></li>
+							<li class="selected-item"><span class="item-name">李妮</span><span class="remove-h">×</span></li>
+							<li class="selected-item"><span class="item-name">李妮</span><span class="remove-h">×</span></li>
+							<li class="selected-item"><span class="item-name">李妮</span><span class="remove-h">×</span></li>
+							<li class="selected-item"><span class="item-name">李妮</span><span class="remove-h">×</span></li>
+							<li class="selected-item"><span class="item-name">李妮</span><span class="remove-h">×</span></li>
+							<li class="selected-item"><span class="item-name">李妮</span><span class="remove-h">×</span></li>
+							<li class="selected-item"><span class="item-name">李妮</span><span class="remove-h">×</span></li>
+							</ul>
+							<div class="input-wrapper">
+								<span class="input-tip" style="display: inline-block;"><i class="prefix"></i>选择同事</span>
+								<input class="input-field" type="text" style="display: none;">
+							</div>
+							</td>
+							<td width="10%">
+								<a href="javascript:;" class="submit">提交</a>
+							</td>
+						</tr>
+						<tr>
+							<td>发公告</td>
+							<td>2</td>
+							<td>
+							<ul class="selected-list">
+							</ul>
+							<div class="input-wrapper">
+								<span class="input-tip" style="display: inline-block;"><i class="prefix"></i>选择同事</span>
+								<input class="input-field" type="text" style="display: none;">
+							</div>
+							</td>
+							<td>
+								<a href="javascript:;" class="submit">提交</a>
+							</td>
+						</tr>					
+						<tr>
+							<td>发新闻</td>
+							<td>2</td>
+							<td>
+							<ul class="selected-list">
+							</ul>
+							<div class="input-wrapper">
+								<span class="input-tip" style="display: inline-block;"><i class="prefix"></i>选择同事</span>
+								<input class="input-field" type="text" style="display: none;">
+							</div>
+							</td>
+							<td>
+								<a href="javascript:;" class="submit">提交</a>
+							</td>
+						</tr>
+						<tr>
+							<td>发调查</td>
+							<td>2</td>
+							<td>
+							<ul class="selected-list">
+							</ul>
+							<div class="input-wrapper">
+								<span class="input-tip" style="display: inline-block;"><i class="prefix"></i>选择同事</span>
+								<input class="input-field" type="text" style="display: none;">
+							</div>
+							</td>
+							<td>
+								<a href="javascript:;" class="submit">提交</a>
+							</td>
+						</tr>
+						
+						
+						<tr>
+							<td>新闻管理员sfdsf</td>
+							<td>2</td>
+							<td>
+							<ul class="selected-list">
+							</ul>
+							<div class="input-wrapper">
+								<span class="input-tip" style="display: inline-block;"><i class="prefix"></i>选择同事</span>
+								<input class="input-field" type="text" style="display: none;">
+							</div>
+							</td>
+							<td>
+								<a href="javascript:;" class="submit">提交</a>
+							</td>
+						</tr>
+					
+				</table>
+				</div>
+				</div>
+				</div>
+				<div class="pagination">
+				<div class="pagination_left fl">显示1-6条/共6条</div>
+				<div class="pagination_right fr">
+					<a href="javascript:;" class="btn default fl ">上一页</a>
+					<ul class="page fl">
+						<li><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="" class="current">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">5</a></li>
+					</ul>
+					<a href="javascript:;" class="btn default fl">下一页</a>
+				</div>
+			</div>
+			</div>
+			<!--按照权限查看结束-->
+			<!--按照人员查看开始-->
+			<div class="person">
+				<p class="person_title">按照人员查看</p><i class="select"></i><span class="input-tip2" style="display: inline-block;"><i class="prefix2"></i>添加权限人</span>
+				<table class="table_head">
+					<tr>
+						<td width="25%">人员</td>
+						<td width="25%">授权数</td>
+						<td width="50%">已授权权限</td>
+					</tr>
+				</table>
+				<div class="table_wrap">
+					<table>
+						<tr>
+							<td width="25%">杨杨</td>
+							<td width="25%">2</td>
+							<td width="50%">
+								<ul class="selected-list">
+									<li class="selected-item"><span class="item-name">发公告</span><span class="remove-h">×</span></li>
+									<li class="selected-item"><span class="item-name">发通知</span><span class="remove-h">×</span></li>
+								</ul>
+								<div class="input-wrapper">
+								<span class="input-tip3" style="display: inline-block;"><i class="prefix"></i>授权</span>
+								<input class="input-field" type="text" style="display: none;">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>李锐</td>
+							<td>1</td>
+							<td>
+								<ul class="selected-list">
+									<li class="selected-item"><span class="item-name">部门管理员</span><span class="remove-h">×</span></li>	
+								</ul>
+							<div class="input-wrapper">
+							<span class="input-tip3" style="display: inline-block;"><i class="prefix"></i>授权</span>
+							<input class="input-field" type="text" style="display: none;">
+							</div>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>						
+					</table>
+				</div>
+				<div class="pagination">
+				<div class="pagination_left fl">显示1-6条/共6条</div>
+				<div class="pagination_right fr">
+					<a href="javascript:;" class="btn default fl ">上一页</a>
+					<ul class="page fl">
+						<li><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="" class="current">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">5</a></li>
+					</ul>
+					<a href="javascript:;" class="btn default fl">下一页</a>
+				</div>
+			</div>
+			</div>
+			<!--按照人员查看结束-->
+			<!--部门管理授权开始-->
+			<div class="dept_manage">
+				<table class="table_head">
+					<tr>
+						<td width="25%">部门管理</td>
+						<td width="25%">授权数</td>
+						<td width="40%">授权人</td>
+						<td width="10%">操作</td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td width="25%">单位云服务</td>
+						<td width="25%">1</td>
+						<td width="40%">
+							<ul class="selected-list">
+								<li class="selected-item"><span class="item-name">李妮</span><span class="remove-h">×</span></li>	
+							</ul>
+							<div class="input-wrapper">
+							<span class="input-tip5" style="display: inline-block;"><i class="prefix"></i>选择同事</span>
+							<input class="input-field" type="text" style="display: none;">
+							</div>
+						</td>
+						<td width="10%">
+							<a href="javascript:;" class="submit">提交</a>
+						</td>
+					</tr>
+					<tr>
+						<td width="25%">
+							<ul class="selected-list">	
+							</ul>
+							<div class="input-wrapper">
+							<span class="input-tip4" style="display: inline-block;"><i class="prefix"></i>选择部门</span>
+							<input class="input-field" type="text" style="display: none;">
+							</div>
+						</td>
+						<td width="25%">--</td>
+						<td width="40%">
+							<ul class="selected-list">	
+							</ul>
+							<div class="input-wrapper">
+							<span class="input-tip" style="display: inline-block;"><i class="prefix"></i>选择同事</span>
+							<input class="input-field" type="text" style="display: none;">
+							</div>
+						</td>
+						<td width="10%">
+							<a href="javascript:;" class="submit">提交</a>
+						</td>
+					</tr>
+				</table>
+				<div class="outline">
+					<p class="add_dept_manage"><i class="add_icon"></i><span>添加部门管理员</span></p>
+				</div>
+			</div>
+			<!--部门管理授权结束-->
+		</div>
+	</div>
+	
+	<!--按人员查看/权限查看弹出框-->
+	<div class="f-g-options-wrapper" style="position: absolute; top: 198px; left: 293px; z-index: 2000;">
+		<ul class="g-select-options" style="max-height: 240px; width: 135px;">
+			<li data-value="1" title="按照权限查看"  class="qx state-selected">按照权限查看</li>
+			<li data-value="2" title="按照人员查看" class="ry">按照人员查看</li>
+		</ul>
+	</div>
+	<!--选人弹出框开始-->
+		<div class="organization-list">
+			<div class="tree_list">
+				<div class="search_org">
+					<select>
+						<option>职级</option>
+						<option>董事</option>
+						<option>工会主席</option>
+						<option>总工程师</option>
+					</select>
+					<input type="text" class="name_org" placeholder="姓名"/>
+					<a href="javascript:void(0)" class="search_btn">搜索</a>
+				</div>
+				<div>
+					<ul id="treeDemo" class="ztree"></ul>
+				</div>
+				<p class="org-submit">
+					<button type="submit">确定</button>
+				</p>
+			</div>			
+			<div class="search_list">
+				<div class="wrap_search">
+					<input type="text" placeholder="姓名" class="searchbyname"/>
+					<span class="img_cancle"></span>
+				</div>
+				
+				<a href="javascript:void(0)" class="search_cancle">取消</a>
+				<ul class="search_ul">
+					<li>张三</li>
+					<li>李四</li>
+					<li>王某某</li>
+					<li>张三</li>
+					<li>李四</li>
+					<li>王某某</li>
+				</ul>
+				<p class="org-submit">
+					<button type="submit">确定</button>
+				</p>
+			</div>
+		</div>
+	<!--选人弹出框结束-->
+	<!--选部门弹出框开始-->
+		<div class="dept-list">
+			<div class="tree_list">
+				<div class="search_org">
+					<input type="text" class="dept_name" placeholder="部门"/>
+					<a href="javascript:void(0)" class="search_btn">搜索</a>
+				</div>
+				<div>
+					<ul id="treeDemo1" class="ztree"></ul>
+				</div>
+			</div>			
+			<div class="search_list">
+				<div class="wrap_search">
+					<input type="text" placeholder="单位" class="searchbyname"/>
+					<span class="img_cancle"></span>
+				</div>
+				
+				<a href="javascript:void(0)" class="search_cancle">取消</a>
+				<ul class="search_ul">
+					<li>单位云服务</li>
+					<li>研发中心</li>
+					<li>综合部</li>
+					<li>财务部</li>
+				</ul>
+			</div>
+		</div>
+	<!--选部门弹出框结束-->
+	<!--添加权限人模态框开始-->
+			<div id="dialog" title="添加权限人">
+				<div class="box">	
+					<p class="select_person">选择权限人</p>
+					<div class="selectbar">
+						<div class="select-range-inner fn-clear">
+							<ul class="selected-list">	
+							</ul>
+							<div class="input-wrapper">
+								<span class="input-tip" style="display: inline-block;"><i class="prefix"></i>添加员工</span>   
+								<input class="input-field" type="text" style="display: none;">
+							</div>
+						</div>	
+					</div>	
+					<p class="select_person">选择权限</p>
+					<ul class="select_anth">
+						<li><input type="checkbox"/> <span>发通知</span></li>
+						<li><input type="checkbox"/> <span>发公告</span></li>
+						<li><input type="checkbox"/> <span>发调查</span></li>
+						<li><input type="checkbox"/> <span>发新闻</span></li>
+						<li><input type="checkbox"/> <span>部门管理</span></li>
+					</ul>
+				</div>	
+			</div>
+	<!--添加权限人模态框结束-->	
+	<!--授权左侧弹出框开始-->
+	<div class="accredit">
+		<div class="detail-frame-content">
+			<p  class="caption-title">杨杨</p>
+			<table class="table_head">
+				<tr>
+					<td width="20%">
+						<input type="checkbox" id="checkAll"/>
+					</td>
+					<td width="40%">权限</td>
+					<td width="40%">状态</td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td width="20%">
+						<input type="checkbox" name="subBox"/>
+					</td>
+					<td width="40%">发通知</td>
+					<td width="40%">已授权4人</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="checkbox" name="subBox"/>
+					</td>
+					<td>发调查</td>
+					<td>已授权2人</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="checkbox" name="subBox"/>
+					</td>
+					<td>发新闻</td>
+					<td>未授权</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="checkbox" name="subBox"/>
+					</td>
+					<td>部门管理</td>
+					<td>未授权</td>
+				</tr>
+			</table>			
+		</div>
+		<div class="sq_btn">
+				<button class="btn default">确定</button>	
+		</div>
+	</div>
+	<!--授权左侧弹出框结束-->
+	<script type="text/javascript">
+		$(function(){
+	 　　   $('#file_upload').uploadify({
+	       　　 'swf'      :'uploadify/uploadify.swf',
+	     　　　 'uploader':'uploadify/uploadify.php',
+	     		'buttonText':'上传'
+	    　　});
+　　　	});
+	</script>
+</body>
+</html>

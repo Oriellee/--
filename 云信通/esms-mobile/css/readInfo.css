@@ -1,0 +1,141 @@
+html,body,div,span,ul,li,p,img,input{margin:0;padding:0;}
+a{text-decoration:none;}
+li{list-style-type:none}
+body{max-width:640px;min-width:320px;width:100%;margin:0 auto;font-family:"微软雅黑";padding-bottom:0.2rem;}
+.head{max-width: 640px;min-width: 320px;width: 100%;height:0.7rem;background:#fafafa;position:absolute;z-index:100;box-shadow: 0 1px 8px #B2B0B0;}
+.head ul{overflow:hidden;width:100%;height:0.7rem;background:#fff;box-shadow: 0 1px 8px #B2B0B0;}
+.head ul li{width:33.333%;height:0.7rem;line-height:0.7rem;color:#797979;text-align:center;float:left;cursor:pointer;}
+#nav-smartSetup ul li{width:1.7rem;height:0.7rem;line-height:0.7rem;color:#797979;text-align:center;float:left;cursor:pointer;}
+.head ul li span{display:inline-block;}
+.head ul li a{color:#797979}
+.head ul li.active{border-bottom:2px solid #4bc1d2;color:#4bc1d2;}
+.head ul li.active a{color:#4bc1d2;}
+.readInfoList{width:100%;height:auto;}
+.readInfoList ul{width:100%;min-height:1.8rem;}
+.readInfoList ul li{min-height: 0.9rem;text-align: center;padding-top: 0.21rem;color: #737373;border-bottom: 1px solid #d8d8d8;}
+.person-img{border-radius:50%;width:0.7rem;height:0.7rem;display: inline-block;float: left;margin-left:0.2rem;}
+.name-dept{display:inline-block;float: left;margin-left: 0.2rem;width: 3.8rem;text-align: left;}
+.name-dept-readed{display:inline-block;float: left;margin-left: 0.2rem;width:4.15rem;text-align: left;}
+.name-dept-unjoin{display:inline-block;float: left;margin-left: 0.2rem;width:3.8rem;text-align: left;margin-bottom: 0.15rem;}
+.unjoin .refuse-reason{clear: both;margin-left: 1.1rem;margin-right: 0.1rem;line-height:0.4rem;text-align:left;padding-bottom:0.15rem;color:#000;word-wrap: break-word;}
+.name-dept .name,.name-dept-readed .name{height: 0.4rem;line-height: 0.4rem;}
+.name-dept  .dept,.name-dept-readed .dept,.name-dept-unjoin .dept{height: 0.4rem;line-height: 0.45rem;width: 3.7rem;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+.phone,.operate{display:inline-block;float:right;height:0.7rem;line-height:0.9rem;background: #fff;border-style: none;width: 0.7rem;outline:none;}
+.operate{background-image: url(../images/operate.png);background-repeat: no-repeat;background-position: center center;background-size: 80%;}
+.phone{background-image: url(../images/phone.png);background-repeat: no-repeat;background-position: center center;background-size: 80%;}
+.phone img{width:0.56rem;height:0.55rem;vertical-align: middle;}
+.operate img{width:0.56rem;height:0.55rem;margin-left:0.2rem;vertical-align: middle;}
+.readInfoList ul li span{display: inline-block;max-width: 1.4rem;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+.readInfoList .readed,.readInfoList .confirm,.readInfoList .unjoin,.readInfoList .join{display:none;}
+.space{clear:both;height:0.2rem;width:100%;}
+.bottom {width: 98%;margin-left:1%;height:auto;position: fixed;bottom: 0;background: #fff;z-index: 101;clear: both;max-width: 640px;border-top: 1px solid #e1e1e1;line-height: 0.9rem;
+background:#e8e8e8;display:none;}
+.bottom div{width:100%;height:auto;border-radius:5px;background:#fff;}
+.bottom div .set-join,.bottom div .set-unjoin,.bottom div .set-readed,.bottom div .set-cofirm,.bottom div .set-late,.bottom div .set-leave{display: block;height: 0.81rem;line-height: 0.81rem;border-bottom: 1px solid #e8e8e8;text-align:center;color:#3d3d3d}
+.bottom div .set-undetermined{display: block;height: 0.81rem;line-height: 0.81rem;text-align:center;color:#3d3d3d}
+.bottom .cancel{display:block;height:0.78rem;border-radius:5px;text-align:center;line-height:0.78rem;color:#f26262;background:#fff;margin-top:0.04rem;}
+.two{width:50%!important;}
+.overlay{position: fixed;top: 0;left: 0;width: 100%;height: 100%;z-index: 100;background: #656262;opacity: .3;display:none;}
+.operaDiv{float:left;width:1.4rem;}
+.name .name-p{color:#000;}
+.smallLi{width:0.5rem!important;}
+.bg-color{float:left;width:0.7rem;height:0.7rem;border-radius: 50%;margin-left: 0.2rem;}
+.bg-color p{width: 0.7rem;height: 0.7rem;line-height: 0.7rem;text-align: center;color: #fff;}
+.join-info ul li{width:25%!important;}
+.Belate{width: 0.65rem;height: 0.35rem;line-height: 0.35rem;text-align: center;background: #ff9853;color: #fff;margin-right: 0.1rem;}
+.refuse-reason-box {
+    display: none;
+    width: 6.4rem;
+    height: 3.47rem;
+    top: 2rem;
+    position: fixed;
+    z-index: 101;
+}
+.refuse-reason-box .reason-box {
+    width: 5.18rem;
+    height: 3.47rem;
+    background: #fff;
+    margin: 0 auto;
+    box-shadow: 1px 1px 8px #656262;
+    border-radius: 5px;
+}
+.reason-box .refuse-btn {
+    height: 0.76rem;
+    line-height: 0.76rem;
+    border-bottom: 1px solid #c7c7c7;
+}
+.refuse-btn .cancel {
+    width: 0.8rem;
+    text-align: center;
+    color: #c7c7c7;
+}
+.refuse-btn .publish {
+    width: 0.8rem;
+    text-align: center;
+    color: #37c3f8;
+}
+.refuse-content {
+    height: 1.94rem;
+}
+.reason-box .refuse-btn span, .reason-box .refuse-btn a {
+    display: inline-block;
+    float: left;
+}
+.refuse-btn .title {
+    width: 5.18rem;
+    text-align: center;
+}
+.reason-box .refuse-btn span, .reason-box .refuse-btn a {
+    display: inline-block;
+    float: left;
+}
+.refuse-content textarea {
+    width: 97%;
+    height: 1.75rem;
+    border: 0;
+    outline: 0;
+    resize: none;
+    padding: 0 1%;
+    line-height: 0.4rem;
+	font-family: "微软雅黑";
+	margin-top: 0.1rem;
+}
+.refuse-bottom{width:100%;height:0.75rem;line-height:0.75rem;border-top:1px solid #ddd}
+.refuse-bottom .cancel{display: inline-block;width: 48%;text-align: center;border-right: 1px solid #ddd;color: #ff6261;}
+.refuse-bottom .publish{display: inline-block;width: 48%;text-align: center;color: #545454;}
+@media screen and (min-width: 400px) {
+	body{font-size:20px;}
+	.bg-color p{font-size:18px;}
+	.head ul li{font-size:18px;}
+	.name-dept .name,.name-dept-readed  .name{font-size:20px;}
+	.name-dept .dept,.name-dept-readed .dept,.rank,.name-dept-unjoin .dept{font-size:17px;}
+	.bottom a{font-size:19px;}
+	.unjoin .refuse-reason{font-size:17px;}
+	.refuse-btn .cancel,.refuse-btn .publish,.refuse-content textarea{font-size:16px}
+	span.Belate{font-size:15px;}
+	
+}
+
+@media screen and (min-width:321px) and (max-width:400px){
+	body{font-size:18px;}
+	.bg-color p{font-size:16px;}
+    .head ul li{font-size:17px;}
+   .name-dept .name,.name-dept-readed  .name{font-size:19px;}
+   .name-dept .dept,.name-dept-readed .dept,.rank,.name-dept-unjoin .dept{font-size:16px;}
+	.bottom a{font-size:17px;}
+	.unjoin .refuse-reason{font-size:15px;}
+	.refuse-btn .cancel,.refuse-btn .publish,.refuse-content textarea{font-size:14px}
+	span.Belate{font-size:14px;}
+}
+
+@media screen and (max-width:321px){
+	body{font-size:16px;}
+	.bg-color p{font-size:13px;}
+   .head ul li{font-size:14px;}
+  .name-dept .name,.name-dept-readed  .name{font-size:16px;}
+   .name-dept .dept,.name-dept-readed .dept,.rank,.name-dept-unjoin .dept{font-size:14px;}
+   .bottom a{font-size:15px;}
+   .unjoin .refuse-reason{font-size:13px;}
+   .refuse-btn .cancel,.refuse-btn .publish,.refuse-content textarea{font-size:12px}
+   span.Belate{font-size:13px;}
+}

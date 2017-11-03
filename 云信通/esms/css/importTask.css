@@ -1,0 +1,117 @@
+.important_title{width: 98%;
+    height: 40px;
+    padding-left: 2%;
+    line-height: 40px;
+    font-size: 14px;
+    border-bottom: 1px solid #999;
+	margin-bottom:20px;
+}
+.item_name {
+    width: 92%;
+    height: 50px;
+    line-height: 50px;
+    margin-left: 3%;
+    margin-right: 4%;
+}
+.item_name .name {
+    width: 70px;
+    height: 50px;
+    display: inline-block;
+    text-align: right;
+    float: left;
+}
+.item_name  textarea {
+    margin-top: 13px;
+    width: 500px;
+    height: 80px;
+    overflow-y: scroll;
+}
+.describe {
+    height: 134px;
+}
+.import_btn {
+    background-color: #4acee1;
+    border-style: none;
+    margin-left: 110px;
+	display: inline-block;
+	outline:none;
+}
+.import-file{
+	position: absolute;
+    top: 76px;
+    left: 260px;
+    opacity: 0;
+    width: 70px;
+    height: 26px
+}
+.import-lable{
+	width: 70px;
+    height: 20px;
+    border: 1px solid #ddd;
+    display: inline-block;
+    text-align: center;
+    line-height: 20px;
+	margin-left:15px;
+}
+
+.logList{
+	width: 566px;
+    height: 290px;
+    overflow-y: scroll;
+	padding: 10px 10px;
+}
+.important-list{
+	width:85%;
+	height:40px;
+	margin:0 auto;
+	line-height: 40px;
+}
+.important-list li{
+	float:left;
+	width:18%;
+}
+.important-list label{margin-left:5px;}
+.important-type{width:85%;margin:0 auto;margin-top: 10px;}
+.btn{border-style:none;outline:none;cursor:pointer;}
+.btn-import{margin:50px 0 0 83px;}
+.dept-list,.import-time{display:none;}
+.import-inform p,.import-information p,.import-error li{line-height:20px;}
+.import-error li a{color:#3D83E9}
+.addsoft_btn{background: #4acee1;margin-left: 40px;}
+..details_info {
+    width: 340px;
+    height: 450px;
+    padding: 20px 20px;
+}
+.details_info .items {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+}
+.details_info .items label {
+    font-size: 12px;
+    text-align: right;
+    width: 90px;
+    display: inline-block;
+}
+.details_info .items .version {
+    width: 230px;
+    font-size: 12px;
+}
+.items select {
+    width: 234px;
+}
+.items .no {
+    margin-left: 20px;
+}
+.items .upload {
+    width: 66px;
+    outline: none;
+}
+.items textarea {
+    vertical-align: middle;
+    width: 230px;
+    height: 45px;
+    resize: none;
+    margin-top: 14px;
+}

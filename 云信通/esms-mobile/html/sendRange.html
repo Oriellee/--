@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>发送范围</title>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="../css/sendRange.css">
+	<style>
+		body{display:none;}
+	</style>
+	<script>
+	$(function() {
+		var deviceWidth = document.documentElement.clientWidth;
+		if (deviceWidth > 640)
+			deviceWidth = 640;
+		document.documentElement.style.fontSize = deviceWidth / 6.4 + 'px';
+		$("body").show();
+		
+		//默认头像颜色设置
+		$(".bg-color").each(function(arr){
+			var arr = ['#ff9852','#70b45a','#11b7f5','#fdcc09','#4683d5','#fe7c7b'];
+			var n = getRandom(6);
+			var color = arr[n];
+		   $(this).css("background",color);
+		})
+	});
+	
+	//生成随机数
+	function getRandom(n){
+        return Math.floor(Math.random()*n)
+       }
+	</script>
+  </head>
+  <body>
+   		<ul>
+   			<li>
+   				<div  class="bg-color"><p>张三</p></div>
+   				<p class="dept">总裁办</p>
+   			</li>
+   			<li>
+   				<div class="bg-color"  ><p>张三</p></div>
+   				<div class="person">
+   					<p class="name"><span class="name-p">高鹏</span>&nbsp;&nbsp;<span class="rank">测试主管</span></p>
+   					<p class="dept-from">单位云服务事业部</p> 
+   				</div>
+   			</li>
+			<li>
+   				<div class="bg-color"  ><p>张三</p></div>
+   				<div class="person">
+   					<p class="name"><span class="name-p">高鹏</span>&nbsp;&nbsp;<span class="rank">测试主管</span></p>
+   					<p class="dept-from">单位云服务事业部</p> 
+   				</div>
+   			</li>
+			<li>
+   				<div class="bg-color"  ><p>张三</p></div>
+   				<div class="person"> 
+   					<p class="name"><span class="name-p">高鹏</span>&nbsp;&nbsp;<span class="rank">测试主管</span></p>
+   					<p class="dept-from">单位云服务事业部</p> 
+   				</div>
+   			</li>
+			<li>
+   				<div class="bg-color"  ><p>张三</p></div>
+   				<div class="person">
+   					<p class="name"><span class="name-p">高鹏</span>&nbsp;&nbsp;<span class="rank">测试主管</span></p>
+   					<p class="dept-from">单位云服务事业部</p> 
+   				</div>
+   			</li>
+			<li>
+   				<div class="bg-color"  ><p>张三</p></div>
+   				<div class="person">
+   					<p class="name"><span class="name-p">高鹏</span>&nbsp;&nbsp;<span class="rank">测试主管</span></p>
+   					<p class="dept-from">单位云服务事业部</p> 
+   				</div>
+   			</li>
+			<li>
+   				<div class="bg-color"  ><p>张三</p></div>
+   				<div class="person">
+   					<p class="name"><span class="name-p">高鹏</span>&nbsp;&nbsp;<span class="rank">测试主管</span></p>
+   					<p class="dept-from">单位云服务事业部</p> 
+   				</div>
+   			</li>
+			<li>
+   				<div class="bg-color"  ><p>张三</p></div>
+   				<div class="person">
+   					<p class="name"><span class="name-p">高鹏</span>&nbsp;&nbsp;<span class="rank">测试主管</span></p>
+   					<p class="dept-from">单位云服务事业部</p> 
+   				</div>
+   			</li>
+			<li>
+   				<div class="bg-color"  ><p>张三</p></div>
+   				<div class="person">
+   					<p class="name"><span class="name-p">高鹏</span>&nbsp;&nbsp;<span class="rank">测试主管</span></p>
+   					<p class="dept-from">单位云服务事业部</p> 
+   				</div>
+   			</li>
+			<li>
+   				<div class="bg-color"  ><p>张三</p></div>
+   				<div class="person">
+   					<p class="name"><span class="name-p">高鹏</span>&nbsp;&nbsp;<span class="rank">测试主管</span></p>
+   					<p class="dept-from">单位云服务事业部</p> 
+   				</div>
+   			</li>
+   		</ul>
+
+  </body>
+</html>

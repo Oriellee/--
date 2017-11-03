@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新闻-部门排序统计</title>
+	<link rel="stylesheet" href="css/main.css"/>
+	<link rel="stylesheet" href="css/sort.css"/>
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<link rel="stylesheet" href="css/jquery-ui.css" />
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/service.js"></script>
+	<script type="text/javascript" src="js/echarts.min.js"></script>
+	<script type="text/javascript" src="js/jquery.datetimepicker.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css" />
+</head>
+<body class="admin">
+<div class="header">
+		<div class="logo">
+			<a href=""><img src="images/logo.png" class="fl"/></a>
+		</div>
+		<div class="user_info">
+			<i class="sprite people"></i>
+			<span class="fl">账号：liuyingjie</span>
+			<a href="" class="back">退出</a>
+		</div>
+	</div>
+	<div class="container organization">
+		<div class="cont_left">
+			<div class="navigation_left h100 fl">
+				<ul>
+					<li><a href="fastQuery.html"><i class="sprite5 publish ml15"></i><span>通讯录查询</span></a></li>
+					<li><a href="Organization.html" class=""><i class="sprite orangise ml15"></i><span>组织结构</span></a></li>
+					<li><a href="addNews.html"><i class="sprite publish ml15"></i><span>内容发布</span></a></li>
+					<li><a href="folderManage.html"><i class="sprite4  ml15"></i><span>应用</span></a></li>
+					<li><a href="newImport.html"><i class="sprite2 ml15"></i><span>辅助功能</span></a></li>
+					<li><a href="useNumber.html"><i class="sprite3 ml15"></i><span>服务查看</span></a></li>
+					<li class="visited"><a href="deptSort.html"><i class="sprite6 ml15"></i><span>统计分析</span></a></li>
+					<li><a href="admin.html"><i class="sprite system ml15"></i><span>系统设置</span></a></li>
+				</ul>
+			</div>
+			<div class="navigation_right h100 fl">
+				<div class="data_info">
+					<div class="news_list">
+						<div class="title">通知统计</div>
+						<a href="noticeDeptSort.html">部门排序统计</a>
+						<div class="btm_select"></div>
+						<a href="noticeDeptChange.html" >部门变化统计</a>	
+						<a href="noticeMemberSort.html">人员排序统计</a>	
+						<a href="noticeMemberChange.html">人员变化统计</a>	
+						<div class="title">新闻统计</div>
+						<a href="newsDeptSort.html" class="visited">部门排序统计</a>
+						<a href="newsDeptChange.html" >部门变化统计</a>	
+						<a href="newsMemberSort.html">人员排序统计</a>	
+						<a href="newsMemberChange.html">人员变化统计</a>	
+						<a href="newsChannelSort.html">频道排序统计</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cont_right rel">
+			<i class="sprite left_icon top40"></i>
+			<div class="item-box">
+				<ul class="">
+					<li><a href="#" class="active month">月</a></li>
+					<li><a href="#" class="week">周</a></li>
+					<li><a href="#" class="day">日</a></li>
+				</ul>
+				<div class="radio-item">
+					<input type="radio" name="sort"/>正序
+					<input type="radio" name="sort"/>倒序
+				</div>
+			</div>
+			<div class="item-sel">
+				<select class="num">
+					<option>发布数</option>
+					<option>被阅读人数</option>
+					<option>被阅读率</option>
+					<option>被评论数</option>
+					<option>被赞数</option>
+					<option>阅读率</option>
+					
+				</select>
+				<select class="date-month">
+					<option>2016年8月</option>
+					<option>2016年7月</option>
+					<option>2016年6月</option>
+					<option>2016年5月</option>
+					<option>2016年4月</option>
+				</select>
+				<select class="date-week">
+					<option>06月20日-06月26日</option>
+					<option>06月13日-06月19日</option>
+					<option>06月06日-06月12日</option>
+				</select>
+				<div class="date-day">
+					<span>选择日期：</span>
+					<input type="text" placeholder="选择日期" class="h21 endTime mt5" id="endtime" name="endtime"/>
+				</div>
+				<input type="text" placeholder="请输入部门名称" class="deptName"/>
+				<a href="javascript:;" class="btn-item">查询</a>
+			</div>
+			<div id="main" style="width:100%;height:400px;overflow-x:scroll;margin-top:35px;"></div>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#endtime').datetimepicker({
+			dateFormat : 'mm-dd-yy',
+			timeFormat : 'hh:mm:ss'
+			});
+			$(".item-box ul li a").click(function(){
+				$(".item-box ul li a").removeClass("active");
+				$(this).addClass("active");
+			});
+			
+		$(".week").click(function(){
+			$(".date-month,.date-day").hide();
+			$(".date-week").show();
+		});
+		$(".month").click(function(){
+			$(".date-week,.date-day").hide();
+			$(".date-month").show();
+		});
+		$(".day").click(function(){
+			$(".date-month,.date-week").hide();
+			$(".date-day").css("display","inline-block");
+		});
+		});	
+	</script>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+
+
+option = {
+	title : {
+        text: '新闻发布数统计图',
+        x:'center'
+    },
+    color: ['#3398DB'],
+    tooltip : {
+        trigger: 'axis',
+        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+        }
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis : [
+        {
+            type : 'category',
+            data : ['人力', '产品', '云信通', '录音事业部', '销售部'],
+            axisTick: {
+                alignWithLabel: true
+            }
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value'
+        }
+    ],
+    series : [
+        {
+            name:'通知发布数',
+            type:'bar',
+            barWidth: '30',
+            data:[10, 52, 200, 334, 390]
+        }
+    ]
+};
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+       
+    </script>
+	</div>
+	</div>
+</body>
+</html>

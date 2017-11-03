@@ -1,0 +1,123 @@
+.w155{
+	width: 155px;
+}
+.w320{
+	width:320px;
+}
+.news_list{
+	width: 100%;
+}
+.news_list a, .news_list .title{
+	width:100%;
+	height:40px;
+	display: block;
+	line-height: 40px;
+	border-bottom: 1px solid #ddd;
+	padding-left: 10px;
+}
+.news_list a{
+	padding-left: 20px;
+}
+.news_list .visited{
+	color:#555;
+	font-weight: bolder;
+	font-size: 13px;
+}
+.h_form{
+	width:70%;
+	margin-left: 40px;
+}
+.h_form .formGroup{
+	width: 100%;
+	margin-top: 10px;
+}
+.formGroup .form_label{
+	width: 100%;
+	display: block;
+}
+.form_label input{
+	margin-top: 2px;
+	margin-right: 3px;
+}
+.formGroup .form_control{
+	width: 360px;
+	height: 25px;
+	margin-top: 5px;
+	line-height: 25px;
+	border:1px solid #999;
+}
+.form_control:focus{
+	border-color: #555;
+	outline: 0;
+}
+.formGroup .textArea{
+	height: 120px;
+	width: 545px;
+}
+.formGroup a{
+	text-decoration: underline;
+}
+.formGroup .w235{
+	width: 235px;
+}
+.formGroup .w310{
+	width: 310px;
+}
+.formGroup a.btn{
+	text-decoration: none;
+}
+.formGroup .form_radio{
+	margin-top: 8px;
+	margin-right: 10px;
+}
+.formGroup .h100{
+	height: 100px;
+}
+.form_label .w6{
+	width: 30px;
+}
+.yulan{
+	width: 285px;
+	border-left: 1px solid #ddd;
+	position: absolute;
+	top:-10px;
+	right:0px;
+	height: 100%;
+	min-height: 610px;
+}
+.yulan .yu_head{
+	width: 100%;
+	height: 35px;
+	background-color: #ddd;
+	text-align: center;
+	line-height: 35px;
+}
+.yulan .yu_cont{
+	width: 80%;
+	margin-left: 10%;
+}
+.yulan .textArea{
+	width: 225px;
+}
+.yulan .formGroup{
+	margin-top: 10px;
+}
+.rel{
+	position: relative;
+}
+.addCondition{
+	text-decoration: underline;
+	margin-left: 58px;
+}
+.dashed{
+	width: 100%;
+	height: 1px;
+	border-bottom: 1px dashed #ddd;
+	position: absolute;
+	top:195px;
+}
+.pr .endTimes_img {
+	left:109px;
+	top:25px;
+}
+.news_list .title{background:rgb(236, 233, 233);font-size: 13px;}

@@ -1,0 +1,104 @@
+html,body,div,span,ul,li,p,img,input{margin:0;padding:0;}
+a{text-decoration:none;}
+li{list-style-type:none}
+html{font-size:1rem;}
+body{max-width:640px;min-width:320px;width:100%;margin:0 auto;font-family:"微软雅黑";padding-bottom:0.2rem;}
+.vote-deadline{width:6.2rem;height:0.57rem;border:1px solid #e0e0e0;border-left:0;border-right:0;line-height:0.57rem;padding-left:0.2rem;color:#7C7C7C;background:#fafafa;
+	position: fixed;top: 0;z-index:100;}
+.vote-title{width:6rem;padding:0 0.2rem;line-height:0.5rem;margin-top:0.67rem;}
+.vote-from{height:0.3rem;width:6rem;padding:0 0.2rem;color:#B5B3B3;}
+.publish-time{display:inline-block;margin-right:0.1rem;}
+.voteChoice-title{margin-top:0.3rem;width:6rem;padding:0 0.2rem;height:0.3rem;line-height:0.3rem;margin-bottom: 0.4rem;}
+.voteChoice-title .vote-type{display:inline-block;margin-right:0.15rem;}
+.voteChoice-title .vote-total{display:inline-block;float:right;}
+.vote-result{margin-top: 0.38rem;  margin-bottom: 2.5rem}
+.vote-result .vote-bar{display:block;width: 6rem;height: 0.52rem;line-height: 0.52rem;background: #f0f0f0;margin: 0 auto;margin-bottom: 0.38rem;position: relative;}
+.vote-bar .bg-color{width: 4rem;background: #ffa92e;color: #fff;height: 0.52rem;display: inline-block;padding-left: 0.1rem;}
+.vote-bar .vote-percent{color: #000;display: inline-block;float: right;position: absolute;top: 0;right: 0.1rem;}
+.votePiao{width: 100%;height: 1.5rem;position: fixed;bottom: 0.98rem;background: #fff;z-index: 100;
+    clear: both;max-width: 640px;line-height: 1.5rem;text-align: center;}
+.votePiao button{width: 5.65rem;height: 0.76rem;background: #37c3f8;border-style: none;border-radius: 5px;color: #fff}
+.option-list{padding: 0 0.2rem}
+.option-box{width:0.3rem;height:0.3rem;position: relative;border: 1px solid #e0e0e0;border-radius: 5px;float: left;
+    clear: both;line-height:0.24rem;}
+.option-box label{position: absolute;top: 0.05rem;left: 0.05rem;width: 0.2rem;height: 0.2rem;}
+.option-box input{opacity: 0;width:0.3rem;height:0.3rem;}
+.option-list p{min-height: 0.4rem;margin-left: 0.2rem;float: left;width: 5rem;line-height: 0.35rem;margin-bottom:0.3rem;word-wrap: break-word;}
+.option-box .bg{background: #37c3f8;}
+.option-radio{width:0.3rem;height:0.3rem;position: relative;border: 1px solid #e0e0e0;border-radius: 50%;float: left;
+    clear: both;}
+.option-radio input{opacity: 0;width:0.3rem;height:0.3rem;}
+.option-radio label{position: absolute;top: 0.05rem;left: 0.05rem;width: 0.2rem;height: 0.2rem; border-radius:50%}
+.option-radio .bg{background: #37c3f8;}
+.space{clear: both;width: 100%;height: 2.5rem;}
+
+.bottom{width:98%;height:0.98rem;position:fixed;bottom:0;background:#fff;z-index:100;clear:both;padding:0 1%;max-width:640px;border-top: 1px solid #E4E4E4;}
+.bottom li{width: 33.333%;height: 0.98rem;line-height: 0.98rem;float:left;text-align:center;}
+.bottom a{color:#5f5f5f;}
+.reply a img{width:0.42rem;height:0.4rem;vertical-align: middle;}
+.read a img{width:0.4rem;height:0.34rem;vertical-align: middle;}
+.praise a img{width:0.4rem;height:0.34rem;vertical-align: middle;}
+.accessory{width:100%;height:auto;margin-top:0.2rem;padding-bottom:0.8rem;}
+.accessory a{display: block;height:0.45rem;line-height:0.45rem;margin-left: 0.2rem;color: #5f5f5f}
+.two{width:50%!important;}
+.one{width:100%!important;}
+.unVoteTip{width: 6.2rem;margin: 0 auto;height: 0.8rem; background: #000;position: fixed;top: 0.1rem;left: 0.1rem;z-index: 1000;opacity: 0.65;color: #fff;line-height: 0.8rem;
+    text-align: center;border-radius:4px;display:none;}
+@media screen and (min-width: 400px) {
+	body{font-size: 20px;}
+	.vote-deadline{font-size:17px;}
+	.vote-title{font-size:20px;}
+	.vote-from{font-size:15px;}
+	.voteChoice-title{font-size:17px;}
+	.vote-bar .bg-color,.vote-percent{font-size:17px;}
+	.votePiao button{font-size:22px;}
+	
+	
+	.message_info{font-size:21px;}
+	.messageform{font-size:15px;}
+	.con_text_img{font-size:20px;}
+	.longtime{font-size:18px;}
+	.bottom{font-size:17px;}
+	.accessory a{font-size:19px;}
+	.option-list p{font-size:17px;}
+	.unVoteTip{font-size:16px;}
+}
+
+@media screen and (min-width:321px) and (max-width:400px){
+	body{font-size: 18px;}
+	.vote-deadline{font-size:16px;}
+	.vote-title{font-size:18px;}
+	.vote-from{font-size:14px;}
+	.voteChoice-title{font-size:16px;}
+	.vote-bar .bg-color,.vote-percent{font-size:16px;}
+	
+    .message_info{font-size:19px;}
+	.messageform{font-size:14px;}
+	.con_text_img{font-size:18px;}
+	.longtime{font-size:16px;}
+	.bottom{font-size:15px;}
+	.accessory a{font-size:17px;}
+	.votePiao button{font-size:20px;}
+	.option-list p{font-size:16px;}
+	.unVoteTip{font-size:15px;}
+}
+
+@media screen and (max-width:321px){
+	body{font-size: 16px;}
+    .vote-deadline{font-size:14px;}
+    .vote-title{font-size:16px;}
+    .vote-from{font-size:13px;}
+    .voteChoice-title{font-size:14px;}
+    .vote-bar .bg-color,.vote-percent{font-size:15px;}
+    
+    
+   .message_info{font-size:17px;}
+   	.messageform{font-size:13px;}
+	.con_text_img{font-size:16px;}
+	.longtime{font-size:14px;}
+	.bottom{font-size:14px;}
+	.accessory a{font-size:15px;}
+	.votePiao button{font-size:18px;}
+	.option-list p{font-size:15px;}
+	.unVoteTip{font-size:14px;}
+}

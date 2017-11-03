@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>管理员</title>
+	<link rel="stylesheet" href="css/main.css"/>
+	<link rel="stylesheet" href="css/importTask.css"/>
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body class="admin">
+<div class="header">
+		<div class="logo">
+			<a href=""><img src="images/logo.png" class="fl"/></a>
+		</div>
+		<div class="user_info">
+			<i class="sprite people"></i>
+			<span class="fl">账号：liuyingjie</span>
+			<a href="" class="back">退出</a>
+		</div>
+	</div>
+	<div class="container organization">
+		<div class="cont_left">
+			<div class="navigation_left h100 fl">
+				<ul>
+					<li><a href="Organization.html" class=""><i class="sprite orangise ml15"></i><span>组织结构</span></a></li>
+					<li><a href="addNews.html"><i class="sprite publish ml15"></i><span>内容发布</span></a></li>
+					<li class="visited"><a href="newImport.html"><i class="sprite2 ml15"></i><span>辅助功能</span></a></li>
+					<li><a href="admin.html"><i class="sprite system ml15"></i><span>系统设置</span></a></li>
+				</ul>
+			</div>
+			<div class="navigation_right h100 fl">
+				<div class="data_info">
+					<div class="news_list">
+						<div class="title">组织人员大数据导入</div>
+						<a href="newImport.html" class="visited">新建导入任务</a>
+						<div class="btm_select"></div>
+						<a href="taskList.html" >导入任务列表</a>	
+						<a href="passwordImport.html" >密码导出</a>	
+						<div class="title">软件升级</div>	
+						<a href="softwareDevelop.html" >软件升级列表</a>							
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cont_right rel">
+			<i class="sprite left_icon top52"></i>
+			<p class="important_title">新建导入任务</p>
+			<p class="item_name">
+						<label class="name">文件名称：</label>
+						<input type="text">
+						<label class="import-lable">选择文件</label><input type="file" value="" class="import-file" style="filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);">
+			</p>
+			<p class="item_name describe">
+						<label class="name">备注：</label>
+						<textarea></textarea>
+			</p>
+			<button class="import_btn btn" type="submit">提交</button>
+			<button class="import_btn btn">取消</button>
+		</div>
+	</div>
+</body>
+</html>

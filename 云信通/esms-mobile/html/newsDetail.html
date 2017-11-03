@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>新闻详情页</title>
+	 <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no">
+	<link type="text/css" rel="stylesheet" href="../css/newsDetail.css"/>
+	<style>
+		body{display:none;}
+	</style>
+   <script>
+	$(function(){
+		var deviceWidth = document.documentElement.clientWidth;
+		if(deviceWidth > 640) deviceWidth = 640;
+		document.documentElement.style.fontSize = deviceWidth / 6.4 + 'px';	
+$("body").show();		
+	});
+  
+    
+</script>
+</head>
+<body>
+	<div class="message_info">
+		<div class="message_left">
+			<p class="title">中秋节放假通知中秋节放假通知中</p>
+			<p class="messageform"><span>来自张三</span>&nbsp;&nbsp;<span>2015-08-05 14:34</span>&nbsp;&nbsp;<span>100</span>阅读</p>
+		</div>
+		
+	</div>
+	
+	<!--中间内容部分开始-->
+	<div class="content">
+		<!--图文混排开始-->
+		<div class="con_text_img">
+			根据国务院办公厅通知精神，现将2015年中秋节、国庆节放假安排通知如下：
+
+　　			中秋节：9月26日（周六）、9月27日(星期日)放假，共2天。9月28日（周一）上班。
+　　
+			国庆节：10月1日(星期四)至10月7日(星期三)放假调休，共7天。10月8日（周四）上班。10月10日(星期六)上班。
+			<img src="../images/date.png" class="date" border="0">
+		</div>
+		<!--图文混排结束-->
+		
+		<!--图片列表开始-->
+		<ul class="con_img">
+			<li class=""><a href="#"><img src="../images/img1.png" width="100%" border="0"></a></li>
+			<li class=""><a href="#"><img src="../images/1.png" width="100%"></a></li>
+			<li class=""><a href="#"><img src="../images/2.png" width="100%"></a></li>
+			<li class=""><a href="#"><img src="../images/4.png" width="100%"></a></li>
+			<li class=""><a href="#"><img src="../images/img1.png" width="100%"></a></li>
+			<li class=""><a href="#"><img src="../images/img1.png" width="100%"></a></li>
+			<li class=""><a href="#"><img src="../images/img1.png" width="100%"></a></li>
+			<li class=""><a href="#"><img src="../images/img1.png" width="100%"></a></li>
+			<li class=""><a href="#"><img src="../images/img1.png" width="100%"></a></li>
+			<li class=""><a href="#"><img src="../images/img1.png" width="100%"></a></li>
+			<li class=""><a href="#"><img src="../images/img1.png" width="100%"></a></li>
+			<li class=""><a href="#"><img src="../images/img1.png" width="100%"></a></li>
+			<li class=""><a href="#"><img src="../images/img1.png" width="100%"></a></li>
+			<li class=""><a href="#"><img src="../images/img1.png" width="100%"></a></li>
+		</ul>
+		<!--图片列表结束-->
+		
+		<!--清除浮动的空标签-->
+		<div class="space"></div>
+		
+	</div>
+	<!--中间内容部分结束-->
+	
+	<!--底部开始-->
+	<ul class="bottom">
+		<li class="reply">
+			<a href="commentList.html"><img src="../images/reply.png"/>&nbsp;&nbsp;评论&nbsp;&nbsp;<span>3</span></a>
+		</li>	
+		<li class="praise">
+			<a href="#"><img src="../images/praise.png"/>&nbsp;&nbsp;赞&nbsp;&nbsp;<span>4</span></a>
+		</li>
+
+	</ul>
+	<!--底部结束-->
+</body>
+</html>

@@ -1,0 +1,195 @@
+﻿.vote-title{
+	width: 800px;
+    height: 64px;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.vote-title textarea{
+	width: 595px;
+	padding-left:5px;
+    height: 52px;
+	line-height:24px;
+    border: 1px solid #ccc;
+    float: left;
+	outline:none;
+	resize:none
+}
+.vote-error-tip{
+	color: red;
+    display: inline-block;
+    float: left;
+	margin-left:20px;
+	margin-top:10px;
+}
+.option{
+	width:800px;
+	min-height:184px;
+}
+.option-list{
+	width: 600px;
+    min-height: 184px;
+    margin-left: 30px;
+	border: 1px solid #eee;
+	float:left
+}
+.option-list p.title{
+	padding-left:10px;
+	height:40px;
+	line-height:40px;
+}
+.input-list .num{
+	float: left;
+    display: inline-block;
+    margin-left: 10px;
+    line-height: 26px;
+	clear: both;
+	width: 30px;
+}
+.option-list .input-list .default-option{
+	display:block;
+	margin-left:8px;
+	height:24px;
+	line-height:24px;
+	width:500px;
+	margin-bottom:10px;
+	border:1px solid #cfcfcf;
+}
+
+.option-list .input-list .option-append{
+	display:inline-block;
+	height:24px;
+	line-height:24px;
+	width:500px;
+	margin-bottom:10px;
+	border:1px solid #cfcfcf;
+	float:left;
+}
+.option-list .input-list span{
+	display:inline-block;
+	float:left;
+	margin-left:20px;
+	height:24px;
+	line-height:24px;
+	cursor: pointer;
+	color: #3D83E9;
+}
+.option-list .add-option{
+	display: block;
+    clear: both;
+    margin-left: 10px;
+    color: #3D83E9;
+	margin-bottom:20px;
+	width: 50px;
+}
+.selectPerson {
+    width: 1000px;
+    min-height: 30px;
+    margin-left: 30px;
+    margin-top: 10px;
+    display: inline-block;
+}
+.select-range-inner{
+	width:592px;
+	float:left;
+}
+.vote-type,.vote-set,.dead-line{
+	width:800px;
+	height:44px;
+	margin-left: 30px;
+    margin-top: 10px;
+}
+.vote-set div input,.vote-type  div input{
+	vertical-align: middle;
+    margin-top: -2px;
+    margin-right: 5px;
+}
+.dead-line{
+	margin-bottom: 40px;
+}
+.vote-type div,.vote-set div,.dead-line div{
+	width:595px;
+	padding-left:5px;
+	height:44px;
+	line-height:44px;
+	float:left;
+	border: 1px solid #ddd;
+}
+.vote-type div .vote-type-title,.vote-set div .vote-set-title{
+	display:inline-block;
+	margin-right:20px;
+}
+
+.vote-type div .seprate,.vote-set  div .seprate{
+	margin-right:70px;
+}
+.dead-line div{
+	position:relative;
+}
+.dead-line div .endTime{
+	margin-left:20px;
+}
+.endTimes_img{
+	position:absolute;
+	top:13px;
+	left:220px;
+}
+.published{
+	margin-top:30px;
+}
+.vote-result{
+	min-height:60px;
+	margin-top:15px;
+}
+.vote-result .vote-bar{
+	height:24px;
+	width:680px;
+	border:1px solid #ddd;
+	margin-bottom:10px;
+	position: relative;
+	cursor: pointer;
+}
+.vote-bar .bg-color{
+    height: 24px;
+    background: #00CCFF;
+    display: inline-block;
+    line-height: 24px;
+}
+.vote-bar  .vote-percent{
+	display: inline-block;
+    float: right;
+    position: absolute;
+    top: 4px;
+    right: 8px;
+}
+.bg-color i{
+	position: absolute;
+    left: 0;
+}
+.bottom .vote-info{
+	float: left;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 10px;
+    position: relative;
+    cursor: pointer;
+    margin-left: 30px;
+}
+.share-group-countman .fenye{
+	margin-right:0!important;
+}
+.tip-position{
+	left:155px;
+	top:27px;
+}
+.option-text{
+	display: inline-block;
+    float: left;
+    position: absolute;
+    top: 4px;
+    left: 10px;
+}
+.vote-error-tip label{color:red;}
+.vote-xx label{display:inline-block}
+.vote-xx{color: red;
+    display: inline-block;
+    float: left;}

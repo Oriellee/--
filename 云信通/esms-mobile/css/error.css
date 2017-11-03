@@ -1,0 +1,16 @@
+html{font-size:1rem;}
+body{max-width:640px;min-width:320px;width:100%;margin:0 auto;font-family:"Î¢ÈíÑÅºÚ";padding-bottom:0.2rem;
+background: -webkit-gradient(linear, 0 0, 0 100%, from(#D2EBEF), to(#D2EBEF)) no-repeat}
+p{margin-top:1.35rem;text-align:center;width:100%;color:#676565}
+@media screen and (min-width: 400px) {
+	p{font-size:18px;}
+}
+
+
+@media screen and (min-width:321px) and (max-width:400px){
+	p{font-size:15px;}
+}
+
+@media screen and (max-width:321px){
+	p{font-size:14px;}
+}

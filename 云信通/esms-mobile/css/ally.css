@@ -1,0 +1,46 @@
+html,body,div,span,ul,li,p,img,input,button{margin:0;padding:0;font-family:"微软雅黑";}
+a{text-decoration:none;}
+li{list-style-type:none}
+html{font-size:1rem;}
+body{max-width:640px;min-width:320px;width:100%;margin:0 auto;padding-bottom:0.2rem;background: #fafafa;}
+.allyPicInt{background:#fff;text-align: center;padding-top: 0.1rem;border-bottom: 1px solid #ddd;}
+.nameInt{margin-top: 0.2rem;line-height: 0.24rem;}
+.nameInt .name{margin-right: 0.1rem;}
+.companyInt{color: #999;padding-bottom: 0.16rem;margin-top: 0.06rem;}
+.picInt img{max-width: 100%;}
+.detailInt{background:#fff;margin-top: 0.1rem;border-top: 1px solid #ddd; padding-top: 0.1rem;padding-bottom: 0.1rem;border-bottom: 1px dashed #ddd;padding-left: 0.24rem;}
+.detailInt p,.assistantInt p{height:0.5rem;line-height:0.5rem;color:#4A4747}
+.assistantInt{border-bottom:1px solid #ddd;padding-left: 0.24rem;background:#fff;padding-bottom: 0.1rem;padding-top: 0.1rem;}
+.intrduceDetail{padding:0.2rem;}
+.intrduceDetail .line{height: 0.3rem;margin-left:0.13rem;border-left: 3px solid #36c2f7;}
+.intrduceDetail p img{padding: 0.1rem 0.1rem 0.1rem 0;vertical-align: middle;}
+.perIntrduce{border-left: 3px solid #36c2f7;margin-left: 0.13rem;line-height: 0.5rem;padding: 0.1rem 0 0.3rem 0.2rem;color: #6D6A6A}
+@media screen and (min-width: 400px) {
+	body{font-size:20px;}
+	.nameInt .name{font-size:20px}
+	.nameInt .post{font-size:16px}
+	.companyInt{font-size:16px;}
+	.detailInt p,.assistantInt p{font-size:18px;}
+	.intrduceDetail p  span{font-size:20px;}
+	.perIntrduce{font-size: 18px;}
+}
+
+@media screen and (min-width:321px) and (max-width:400px){
+	body{font-size:18px;}
+   .nameInt .name{font-size:18px}
+   .nameInt .post{font-size:15px}
+   .companyInt{font-size:15px;}
+   .detailInt p,.assistantInt p{font-size:17px;}
+   .intrduceDetail p  span{font-size:19px;}
+   .perIntrduce{font-size: 17px;}
+}
+
+@media screen and (max-width:321px){
+	body{font-size:16px;}
+  .nameInt .name{font-size:16px}
+  .nameInt .post{font-size:14px}
+  .companyInt{font-size:14px;}
+  .detailInt p,.assistantInt p{font-size:16px;}
+  .intrduceDetail p  span{font-size:18px;}
+  .perIntrduce{font-size: 16px;}
+}

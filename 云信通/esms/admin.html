@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>管理员</title>
+	<link rel="stylesheet" href="css/main.css"/>
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body class="admin">
+<div class="header">
+		<div class="logo">
+			<a href=""><img src="images/logo.png" class="fl"/></a>
+		</div>
+		<div class="user_info">
+			<i class="sprite people"></i>
+			<span class="fl">账号：liuyingjie</span>
+			<a href="" class="back">退出</a>
+		</div>
+	</div>
+	<div class="container organization">
+		<div class="cont_left">
+			<div class="navigation_left h100 fl">
+				<ul>
+					<li><a href="Organization.html" class=""><i class="sprite orangise ml15"></i><span>组织结构</span></a></li>
+					<li><a href="addNews.html"><i class="sprite publish ml15"></i><span>内容发布</span></a></li>
+					<li class="visited"><a href="admin.html"><i class="sprite system ml15"></i><span>系统设置</span></a></li>
+				</ul>
+			</div>
+			<div class="navigation_right h100 fl">
+				<div class="data_info">
+					<div class="news_list">
+						<a href="systemInfo.html" >企业信息</a>		
+						<a href="setSafety.html" >设备与安全</a>
+						<a href="rankSet.html">职级设置</a>
+						<a href="authorityManage.html">权限管理</a>						
+						<a href="safetyCe.html">日志管理</a>
+						<a href="pwdSafety.html" >修改密码</a>
+						<a href="admin.html" class="visited" >管理员</a>
+						<div class="btm_select"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cont_right rel">
+			<i class="sprite left_icon top12"></i>
+			<div class="navigation_search">
+				<div class="search_left fl">
+					<div class="fl mt15 ml14 mr5 pr">
+						<a href="javascript:;" class="btn default btnAddAdmin">添加管理员</a>
+					</div>
+				</div>
+			</div>
+			<div class="table_list">
+				<table>
+					<tbody>
+						<tr class="odd">
+							<th>姓名</th>
+							<th>账号</th>
+							<th>分机号</th>
+							<th>权限</th>
+							<th>操作</th>
+						</tr>
+						<tr>
+							<td>李伟</td>
+							<td>13688888888</td>
+							<td>1211</td>
+							<td>组织结构</td>
+							<td><a href="">编辑</a>&nbsp;&nbsp;|<a href="">删除</a><br/></td>
+						</tr>
+						<tr>
+							<td>李伟</td>
+							<td>13688888888</td>
+							<td>1211</td>
+							<td>组织结构</td>
+							<td><a href="">编辑</a>&nbsp;&nbsp;|<a href="">删除</a><br/></td>
+						</tr>
+						<tr>
+							<td>李伟</td>
+							<td>13688888888</td>
+							<td>1211</td>
+							<td>组织结构</td>
+							<td><a href="">编辑</a>&nbsp;&nbsp;|<a href="">删除</a><br/></td>
+						</tr>
+						<tr>
+							<td>李伟</td>
+							<td>13688888888</td>
+							<td>1211</td>
+							<td>组织结构</td>
+							<td><a href="">编辑</a>&nbsp;&nbsp;|<a href="">删除</a><br/></td>
+						</tr>
+						<tr>
+							<td>李伟</td>
+							<td>13688888888</td>
+							<td>1211</td>
+							<td>组织结构</td>
+							<td><a href="">编辑</a>&nbsp;&nbsp;|<a href="">删除</a><br/></td>
+						</tr>
+						<tr>
+							<td>李伟</td>
+							<td>13688888888</td>
+							<td>1211</td>
+							<td>组织结构</td>
+							<td><a href="">编辑</a>&nbsp;&nbsp;|<a href="">删除</a><br/></td>
+						</tr>
+						<tr>
+							<td>李伟</td>
+							<td>13688888888</td>
+							<td>1211</td>
+							<td>组织结构</td>
+							<td><a href="">编辑</a>&nbsp;&nbsp;|<a href="">删除</a><br/></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="pagination">
+				<div class="pagination_left fl">显示1-6条/共6条</div>
+				<div class="pagination_right fr">
+					<a href="javascript:;" class="btn default fl ">上一页</a>
+					<ul class="page fl">
+						<li><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="" class="current">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">5</a></li>
+					</ul>
+					<a href="javascript:;" class="btn default fl">下一页</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="confirm" style="display:none">
+		<div class="conf_header">
+			<a href='javascript:;' class='btnClose close'><i class='sprite'></i></a>
+		</div>
+		<div class="conf_conter fl" style="line-height:0px;text-align:left">
+			<div class="fl w70 mt40 ">
+				<div class="fl mr15"><input type="checkbox" name="" class="fl mr5"/>组织架构</div>
+				<div class="fl"><input type="checkbox" name="" class="fl mr5"/>内容发布</div>
+			</div>
+			<div class="fl w70 mt20">
+				目标:
+				<select>
+					<option>请输入账号关键字</option>
+					<option>请输入账号关键字</option>
+				</select>
+			</div>
+		</div>
+		<div class="conf_footer fl">
+			<a href="javascript:;" class="btn default fl btnOk btnAdmin">添加</a>
+		</div>
+	</div>
+</body>
+</html>

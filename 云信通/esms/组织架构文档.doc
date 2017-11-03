@@ -1,0 +1,10 @@
+				组织架构文档
+cofirm.js使用规则
+	目前一共3个方法:delete,edit,updatePwd,每个方法中都有参数msg,和回调函数,组织架构的一些弹窗都封装在这个js中,参数对应的是显示的数据,回调函数返回的值是true和false。对应的是true和false,也就是确定和取消按钮
+
+tree.js使用规则
+	目前树形的数据是为了测试用的,js存放在tree.js中,需求上面的功能现在已经可以实现了,包括折叠和拖拽
+
+组织架构目前需要的js分别写在main.js,tree.js,confirm.js  每个文件夹存放都是相对应的模块
+
+	

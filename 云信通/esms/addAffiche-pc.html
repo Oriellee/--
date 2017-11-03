@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新建公告-pc</title>
+	<link rel="stylesheet" href="css/addNotice-pc.css"/>
+	<script type="text/javascript" charset="utf-8" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/addNotice-pc.js"></script>
+	<script type="text/javascript" src="js/placeholder.js"></script>	
+	 <link rel="stylesheet" href="js/zTree/css/zTreeStyle/zTreeStyle.css" type="text/css">
+	 <link rel="stylesheet" href="js/mCustomScrollbar/jquery.mCustomScrollbar.css" type="text/css">
+    <link rel="stylesheet" href="js/mCustomScrollbar/jquery.mCustomScrollbarReset.css" type="text/css">
+    <script type="text/javascript" src="js/mCustomScrollbar/jquery.mCustomScrollbar.js"></script>
+    <link rel="stylesheet" href="css/ztree_reset.css" type="text/css">
+    <script type="text/javascript" src="js/zTree/js/jquery.ztree.core-3.5.js"></script>
+    <script type="text/javascript" src="js/zTree/js/jquery.ztree.excheck-3.5.js"></script>
+    
+    <script type="text/javascript">
+		var setting = {
+			view: {
+				showLine: false,
+				showIcon: showIconForTree,
+				addDiyDom: addDiyDom
+			},
+			check: {
+				enable: true
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			},
+			callback : {
+				onClick : onClick
+			}
+		};
+		
+		var zNodes =[
+			{ id:1, pId:0, name:"父节点1 - 展开", open:true, isParent:true},
+			{ id:11, pId:1, name:"父节点11 - 展开", open:true, isParent:true},
+			{ id:111, pId:11, name:"叶子节点111/总统", icon:"./images/user1.png"},
+			{ id:112, pId:11, name:"叶子节点112/总理", icon:"./images/user2.png"},
+			{ id:113, pId:11, name:"叶子节点113/总监", icon:"./images/user3.png", isParent:true},
+			{ id:1234, pId:113, name:"测试节点/测试"},
+			{ id:12, pId:1, name:"父节点12 - 折叠", isParent:true},
+			{ id:121, pId:12, name:"叶子节点121/总监"},
+			{ id:122, pId:12, name:"叶子节点122/经理"},
+			{ id:13, pId:1, name:"父节点13 - 没有子节点", isParent:true}
+		];
+
+		var code;
+		
+		function setCheck() {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+			py = $("#py").attr("checked")? "p":"",
+			sy = $("#sy").attr("checked")? "s":"",
+			pn = $("#pn").attr("checked")? "p":"",
+			sn = $("#sn").attr("checked")? "s":"",
+			type = { "Y":py + sy, "N":pn + sn};
+			zTree.setting.check.chkboxType = type;
+			showCode('setting.check.chkboxType = { "Y" : "' + type.Y + '", "N" : "' + type.N + '" };');
+		};
+		function showCode(str) {
+			if (!code) code = $("#code");
+			code.empty();
+			code.append("<li>"+str+"</li>");
+		};
+		function showIconForTree(treeId, treeNode) {
+			return !treeNode.isParent;
+		};
+		function onClick(event, treeId, treeNode) {
+			$("#"+treeNode.tId+"_check").click();
+		}
+		function addDiyDom(treeId, treeNode) {
+			
+			//级别缩进
+			var spaceWidth = 20;
+			var switchObj = $("#" + treeNode.tId + "_switch"),
+			checkObj = $("#" + treeNode.tId + "_check"),
+			icoObj = $("#" + treeNode.tId + "_ico");
+			switchObj.remove();
+			checkObj.remove();
+			icoObj.before(switchObj);
+			icoObj.before(checkObj);
+
+			var spaceStr = "<span style='display:inline-block;width:" + (spaceWidth * treeNode.level)+ "px'></span>";
+			switchObj.before(spaceStr);
+			
+			//添加附加信息
+			var lowest=$("#" + treeNode.tId).find("span").eq(1).hasClass("noline_docu");
+			
+			if(lowest){
+				
+				var name=treeNode.name;
+				if(name.indexOf("/")!=-1){
+					var info=name.split("/");
+					$("#"+treeNode.tId+"_span").html(info[0]);
+					$("#"+treeNode.tId+"_span").append("<span class='addInfo'>"+info[1]+"</span>");
+				}
+			}
+			
+			//设置最低级别高度
+			if(switchObj.hasClass("noline_docu")){
+				switchObj.parent().height("66px");
+			}
+			
+		}
+		function rangeSearch(){
+
+			var keyword=$.trim($("#rangeSearch").val());
+			if(keyword==""){
+				//var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+				//zTree.destroy();
+				$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+			}else{
+				
+				//前台检索数据
+				/*var searchData=[];
+				$.each(zNodes,function(k,v){
+					if(v.name.indexOf(keyword)!=-1){
+						if(v.isParent){
+							return true;
+						}
+						searchData.push(v);
+					}
+				});
+				$.fn.zTree.init($("#treeDemo"), setting, searchData);*/
+				//后台检索数据
+				var data = {
+					keyword:keyword
+				};
+				$.ajax({
+					type:"POST",
+					data:data,
+					dataType:"json",
+					url:"./test.php",
+					success:function(data){
+						$.fn.zTree.init($("#treeDemo"), setting, data);
+					}
+				});
+				
+			}
+			
+			
+		}
+
+
+		$(document).ready(function(){
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+			
+			setCheck();
+			$("#py").bind("change", setCheck);
+			$("#sy").bind("change", setCheck);
+			$("#pn").bind("change", setCheck);
+			$("#sn").bind("change", setCheck);
+			
+			//发送范围弹框搜索
+			$("#rangeSearch").keyup(rangeSearch);
+			
+			//发送范围弹框滚动条
+			$(".range_dialog_main").mCustomScrollbar({
+				axis:"yx",
+				theme:"3d-thick"
+			});
+			
+		});
+
+	</script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="item-bar">
+			<span class="span-title">公告标题：</span>
+			<input class="text" placeholder="请填写标题"/>
+		</div>				
+		<div class="text-content">
+			<p class="con-tit">公告内容：</p>
+			<!--富文本编辑器开始-->
+				<div class="content">
+				<textarea></textarea>
+				<!--图片附件-->
+				<div class="tp-accessory">
+					<p class="add_accessory"><a href="javascript:;">添加图片 </a><input type="file" class="sel-file2"><span>支持jpg、jpeg、png、gif5M以内</span></p>
+					<div class="pImgUload"><img src="images/pImg.png"><div class="del">×</div></div>
+					<div class="pImgUload"><img src="images/pImg.png"><div class="del">×</div></div>
+					<div class="pImgUload"><img src="images/pImg.png"><div class="del">×</div></div>
+					<div class="pImgUload"><img src="images/pImg.png"><div class="del">×</div></div>
+					<div class="pImgUload"><img src="images/pImg.png"><div class="del">×</div></div>
+					<p class="file_total">共添加了<span>3</span>张图片，总大小<span>123</span>MB最多5张照片 <span class="del_all">全部删除</span></p>
+				</div>
+				<!--文件附件-->
+				<div class="wj-accessory">
+					<p class="add_accessory"><a href="javascript:;">添加文件 </a><input type="file" class="sel-file2"><span>支持doc、pdf、xls、ppt、zip类型文件&nbsp;&nbsp;20M以内</span></p>
+					<ul class="file-list">
+						<li class="file-name">
+							<img src="images/doc.gif">
+							<a href="javascript:;" class="link-a">13675936_105344041000_2.png（486KB）</a><a href="javascript:;" class="file-remove-l">×</a>
+						</li>
+						<li class="file-name">
+							<img src="images/ppt.gif">
+							<a href="javascript:;" class="link-a">13675936_105344041000_2.png（486KB）</a><a href="javascript:;" class="file-remove-l">×</a>
+						</li>
+						<li class="file-name">
+							<img src="images/ppt.gif">
+							<a href="javascript:;" class="link-a">13675936_105344041000_2.png（486KB）</a><a href="javascript:;" class="file-remove-l">×</a>
+						</li>
+					</ul>
+					<p class="file_total">共添加了<span>3</span>张图片，总大小<span>123</span>MB最多5张照片 <span class="del_all">全部删除</span></p>
+			</div>
+			<p class="fj-p">
+				<img src="images/tp.png" class="tp"/>
+				 <input type="file" class="sel-file">
+				<img src="images/fj.png"/>
+				<input type="file" class="sel-file2">
+			</p>
+			</div>
+			<!--富文本编辑器结束-->
+			
+		</div>
+		<div class="item-bar">
+			<span class="span-title">发送范围：</span>
+			<img src="images/addIcon.png" class="addIcon"/>
+		</div>
+		<div class="item-bar">
+				<div class="checkboxFive">
+				<input type="checkbox" value="1" id="checkboxFiveInput2" name="" />
+				<label for="checkboxFiveInput2"></label>
+			</div>	
+			<span class="spanTxt">允许点赞</span>
+		</div>
+		<div class="bottom Top">
+			<a href="javascript:;" class="publish">发布</a>
+			<a href="javascript:;" class="save">保存</a>
+		</div>	
+	</div>
+	<div class="range-dialog">
+    	<div class="range_dialog_head">
+    		<div class="range_search">
+            	<img src="images/range_search.png" class="range_search">
+                <input id="rangeSearch" type="text" placeholder="姓名 职位 手机号">
+                <img src="images/clean_input.png" class="clean_input">
+            </div>
+    	</div>
+        <div class="range_dialog_main">
+
+            <div class="zTreeOut">
+                <ul id="treeDemo" class="ztree"></ul>
+            </div>
+
+        </div>
+        <div class="range_dialog_foot">
+        	<a href="javascript:;" class="confirm">确定</a>
+        	<a href="javascript:;" class="cancel">取消</a>
+        </div>
+	</div>
+	<div class="cover">
+		
+	</div>
+</body>
+</html>

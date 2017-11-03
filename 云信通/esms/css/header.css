@@ -1,0 +1,110 @@
+.header{
+	width:100%;
+	height:90px;
+}
+.logo{width: 500px;height: 50px;line-height: 50px;float: left;margin-left: 39px;}
+.logo .big{font-size: 30px;display: inline-block;margin-right: 10px;}
+.logo .small{font-size: 14px;}
+.top{margin-top:18px;}
+.white span{color:#fff}
+.blue span{color: #4acee1}
+.header .user_info{
+	height:35px;
+	float: right;
+	color:#ffffff;
+	font-size: 14px;
+	background-color: #4cc1d2;
+}
+.sprite{
+	background: url(../images/sprite.png);
+	margin-top: 5px;
+}
+.sprite2{
+	background: url(../images/technical_wrench.png);
+	margin-top: 5px;
+}
+.sprite3{
+	background: url(../images/fwck.png) no-repeat;
+	margin-top: 5px;
+}
+.sprite4{
+	background: url(../images/app.png) no-repeat;
+	margin-top: 5px;
+}
+.sprite5 {
+    background: url(../images/telQuery.png) ;
+	background-position:0 0!important;
+    margin-top: 5px;
+}
+.sprite6 {
+    background: url(../images/countAnisy.png) ;
+	background-position:0 0!important;
+    margin-top: 5px;
+}
+.sprite7 {
+    background: url(../images/setSafety.png);
+    background-position: 0 0!important;
+    margin-top: 5px;
+}
+.visited .sprite2{
+	background: url(../images/technical_wrench1.png);
+	margin-top: 5px;
+}
+.visited .sprite3{
+	background: url(../images/fwck_act.png) no-repeat;
+	margin-top: 5px;
+}
+.visited .sprite4{
+	background: url(../images/app-active.png) no-repeat;
+	margin-top: 5px;
+}
+.visited .sprite5{
+	background: url(../images/telQuery-act.png) no-repeat;
+	margin-top: 5px;
+}
+.visited .sprite6{
+	background: url(../images/countAnisy-act.png) no-repeat;
+	margin-top: 5px;
+}
+.visited .sprite7 {
+    background: url(../images/setSafety-act.png);
+    background-position: 0 0!important;
+    margin-top: 5px;
+}
+
+.user_info .people{
+	width:30px;
+	height:30px;
+	display: block;
+	margin-top: -2px;
+	margin-left: 10px;
+	float: left;
+	background-position: 0px 5px;
+}
+.user_info span{
+    margin-right: 20px;
+	margin-left: 5px;
+	margin-top: 8px;
+	color:#ffffff;
+}
+.user_info a{
+	color: #ffffff;
+	float: right;
+	margin-right: 10px;
+	margin-top: 8px;
+}
+.logo img{
+	margin-left: 25px;
+	margin-top: 18px;
+}
+.container{
+	min-width: 1200px;
+	position: relative;
+	border-bottom: 1px solid #999;
+	border-right: 1px solid #999;
+	margin-right: 10px;
+	border-top: 1px solid #999;
+	min-height:1000px;
+}
+
+

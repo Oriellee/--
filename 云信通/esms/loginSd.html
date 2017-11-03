@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>企业登陆</title>
+	<link rel="stylesheet" href="css/main.css"/>
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<style type="text/css">
+		.register{background-color: #172853;}
+		.reg_cont_logo{font-size:24px;}
+		.default {background-color: #feba4d;}
+		.reg_cont .reg_cont_form{height:300px;}
+		.loginbg{background:url("images/loginbg.png");height: 740px;width: 100%;}
+		.reg_cont .reg_cont_logo{margin:0 auto;padding:35px 0;}
+		.reg_cont_foot .banquan{display: inline-block;height: 80px;line-height: 80px;font-size: 20px;margin-left: 10px;}
+		.btn:hover{background:#feba4d}
+		.reg_group .reg_control{height:35px;line-height:35px;}
+		.appLoad{width: 80px;height: 25px;border-style: none;background: #4ACEE1;color: #fff;margin-top: 20px!important; border-radius: 4px;display: inline-block;
+		line-height: 25px;text-align: center;}
+	</style>
+</head>
+<body class="bgColor">
+	<div class="header register">
+		<div class="logo">
+			<a href=""><img src="images/sd-login.png" class="fl"/></a>
+		</div>
+	</div>
+  <div class="loginbg">
+	<div class="reg_cont">
+		<div class="reg_cont_logo">单 位 登 录</div>
+		<div class="reg_cont_form">
+			<form class="reg_form">
+				<!--错误提示框-->
+				<div class="error-tip">
+					用户名或密码错误！
+				</div>
+				<div class="reg_group">
+					<label class="reg_label">帐号：</label>
+					<input type="text" class="reg_control username"/>
+					<span class="help_line">用户名不能为空</span>
+				</div>
+				<div class="reg_group">
+					<label class="reg_label">密码：</label>
+					<input type="text" class="reg_control password"/>
+					<span class="help_line">密码不能为空</span>
+				</div>
+				<div class="reg_group mt20">
+					<label class="reg_label"></label>
+					<button type="button" class="reg_control btn default border0 btn_login" style="width:462px;">登录</button>
+					<br/>
+					<br/>
+					<label class="reg_label"></label>
+					<a class="appLoad" href="#">应用程序下载</a>
+					<a href="" style="text-decoration: underline;float: right;margin-top: 27px;margin-right: 42px;">忘记密码</a>
+				</div>
+			</form>
+		</div>
+		<div class="reg_cont_foot">
+			<p>
+				<span style="display: inline-block;float: left;"><img src="images/logojh.png"/></span>
+				<span class="banquan">山东省公安厅</span>
+			</p>
+		</div>
+	</div>
+  </div>
+</body>
+</html>

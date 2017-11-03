@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>错误信息提示页面</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no">
+    <link type="text/css" rel="stylesheet" href="../css/error.css"/>
+    <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+	<script>
+	$(function(){
+		var deviceWidth = document.documentElement.clientWidth;
+		var deviceHeight = document.documentElement.clientHeight-100;
+		$("body").height(deviceHeight) ;
+		if(deviceWidth > 640) deviceWidth = 640;
+		document.documentElement.style.fontSize = deviceWidth / 6.4 + 'px';
+	});
+	</script>
+  </head>
+  
+  <body>
+   <p>服务器断开无法连接！</p>
+  </body>
+</html>

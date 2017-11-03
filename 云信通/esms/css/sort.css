@@ -1,0 +1,23 @@
+.item-box{height:60px;}
+.item-box ul{float:left;width:320px;height: 20px;margin-left: 80px;margin-top:30px;}
+.item-box ul li{float:left;width: 60px;height: 20px;line-height: 20px;margin-right:1px;}
+.item-box ul li a{display: inline-block;width: 60px;height: 22px;line-height: 22px;text-align: center;background:#ddd;}
+.item-box ul li .active{background:#4ACEE1;color:#fff;}
+.item-box .radio-item{float:left;margin-top:30px;}
+.item-box .radio-item input{margin-left:70px;vertical-align: middle;margin-top: -2px;margin-right: 5px;}
+.item-sel{margin-top:20px;}
+.item-sel .num{width: 120px;height: 25px;margin-left: 80px;}
+.item-sel .date-month{width: 120px;height: 25px;margin-left:60px;}
+.item-sel .date-week{width: 140px;height: 25px;margin-left:60px;}
+.item-sel .date-day{display:inline-block;margin-left:60px;}
+.item-sel .deptName{width:120px;height:21px;margin-left:50px;}
+.item-sel  .btn-item{color: #ffffff;padding: 0px 15px;height: 25px;line-height: 25px;text-decoration: none;width:30px;display: inline-block;background: #4ACEE1;text-align: center;margin-left:50px;}
+.item-sel  .date-week,.item-sel .date-day{display:none;}
+
+.cont_right .left{width:28%;float:left;}
+.ztree{border: 1px solid #ddd;margin-left: 20px!important;;}
+.cont_right .right{float:left;width:70%;}
+.cont_right .left p{text-align: center;font-weight: bold;margin-top: 30px;margin-bottom: 10px;}
+.left .name-input{width: 150px;height: 20px;line-height: 20px;margin-left: 20px;margin-bottom: 10px;}
+.left .btn-search{color: #ffffff;padding: 0px 15px;height: 22px;line-height: 22px;text-decoration: none;width: 30px;display: inline-block;background: #4ACEE1;text-align: center;margin-left: 50px;}
+.channelSel{width:200px;margin:20px 40px 0;height:24px;}

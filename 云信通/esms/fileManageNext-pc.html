@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文件管理</title>
+	<link rel="stylesheet" href="css/file-pc.css"/>
+	<script type="text/javascript" charset="utf-8" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/My97DatePicker/WdatePicker.js"></script>
+	<script type="text/javascript" src="js/file-pc.js"></script>	
+	<!--页面滚动条样式-->
+    <link rel="stylesheet" href="js/mCustomScrollbar/jquery.mCustomScrollbar.css" type="text/css">
+    <link rel="stylesheet" href="js/mCustomScrollbar/jquery.mCustomScrollbarReset.css" type="text/css">
+    <script type="text/javascript" src="js/mCustomScrollbar/jquery.mCustomScrollbar.js"></script>	
+	<script>
+	$(document).ready(function(){
+			$(".table-wapper").mCustomScrollbar({
+				axis:"y",
+				theme:"3d-thick"
+			});
+			
+		});
+
+	</script>
+</head>
+<body>
+	<div class="wrapper">	
+		<div class="head">
+			<div class="left">
+				<span class="bule">文件管理&nbsp;&nbsp;></span>
+				<span class="bule">市场部文件</span>&nbsp;&nbsp;>
+				<span>请假单据</span>
+			</div>
+			<div class="right">
+				<a href="javascript:;"  class="xjwj">新建文件夹</a>
+				<a href="javascript:;" class="shcwj">上传</a>
+				<a href="javascript:;" class="scwj">删除</a>
+			</div>
+		</div>
+		<table class="table">
+				<thead>
+					<tr>
+						<td width="50px;">
+							<div class="checkboxFive H">
+								<input type="checkbox" value="1" id="checkboxFiveInput11">
+								<label for="checkboxFiveInput11" name="check_all"></label>
+							</div>
+						</td>
+						<td>文件名</td>
+						<td>创建人</td>
+						<td>大小</td>
+						<td>时间</td>
+						<td>操作</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<div class="checkboxFive H">
+								<input type="checkbox" value="1" id="checkboxFiveInput12" name="subBox">
+								<label for="checkboxFiveInput12"></label>
+							</div>
+						</td>
+						<td>
+							<img src="images/folder.png" class="folder"/>市场部文件
+						</td>
+						<td>管理员</td>
+						<td>3.5M</td>
+						<td>2017-4-10 12:09:11</td>	
+						<td></td>
+					</tr>
+
+					<tr>
+						<td>
+							<div class="checkboxFive H">
+								<input type="checkbox" value="1" id="checkboxFiveInput13" name="subBox">
+								<label for="checkboxFiveInput13"></label>
+							</div>
+						</td>
+						<td>
+							<img src="images/folder.png" class="folder"/>市场部文件
+						</td>
+						<td>管理员</td>
+						<td>3.5M</td>
+						<td>2017-4-10 12:09:11</td>	
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<div class="checkboxFive H">
+								<input type="checkbox" value="1" id="checkboxFiveInput14" name="subBox">
+								<label for="checkboxFiveInput14"></label>
+							</div>
+						</td>
+						<td>
+							<img src="images/docPc.png" class="folder"/>五险一金.doc
+						</td>
+						<td>管理员</td>
+						<td>3.5M</td>
+						<td>2017-4-10 12:09:11</td>	
+						<td><a href="javascript:;" class="download">下载</a></td>
+					</tr>
+					<tr>
+						<td>
+							<div class="checkboxFive H">
+								<input type="checkbox" value="1" id="checkboxFiveInput15" name="subBox">
+								<label for="checkboxFiveInput15"></label>
+							</div>
+						</td>
+						<td>
+							<img src="images/xlsxPc.png" class="folder"/>请假单据.xls
+						</td>
+						<td>管理员</td>
+						<td>3.5M</td>
+						<td>2017-4-10 12:09:11</td>	
+						<td><a href="javascript:;" class="download">下载</a></td>
+					</tr>
+				</tbody>
+			</table>
+	</div>
+	<!--先勾选要删除的文件-->
+	  <div class="deleteTip">
+		<a class="close" href="javascript:;">×</a>
+		<p>请先选择要删除的文件！</p>
+		<div class="bottom">
+			<a href="javascript:;" class="publish">确定</a>
+		</div>
+	 </div>
+	 <!--新建文件夹-->
+	 <div class="sel-dialog">
+	 <span class="title">新建文件夹</span>
+		<a class="close" href="javascript:;">×</a>
+		<p>文件夹名称</p>
+		<input type="text" />
+		<div class="bottom2">
+			<a href="javascript:;" class="publish">确定</a>
+			<a href="javascript:;" class="save">取消</a>
+		</div>
+	 </div>
+	 <!--删除所选文件-->
+	 <div class="deleteFile">
+		<span class="title">删除文件夹</span>
+		<a class="close" href="javascript:;">×</a>
+		<p>您确定要删除所选文夹及里面的文件吗？</p>
+		<div class="bottom2">
+			<a href="javascript:;" class="publish">确定</a>
+			<a href="javascript:;" class="save">取消</a>
+		</div>
+	 </div>
+	 
+	 <!--上传文件-->
+	 <div class="upload">
+		<span class="title">文件上传</span>
+		<a class="close" href="javascript:;">×</a>
+		<label>添加文件</label>
+		<input type="file" class="up-load"/>
+		<div class="table-wapper">
+			<table class="table-file">
+				<thead>
+					<tr>
+						<td>文件名</td>
+						<td>大小</td>
+						<td>状态</td>
+						<td>操作</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>试用手册.doc</td>
+						<td>10M</td>
+						<td>100%</td>
+						<td><a href="javascript:;">删除</a></td>
+					</tr>
+					<tr>
+						<td>试用手册.doc</td>
+						<td>10M</td>
+						<td>100%</td>
+						<td><a href="javascript:;" class="disable">删除</a></td>
+					</tr>
+					<tr>
+						<td>试用手册.doc</td>
+						<td>10M</td>
+						<td>100%</td>
+						<td><a href="javascript:;" class="disable">删除</a></td>
+					</tr>
+					<tr>
+						<td>试用手册.doc</td>
+						<td>10M</td>
+						<td>100%</td>
+						<td><a href="javascript:;" class="disable">删除</a></td>
+					</tr>
+					<tr>
+						<td>试用手册.doc</td>
+						<td>10M</td>
+						<td>100%</td>
+						<td><a href="javascript:;" class="disable">删除</a></td>
+					</tr><tr>
+						<td>试用手册.doc</td>
+						<td>10M</td>
+						<td>100%</td>
+						<td><a href="javascript:;" class="disable">删除</a></td>
+					</tr><tr>
+						<td>试用手册.doc</td>
+						<td>10M</td>
+						<td>100%</td>
+						<td><a href="javascript:;" class="disable">删除</a></td>
+					</tr><tr>
+						<td>试用手册.doc</td>
+						<td>10M</td>
+						<td>100%</td>
+						<td><a href="javascript:;" class="disable">删除</a></td>
+					</tr><tr>
+						<td>试用手册.doc</td>
+						<td>10M</td>
+						<td>100%</td>
+						<td><a href="javascript:;" class="disable">删除</a></td>
+					</tr>
+					<tr>
+						<td>试用手册.doc</td>
+						<td>10M</td>
+						<td>100%</td>
+						<td><a href="javascript:;" class="disable">删除</a></td>
+					</tr>
+				</tbody>
+			</table>	
+		</div>
+			<a href="javascript:;" class="sc">上传</a>
+			<a href="javascript:;" class="qx">取消</a>
+			<p class="sucess">文件上传成功</p>
+	 </div>
+	  <div class="cover"></div>
+</body>
+</html>

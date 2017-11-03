@@ -1,0 +1,65 @@
+html,body,div,span,ul,li,p,img,input{margin:0;padding:0;}
+a{text-decoration:none;}
+li{list-style-type:none}
+body{max-width:640px;min-width:320px;width:100%;margin:0 auto;font-family:"微软雅黑";padding-bottom:0.2rem;}
+.head{max-width: 640px;min-width: 320px;width:5.8rem;min-height:0.76rem;background:#fafafa;position:fixed;z-index:100;padding:0.1rem 0.3rem;color:#3E3B3B;
+border-bottom: 1px solid #d8d8d8;}
+.head p{line-height:0.4rem;}
+.readInfoList{width:100%;height:auto;}
+.readInfoList ul{width:100%;min-height:1.8rem;}
+.readInfoList ul li{height: 0.9rem;text-align: center;padding-top: 0.21rem;color: #737373;border-bottom: 1px solid #d8d8d8;}
+.person-img{border-radius:50%;width:0.7rem;height:0.7rem;display: inline-block;float: left;margin-left:0.2rem;}
+.name-dept{display:inline-block;float: left;margin-left: 0.2rem;width: 3.8rem;text-align: left;}
+.name-dept-readed{display:inline-block;float: left;margin-left: 0.2rem;width:4.15rem;text-align: left;}
+.name-dept .name,.name-dept-readed .name{height: 0.35rem;line-height: 0.35rem;}
+.name-dept  .dept,.name-dept-readed .dept{height: 0.4rem;line-height: 0.45rem;width: 3.7rem;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+.phone,.operate{display:inline-block;float:right;height:0.7rem;line-height:0.9rem;background: #fff;border-style: none;width: 0.7rem;outline:none;}
+.operate{background-image: url(../images/operate.png);background-repeat: no-repeat;background-position: center center;background-size: 80%;}
+.phone{background-image: url(../images/phone.png);background-repeat: no-repeat;background-position: center center;background-size: 80%;}
+.phone img{width:0.56rem;height:0.55rem;vertical-align: middle;}
+.operate img{width:0.56rem;height:0.55rem;margin-left:0.2rem;vertical-align: middle;}
+.readInfoList ul li span{display: inline-block;max-width: 1.5rem;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+.readInfoList ul li .rank{max-width: 2rem!important;}
+.readInfoList .readed,.readInfoList .confirm{display:none;}
+.space{clear:both;height:0.2rem;width:100%;}
+.bottom {width: 98%;margin-left:1%;height:auto;position: fixed;bottom: 0;background: #fff;z-index: 101;clear: both;max-width: 640px;border-top: 1px solid #e1e1e1;line-height: 0.9rem;
+background:#e8e8e8;display:none;}
+.bottom div{width:100%;height:auto;border-radius:5px;background:#fff;}
+.bottom div .set-readed{display: block;height: 0.81rem;line-height: 0.81rem;border-bottom: 1px solid #e8e8e8;text-align:center;color:#3d3d3d}
+.bottom div .set-cofirm{display: block;height: 0.81rem;line-height: 0.81rem;text-align:center;color:#3d3d3d}
+.bottom .cancel{display:block;height:0.78rem;border-radius:5px;text-align:center;line-height:0.78rem;color:#f26262;background:#fff;margin-top:0.04rem;}
+.two{width:50%!important;}
+.overlay{position: fixed;top: 0;left: 0;width: 100%;height: 100%;z-index: 100;background: #656262;opacity: .3;display:none;}
+.operaDiv{float:left;width:1.4rem;}
+.name .name-p{color:#000;}
+.bg-color{float:left;width:0.7rem;height:0.7rem;border-radius: 50%;margin-left: 0.2rem;}
+.bg-color p{width: 0.7rem;height: 0.7rem;line-height: 0.7rem;text-align: center;color: #fff;}
+@media screen and (min-width: 400px) {
+	body{font-size:20px;}
+	.bg-color p{font-size:18px;}
+	.head ul li{font-size:18px;}
+	.name-dept .name,.name-dept-readed  .name{font-size:20px;}
+	.name-dept .dept,.name-dept-readed .dept,.rank{font-size:17px;}
+	.bottom a{font-size:19px;}
+	.head{font-size:18px;}
+}
+
+@media screen and (min-width:321px) and (max-width:400px){
+	body{font-size:18px;}
+	.bg-color p{font-size:16px;}
+    .head ul li{font-size:17px;}
+    .name-dept .name,.name-dept-readed  .name{font-size:19px;}
+    .name-dept .dept,.name-dept-readed .dept,.rank{font-size:16px;}
+	.bottom a{font-size:17px;}
+	.head{font-size:17px;}
+}
+
+@media screen and (max-width:321px){
+	body{font-size:16px;}
+	.bg-color p{font-size:13px;}
+   .head ul li{font-size:16px;}
+   .name-dept .name,.name-dept-readed  .name{font-size:17px;}
+   .name-dept .dept,.name-dept-readed .dept,.rank{font-size:14px;}
+   .bottom a{font-size:15px;}
+   .head{font-size:16px;}
+}

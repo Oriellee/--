@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新建新闻-pc</title>
+	<link rel="stylesheet" href="css/addNotice-pc.css"/>
+	<script type="text/javascript" charset="utf-8" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/addNotice-pc.js"></script>
+	<script type="text/javascript" src="js/placeholder.js"></script> 	
+	<script type="text/javascript" src="js/My97DatePicker/WdatePicker.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="item-bar">
+		<span class="span-title">选择频道：</span>	
+		<dl class="select"> 
+			<dt title="value">请选择频道</dt><!--title用于存储选值-->
+			<div class="option">
+				<dd>选项一</dd> 
+				<dd>选项二</dd> 
+				<dd>选项三</dd> 
+				<dd>选项四</dd> 
+				<dd>选项五</dd> 
+			</div>		
+		</dl>		
+		</div>
+		<div class="item-bar">
+			<span class="span-title">新闻标题：</span>
+			<input class="text" placeholder="请填写标题"/>
+		</div>				
+		<div class="text-content">
+			<!--富文本编辑器开始-->
+			<div class="content">
+			
+			</div>
+			<!--富文本编辑器结束-->
+		
+		</div>
+		<div class="item-bar">
+			<span class="span-title">发布人：张三</span>	
+		</div>
+		<div class="item-bar" style="height:auto;min-height:40px;">
+			<span class="span-title">封面图片：</span>	
+			<span class="fbl">推荐分辨率132*112，支持jpg、jpeg、png格式。</span>
+			<img src="images/addIcon.png" class="addImg">
+			<img src="images/pImg.png" class="pImg"/>
+			<div class="del">×</div>
+		</div>
+		<div class="item-bar">
+		
+			<div class="checkboxFive">
+				<input type="checkbox" value="1" id="checkboxFiveInput1" name="" />
+				<label for="checkboxFiveInput1"></label>
+			</div>
+			<span class="spanTxt">允许评论</span>
+			<div class="checkboxFive">
+				<input type="checkbox" value="1" id="checkboxFiveInput2" name="" />
+				<label for="checkboxFiveInput2"></label>
+			</div>	
+			<span class="spanTxt">允许点赞</span>
+			<div class="checkboxFive">
+				<input type="checkbox" value="1" id="checkboxFiveInput" name=""  class="selZd"/>
+				<label for="checkboxFiveInput"></label>
+			</div>
+			<span class="spanTxt">置顶</span>
+		</div>
+		<ul class="zd">
+			<li>
+			<div class="checkboxFive">
+				<input type="radio" value="1" id="radioBox" name="zding" />
+				<label for="radioBox"></label>
+			</div>	
+			<span>1天</span>
+			</li>
+			<li>
+			<div class="checkboxFive">
+				<input type="radio" value="1" id="radioBox2" name="zding" />
+				<label for="radioBox2"></label>
+			</div>	
+			<span>2天</span>
+			</li>
+			<li>
+			<div class="checkboxFive">
+				<input type="radio" value="1" id="radioBox3" name="zding" />
+				<label for="radioBox3"></label>
+			</div>	
+			<span>3天</span>
+			</li>
+			<li>
+			<div class="checkboxFive">
+				<input type="radio" value="1" id="radioBox4" name="zding" />
+				<label for="radioBox4"></label>
+			</div>	
+			<span>1周</span>
+			</li>
+			<li>
+			<div class="checkboxFive">
+				<input type="radio" value="1" id="radioBox5" name="zding" />
+				<label for="radioBox5"></label>
+			</div>	
+			<span>自定义</span><div class="diyTime"><p>2017-5-11&nbsp;&nbsp;到&nbsp;&nbsp;<input  id="d12" onclick="WdatePicker({el:'d12'})" type="text"/></p></div>
+			</li>
+		</ul>
+		<div class="bottom Top">
+			<a href="javascript:;" class="publish">发布</a>
+			<a href="javascript:;" class="save">保存</a>
+		</div>	
+	</div>	
+	<!--添加封面图片弹出框-->
+	<div class="addImg-dialog">
+		<p class="dTitle">封面图片</p>
+		<a class="close"href="javascript:;">×</a>
+		<span class="sPic">选择图片</span>
+		<input type="file" style="filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);" class="upload-logo">
+		<!--图片裁剪框-->
+		<div class="clict"></div>
+		<a href="javasctipt:;" class="sure">确定</a>
+		<a href="javasctipt:;" class="cancle">取消</a>
+	</div>
+	<div class="cover"></div>
+</body>
+</html>

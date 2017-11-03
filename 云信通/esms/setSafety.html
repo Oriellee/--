@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>设备与安全</title>
+	<link rel="stylesheet" href="css/main.css"/>
+	<link rel="stylesheet" href="css/accountSet.css"/>
+	<link rel="stylesheet" href="css/jquery-ui.css" />
+	<script type="text/javascript" charset="utf-8" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/accountSet.js"></script>
+</head>
+<body>
+<div class="header">
+		<div class="logo">
+			<a href=""><img src="images/logo.png" class="fl"/></a>
+		</div>
+		<div class="user_info">
+			<i class="sprite people"></i>
+			<span class="fl">账号：liuyingjie</span>
+			<a href="" class="back">退出</a>
+		</div>
+	</div>
+	<div class="container organization">
+		<div class="cont_left">
+			<div class="navigation_left h100 fl">
+				<ul>
+					<li><a href="Organization.html" class=""><i class="sprite orangise ml15"></i><span>组织结构</span></a></li>
+					<li><a href="addNews.html"><i class="sprite publish ml15"></i><span>内容发布</span></a></li>
+					<li class="visited"><a href="systemInfo.html"><i class="sprite system ml15"></i><span>系统设置</span></a></li>
+				</ul>
+			</div>
+			<div class="navigation_right h100 fl">
+				<div class="data_info">
+					<div class="news_list">
+						<a href="systemInfo.html">企业信息</a>					
+						<a href="setSafety.html" class="visited">设备与安全</a>
+						<div class="btm_select"></div>	
+						<a href="rankSet.html">职级设置</a>
+						<a href="authorityManage.html">权限管理</a>						
+						<a href="safetyCe.html">日志管理</a>
+						<a href="pwdSafety.html" >修改密码</a>
+						<a href="admin.html">管理员</a>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cont_right rel">
+			<i class="sprite left_icon top174"></i>
+			<!--设备登录设置-->
+			<div class="loginDiv">
+				<ul class="ulHead">
+					<li class="loginLi active">设备登录设置</li>
+					<li class="weakupLi">唤醒保护设置</li>
+				</ul>
+				<div class="loginSet">
+					<input type="radio" name="setType" checked="checked"/>多设备
+					<p>同一账号可登录多个同类型设备</p>
+					<input type="radio" name="setType"/>单设备
+					<p>同一账号只能登录一个同类型设备</p>
+					<p class="zhu">注：由多设备模式设置为单设备模式，最新登录的同类型设备将被自动绑定，未登录过的账号将绑定第一次登录的设备。</p>
+				</div>
+				<a href="javascript:;"class="save">保存</a>
+			</div>
+			<!--唤醒保护设置-->
+			<div class="weakupDiv">
+				<ul class="ulHead">
+					<li class="loginLi">设备登录设置</li>
+					<li class="weakupLi active">唤醒保护设置</li>
+				</ul>
+				<div class="loginSet">
+					<input type="radio" name="setProtect" checked="checked"/>断网保护
+					<p>断网时，开启唤醒保护。手机端唤醒应用时需要输入账号密码进行验证，同时支持用户更改为手势密码验证。</p>
+					<input type="radio" name="setProtect"/>全程保护
+					<p>断网或联网时，开始唤醒保护，手机端唤醒应用时需要输入账号密码进行验证，同时支持用户更改为手势密码验证。</p>
+					<input type="radio" name="setProtect"/>不保护
+					<p>不强制开启唤醒保护，用户可在手机端自主设置。</p>
+				</div>
+				<a href="javascript:;" class="save">保存</a>
+			</div>
+			</div>	
+	</div>
+	<!--管理员密码校验-->
+	<div id="admin-pwd" title="管理员密码">
+		<p>请输入管理员密码</p>
+		<input type="password"/>
+		<p class="pwd-wrong">密码错误（<span>1</span>/<span>2</span>）</p>
+	</div>
+	<!--吐司提示框-->
+	<p class="toast"></p>
+</body>
+</html>

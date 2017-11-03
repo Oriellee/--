@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新建调查</title>
+	<link rel="stylesheet" href="css/common.css"/>
+	<link rel="stylesheet" href="css/cont_left.css"/>
+	<link rel="stylesheet" href="css/cont_right.css"/>
+	<link rel="stylesheet" href="css/header.css"/>
+	
+	<link rel="stylesheet" href="css/confirm.css"/>
+	<link rel="stylesheet" href="css/oranization.css"/>
+	<link rel="stylesheet" href="css/news.css"/>
+	<link rel="stylesheet" href="css/system.css"/>
+	<link rel="stylesheet" href="css/register.css"/>
+	<link rel="stylesheet" href="css/IE.css"/>
+	<link rel="stylesheet" href="css/notice.css"/>
+	<link rel="stylesheet" href="css/research.css"/>
+	<script type="text/javascript" charset="utf-8" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="editor_config.js"></script>
+	<script type="text/javascript" charset="utf-8" src="editor_api.js"></script>
+	<script type="text/javascript" charset="utf-8" src="uploadify/jquery.uploadify.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/notice.js"></script>
+	<link rel="stylesheet" href="css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="js/jquery.ztree.core-3.5.js"></script>
+	<script type="text/javascript" src="js/jquery.ztree.excheck-3.5.js"></script>
+	<script type="text/javascript" src="js/jquery.ztree.exedit-3.5.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css" />
+	<script type="text/javascript" src="js/jquery.datetimepicker.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".add-option").click(function(){
+				var  order = $(".input-list label").length;
+				order = order+1;
+				$(".input-list").append("<label class='num'>"+order+"、</label><input class='option-append'><span class='del-option'>删除</span>");
+			});
+			
+			$(".input-list").on('click',".del-option", function(){
+				
+				$(this).prev().prev().remove();
+				$(this).prev().remove();
+				$(this).remove();
+				//对所有label标签重新赋值
+				$(".input-list label").each(function(i){
+					$(this).html(i+1+"、");
+				});
+			});	
+			
+			//请输入选项提示的位置计算
+			var h = $(".option-list").height();
+			var top = (h-16)/2;
+			$(".vote-xx label").css("margin-top",top);
+		});		
+		
+	</script>
+</head>
+<body>
+<div class="header">
+		<div class="logo">
+			<a href=""><img src="images/logo.png" class="fl"/></a>
+		</div>
+		<div class="user_info">
+			<i class="sprite people"></i>
+			<span class="fl">账号：liuyingjie</span>
+			<a href="" class="back">退出</a>
+		</div>
+	</div>
+	<div class="container organization">
+		<div class="cont_left">
+			<div class="navigation_left h100 fl">
+				<ul>
+					<li><a href="Organization.html" class=""><i class="sprite orangise ml15"></i><span>组织结构</span></a></li>
+					<li class="visited"><a href="addNews.html"><i class="sprite publish ml15"></i><span>内容发布</span></a></li>
+					<li><a href="admin.html"><i class="sprite system ml15"></i><span>系统设置</span></a></li>
+				</ul>
+			</div>
+			<div class="navigation_right h100 fl">
+				<div class="data_info">
+					<div class="news_list">
+						<div class="title">企业消息</div>
+						<a href="addNews.html">新建消息</a>
+						<a href="newsPublish.html">消息列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">投票消息</div>
+						<a href="addPiao.html">新建投票</a>
+						<a href="newsList.html">投票列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">通知</div>
+						<a href="addNotice.html">新建通知</a>
+						<a href="noticesList.html">通知列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">公告</div>
+						<a href="addAffiche.html">新建公告</a>
+						<a href="afficheList.html">公告列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">新闻</div>
+						<a href="newNews.html">新建新闻</a>
+						<a href="myNewNewsList.html">我创建的</a>
+						<a href="myManageList.html">我管理的</a>
+						<a href="channelManage.html">频道管理</a>
+						<a href="basicManage.html">基本管理</a>
+					</div>
+					<div class="news_list">
+						<div class="title">调查管理</div>
+						<a href="addResearch.html"  class="visited">新建调查</a>
+						<div class="btm_select"></div>
+						<a href="researchList.html">调查列表</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cont_right rel">
+			<i class="sprite left_icon top296"></i>
+			<p class="notice_title">新建调查</p>
+			<div class="vote-title"> 
+				<textarea placeholder="输入投票主题，最多200个字"></textarea>
+				<span class="vote-error-tip"><label>请输入投票主题</label></span>
+			</div>
+			<!--选项开始-->
+			<div class="option">
+				<div class="option-list">
+					<p class="title">选项设置（最多设置99个）：</p>
+					<div class="input-list">
+						<label class="num">1、</label><input class="default-option"/>
+						<label class="num">2、</label><input class="default-option"/>
+					</div>
+					<a href="javascript:;" class="add-option">添加选项</a>
+				</div>
+				<span class="vote-error-tip vote-xx"><label>请输入选项</label></span>
+			</div>
+			<!--选项结束-->
+			
+			<!--选人开始-->
+			<div class="selectPerson">
+				<div class="select-range-inner fn-clear">
+					<ul class="selected-list">	
+					</ul>
+					<div class="input-wrapper">
+						<span class="input-tip" style="display: inline-block;"><i class="prefix"></i>选择同事或部门</span>
+							<input class="input-field" type="text" style="display: none;">
+					</div>
+				</div>	
+				<span class="vote-error-tip"><label>请选择同事或部门</label></span>
+			</div>
+			<!--选人结束-->
+			
+			<!--投票类型开始-->	
+			<div class="vote-type">
+				<div>
+					<span class="vote-type-title">投票类型：</span>
+					<input type="radio" name="type-vote"/>单选<span class="seprate"></span>
+					<input type="radio" name="type-vote"/>多选
+				</div>
+				<span class="vote-error-tip"><label>请选择投票类型</label></span>
+			</div>
+			<!--投票类型结束-->
+			
+			<!--投票设置开始-->	
+			<div class="vote-set">
+				<div>
+					<span class="vote-set-title">投票设置：</span>
+					<input type="radio" name="set-vote"/>实名<span class="seprate"></span>
+					<input type="radio" name="set-vote"/>匿名
+				</div>
+				<span class="vote-error-tip"><label>请选择投票设置</label></span>
+			</div>
+			<!--投票设置结束-->	
+			
+			<!--投票截至时间开始-->	
+			<div class="dead-line">
+				<div>
+					<span class="vote-set-title">投票截至时间：</span>
+					<input type="text" placeholder="选择日期" class="h21 endTime mt5" id="endtime" name="endtime"/>
+					<img src="images/date.png" class="endTimes_img"/>
+				</div>
+				<span class="vote-error-tip"><label>请选择截止时间</label></span>
+			</div>
+			<!--投票截至时间结束-->	
+			
+			<!--发布、保存-->
+			<div class="publish-save">
+				<input type="submit" value="保存" class="save-btn"/>
+				<input type="submit" value="提交" class="publish-btn"/>
+			</div>
+		</div>
+	</div>
+	<!--选同事弹出框开始-->
+		<div class="organization-list">
+			<div class="tree_list">
+				<div class="search_org">
+					<input type="text" class="dept_name" placeholder="部门"/>
+					<a href="javascript:void(0)" class="search_btn">搜索</a>
+				</div>
+				<div>
+					<ul id="treeDemo" class="ztree"></ul>
+				</div>
+				<p class="org-submit">
+					<button type="submit">确定</button>
+				</p>
+			</div>			
+			<div class="search_list">
+				<div class="wrap_search">
+					<input type="text" placeholder="姓名、手机号" class="searchbyname"/>
+					<span class="img_cancle"></span>
+				</div>
+				
+				<a href="javascript:void(0)" class="search_cancle">取消</a>
+				<ul class="search_ul">
+					<li>李巍</li>
+					<li>李妮</li>
+					<li>李四</li>
+				</ul>
+				<p class="org-submit">
+					<button type="submit">确定</button>
+				</p>
+			</div>
+		</div>
+		<div class="toast">提交成功</div>
+	<!--选同事弹出框结束-->
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$('#endtime').datetimepicker({
+			dateFormat : 'mm-dd-yy',
+			timeFormat : 'hh:mm:ss'
+		});
+
+		$('.endTimes_img').click(function() {
+			$('#endtime').datetimepicker('show');
+		});
+
+	});
+</script>
+</body>
+</html>

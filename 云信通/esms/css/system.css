@@ -1,0 +1,66 @@
+.formGroup .w55{
+	width: 60px;
+	display: block;
+	text-align: right;
+	margin-right: 5px;
+	padding-top: 10px;
+}
+.ml60{
+	margin-left: 60px;
+}
+.w70{
+	width: 70%;
+	margin-left: 25px;
+}
+.w70 input{
+	margin-top: -7px;
+}
+.conf_conter .w70 select{
+	width: 150px;
+}
+.yulan_content{
+	width: 960px;
+	margin:0px auto;
+}
+.yulan_head, .yulan_body, .yulan_footer{
+	width: 100%;
+	text-align: center;
+	margin-top: 10px;
+}
+.yulan_head .title{
+	font-size: 30px;
+	color:black;
+}
+.yulan_head .author{
+	font-size: 24px;
+	color:#999;
+}
+.yulan_footer{
+	text-align: left;
+}
+.yulan_footer{
+	font-size: 24px;
+	color: #555;
+}
+@media screen and (max-width: 900px){
+	.yulan_head .title{
+		font-size: 30px;
+	}
+	.yulan_head .author{
+		font-size: 24px;
+	}
+	.yulan_footer{
+		font-size: 24px;
+	}
+}
+@media screen and (min-width: 900px){
+	.yulan_head .title{
+		font-size: 60px;
+	}
+	.yulan_head .author{
+		font-size: 48px;
+	}
+	.yulan_footer{
+		font-size: 48px;
+	}
+}

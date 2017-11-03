@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>综合查询</title>
+	<link rel="stylesheet" href="css/main.css"/>
+	<link rel="stylesheet" href="css/phonenumberQuery.css"/>
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/phonenumberQuery.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body class="admin">
+<div class="header">
+		<div class="logo">
+			<a href=""><img src="images/logo.png" class="fl"/></a>
+		</div>
+		<div class="user_info">
+			<i class="sprite people"></i>
+			<span class="fl">账号：liuyingjie</span>
+			<a href="" class="back">退出</a>
+		</div>
+	</div>
+	<div class="container organization">
+		<div class="cont_left">
+			<div class="navigation_left h100 fl">
+				<ul>
+					<li><a href="Organization.html" class=""><i class="sprite orangise ml15"></i><span>组织结构</span></a></li>
+					<li><a href="addNews.html"><i class="sprite publish ml15"></i><span>内容发布</span></a></li>
+					<li class="visited"><a href="newImport.html"><i class="sprite2 ml15"></i><span>辅助功能</span></a></li>
+					<li><a href="admin.html"><i class="sprite system ml15"></i><span>系统设置</span></a></li>
+				</ul>
+			</div>
+			<div class="navigation_right h100 fl">
+				<div class="data_info">
+					<div class="news_list">
+						<div class="title">通讯录查询</div>
+						<a href="fastQuery.html" >快速查询</a>
+						<a href="queryByDept.html" >按部门查询</a>	
+						<a href="synthesizeQuery.html" class="visited">综合查询</a>	
+						<div class="btm_select"></div>						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cont_right rel">
+			<i class="sprite left_icon top52"></i>
+			<p class="synthesize-title">综合查询</p>
+			<div class="labelGroup">
+				<label>查询位置：</label>
+				<select>
+					<option>请选择...</option>
+					<option>山东</option>
+					<option>烟台</option>
+					<option>淄博</option>
+				</select>
+			</div>
+			<div class="labelGroup">
+				<label>姓名：</label>
+				<input type="text"/>
+			</div>
+			<div class="labelGroup">
+				<label>办公专线：</label>
+				<input type="text"/>
+			</div>
+			<div class="labelGroup">
+				<label>办公外线：</label>
+				<input type="text"/>
+			</div>
+			<div class="labelGroup">
+				<label>警务通：</label>
+				<input type="text"/>
+			</div>
+			<div class="labelGroup">
+				<label>手机：</label>
+				<input type="text"/>
+			</div>
+			<div class="labelGroup">
+				<label></label>
+				<button class="search">查询</button>
+			</div>
+			<div class="person-list">
+				<p class="title">人员名单</p>
+				<div class="table_list">
+				<table>
+					<tbody>
+						<tr class="odd">
+							<th>部门</th>
+							<th>姓名</th>
+							<th>办公专线</th>
+							<th>办公外线</th>
+							<th>警务通</th>
+							<th>手机</th>
+							<th>职务</th>
+							<th>邮件</th>
+							<th>照片</th>
+						</tr>
+						<tr>
+							<td>省厅——>公安总队——>七支队</td>
+							<td>张三</td>
+							<td>9233-3422</td>
+							<td>6322432</td>
+							<td>15209788761</td>
+							<td>15209788761</td>
+							<td>主任</td>
+							<td>aa@163.com</td>
+							<td><a href="images/1.jpg">查看照片</a></td>
+						</tr>
+						<tr>
+							<td>省厅——>公安总队——>七支队</td>
+							<td>张三</td>
+							<td>9233-3422</td>
+							<td>6322432</td>
+							<td>15209788761</td>
+							<td>15209788761</td>
+							<td>主任</td>
+							<td>aa@163.com</td>
+							<td><a href="images/1.jpg">查看照片</a></td>
+						</tr>
+						<tr>
+							<td>省厅——>公安总队——>七支队</td>
+							<td>张三</td>
+							<td>9233-3422</td>
+							<td>6322432</td>
+							<td>15209788761</td>
+							<td>15209788761</td>
+							<td>主任</td>
+							<td>aa@163.com</td>
+							<td><a href="images/1.jpg">查看照片</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="pagination">
+				<div class="pagination_left fl">显示1-6条/共6条</div>
+				<div class="pagination_right fr">
+					<a href="javascript:;" class="btn default fl ">上一页</a>
+					<ul class="page fl">
+						<li><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="" class="current">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">5</a></li>
+					</ul>
+					<a href="javascript:;" class="btn default fl">下一页</a>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+	<link href="js/tsi-jQuery.imgBox/imgbox.css" type="text/css" rel="stylesheet" />
+	<script src="js/tsi-jQuery.imgBox/jquery.imgbox.js"></script>
+	<script>
+	$(function(){	
+		$(".table_list tr td a").imgbox({
+		'speedIn'		: 0,
+		'speedOut'		: 0,
+		'alignment'		: 'center',
+		'overlayShow'	: true,
+		'allowMultiple'	: false,
+		'slideshow'     : false,
+		'border'        : 0,
+		'padding'       : 0
+	});
+	});
+	</script>
+</body>
+</html>

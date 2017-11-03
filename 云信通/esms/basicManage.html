@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>轮播页管理</title>
+	<link rel="stylesheet" href="css/main.css"/>
+	<link rel="stylesheet" href="css/basicManage.css"/>
+	<link rel="stylesheet" href="uploadify/uploadify.css"/>
+	<script type="text/javascript" charset="utf-8" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="editor_config.js"></script>
+	<script type="text/javascript" charset="utf-8" src="editor_api.js"></script>
+	<script type="text/javascript" charset="utf-8" src="uploadify/jquery.uploadify.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/voice.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/basicManage.js"></script>
+	<link rel="stylesheet" href="datetimepicker/jquery.datetimepicker.css"/>
+	<script type="text/javascript" charset="UTF-8" src="datetimepicker/jquery.datetimepicker.js"></script>
+	<link rel="stylesheet" href="css/jquery-ui.css" />
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+</head>
+<body>
+<div class="header">
+		<div class="logo">
+			<a href=""><img src="images/logo.png" class="fl"/></a>
+		</div>
+		<div class="user_info">
+			<i class="sprite people"></i>
+			<span class="fl">账号：liuyingjie</span>
+			<a href="" class="back">退出</a>
+		</div>
+	</div>
+	<div class="container organization">
+		<div class="cont_left">
+			<div class="navigation_left h100 fl">
+				<ul>
+					<li><a href="Organization.html" class=""><i class="sprite orangise ml15"></i><span>组织结构</span></a></li>
+					<li class="visited"><a href="addNews.html"><i class="sprite publish ml15"></i><span>内容发布</span></a></li>
+					<li><a href="admin.html"><i class="sprite system ml15"></i><span>系统设置</span></a></li>
+				</ul>
+			</div>
+			<div class="navigation_right h100 fl">
+				<div class="data_info">
+					<div class="news_list">
+						<div class="title">企业消息</div>
+						<a href="addNews.html">新建消息</a>
+						<a href="newsPublish.html">消息列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">投票消息</div>
+						<a href="addPiao.html">新建投票</a>
+						<a href="newsList.html">投票列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">通知</div>
+						<a href="addNotice.html">新建通知</a>
+						<a href="noticesList.html">通知列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">公告</div>
+						<a href="addAffiche.html">新建公告</a>
+						<a href="afficheList.html">公告列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">新闻</div>
+						<a href="newNews.html">新建新闻</a>
+						<a href="myNewNewsList.html" >我创建的</a>
+						<a href="myManageList.html">我管理的</a>
+						<a href="channelManage.html">频道管理</a>
+						<a href="basicManage.html"   class="visited">基本管理</a>
+						<div class="btm_select"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cont_right rel">
+			<i class="sprite left_icon top337"></i>
+			<p class="basic_title">轮播页管理</p>
+			<div class="search_left fl">
+					<a href="#" class="btn default-cor fl ml14 mt15 btnAdd active">轮播页管理</a>
+					<a href="pictureManage.html" class="btn default-cor fl ml14 mt15 btnDel">图片管理</a>		
+			</div>
+			<div class="select-news">	
+				发布时间&nbsp;
+				<input placeholder="选择时间" class="h21 endTime mt5" id="startTimes"/>&nbsp;-&nbsp;
+				<input placeholder="选择时间" class="h21 endTime mt5" id="endTimes"/>
+				<input type="text" placeholder="标题/内容" class="sel-text"/>
+				<input type="submit" value="搜索" class="search-btn"/>
+				<a class="btn-addnews" href="newbannerNews.html">新建轮播页新闻</a>
+				<a class="search-btn ready-news" href="bannerNewsList.html" >已上轮播页新闻</a>
+			</div>	
+			<!--列表开始-->
+			<div class="table_list">
+				<table>
+					<tbody>
+						<tr class="odd">
+							<th>编号</th>
+							<th>标题</th>
+							<th>频道</th>
+							<th>时间</th>
+							<th>部门</th>
+							<th>状态</th>
+							<th>创建人</th>
+							<th>审批者</th>
+							<th>操作</th>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td><a href="newNewsDetails.html" title="北京市知识产法院部署平治东方“单位云服务系统”北京市知识产法院部署平治东方“单位云服务系统">北京市知识产法院部署平治东方“单位云服务系统</a></td>
+							<td>产品</td>
+							<td>2015-08-31 16:08</td>
+							<td>市场部</td>
+							<td>已发布</td>
+							<td>张三</td>
+							<td>赵四</td>
+							<td>
+							<a class="set-news" href="javascript:;">设置为轮播页新闻</a>
+							</td>	
+						</tr>
+						<tr>
+							<td>1</td>
+							<td><a href="newNewsDetails.html" title="北京市知识产法院部署平治东方“单位云服务系统”北京市知识产法院部署平治东方“单位云服务系统">北京市知识产法院部署平治东方“单位云服务系统”</a></td>
+							<td>产品</td>
+							<td>2015-08-31 16:08</td>
+							<td>市场部</td>
+							<td>已发布</td>
+							<td>张三</td>
+							<td>赵四</td>
+							<td>
+							<a class="set-news" href="javascript:;">设置为轮播页新闻</a>
+							</td>	
+						</tr>
+						<tr>
+							<td>1</td>
+							<td><a href="newNewsDetails.html" title="北京市知识产法院部署平治东方“单位云服务系统”北京市知识产法院部署平治东方“单位云服务系统">北京市知识产法院部署平治东方“单位云服务系统”</a></td>
+							<td>产品</td>
+							<td>2015-08-31 16:08</td>
+							<td>市场部</td>
+							<td>已发布</td>
+							<td>张三</td>
+							<td>赵四</td>
+							<td>
+							<a class="set-news" href="javascript:;">设置为轮播页新闻</a>
+							</td>	
+						</tr>
+						<tr>
+							<td>1</td>
+							<td><a href="newNewsDetails.html" title="北京市知识产法院部署平治东方“单位云服务系统”北京市知识产法院部署平治东方“单位云服务系统">北京市知识产法院部署平治东方“单位云服务系统”</a></td>
+							<td>产品</td>
+							<td>2015-08-31 16:08</td>
+							<td>市场部</td>
+							<td>已发布</td>
+							<td>张三</td>
+							<td>赵四</td>
+							<td>
+							<a class="set-news" href="javascript:;">设置为轮播页新闻</a>
+							</td>	
+						</tr>
+						<tr>
+							<td>1</td>
+							<td><a href="newNewsDetails.html" title="北京市知识产法院部署平治东方“单位云服务系统”北京市知识产法院部署平治东方“单位云服务系统">北京市知识产法院部署平治东方“单位云服务系统”</a></td>
+							<td>产品</td>
+							<td>2015-08-31 16:08</td>
+							<td>市场部</td>
+							<td>已发布</td>
+							<td>张三</td>
+							<td>赵四</td>
+							<td>
+							<a class="set-news" href="javascript:;">设置为轮播页新闻</a>
+							</td>	
+						</tr>
+						<tr>
+							<td>1</td>
+							<td><a href="newNewsDetails.html" title="北京市知识产法院部署平治东方“单位云服务系统”北京市知识产法院部署平治东方“单位云服务系统">北京市知识产法院部署平治东方“单位云服务系统”</a></td>
+							<td>产品</td>
+							<td>2015-08-31 16:08</td>
+							<td>市场部</td>
+							<td>已发布</td>
+							<td>张三</td>
+							<td>赵四</td>
+							<td>
+							<a class="set-news" href="javascript:;">设置为轮播页新闻</a>
+							</td>	
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!--列表结束-->
+			
+			<!--分页-->
+			<div class="pagination">
+				<div class="pagination_left fl">显示1-6条/共6条</div>
+				<div class="pagination_right fr">
+					<a href="javascript:;" class="btn default fl ">上一页</a>
+					<ul class="page fl">
+						<li><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="" class="current">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">5</a></li>
+					</ul>
+					<a href="javascript:;" class="btn default fl">下一页</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--设为轮播页新闻开始-->
+	<div id="dialog" title="上传轮播页图片">
+		<p class="upload-tip">推荐分辨率640*300的图片，支持jpg、jpeg、png、bmp格式</p>
+		<div class="img-show">
+		
+		</div>
+		<p class="upload-img"><label>上传图片</label><input type="file" value="" onchange="uploadImg()"/></p>
+	</div>
+	<!--设为轮播页新闻结束-->
+	<script type="text/javascript">
+		$('#startTimes').datetimepicker({
+		});
+		$('#endTimes').datetimepicker({
+		});
+	</script>
+</body>
+</html>

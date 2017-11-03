@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>添加申请流程</title>
+	<link rel="stylesheet" href="css/common.css"/>
+	<link rel="stylesheet" href="css/cont_left.css"/>
+	<link rel="stylesheet" href="css/cont_right.css"/>
+	<link rel="stylesheet" href="css/header.css"/>
+	
+
+	<link rel="stylesheet" href="css/confirm.css"/>
+	<link rel="stylesheet" href="css/oranization.css"/>
+	<link rel="stylesheet" href="css/news.css"/>
+	<link rel="stylesheet" href="css/system.css"/>
+	<link rel="stylesheet" href="css/IE.css"/>
+	<link rel="stylesheet" href="css/flow.css"/>
+	<link rel="stylesheet" href="css/notice.css"/>
+	<script type="text/javascript" charset="utf-8" src="js/jquery-1.9.1.min.js"></script>
+	<link rel="stylesheet" href="css/jquery-ui.css" />
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/flow.js"></script>
+	<link rel="stylesheet" href="css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="js/jquery.ztree.core-3.5.js"></script>
+	<script type="text/javascript" src="js/jquery.ztree.excheck-3.5.js"></script>
+	<script type="text/javascript" src="js/jquery.ztree.exedit-3.5.js"></script>
+	<script type="text/javascript" src="js/tree.js"></script>
+</head>
+<body>
+<div class="header">
+		<div class="logo">
+			<a href=""><img src="images/logo.png" class="fl"/></a>
+		</div>
+		<div class="user_info">
+			<i class="sprite people"></i>
+			<span class="fl">账号：liuyingjie</span>
+			<a href="" class="back">退出</a>
+		</div>
+	</div>
+	<div class="container organization">
+		<div class="cont_left">
+			<div class="navigation_left h100 fl">
+				<ul>
+					<li><a href="Organization.html" class=""><i class="sprite orangise ml15"></i><span>组织结构</span></a></li>
+					<li><a href="addNews.html"><i class="sprite publish ml15"></i><span>内容发布</span></a></li>
+					<li class="visited"><a href="folderManage.html"><i class="sprite4  ml15"></i><span>应用</span></a></li>
+					<li><a href="newImport.html"><i class="sprite2 ml15"></i><span>辅助功能</span></a></li>
+					<li><a href="useNumber.html"><i class="sprite3 ml15"></i><span>服务查看</span></a></li>
+					<li><a href="admin.html"><i class="sprite system ml15"></i><span>系统设置</span></a></li>
+				</ul>
+			</div>
+			<div class="navigation_right h100 fl">
+				<div class="data_info">
+					<div class="news_list">
+						<div class="title">单位文件柜</div>
+						<a href="addNews.html">文件夹管理</a>
+						<a href="addNews.html" style="display:none;" class="visited">文件上传与下载</a>
+						<a href="addNews.html" style="display:none;" class="visited">文件下载</a>
+						<div class="title">会议管理</div>
+						<a href="meetingType.html">会议类型</a>
+						<div class="title">申请流程</div>
+						<a href="processManage.html"  class="visited">流程管理</a>
+						<div class="btm_select"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cont_right rel">
+			<i class="sprite left_icon top296"></i>
+			<div class="navigation_search">
+				<div class="search_left fl">
+					<div class="fl mt15 ml14 mr5 pr">
+						<a href="processManage.html" class="return">返回上一级</a>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<span>流程名称：</span>
+				<span>车辆申请</span>
+				<span class="errorTip">程名称不能为空</span>
+			</div>
+			<div class="item">
+				<span>&nbsp;&nbsp;&nbsp;知会人：</span>
+				<!--编辑时显示-->
+				<span class="knowPerson"><span class="item-name">张三</span><span class="remove-h">×</span></span>
+				<a class="input-tip" href="javascript:;"><i class="prefix"></i>添加</a>
+				<span class="errorTip">知会人不能为空</span>
+			</div>
+			<div class="item">
+				<span>审批说明：</span>
+				<span class="grey-tip">审批说明主要用来介绍审批人的审批权限或审批流程</span>
+				<!--富文本编辑器-->
+				<div>
+				
+				</div>
+			</div>
+			<div class="publish-save">
+				<input type="submit" value="返回" class="cancel-btn">
+				<input type="submit" value="提交" class="publish-btn">
+				
+			</div>
+		</div>
+	</div>	
+	<div>
+	<!--选人弹出框-->
+		<div class="organization-list">
+			<div class="tree_list">
+				<div>
+					<ul id="treeDemo" class="ztree"></ul>
+				</div>
+				<p class="org-submit">
+					<button type="submit">确定</button>
+				</p>
+			</div>			
+		</div>
+	</div>
+</body>
+</html>

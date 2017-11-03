@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新建通知</title>
+	<link rel="stylesheet" href="css/common.css"/>
+	<link rel="stylesheet" href="css/cont_left.css"/>
+	<link rel="stylesheet" href="css/cont_right.css"/>
+	<link rel="stylesheet" href="css/header.css"/>
+	
+
+	<link rel="stylesheet" href="css/confirm.css"/>
+	<link rel="stylesheet" href="css/oranization.css"/>
+	<link rel="stylesheet" href="css/news.css"/>
+	<link rel="stylesheet" href="css/system.css"/>
+	<link rel="stylesheet" href="css/register.css"/>
+	<link rel="stylesheet" href="css/IE.css"/>
+	<link rel="stylesheet" href="css/folder.css"/>
+	<script type="text/javascript" charset="utf-8" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="editor_config.js"></script>
+	<script type="text/javascript" charset="utf-8" src="editor_api.js"></script>
+	<script type="text/javascript" charset="utf-8" src="uploadify/jquery.uploadify.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css" />
+	<script type="text/javascript" src="js/jquery.datetimepicker.js"></script>
+	<link rel="stylesheet" href="css/jquery-ui.css" />
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/folder.js"></script>
+	<script type="text/javascript" src="js/plupload.full.min.js"></script>
+	<script>
+  $(function() {
+	$(".btnUploadFolder").click(function(){
+			$("#dialog").dialog({
+				modal : true,
+				width : 590,
+				height : 500,
+				buttons: {
+					"上传": function() {
+						$( this ).dialog( "close" );
+					},
+					"取消": function() {
+						$( this ).dialog( "close" );
+					}
+				}
+		});
+	});
+    });
+  </script>
+</head>
+<body>
+<div class="header">
+		<div class="logo">
+			<a href=""><img src="images/logo.png" class="fl"/></a>
+		</div>
+		<div class="user_info">
+			<i class="sprite people"></i>
+			<span class="fl">账号：liuyingjie</span>
+			<a href="" class="back">退出</a>
+		</div>
+	</div>
+	<div class="container organization">
+		<div class="cont_left">
+			<div class="navigation_left h100 fl">
+				<ul>
+					<li><a href="Organization.html" class=""><i class="sprite orangise ml15"></i><span>组织结构</span></a></li>
+					<li><a href="addNews.html"><i class="sprite publish ml15"></i><span>内容发布</span></a></li>
+					<li class="visited"><a href="folderManage.html"><i class="sprite4  ml15"></i><span>应用</span></a></li>
+					<li><a href="newImport.html"><i class="sprite2 ml15"></i><span>辅助功能</span></a></li>
+					<li><a href="useNumber.html"><i class="sprite3 ml15"></i><span>服务查看</span></a></li>
+					<li><a href="admin.html"><i class="sprite system ml15"></i><span>系统设置</span></a></li>
+				</ul>
+			</div>
+			<div class="navigation_right h100 fl">
+				<div class="data_info">
+					<div class="news_list">
+						<div class="title">单位文件柜</div>
+						<a href="addNews.html"  class="visited">文件夹管理</a><!--管理员进入显示此菜单-->
+						<a href="addNews.html" style="display:none;" class="visited">文件上传与下载</a><!--上传者进入显示此菜单-->
+						<a href="addNews.html" style="display:none;" class="visited">文件下载</a><!--普通员工进入显示此菜单-->
+						<div class="btm_select"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cont_right rel">
+			<i class="sprite left_icon top296"></i>
+			<p class="file-title">
+			<a href="folderManage.html">返回上一级</a>&nbsp;&nbsp;|<span class="dept-name-file">文件柜</span>><span class="dept-name-file">人力资源文件</span>
+			</p>
+			</p>
+	
+			<div class="navigation_search">
+				<div class="search_left fl">
+					<div class="fl mt15 ml14 mr5 pr">
+						<a href="javascript:;" class="btn default btnAddFolder">新建文件夹</a>
+						<button href="javascript:;" class="btn default btnUploadFolder ">上传</button>
+						<!--<input href="javascript:;" class="btn default upload-input" value="上传" type="file" style="filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);">-->
+						<button href="javascript:;" class="btn default btnDelFolder disabledBg" disabled>删除</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="table_list">
+				<table>
+					<tbody>
+						<tr class="odd">
+							<th></th>
+							<th>文件名</th>
+							<th>创建人</th>
+							<th>上传人</th>
+							<th>大小</th>
+							<th>时间</th>
+							<th width="100px;">操作</th>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="check_only"></td>	
+							<td><img src="images/folder.png"/><a href="fileManage.html">财务部文件</a></td>
+							<td>管理员</td>
+							<td>张三</td>
+							<td>12M</td>
+							<td>2016-5-24 12:09</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="check_only"></td>	
+							<td><img src="images/folder.png"/><a href="fileManage.html">财务部文件</a></td>
+							<td>管理员</td>
+							<td>张三</td>
+							<td>12M</td>
+							<td>2016-5-24 12:09</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="check_only"></td>	
+							<td><img src="images/ppt.png"/>考勤制度.ppt</td>
+							<td>张三</td>
+							<td>张三</td>
+							<td>12M</td>
+							<td>2016-5-24 12:09</td>
+							<td><a href="#" class="btn default btnDownloadFolder">下载</a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="check_only"></td>	
+							<td><img src="images/doc.png"/>薪资福利制度.doc</td>
+							<td>李四</td>
+							<td>张三</td>
+							<td>12M</td>
+							<td>2016-5-24 12:09</td>
+							<td><a href="#" class="btn default btnDownloadFolder">下载</a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="check_only"></td>	
+							<td><img src="images/xlsx.png"/>请假等单据.xsls</td>
+							<td>张三</td>
+							<td>张三</td>
+							<td>12M</td>
+							<td>2016-5-24 12:09</td>
+							<td><a href="#" class="btn default btnDownloadFolder" >下载</a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="check_only"></td>	
+							<td><img src="images/pdf.png"/>五险一金资料.pdf</td>
+							<td>张三</td>
+							<td>张三</td>
+							<td>12M</td>
+							<td>2016-5-24 12:09</td>
+							<td><a href="#" class="btn default btnDownloadFolder" >下载</a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="check_only"></td>	
+							<td><img src="images/doc.png"/>公司规章制度.doc</td>
+							<td>张三</td>
+							<td>张三</td>
+							<td>12M</td>
+							<td>2016-5-24 12:09</td>
+							<td><a href="#" class="btn default btnDownloadFolder">下载</a></td>
+						</tr>
+						
+					</tbody>
+				</table>
+			</div>
+			<div class="pagination">
+				<div class="pagination_left fl">显示1-6条/共6条</div>
+				<div class="pagination_right fr">
+					<a href="javascript:;" class="btn default fl ">上一页</a>
+					<ul class="page fl">
+						<li><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="" class="current">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">5</a></li>
+					</ul>
+					<a href="javascript:;" class="btn default fl">下一页</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="dialog2" title="删除文件">
+		<p class="del-folder-tip">您确定要删除所选文件？</p>
+	</div>
+	<!--新建文件夹-->
+	<div id="dialogNew" title="新建文件夹">
+		<p class="folder-name">文件夹名称</p>
+		<input type="text" class="folder-text"/>
+	</div>
+	<!--上传页面弹出框-->
+	<div id="dialog" title="上传文件">
+		<p id="container">
+			<a href="javascript:;" id="pickfiles" class="add-file">添加文件</a>
+		</p>
+		<div class="table_list table-height">
+				<table>
+					<thead>
+						<tr class="odd">
+							<th width="40%">文件名</th>
+							<th width="20%">大小</th>
+							<th width="20%">操作</th>
+							<th width="20%">状态</th>
+						</tr>
+					</thead>
+					</table>
+					<div>
+					<table>
+					<tbody id="filelist">
+						<tr>
+							<td>考勤制度.ppt</td>
+							<td>12M</td>
+							<td><a href="#" class="del-btn">删除</a></td>
+							<td></td>
+						</tr>
+						<tr>
+						    <td>薪资福利制度.doc</td>
+							<td>12M</td>
+							<td><a href="#" class="del-btn">删除</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>请假等单据.xsls</td>
+							<td>12M</td>
+							<td><a href="#" class="del-btn" >删除</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>五险一金资料.pdf</td>
+							<td>12M</td>
+							<td><a href="#" class="del-btn" >删除</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>公司规章制度.doc</td>
+							<td>12M</td>
+							<td><a href="#" class="del-btn">删除</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>公司规章制度.doc</td>
+							<td>12M</td>
+							<td><a href="#" class="del-btn">删除</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>公司规章制度.doc</td>
+							<td>12M</td>
+							<td><a href="#" class="del-btn">删除</a></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+				</div>
+			</div>
+			<div class="tips">		
+				<p>类型为 Word、Excel、PPT、Pdf的文件支持在线预览</p>
+				<p class="upload-error">上传失败</p>
+			</div>
+	</div>
+
+<!--上传页面弹出框-->
+	<script type="text/javascript">
+// Custom example logic
+
+var uploader = new plupload.Uploader({
+	runtimes : 'html5,flash,silverlight,html4',
+	browse_button : 'pickfiles', // you can pass an id...
+	container: document.getElementById('container'), // ... or DOM Element itself
+	url : 'upload.php',
+	flash_swf_url : '../js/Moxie.swf',
+	silverlight_xap_url : '../js/Moxie.xap',
+	
+	filters : {
+		max_file_size : '10mb',
+		mime_types: [
+			{title : "Image files", extensions : "jpg,gif,png"},
+			{title : "Zip files", extensions : "zip"}
+		]
+	},
+
+	init: {
+		PostInit: function() {
+			document.getElementById('filelist').innerHTML = '';
+
+			document.getElementById('uploadfiles').onclick = function() {
+				uploader.start();
+				return false;
+			};
+		},
+
+		FilesAdded: function(up, files) {
+			plupload.each(files, function(file) {
+				document.getElementById('filelist').innerHTML += '<tr id="'+file.id+'"><td width="40%">'+file.name+'</td><td width="20%">'+plupload.formatSize(file.size)+'</td><td width="20%"><a href="#" class="del-btn">删除</a><td width="20%"></td>';
+				
+			});
+		},
+
+		UploadProgress: function(up, file) {
+			document.getElementById(file.id).getElementsByTagName('b')[0].innerHTML = '<span>' + file.percent + "%</span>";
+		},
+
+		Error: function(up, err) {
+			document.getElementById('console').appendChild(document.createTextNode("\nError #" + err.code + ": " + err.message));
+		}
+	}
+});
+
+uploader.init();
+
+</script>
+</body>
+</html>

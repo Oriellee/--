@@ -1,0 +1,62 @@
+.yulan{
+	*top:0px;
+}
+.form_label input{
+	*margin-top: -2px;
+}
+.cont_right .top40{
+	*top:50px;
+}
+.dashed{
+	*margin-left: -40px;
+	*top:210px;
+}
+.addCondition{
+	*margin-left: 53px;
+}
+.formGroup .h100{
+	*margin-left: 10px;
+}
+.top164{
+	*top:172px;
+}
+.cont_right .top52{
+	*top:90px;
+}
+table th, table td {
+	*border-bottom: 1px solid #ddd;
+}
+.w70 input{
+	*margin-top: -5px;
+}
+.w70 .fl{
+	*height: 20px;
+	*line-height: 11px;
+}
+.conf_conter .mt20{
+	*margin-top: 10px;
+}
+.top192{
+	*top:215px;
+}
+.top70{
+	*top:92px;
+}
+.conter_header, .conter_conter{
+	*width: 580px;
+}
+.ie_ml70{
+	*margin-left: 40px;
+}
+.check_group input{
+	*margin-top: -2px;
+}
+.ie_btn_add{
+	*width: 55px;
+}
+.add_footer .w40{
+	*width: 45%;
+}
+.top174{
+	top:174px;
+}

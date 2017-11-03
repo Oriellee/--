@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>会议类型设置</title>
+	<link rel="stylesheet" href="css/common.css"/>
+	<link rel="stylesheet" href="css/cont_left.css"/>
+	<link rel="stylesheet" href="css/cont_right.css"/>
+	<link rel="stylesheet" href="css/header.css"/>
+	
+
+	<link rel="stylesheet" href="css/confirm.css"/>
+	<link rel="stylesheet" href="css/oranization.css"/>
+	<link rel="stylesheet" href="css/news.css"/>
+	<link rel="stylesheet" href="css/system.css"/>
+	<link rel="stylesheet" href="css/register.css"/>
+	<link rel="stylesheet" href="css/IE.css"/>
+	<link rel="stylesheet" href="css/meetingType.css"/>
+	<script type="text/javascript" charset="utf-8" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="editor_config.js"></script>
+	<script type="text/javascript" charset="utf-8" src="editor_api.js"></script>
+	<script type="text/javascript" charset="utf-8" src="uploadify/jquery.uploadify.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css" />
+	<script type="text/javascript" src="js/jquery.datetimepicker.js"></script>
+	<link rel="stylesheet" href="css/jquery-ui.css" />
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/meetingType.js"></script>
+</head>
+<body>
+<div class="header">
+		<div class="logo">
+			<a href=""><img src="images/logo.png" class="fl"/></a>
+		</div>
+		<div class="user_info">
+			<i class="sprite people"></i>
+			<span class="fl">账号：liuyingjie</span>
+			<a href="" class="back">退出</a>
+		</div>
+	</div>
+	<div class="container organization">
+		<div class="cont_left">
+			<div class="navigation_left h100 fl">
+				<ul>
+					<li><a href="Organization.html" class=""><i class="sprite orangise ml15"></i><span>组织结构</span></a></li>
+					<li><a href="addNews.html"><i class="sprite publish ml15"></i><span>内容发布</span></a></li>
+					<li class="visited"><a href="folderManage.html"><i class="sprite4  ml15"></i><span>应用</span></a></li>
+					<li><a href="newImport.html"><i class="sprite2 ml15"></i><span>辅助功能</span></a></li>
+					<li><a href="useNumber.html"><i class="sprite3 ml15"></i><span>服务查看</span></a></li>
+					<li><a href="admin.html"><i class="sprite system ml15"></i><span>系统设置</span></a></li>
+				</ul>
+			</div>
+			<div class="navigation_right h100 fl">
+				<div class="data_info">
+					<div class="news_list">
+						<div class="title">单位文件柜</div>
+						<a href="addNews.html">文件夹管理</a><!--管理员进入显示此菜单-->
+						<a href="addNews.html" style="display:none;" class="visited">文件上传与下载</a><!--上传者进入显示此菜单-->
+						<a href="addNews.html" style="display:none;" class="visited">文件下载</a><!--普通员工进入显示此菜单-->
+						<div class="title">会议管理</div>
+						<a href="meetingType.html"  class="visited">会议类型</a>
+						<div class="btm_select"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cont_right rel">
+			<i class="sprite left_icon top296"></i>
+			<div class="type-set">
+				类型设置
+			</div>
+			<a href="javascript:;" class="btn default btnAddFolder add-type">添加类型</a>
+			<div class="table_list">
+				<table>
+					<tbody>
+						<tr class="odd">
+							<th width="10%">序号</th>
+							<th width="70%">类型名称</th>
+							<th width="20%">操作</th>
+						</tr>
+						<tr>
+							<td>1</td>	
+							<td>新员工培训</td>
+							<td>
+								<a href="javascript:;" class="btnEditType">编辑</a>
+								<a href="javascript:;" class="btnDelFolder">删除</a>
+							</td>
+						</tr>
+						<tr>
+							<td>2</td>	
+							<td>新员工培训</td>
+							<td>
+								<a href="javascript:;" class="btnEditType">编辑</a>
+								<a href="javascript:;" class="btnDelFolder">删除</a>
+							</td>
+						</tr>
+						<tr>
+							<td>3</td>	
+							<td>新员工培训</td>
+							<td>
+								<a href="javascript:;" class="btnEditType">编辑</a>
+								<a href="javascript:;" class="btnDelFolder">删除</a>
+							</td>
+						</tr>
+						<tr>
+							<td>4</td>	
+							<td>新员工培训</td>
+							<td>
+								<a href="javascript:;" class="btnEditType">编辑</a>
+								<a href="javascript:;" class="btnDelFolder">删除</a>
+							</td>
+						</tr>
+						<tr>
+							<td>5</td>	
+							<td>新员工培训</td>
+							<td>
+								<a href="javascript:;" class="btnEditType">编辑</a>
+								<a href="javascript:;" class="btnDelFolder">删除</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="pagination">
+				<div class="pagination_left fl">显示1-6条/共6条</div>
+				<div class="pagination_right fr">
+					<a href="javascript:;" class="btn default fl ">上一页</a>
+					<ul class="page fl">
+						<li><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="" class="current">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">5</a></li>
+					</ul>
+					<a href="javascript:;" class="btn default fl">下一页</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="dialog" title="新建类型">
+		<p class="type-name">类型名称</p>
+		<input type="text" class="type-text"/>
+	</div>
+	<div id="dialog2" title="删除类型">
+		<p class="del-folder-tip">您确定要删除这个类型吗？</p>
+	</div>
+	<div id="dialog3" title="编辑类型">
+		<p class="type-name">类型名称</p>
+		<input type="text" class="type-text" value="新员工培训"/>
+	</div>
+	
+</body>
+</html>

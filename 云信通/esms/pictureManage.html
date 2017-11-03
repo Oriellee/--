@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片管理</title>
+	<link rel="stylesheet" href="css/main.css"/>
+	<link rel="stylesheet" href="css/basicManage.css"/>
+	<link rel="stylesheet" href="uploadify/uploadify.css"/>
+	<script type="text/javascript" charset="utf-8" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="editor_config.js"></script>
+	<script type="text/javascript" charset="utf-8" src="editor_api.js"></script>
+	<script type="text/javascript" charset="utf-8" src="uploadify/jquery.uploadify.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/voice.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/basicManage.js"></script>
+	<link rel="stylesheet" href="css/jquery-ui.css" />
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+</head>
+<body>
+<div class="header">
+		<div class="logo">
+			<a href=""><img src="images/logo.png" class="fl"/></a>
+		</div>
+		<div class="user_info">
+			<i class="sprite people"></i>
+			<span class="fl">账号：liuyingjie</span>
+			<a href="" class="back">退出</a>
+		</div>
+	</div>
+	<div class="container organization">
+		<div class="cont_left">
+			<div class="navigation_left h100 fl">
+				<ul>
+					<li><a href="Organization.html" class=""><i class="sprite orangise ml15"></i><span>组织结构</span></a></li>
+					<li class="visited"><a href="addNews.html"><i class="sprite publish ml15"></i><span>内容发布</span></a></li>
+					<li><a href="admin.html"><i class="sprite system ml15"></i><span>系统设置</span></a></li>
+				</ul>
+			</div>
+			<div class="navigation_right h100 fl">
+				<div class="data_info">
+					<div class="news_list">
+						<div class="title">企业消息</div>
+						<a href="addNews.html">新建消息</a>
+						<a href="newsPublish.html">消息列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">投票消息</div>
+						<a href="addPiao.html">新建投票</a>
+						<a href="newsList.html">投票列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">通知</div>
+						<a href="addNotice.html">新建通知</a>
+						<a href="noticesList.html">通知列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">公告</div>
+						<a href="addAffiche.html">新建公告</a>
+						<a href="afficheList.html">公告列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">新闻</div>
+						<a href="newNews.html">新建新闻</a>
+						<a href="myNewNewsList.html" >我创建的</a>
+						<a href="myManageList.html">我管理的</a>
+						<a href="channelManage.html">频道管理</a>
+						<a href="basicManage.html"   class="visited">基本管理</a>
+						<div class="btm_select"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cont_right rel">
+			<i class="sprite left_icon top337"></i>
+			<p class="basic_title">图片管理</p>
+			<div class="search_left fl jl">
+					<a href="basicManage.html" class="btn default-cor fl ml14 mt15 btnAdd">轮播页管理</a>
+					<a href="#" class="btn default-cor fl ml14 mt15 btnDel active">图片管理</a>		
+			</div>
+			<p class="picture-tip">新闻中没有图片时，显示此默认图片</p>
+			<p class="picture-tip">请选择默认图片：</p>			
+			<ul class="picture-list">
+				<li>
+					<input type="radio" name="pic-default" class="pic-default"/>
+					<img src="images/pic.png" alt=""/>
+					<a class="delete-default-img" href="javascript:;">删除</a>
+				</li>
+			</ul>
+			<a href="javascript:;" class="sel-pic"><img src="images/plus.png"/></a>
+			<a href="javascript:;" class="sel-pic1">点击添加图片</a>								
+			
+	<!--图片库添加图片开始-->
+	<div id="dialog3" title="添加图片">
+		<div class="img-show">
+		
+		</div>
+		<p class="upload-img"><label>上传图片</label><input type="file" value="" onchange="uploadImg()"/></p>
+	</div>
+	<!--图片库添加图片结束-->
+	
+	<!--删除图片库默认图片开始-->
+			<div id="dialog4" title="系统提示">
+				<p class="box2">确定删除图片？</p>	
+			</div>
+	<!--删除图片库默认图片结束-->
+</div>
+</body>
+</html>

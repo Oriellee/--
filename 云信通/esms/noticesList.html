@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>通知列表</title>
+	<!--<link rel="stylesheet" href="css/common_pc.css"/>
+	<link rel="stylesheet" href="css/cont_left_pc.css"/>
+	<link rel="stylesheet" href="css/cont_right_pc.css"/>-->
+	
+	<link rel="stylesheet" href="css/common.css"/>
+	<link rel="stylesheet" href="css/cont_left.css"/>
+	<link rel="stylesheet" href="css/cont_right.css"/>
+	<link rel="stylesheet" href="css/header.css"/>
+	<link rel="stylesheet" href="css/confirm.css"/>
+	<link rel="stylesheet" href="css/oranization.css"/>
+	<link rel="stylesheet" href="css/news.css"/>
+	<link rel="stylesheet" href="css/system.css"/>
+	<link rel="stylesheet" href="css/register.css"/>
+	<link rel="stylesheet" href="css/IE.css"/>
+	<link rel="stylesheet" href="css/notice.css"/>
+	<link rel="stylesheet" href="uploadify/uploadify.css"/>
+	<script type="text/javascript" charset="utf-8" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="editor_config.js"></script>
+	<script type="text/javascript" charset="utf-8" src="editor_api.js"></script>
+	<script type="text/javascript" src="js/jquery.datetimepicker.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/noticelist.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css" />
+	<script type="text/javascript" charset="utf-8" src="uploadify/jquery.uploadify.js"></script>
+</head>
+<body>
+<div class="header">
+		<div class="logo">
+			<a href=""><img src="images/logo.png" class="fl"/></a>
+		</div>
+		<div class="user_info">
+			<i class="sprite people"></i>
+			<span class="fl">账号：liuyingjie</span>
+			<a href="" class="back">退出</a>
+		</div>
+	</div>
+	<div class="container organization">
+		<div class="cont_left">
+			<div class="navigation_left h100 fl">
+				<ul>
+					<li><a href="Organization.html" class=""><i class="sprite orangise ml15"></i><span>组织结构</span></a></li>
+					<li class="visited"><a href="addNews.html"><i class="sprite publish ml15"></i><span>内容发布</span></a></li>
+					<li><a href="admin.html"><i class="sprite system ml15"></i><span>系统设置</span></a></li>
+				</ul>
+			</div>
+			<div class="navigation_right h100 fl">
+				<div class="data_info">
+					<div class="news_list">
+						<div class="title">企业消息</div>
+						<a href="addNews.html">新建消息</a>
+						<a href="newsPublish.html">消息列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">投票消息</div>
+						<a href="addPiao.html">新建投票</a>
+						<a href="newsList.html">投票列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">通知</div>
+						<a href="addNotice.html">新建通知</a>
+						<a href="newsList.html" class="visited">通知列表</a>
+						<div class="btm_select"></div>
+					</div>
+					<div class="news_list">
+						<div class="title">公告</div>
+						<a href="addAffiche.html">新建公告</a>
+						<a href="afficheList.html">公告列表</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cont_right rel">
+			<i class="sprite left_icon top337"></i>
+			<p class="notice_title">通知列表</p>
+			<div class="show-notice-list">
+				<div class="left">
+					<p>显示：</p>
+					<a href="javascript:;" class="selected yfb">已发布&nbsp;(<span>2</span>)</a>
+					<a href="javascript:;" class="ch">已撤回&nbsp;(<span>10</span>)</a>
+					<a href="javascript:;">草稿&nbsp;(<span>12</span>)</a>
+				</div>
+				<div class="right">
+					时间范围：
+					<input type="text" placeholder="选择日期" class="h21 endTime mt5" id="endtime" name="endtime"/>
+					<img src="images/date.png" class="endTimes_img"/> <span class="zhi">至</span>
+					<input type="text" placeholder="选择日期" class="h21 endTime mt5" id="endtime1" name="endtime"/> 
+					<img src="images/date.png" class="endTimes_img1"/>
+
+					<input type="text" class="search-text" placeholder="搜索标题/内容"/>
+					<input type="submit" class="search-btn" value=" "/>
+				</div>
+			</div>
+			<!--已发布内容列表开始-->
+			<div class="published">
+				<div class="publisted-list">
+					<div class="publist-con">
+						<div class="basic-info">
+							<a href="meetingNoticeDetails.html"><img src="images/per-icon.png"/></a>
+							<div class="name-time"><p><a href="meetingNoticeDetails.html">管理员</a></p><p>12：00<span class="noticelist-type">会议通知</span></p></div>
+							<p class="read-info">已读&nbsp;<span>3</span>/<span>5</span></p>
+						</div>
+						<p class="notice-title"><img src="images/ding.png" class="ding"/><a href="meetingNoticeDetails.html">通知标题</a></p>
+						<p class="notice-content">通知内容12月1日-2日，习主席出访津巴布韦。 津巴布韦总统府将赠送数件国礼，包括其特有的石雕。送给习主席的是狮子石雕，题为“友好的狮子”，意指中国像健壮的雄狮，有力量却从不对（央视记者顾雪嘉）</p>
+					</div>
+					<div class="bottom">
+						<a href="#">撤回</a>
+					</div>
+				</div>
+				<div class="publisted-list">
+					<div class="publist-con">
+						<div class="basic-info">
+							<a href="activeNoticeDetails.html"><img src="images/per-icon.png"/></a>
+							<div class="name-time"><p><a href="activeNoticeDetails.html">管理员</a></p><p>12：00<span class="noticelist-type">活动通知</span></p></div>
+							<p class="read-info">已读&nbsp;<span>3</span>/<span>5</span></p>
+						</div>
+						<p class="notice-title"><img src="images/ding.png" class="ding"/><a href="activeNoticeDetails.html">通知标题</a></p>
+						<p class="notice-content">通知内容12月1日-2日，习主席出访津巴布韦。 津巴布韦总统府将赠送数件国礼，包括其特有的石雕。送给习主席的是狮子石雕，题为“友好的狮子”，意指中国像健壮的雄狮，有力量却从不对（央视记者顾雪嘉）</p>
+					</div>
+					<div class="bottom">
+						<a href="#">撤回</a>
+					</div>
+				</div>
+				<div class="publisted-list">
+					<div class="publist-con">
+						<div class="basic-info">
+							<a href="noticeDetails.html"><img src="images/per-icon.png"/></a>
+							<div class="name-time"><p><a href="noticeDetails.html">管理员</a></p><p>12：00</p></div>
+							<p class="read-info">已读&nbsp;<span>3</span>/<span>5</span></p>
+						</div>
+						<p class="notice-title"><img src="images/ding.png" class="ding"/><a href="noticeDetails.html">通知标题</a></p>
+						<p class="notice-content">通知内容12月1日-2日，习主席出访津巴布韦。 津巴布韦总统府将赠送数件国礼，包括其特有的石雕。送给习主席的是狮子石雕，题为“友好的狮子”，意指中国像健壮的雄狮，有力量却从不对（央视记者顾雪嘉）</p>
+					</div>
+					<div class="bottom">
+						<a href="#">撤回</a>
+					</div>
+				</div>
+				<div class="publisted-list">
+					<div class="publist-con">
+						<div class="basic-info">
+							<a href="noticeDetails.html"><img src="images/per-icon.png"/></a>
+							<div class="name-time"><p><a href="noticeDetails.html">管理员</a></p><p>12：00</p></div>
+							<p class="read-info">已读&nbsp;<span>3</span>/<span>5</span></p>
+						</div>
+						<p class="notice-title"><img src="images/ding.png" class="ding"/><a href="noticeDetails.html">通知标题</a></p>
+						<p class="notice-content">通知内容12月1日-2日，习主席出访津巴布韦。 津巴布韦总统府将赠送数件国礼，包括其特有的石雕。送给习主席的是狮子石雕，题为“友好的狮子”，意指中国像健壮的雄狮，有力量却从不对（央视记者顾雪嘉）</p>
+					</div>
+					<div class="bottom">
+						<a href="#">撤回</a>
+					</div>
+				</div>
+				<div class="publisted-list">
+					<div class="publist-con">
+						<div class="basic-info">
+							<a href="noticeDetails.html"><img src="images/per-icon.png"/></a>
+							<div class="name-time"><p><a href="noticeDetails.html">管理员</a></p><p>12：00</p></div>
+							<p class="read-info">已读&nbsp;<span>3</span>/<span>5</span></p>
+						</div>
+						<p class="notice-title"><img src="images/ding.png" class="ding"/><a href="noticeDetails.html">通知标题</a></p>
+						<p class="notice-content">通知内容12月1日-2日，习主席出访津巴布韦。 津巴布韦总统府将赠送数件国礼，包括其特有的石雕。送给习主席的是狮子石雕，题为“友好的狮子”，意指中国像健壮的雄狮，有力量却从不对（央视记者顾雪嘉）</p>
+					</div>
+					<div class="bottom">
+						<a href="#">撤回</a>
+					</div>
+				</div>
+				<div class="publisted-list">
+					<div class="publist-con">
+						<div class="basic-info">
+							<a href="javascript:;"><img src="images/per-icon.png"/></a>
+							<div class="name-time"><p><a href="javascript:;">管理员</a></p><p>12：00</p></div>
+							<p class="read-info">已读&nbsp;<span>3</span>/<span>5</span></p>
+						</div>
+						<p class="notice-title"><a href="javascript:;">通知标题</a></p>
+						<p class="notice-content">通知内容12月1日-2日，习主席出访津巴布韦。 津巴布韦总统府将赠送数件国礼，包括其特有的石雕。送给习主席的是狮子石雕，题为“友好的狮子”，意指中国像健壮的雄狮，有力量却从不对外露出獠牙利爪， 和平处事；送给彭丽媛的是母女石雕，意为世界大同，赞颂母爱。（央视记者顾雪嘉）12月1日-2日，习主席出访津巴布韦。 津巴布韦总统府将赠送数件国礼，包括其特有的石雕。送给习主席的是狮子石雕，题为“友好的狮子”，意指中国像健壮的雄狮，有力量却从不对外露出獠牙利爪， 和平处事；送给彭丽媛的是母女石雕，意为世界大同，赞颂母爱。（央视记者顾雪嘉）</p>
+					</div>
+					<div class="bottom">
+						<a href="#">撤回</a>
+					</div>
+				</div>
+				<!--分页-->
+				<div class="pagination">
+				<div class="pagination_left fl">显示1-6条/共6条</div>
+				<div class="pagination_right fr">
+					<a href="javascript:;" class="btn default fl ">上一页</a>
+					<ul class="page fl">
+						<li><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="" class="current">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">5</a></li>
+					</ul>
+					<a href="javascript:;" class="btn default fl">下一页</a>
+				</div>
+				</div>
+			</div>
+			<!--已发布内容列表结束-->
+			
+			<!--草稿箱内容列表开始-->
+			<div class="un-published">
+				<div class="publisted-list">
+					<div class="publist-con">
+						<div class="basic-info">
+							<a href="javascript:;"><img src="images/per-icon.png"/></a>
+							<div class="name-time"><p><a href="javascript:;">管理员</a></p><p>12：00<span class="noticelist-type">会议通知</span></p></div>
+							<p class="read-info">已读&nbsp;<span>3</span>/<span>5</span></p>
+						</div>
+						<p class="notice-title"><a href="javascript:;">通知标题</a></p>
+						<p class="notice-content">通知内容12月1日-2日，习主席出访津巴布韦。 津巴布韦总统府将赠送数件国礼，包括其特有的石雕。送给习主席的是狮子石雕，题为“友好的狮子”，意指中国像健壮的雄狮，有力量却从不对外露出獠牙利爪， 和平处事；送给彭丽媛的是母女石雕，意为世界大同，赞颂母爱。（央视记者顾雪嘉）12月1日-2日，习主席出访津巴布韦。 津巴布韦总统府将赠送数件国礼，包括其特有的石雕。送给习主席的是狮子石雕，题为“友好的狮子”，意指中国像健壮的雄狮，有力量却从不对外露出獠牙利爪， 和平处事；送给彭丽媛的是母女石雕，意为世界大同，赞颂母爱。（央视记者顾雪嘉）</p>
+					</div>
+					<div class="bottom">
+						<a href="#">删除</a>
+					</div>
+				</div>
+				<div class="publisted-list">
+					<div class="publist-con">
+						<div class="basic-info">
+							<a href="javascript:;"><img src="images/per-icon.png"/></a>
+							<div class="name-time"><p><a href="javascript:;">管理员</a></p><p>12：00<span class="noticelist-type">活动通知</span></p></div>
+							<p class="read-info">已读&nbsp;<span>3</span>/<span>5</span></p>
+						</div>
+						<p class="notice-title"><a href="javascript:;">通知标题</a></p>
+						<p class="notice-content">通知内容12月1日-2日，习主席出访津巴布韦。 津巴布韦总统府将赠送数件国礼，包括其特有的石雕。送给习主席的是狮子石雕，题为“友好的狮子”，意指中国像健壮的雄狮，有力量却从不对外露出獠牙利爪， 和平处事；送给彭丽媛的是母女石雕，意为世界大同，赞颂母爱。（央视记者顾雪嘉）12月1日-2日，习主席出访津巴布韦。 津巴布韦总统府将赠送数件国礼，包括其特有的石雕。送给习主席的是狮子石雕，题为“友好的狮子”，意指中国像健壮的雄狮，有力量却从不对外露出獠牙利爪， 和平处事；送给彭丽媛的是母女石雕，意为世界大同，赞颂母爱。（央视记者顾雪嘉）</p>
+					</div>
+					<div class="bottom">
+						<a href="#">删除</a>
+					</div>
+				</div>
+				<div class="publisted-list">
+					<div class="publist-con">
+						<div class="basic-info">
+							<a href="javascript:;"><img src="images/per-icon.png"/></a>
+							<div class="name-time"><p><a href="javascript:;">管理员</a></p><p>12：00</p></div>
+							<p class="read-info">已读&nbsp;<span>3</span>/<span>5</span></p>
+						</div>
+						<p class="notice-title"><a href="javascript:;">通知标题</a></p>
+						<p class="notice-content">通知内容12月1日-2日，习主席出访津巴布韦。 津巴布韦总统府将赠送数件国礼，包括其特有的石雕。送给习主席的是狮子石雕，题为“友好的狮子”，意指中国像健壮的雄狮，有力量却从不对外露出獠牙利爪， 和平处事；送给彭丽媛的是母女石雕，意为世界大同，赞颂母爱。（央视记者顾雪嘉）12月1日-2日，习主席出访津巴布韦。 津巴布韦总统府将赠送数件国礼，包括其特有的石雕。送给习主席的是狮子石雕，题为“友好的狮子”，意指中国像健壮的雄狮，有力量却从不对外露出獠牙利爪， 和平处事；送给彭丽媛的是母女石雕，意为世界大同，赞颂母爱。（央视记者顾雪嘉）</p>
+					</div>
+					<div class="bottom">
+						<a href="#">删除</a>
+					</div>
+				</div>
+				
+				<!--分页-->
+				<div class="pagination">
+				<div class="pagination_left fl">显示1-6条/共6条</div>
+				<div class="pagination_right fr">
+					<a href="javascript:;" class="btn default fl ">上一页</a>
+					<ul class="page fl">
+						<li><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="" class="current">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">5</a></li>
+					</ul>
+					<a href="javascript:;" class="btn default fl">下一页</a>
+				</div>
+				</div>
+			</div>
+			<!--草稿箱内容列表结束-->
+			
+			<!--撤回内容列表开始-->
+			<div class="recallList">
+				<div class="publisted-list">
+					<div class="publist-con">
+						<div class="basic-info">
+							<a href="javascript:;"><img src="images/per-icon.png"/></a>
+							<div class="name-time"><p><a href="javascript:;">管理员</a></p><p>12：00<span class="noticelist-type">会议通知</span></p></div>
+							<p class="read-info">已读&nbsp;<span>3</span>/<span>5</span></p>
+						</div>
+						<p class="notice-title"><a href="javascript:;">通知标题</a></p>
+						<p class="notice-content">通知内容12月1日-2日，习主席出访津巴布韦。 津巴布韦总统府将赠送数件国礼，包括其特有的石雕。送给习主席的是狮子石雕，题为“友好的狮子”，意指中国像健壮的雄狮，有力量却从不对外露出獠牙利爪， 和平处事；送给彭丽媛的是母女石雕，意为世界大同，赞颂母爱。（央视记者顾雪嘉）12月1日-2日，习主席出访津巴布韦。 津巴布韦总统府将赠送数件国礼，包括其特有的石雕。送给习主席的是狮子石雕，题为“友好的狮子”，意指中国像健壮的雄狮，有力量却从不对外露出獠牙利爪， 和平处事；送给彭丽媛的是母女石雕，意为世界大同，赞颂母爱。（央视记者顾雪嘉）</p>
+					</div>
+					<div class="bottom">
+						<a href="#">删除</a>
+					</div>
+				</div>
+				<div class="publisted-list">
+					<div class="publist-con">
+						<div class="basic-info">
+							<a href="javascript:;"><img src="images/per-icon.png"/></a>
+							<div class="name-time"><p><a href="javascript:;">管理员</a></p><p>12：00<span class="noticelist-type">活动通知</span></p></div>
+							<p class="read-info">已读&nbsp;<span>3</span>/<span>5</span></p>
+						</div>
+						<p class="notice-title"><a href="javascript:;">通知标题</a></p>
+						<p class="notice-content">通知内容12月1日-2日，习主席出访津巴布韦。 津巴布韦总统府将赠送数件国礼，包括其特有的石雕。送给习主席的是狮子石雕，题为“友好的狮子”，意指中国像健壮的雄狮，有力量却从不对外露出獠牙利爪， 和平处事；送给彭丽媛的是母女石雕，意为世界大同，赞颂母爱。（央视记者顾雪嘉）12月1日-2日，习主席出访津巴布韦。 津巴布韦总统府将赠送数件国礼，包括其特有的石雕。送给习主席的是狮子石雕，题为“友好的狮子”，意指中国像健壮的雄狮，有力量却从不对外露出獠牙利爪， 和平处事；送给彭丽媛的是母女石雕，意为世界大同，赞颂母爱。（央视记者顾雪嘉）</p>
+					</div>
+					<div class="bottom">
+						<a href="#">删除</a>
+					</div>
+				</div>
+				
+				<!--分页-->
+				<div class="pagination">
+				<div class="pagination_left fl">显示1-6条/共6条</div>
+				<div class="pagination_right fr">
+					<a href="javascript:;" class="btn default fl ">上一页</a>
+					<ul class="page fl">
+						<li><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="" class="current">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">5</a></li>
+					</ul>
+					<a href="javascript:;" class="btn default fl">下一页</a>
+				</div>
+				</div>
+			</div>
+			<!--撤回内容列表结束-->
+		</div>
+	</div>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#endtime').datetimepicker({
+			dateFormat : 'mm-dd-yy',
+			timeFormat : 'hh:mm:ss'
+		});
+		$('#endtime1').datetimepicker({
+			dateFormat : 'mm-dd-yy',
+			timeFormat : 'hh:mm:ss'
+		});
+		$('.endTimes_img').click(function() {
+			$('#endtime').datetimepicker('show');
+		});
+
+		$('.endTimes_img1').click(function() {
+			$('#endtime1').datetimepicker('show');
+		});
+
+	});	
+</script>
+</body>
+</html>

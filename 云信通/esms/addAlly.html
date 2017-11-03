@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>添加盟友</title>
+	<link rel="stylesheet" href="css/main.css"/>
+	<link rel="stylesheet" href="css/ally.css"/>
+	<link rel="stylesheet" href="uploadify/uploadify.css"/>
+	<script type="text/javascript" charset="utf-8" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="editor_config.js"></script>
+	<script type="text/javascript" charset="utf-8" src="editor_api.js"></script>
+	<script type="text/javascript" charset="utf-8" src="uploadify/jquery.uploadify.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/ally.js"></script>
+	<link rel="stylesheet" href="css/jquery-ui.css" />
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+</head>
+<body>
+<div class="header">
+		<div class="logo">
+			<a href=""><img src="images/logo.png" class="fl"/></a>
+		</div>
+		<div class="user_info">
+			<i class="sprite people"></i>
+			<span class="fl">账号：liuyingjie</span>
+			<a href="" class="back">退出</a>
+		</div>
+	</div>
+	<div class="container organization">
+		<div class="cont_left">
+			<div class="navigation_left h100 fl">
+				<ul>
+					<li><a href="Organization.html" class=""><i class="sprite orangise ml15"></i><span>组织结构</span></a></li>
+					<li class="visited"><a href="addNews.html"><i class="sprite publish ml15"></i><span>内容发布</span></a></li>
+					<li><a href="admin.html"><i class="sprite system ml15"></i><span>系统设置</span></a></li>
+				</ul>
+			</div>
+			<div class="navigation_right h100 fl">
+				<div class="data_info">
+					<div class="news_list">
+						<div class="title">企业消息</div>
+						<a href="addNews.html">新建消息</a>
+						<a href="newsPublish.html">消息列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">投票消息</div>
+						<a href="addPiao.html">新建投票</a>
+						<a href="newsList.html">投票列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">通知</div>
+						<a href="addNotice.html">新建通知</a>
+						<a href="noticesList.html">通知列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">公告</div>
+						<a href="addAffiche.html">新建公告</a>
+						<a href="afficheList.html">公告列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">新闻</div>
+						<a href="newNews.html">新建新闻</a>
+						<a href="myNewNewsList.html">我创建的</a>
+						<a href="myManageList.html">我管理的</a>
+						<a href="channelManage.html">频道管理</a>
+						<a href="basicManage.html">基本管理</a>
+					</div>
+					<div class="news_list">
+						<div class="title">调查管理</div>
+						<a href="addResearch.html">新建调查</a>
+						<a href="researchList.html">调查列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">盟友风采</div>
+						<a href="addAlly.html" class="visited">添加盟友</a>
+						<div class="btm_select"></div>
+						<a href="allyList.html">盟友列表</a>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+			<div class="cont_right rel">
+			<i class="sprite left_icon top52"></i>
+			<p class="title">添加盟友</p>
+			<p class="title-bar">盟友信息</p>
+			<div class="bar">
+				<span class="bar-name">姓名</span>
+				<input class="bar-text" placeholder="必填"/>
+				<span class="error">请填入姓名</span>
+			</div>
+			<div class="bar">
+				<span class="bar-name">职务</span>
+				<input class="bar-text" placeholder="必填"/>
+				<span class="error">请填入职务</span>
+			</div>
+			<div class="bar">
+				<span class="bar-name">入会时间务</span>
+				<input class="bar-text" placeholder="必填"/>
+				<span class="error">请选择入会时间</span>
+			</div>
+			<div class="bar">
+				<span class="bar-name">个人风采照</span>
+				<div class="piction"></div>
+				<div class="upload">
+					<span class="label-up">上传</span>	
+					<p>格式：jpg、jepg、png、bmp，500x500以上</p>
+				</div>
+				<span class="error">请选择个人风采照</span>
+			</div>
+			<div class="bar">
+				<span class="bar-name">个人介绍</span>
+				<textarea placeholder="必填"></textarea>
+				<span class="error">请输入个人介绍</span>
+			</div>
+			<hr/>
+			<p class="title-bar">联系方式</p>
+			<div class="bar">
+				<span class="bar-name">手机1</span>
+				<input class="bar-text" placeholder="必填"/>
+				<span class="error">请输入手机1</span>
+			</div>
+			<div class="bar">
+				<span class="bar-name">手机2</span>
+				<input class="bar-text"/>
+			</div>
+			<div class="bar">
+				<span class="bar-name">办公电话</span>
+				<input class="bar-text" placeholder="必填"/>
+				<span class="error">请输入办公电话</span>
+			</div>
+			<div class="bar">
+				<span class="bar-name">微信号</span>
+				<input class="bar-text"/>
+			</div>
+			<div class="bar">
+				<span class="bar-name">电子邮箱</span>
+				<input class="bar-text" placeholder="必填"/>
+				<span class="error">请输入电子邮箱</span>
+			</div>
+			<hr/>
+			<p class="title-bar">助理信息</p>
+			<div class="bar">
+				<span class="bar-name">助理姓名</span>
+				<input class="bar-text"/>
+			</div>
+			<div class="bar">
+				<span class="bar-name">助理手机</span>
+				<input class="bar-text"/>
+			</div>
+			<div class="bar">
+				<span class="bar-name">助理电话</span>
+				<input class="bar-text"/>
+			</div>
+			<div class="bar">
+				<span class="bar-name">助理邮箱</span>
+				<input class="bar-text"/>
+			</div>	
+			<hr/>
+			<p class="title-bar">企业信息</p>
+			<div class="bar">
+				<span class="bar-name">企业全称</span>
+				<input class="bar-text" placeholder="必填"/>
+				<span class="error">请输入企业全称</span>
+			</div>
+			<div class="bar">
+				<span class="bar-name">所属行业</span>
+				<ul class="selected-list">	
+					<li class="selected-item"><span class="item-name">计算机</span><span class="remove-h">×</span></li>
+					<li class="selected-item"><span class="item-name">互联网</span><span class="remove-h">×</span></li>
+				</ul>
+				<span class="input-tip" style="display: inline-block;"><i class="prefix"></i>添加</span>
+				<span class="error">请选择所属行业</span>
+			</div>
+			<div class="bar">
+				<span class="bar-name">企业网址</span>
+				<input class="bar-text"/>
+			</div>	
+			<div class="bar">
+				<span class="bar-name">企业logo</span>
+				<div class="pic-logo"></div>
+				<div class="upload">
+					<span class="label-up2">上传</span>	
+					<p>格式：jpg、jepg、png、bmp，200x200以上</p>
+				</div>
+			</div>	
+			<div class="bar">
+				<span class="bar-name">企业介绍</span>
+				<textarea placeholder="必填"></textarea>
+				<span class="error">请输入企业介绍</span>
+			</div>
+			<div class="bar">
+				<span class="bar-name">企业资质</span>
+				<textarea></textarea>
+			</div>
+			<div class="bar">
+				<span class="bar-name">产品服务</span>
+				<textarea></textarea>
+			</div>
+			<div class="publishBtn">
+				<input type="submit" value="发布" class="publish-btn">
+				<input type="submit" value="保存" class="save-btn">
+			</div>
+		</div>
+	</div>	
+	<!--上传个人风采照-->
+	<div id="dialog-upload" title="上传个人风采照">
+		<span class="error upload-text">推荐分辨率500*500的图片，支持jpg、jepg、png、bmp格式</span>
+		<span class="sPic">选择图片</span>
+		<input type="file" style="filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);" class="upload-logo"/>
+		<div>
+		
+		</div>
+	</div>
+	<!--上传个人风采照-->
+	<!--上传企业logo-->
+	<div id="dialog-upload2" title="上传企业logo">
+		<span class="error upload-text">推荐分辨率200*200的图片，支持jpg、jepg、png、bmp格式</span>
+		<span class="sPic">选择图片</span>
+		<input type="file" style="filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);" class="upload-logo"/>
+		<div>
+		
+		</div>
+	</div>
+	<!--上传企业logo-->
+	<!--添加行业-->
+	<div id="dialog-industry" title="选择行业">
+		<ul class="selected-list">	
+					
+		</ul>
+		<div class="industryList">
+			<span class="industry-name">计算机</span><span class="industry-name">互联网</span><span class="industry-name">通讯</span><span class="industry-name">电子</span><span class="industry-name">会计</span><span class="industry-name">金融</span><span class="industry-name">银行</span><span class="industry-name">保险</span>
+			<span class="industry-name">国际贸易</span><span class="industry-name">消费品</span><span class="industry-name">制造业</span><span class="industry-name">医疗</span><span class="industry-name">制药</span><span class="industry-name">媒体</span><span class="industry-name">广告</span>
+			<span class="industry-name">建筑业</span><span class="industry-name">教育培训</span><span class="industry-name">服务业</span><span class="industry-name">物流</span><span class="industry-name">运输</span><span class="industry-name">能源材料</span><span class="industry-name">农业</span>
+			<span class="error">最多选择五项</span>
+		</div>
+	</div>
+	
+	
+</body>
+</html>

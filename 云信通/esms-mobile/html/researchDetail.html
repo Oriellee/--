@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>调查详情页</title>
+	 <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no">
+	<link type="text/css" rel="stylesheet" href="../css/researchDetail-pc.css"/>
+	<style>
+		body{display:none;}
+	</style>
+   <script>
+	$(function(){
+		var deviceWidth = document.documentElement.clientWidth;
+		if(deviceWidth > 640) deviceWidth = 640;
+		document.documentElement.style.fontSize = deviceWidth / 6.4 + 'px';	
+		$("body").show();	
+		
+		//获取选项的个数
+		var length = $(".vote-result .vote-bar").length;
+		for(var i=0;i<length;i++){
+			var $index = $('.vote-bg-color').eq(i);
+			var percent = $index.data('scale');
+			//百分比转化为小数
+			var num = percent/100;
+			//设置投票进度条
+			$index.width(num*3.7+"rem");					
+		}	
+
+	});
+  
+    
+</script>
+</head>
+<body>		
+	<p class="vote-deadline">投票将在<span>06-18 24:00</span>结束</p>
+	<p class="vote-title">公司有多少人使用云信通？</p>
+	<p class="vote-from"><span class="publish-time">09:30</span><span>来自马宏明</span></p>
+	<div class="voteChoice-title">
+		<span class="vote-type">单选</span><span class="vote-name">(匿名投票)</span><span class="vote-total">共10票</span>
+	</div>
+	<div class="vote-result">
+		<a href="viewOption.html" class="vote-bar">
+			<span class="vote-op-text">1、周末去爬山周末去爬山周末去爬山周末去爬山周末去爬山周末去爬山周末去爬山周末去爬山周末去爬山周末去</span>	
+			<span class="vote-bg"><span class="vote-bg-color" data-scale="30"></span></span><span class="vote-num">10票<span class="vote-percent">30%</span></span>
+		</a>
+		<a href="viewOption.html" class="vote-bar">
+			<span class="vote-op-text">2、周末去打羽毛球周末去打羽毛球周末去打球周末去打<span class="vote-sel">（已选）</span></span>
+			<span class="vote-bg" ><span class="vote-bg-color" data-scale="30"></span></span><span class="vote-num">10票<span class="vote-percent">30%</span></span>
+		</a>
+		<a href="viewOption.html"class="vote-bar">
+			<span class="vote-op-text">3、周末去游泳</span>
+			<span class="vote-bg" ><span class="vote-bg-color" data-scale="40"></span></span><span class="vote-num">5票<span class="vote-percent">40%</span></span>
+		</a>
+		<a href="viewOption.html"class="vote-bar">
+			<span class="vote-op-text">3、周末去游泳</span>
+			<span class="vote-bg" ><span class="vote-bg-color" data-scale="40"></span></span><span class="vote-num">5票<span class="vote-percent">40%</span></span>
+		</a>
+		<a href="viewOption.html"class="vote-bar">
+			<span class="vote-op-text">3、周末去游泳</span>
+			<span class="vote-bg" ><span class="vote-bg-color" data-scale="40"></span></span><span class="vote-num">5票<span class="vote-percent">40%</span></span>
+		</a>
+		<a href="viewOption.html"class="vote-bar">
+			<span class="vote-op-text">3、周末去游泳</span>
+			<span class="vote-bg" ><span class="vote-bg-color" data-scale="40"></span></span><span class="vote-num">5票<span class="vote-percent">40%</span></span>
+		</a>
+	</div>
+	<!--底部开始-->
+	<ul class="bottom">
+		<li class="reply" class="two">
+			<a href="voteCommentList.html"><img src="../images/reply.png"/>&nbsp;&nbsp;评论&nbsp;&nbsp;<span>3</span></a>
+		</li>	
+		<li class="praise">
+			<a href="viewVoteReply.html"><img src="../images/vote.png"/>&nbsp;&nbsp;已投&nbsp;&nbsp;<span>4</span></a>
+		</li>
+		<li class="praise">
+			<a href="viewVoteReply.html"><img src="../images/unvote.png"/>&nbsp;&nbsp;未投&nbsp;&nbsp;<span>4</span></a>
+		</li>
+	</ul>
+	<!--底部结束-->
+</body>
+</html>

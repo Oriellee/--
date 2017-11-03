@@ -1,0 +1,22 @@
+.query-title{height:130px;border-bottom:1px solid #000;margin-bottom:20px;}
+.query-title .query-label{display:inline-block;margin-top:40px;margin-left:100px;float:left;}
+.query-title .query-text{width:150px;height:20px;margin-top:37px;margin-left:40px;}
+.query-title .search,.labelGroup .search{width:60px;height:25px;background:#4cc1d2;margin-left:40px;border-style:none;color:#fff;}
+.query-title  .tip{margin-left:180px;height:66px;line-height:66px;}
+.person-list{margin:0 auto;display:none;}
+.tree-person-list{margin:0 auto;}
+.tree-person-list .treeList{width:240px;float:left;}
+.person-list .title{margin:0 auto;width:60px;margin-top:20px;font-size:15px;}
+
+.synthesize-title{margin:15px 40px 30px;font-weight:bold;font-size:15px;}
+.labelGroup{height: 44px;margin-left: 70px;}
+.labelGroup label{width:90px;display: inline-block;text-align: right;margin-right:20px;}
+.labelGroup select,.labelGroup input{width:180px;}
+.personList{float:left;width:1010px;margin-left: 30px;}
+.personList .title{text-align: center;font-weight: bold;}
+.personList .return{color:#3D83E9}
+.treeList p{margin-bottom: 20px;margin-left: 10px;}
+
+.queryDept tr th, .queryDept tr  td{text-align: left;padding-left: 18px;padding-right:18px;}
+.queryDept tr  td a{display: block;width: 950px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.tree-person-list .pagination{width: 92%;float: right;margin-right: 4%;}

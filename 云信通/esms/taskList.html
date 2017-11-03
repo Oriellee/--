@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>管理员</title>
+	<link rel="stylesheet" href="css/main.css"/>
+	<link rel="stylesheet" href="css/importTask.css"/>
+	<link rel="stylesheet" href="css/jquery-ui.css" />
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/log.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body class="admin">
+<div class="header">
+		<div class="logo">
+			<a href=""><img src="images/logo.png" class="fl"/></a>
+		</div>
+		<div class="user_info">
+			<i class="sprite people"></i>
+			<span class="fl">账号：liuyingjie</span>
+			<a href="" class="back">退出</a>
+		</div>
+	</div>
+	<div class="container organization">
+		<div class="cont_left">
+			<div class="navigation_left h100 fl">
+				<ul>
+					<li><a href="Organization.html" class=""><i class="sprite orangise ml15"></i><span>组织结构</span></a></li>
+					<li><a href="addNews.html"><i class="sprite publish ml15"></i><span>内容发布</span></a></li>
+					<li class="visited"><a href="newImport.html"><i class="sprite publish ml15"></i><span>辅助功能</span></a></li>
+					<li><a href="admin.html"><i class="sprite system ml15"></i><span>系统设置</span></a></li>
+				</ul>
+			</div>
+			<div class="navigation_right h100 fl">
+				<div class="data_info">
+					<div class="news_list">
+						<div class="title">组织人员大数据导入</div>
+						<a href="newImport.html">新建导入任务</a>	
+						<a href="javascript:;" class="visited">导入任务列表</a>
+						<div class="btm_select"></div>						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cont_right rel">
+			<i class="sprite left_icon top52"></i>
+			<p class="important_title">导入任务列表</p>
+			<div class="table_list">
+				<table>
+					<tbody>
+						<tr class="odd">
+							<th>文件名称</th>
+							<th>导入状态</th>
+							<th>提交时间</th>
+							<th>完成时间</th>
+							<th>备注</th>
+							<th>操作</th>
+						</tr>
+						<tr>
+							<td>x.xls</td>
+							<td>进行中</td>
+							<td>2016-01-21 15:31:00</td>
+							<td>2016-01-20 10:40:00</td>
+							<td>导入10万人</td>
+							<td><a href="javascript:;" class="visible">查看日志</a></td>
+						</tr>
+						<tr>
+							<td>x.xls</td>
+							<td>已完成</td>
+							<td>2016-01-21 15:31:00</td>
+							<td>2016-01-20 10:40:00</td>
+							<td>导入5万人</td>
+							<td><a href="javascript:;" class="visible">查看日志</a></td>
+						</tr>
+						
+						
+					</tbody>
+				</table>
+			</div>
+			<div class="pagination">
+				<div class="pagination_left fl">显示1-6条/共6条</div>
+				<div class="pagination_right fr">
+					<a href="javascript:;" class="btn default fl ">上一页</a>
+					<ul class="page fl">
+						<li><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="" class="current">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">5</a></li>
+					</ul>
+					<a href="javascript:;" class="btn default fl">下一页</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="confirm" style="display:none">
+		<div class="conf_header">
+			<a href='javascript:;' class='btnClose close'><i class='sprite'></i></a>
+		</div>
+		<div class="conf_conter fl" style="line-height:0px;text-align:left">
+			<div class="fl w70 mt40 ">
+				<div class="fl mr15"><input type="checkbox" name="" class="fl mr5"/>组织架构</div>
+				<div class="fl"><input type="checkbox" name="" class="fl mr5"/>内容发布</div>
+			</div>
+			<div class="fl w70 mt20">
+				目标:
+				<select>
+					<option>请输入账号关键字</option>
+					<option>请输入账号关键字</option>
+				</select>
+			</div>
+		</div>
+		<div class="conf_footer fl">
+			<a href="javascript:;" class="btn default fl btnOk btnAdmin">添加</a>
+		</div>
+	</div>
+	
+<!--查看日志弹出框开始-->
+		<div id="dialog" title="查看日志" style="display:none;">
+			<ul class="logList">
+				<li>第一行</li>
+				<li>第二行</li>
+				<li>第一行</li>
+				<li>第二行</li>
+				<li>第一行</li>
+				<li>第二行</li>
+				<li>第一行</li>
+				<li>第二行</li>
+				<li>第一行</li>
+				<li>第二行</li>
+				<li>第一行</li>
+				<li>第二行</li>
+				<li>第一行</li>
+				<li>第二行</li>
+				<li>第一行</li>
+				<li>第二行</li>
+				<li>第一行</li>
+				<li>第二行</li>
+				<li>第一行</li>
+				<li>第二行</li>
+				<li>第一行</li>
+				<li>第二行</li>
+				<li>第一行</li>
+				<li>第二行</li>
+			</ul>	
+		</div>
+<!--查看日志弹出框结束-->
+</body>
+</html>

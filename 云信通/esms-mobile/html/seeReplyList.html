@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>通知-查看评论</title>
+     <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="../css/comment.css">
+	<link rel="stylesheet" href="../css/jquery-ui.css" />
+	<script type="text/javascript" src="../js/jquery-ui.js"></script>
+	<style>
+		body{display:none;}
+	</style>
+	<script>
+	$(function() {
+		var deviceWidth = document.documentElement.clientWidth;
+		if (deviceWidth > 640)
+			deviceWidth = 640;
+		document.documentElement.style.fontSize = deviceWidth / 6.4 + 'px';
+		$("body").show();
+
+		//删除
+		$("li .right").on("click",".delete",function(){
+			var a = $(this);
+			$("#dialog").dialog({
+				modal : true,
+				width : 300,
+				height : 80,
+				buttons: {
+					"确定": function() {
+						$(this ).dialog( "close" );
+						a.closest("li").remove();
+					},
+					 "取消": function() {
+						$( this ).dialog( "close" );
+					}
+				}
+			});
+			
+		});
+		
+		//发送回复
+		$(".bottom a").click(function(){
+			var text = $(this).prev().prop("value");
+			if(text == ""){
+				return false;
+			}else{
+				 $("ul").append("<li><img src='../images/icon.png' class='img' border='0'/><div class='person'>"+
+   					"<span class='name'>赵红杰</span>"+
+   					"<span class='dept'>融合通信部</span>"+
+   					"<span class='time'>2015-12-31 19:30</span></div>"+
+   					"<div class='content'>"+text+
+   					"</div><p class='delete'><a href='javascript:;'><img src='../images/delete.png'  border='0'></a></p>"+
+   					"</li>");
+			};			
+		});
+
+		$(".bg-color").each(function(arr){
+			var arr = ['#ff9852','#70b45a','#11b7f5','#fdcc09','#4683d5','#fe7c7b'];
+			var n = getRandom(6);
+			var color = arr[n];
+		   $(this).css("background",color);
+		})
+		
+	});
+	//生成随机数
+	function getRandom(n){
+        return Math.floor(Math.random()*n)
+       }
+	
+	</script>
+	<style type="text/css"> 
+  		 #slideDown{margin-top: 0;width: 100%;} 
+         #slideDown1,#slideDown2{width: 100%;height: 50px;display: none;} 
+         #slideDown1{height: 50px;} 
+         #slideDown1>p,#slideDown2>p{margin: 0px auto 20px;text-align:center;font-size: 18px;color: #666;height:50px;line-height:50px;} 
+	</style> 
+  </head>
+  
+  <body>
+  <div id="content"> 
+   		<ul>
+   			<li>
+   				<div  class="bg-color"><p>张三</p></div>
+   				<div class="person">
+   					<span class="name">赵红杰赵红杰</span>&nbsp;&nbsp;
+   					<span class="dept">融合通信部融合通信部融合通信部</span>
+   					<span class="time">20小时前</span>
+   				</div>
+   				<div class="content">
+   				今天有事不去了
+   				</div>
+   			</li>
+   			<li>
+   				<div  class="bg-color"><p>张三</p></div>
+   				<div class="person">
+   					<span class="name">赵红杰</span>
+   					<span class="dept">研发中心</span>
+   					<span class="time">20小时前</span>
+   				</div>
+   				<div class="content">
+   				jjkk科技发来的sssssssssssssssssssssdfsssssssssssssssssssssssssssssssssssss
+   				</div>
+   				<p class="delete"><a href="javascript:;"><img src="../images/delete.png"></a></p>
+   			</li>
+   			<li>
+   				<div  class="bg-color"><p>张三</p></div>
+   				<div class="person">
+   					<span class="name">赵红杰</span>
+   					<span class="dept">研发中心</span>
+   					<span class="time">20小时前</span>
+   				</div>
+   				<div class="content">
+   				科技发来的科技发来的科技发来的科技发来的科技发来的科技发来的科技发来的科技发来的科技发来的科技发来的的科技发来的科技发来的科技发来的科技发来的
+   				</div>
+   			</li>
+   			<li>
+   				<div  class="bg-color"><p>张三</p></div>
+   				<div class="person">
+   					<span class="name">赵红杰</span>
+   					<span class="dept">融合通信部</span>
+   					<span class="time">20小时前</span>
+   				</div>
+   				<div class="content">
+   				jjkk科技发来的sssssssssssssssssssssdfsssssssssssssssssssssssssssssssssssss
+   				</div>
+   				<p class="delete"><a href="javascript:;"><img src="../images/delete.png"  border='0'></a></p>
+   			</li>
+   			<li>
+   				<div  class="bg-color"><p>张三</p></div>
+   				<div class="person">
+   					<span class="name">赵红杰</span>
+   					<span class="dept">融合通信部</span>
+   					<span class="time">20小时前</span>
+   				</div>
+   				<div class="content">
+   				jjkk科技发来的sssssssssssssssssssssdfsssssssssssssssssssssssssssssssssssss
+   				</div>
+   				<p class="delete"><a href="javascript:;"><img src="../images/delete.png"></a></p>
+   			</li>
+   			<li>
+   				<div  class="bg-color"><p>张三</p></div>
+   				<div class="person">
+   					<span class="name">赵红杰</span>
+   					<span class="dept">融合通信部</span>
+   					<span class="time">20小时前</span>
+   				</div>
+   				<div class="content">
+   				jjkk科技发来的sssssssssssssssssssssdfsssssssssssssssssssssssssssssssssssss
+   				</div>
+   				<p class="delete"><a href="javascript:;"><img src="../images/delete.png"></a></p>
+   			</li>
+   			<li>
+   				<div  class="bg-color"><p>张三</p></div>
+   				<div class="person">
+   					<span class="name">赵红杰</span>
+   					<span class="dept">融合通信部</span>
+   					<span class="time">20小时前</span>
+   				</div>
+   				<div class="content">
+   				jjkk科技发来的
+   				</div>
+   				<p class="delete"><a href="javascript:;"><img src="../images/delete.png"></a></p>
+   			</li>	
+   		</ul>
+   		<div class="bottom-top"></div>
+   		<!-- 底部开始 -->
+   		<div class="bottom">
+   			<input type="text" placeholder="评论内容"/>
+   			<a href="javascript:;">发送</a>
+   		</div>
+   		<!-- 底部结束 -->
+		<!--删除回复开始-->
+			<div id="dialog" title="系统提示">
+				<p class="box2">确定删除回复？</p>	
+			</div>
+		<!--删除回复结束-->
+	</div>
+  </body>
+</html>

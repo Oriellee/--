@@ -1,0 +1,1216 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>组织架构</title>
+	<link rel="stylesheet" href="css/common.css"/>
+	<link rel="stylesheet" href="css/header.css"/>
+	<link rel="stylesheet" href="css/cont_left.css"/>
+	<link rel="stylesheet" href="css/cont_right_org.css"/>
+	<link rel="stylesheet" href="css/confirm.css"/>
+	<link rel="stylesheet" href="css/oranization.css"/>
+	<link rel="stylesheet" href="css/news.css"/>
+	<link rel="stylesheet" href="css/system.css"/>
+	<link rel="stylesheet" href="css/register.css"/>
+	<link rel="stylesheet" href="css/IE.css"/>
+	
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/confirm.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<!--<link rel="stylesheet" href="css/demo.css" type="text/css">-->
+	<link rel="stylesheet" href="css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="js/jquery.ztree.core-3.5.js"></script>
+	<script type="text/javascript" src="js/jquery.ztree.excheck-3.5.js"></script>
+	<script type="text/javascript" src="js/jquery.ztree.exedit-3.5.js"></script>
+	<script type="text/javascript" src="js/tree.js"></script>
+	
+	
+	<!--部门可见性-->
+	<link rel="stylesheet" href="css/jquery-ui.css" />
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<link rel="stylesheet" href="css/visibleness.css" />
+	<script type="text/javascript" src="js/visibleness.js"></script>
+	<script type="text/javascript" src="js/visibleness2.js"></script>
+	<script type="text/javascript" src="js/visibleness3.js"></script>
+	<!--左侧导航树拖动-->
+	<script type="text/javascript" src="js/org-move.js"></script>
+	<script>
+	$(function(){
+		$(".searchbyname").focusin(function() {
+			this.foucs();
+		});
+	})
+	
+	</script>
+</head>
+<body>
+	<div class="header">
+		<div class="logo top blue">
+			 <span class="big">企话</span><span class="small" >用户管理平台</span>
+		</div>
+		<div class="user_info">
+			<i class="sprite people"></i>
+			<span class="fl">账号：liuyingjie</span>
+			<a href="" class="back">退出</a>
+		</div>
+	</div>
+	<div class="container organization">
+		<div class="cont_left" id="cont_left">
+			<div class="navigation_left h100 fl">
+				<ul>
+					<li><a href="fastQuery.html"><i class="sprite5 publish ml15"></i><span>通讯录查询</span></a></li>
+					<li class="visited"><a href="Organization.html" class=""><i class="sprite orangise ml15"></i><span>组织结构</span></a></li>
+					<li><a href="addNews.html"><i class="sprite publish ml15"></i><span>内容发布</span></a></li>
+					<li><a href="folderManage.html"><i class="sprite4  ml15"></i><span>应用</span></a></li>
+					<li><a href="newImport.html"><i class="sprite2 ml15"></i><span>辅助功能</span></a></li>
+					<li><a href="useNumber.html"><i class="sprite3 ml15"></i><span>服务查看</span></a></li>
+					<li><a href="noticeDeptSort.html"><i class="sprite6 ml15"></i><span>统计分析</span></a></li>
+					<li><a href="accountManage.html"><i class="sprite7 ml15"></i><span>帐号与设备</span></a></li>
+					<li><a href="systemInfo.html"><i class="sprite system ml15"></i><span>系统设置</span></a></li>
+				</ul>
+			</div>
+			<div class="navigation_right h100 fl"  id="left">
+				<div class="data_manager">
+					<span class="fl ml14">数据管理</span>
+					<div class="fr mr15">
+						<a href="">导入</a>(<a href="#getContext()/templet/user.xls" >模板下载</a>)&nbsp;/&nbsp;
+						<a href="">导出</a>
+					</div>
+				</div>
+				<div class="data_info">
+					<div class="data_name">北京平治东方科技发展有限公司</div>
+					<ul class="tree">
+						<li class="open parent_node" data-id="1">
+							<a href="javascript:;" class="w50 pl15 ">
+								<span class="fl">-</span>研发中心（2）
+							</a>
+							<input type="text" value="研发中心" class="edit_input fl"/>
+							<div class="operate">
+								<span class="sprite add"></span>
+								<span class="sprite edit"></span>
+								<span class="sprite delete"></span>
+							</div>
+							<div class="ht1"></div>
+						</li>
+						<li class="childNode1" data-id="11">
+							<a href="javascript:;" class="w80 active">
+								<span>-</span>研发中心一部（4）
+							</a>
+						</li>
+						<div class="ht1"></div>
+						<li class="childNode1 childNode11">
+							<a href="javascript:;" class="w60 node-disabled">
+								<span>-</span>研发中心一部（0）
+							</a>
+							<div class="ht1"></div>
+						</li>
+						<li class="childNode1 childNode11">
+							<a href="javascript:;" class="w60">
+								<span>-</span>研发中心一部（0）
+							</a>
+							<div class="ht1"></div>
+						</li>
+						<li class="childNode1">
+							<a href="javascript:;" class="w80">
+								<span>-</span>研发中心一部（0）
+							</a>
+							<div class="ht1"></div>
+						</li>
+						<li class="parent_node" data-id="2">
+							<a href="javascript:;" class="w50 pl15 ">
+								<span>-</span>销售中心（0）
+							</a>
+							<div class="operate">
+								<span class="sprite add"></span>
+								<span class="sprite edit"></span>
+								<span class="sprite delete"></span>
+							</div>
+							<div class="ht1"></div>
+						</li>
+						<li class="open parent_node" data-id="3">
+							<a href="javascript:;" class="w50 pl15">
+								<span>-</span>研发中心（2）
+							</a>
+							<div class="operate">
+								<span class="sprite add"></span>
+								<span class="sprite edit"></span>
+								<span class="sprite delete"></span>
+							</div>
+							<div class="ht1"></div>
+						</li>
+						<li class="childNode3" data-id="33">
+							<a href="javascript:;" class="w80">
+								<span>-</span>研发中心一部（4）
+							</a>
+							<div class="ht1"></div>
+						</li>
+						<li class="childNode3 childNode33">
+							<a href="javascript:;" class="w60">
+								<span>-</span>研发中心一部（0）
+							</a>
+							<div class="ht1"></div>
+						</li>
+						<li class="childNode3 childNode33">
+							<a href="javascript:;" class="w60">
+								<span>-</span>研发中心一部（0）
+							</a>
+							<div class="ht1"></div>
+						</li>
+						<li class="childNode3">
+							<a href="javascript:;" class="w80">
+								<span>-</span>研发中心一部（0）
+							</a>
+							<div class="ht1"></div>
+						</li>
+						<li class="open parent_node" data-id="3">
+							<a href="javascript:;" class="w50 pl15">
+								<span>-</span>研发中心（2）
+							</a>
+							<div class="operate">
+								<span class="sprite add"></span>
+								<span class="sprite edit"></span>
+								<span class="sprite delete"></span>
+							</div>
+							<div class="ht1"></div>
+						</li>
+						<li class="childNode3" data-id="33">
+							<a href="javascript:;" class="w80">
+								<span>-</span>研发中心一部（4）
+							</a>
+							<div class="ht1"></div>
+						</li>
+						<li class="childNode3 childNode33">
+							<a href="javascript:;" class="w60">
+								<span>-</span>研发中心一部（0）
+							</a>
+							<div class="ht1"></div>
+						</li>
+						<li class="childNode3 childNode33">
+							<a href="javascript:;" class="w60">
+								<span>-</span>研发中心一部（0）
+							</a>
+							<div class="ht1"></div>
+						</li>
+						<li class="childNode3">
+							<a href="javascript:;" class="w80">
+								<span>-</span>研发中心一部（0）
+							</a>
+							<div class="ht1"></div>
+						</li>
+						<li class="open parent_node" data-id="3">
+							<a href="javascript:;" class="w50 pl15">
+								<span>-</span>研发中心（2）
+							</a>
+							<div class="operate">
+								<span class="sprite add"></span>
+								<span class="sprite edit"></span>
+								<span class="sprite delete"></span>
+							</div>
+							<div class="ht1"></div>
+						</li>
+						<li class="childNode3">
+							<a href="javascript:;" class="w80">
+								<span>-</span>研发中心一部（0）
+							</a>
+							<div class="ht1"></div>
+						</li>
+						<li class="open parent_node" data-id="3">
+							<a href="javascript:;" class="w50 pl15">
+								<span>-</span>研发中心（2）
+							</a>
+							<div class="operate">
+								<span class="sprite add"></span>
+								<span class="sprite edit"></span>
+								<span class="sprite delete"></span>
+							</div>
+							<div class="ht1"></div>
+						</li><li class="childNode3">
+							<a href="javascript:;" class="w80">
+								<span>-</span>研发中心一部（0）
+							</a>
+							<div class="ht1"></div>
+						</li>
+						<li class="open parent_node" data-id="3">
+							<a href="javascript:;" class="w50 pl15">
+								<span>-</span>研发中心（2）
+							</a>
+							<div class="operate">
+								<span class="sprite add"></span>
+								<span class="sprite edit"></span>
+								<span class="sprite delete"></span>
+							</div>
+							<div class="ht1"></div>
+						</li><li class="childNode3">
+							<a href="javascript:;" class="w80">
+								<span>-</span>研发中心一部（0）
+							</a>
+							<div class="ht1"></div>
+						</li>
+						<li class="open parent_node" data-id="3">
+							<a href="javascript:;" class="w50 pl15">
+								<span>-</span>研发中心（2）
+							</a>
+							<div class="operate">
+								<span class="sprite add"></span>
+								<span class="sprite edit"></span>
+								<span class="sprite delete"></span>
+							</div>
+							<div class="ht1"></div>
+						</li><li class="childNode3">
+							<a href="javascript:;" class="w80">
+								<span>-</span>研发中心一部（0）
+							</a>
+							<div class="ht1"></div>
+						</li>
+						<li class="open parent_node" data-id="3">
+							<a href="javascript:;" class="w50 pl15">
+								<span>-</span>研发中心（2）
+							</a>
+							<div class="operate">
+								<span class="sprite add"></span>
+								<span class="sprite edit"></span>
+								<span class="sprite delete"></span>
+							</div>
+							<div class="ht1"></div>
+						</li>
+						<li class="childNode3">
+							<a href="javascript:;" class="w80">
+								<span>-</span>研发中心一部（0）
+							</a>
+							<div class="ht1"></div>
+						</li>
+						<li class="open parent_node" data-id="3">
+							<a href="javascript:;" class="w50 pl15">
+								<span>-</span>研发中心（2）
+							</a>
+							<div class="operate">
+								<span class="sprite add"></span>
+								<span class="sprite edit"></span>
+								<span class="sprite delete"></span>
+							</div>
+							<div class="ht1"></div>
+						</li>
+						<li class="open parent_node" data-id="3">
+							<a href="javascript:;" class="w50 pl15">
+								<span>-</span>研发中心last
+							</a>
+							<div class="operate">
+								<span class="sprite add"></span>
+								<span class="sprite edit"></span>
+								<span class="sprite delete"></span>
+							</div>
+							<div class="ht1"></div>
+						</li>
+					
+
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+		<div class="middle" id="middle"></div>
+		<div class="cont_right" id="right">
+			<div class="navigation_search">
+				<div class="search_left fl">
+					<a href="javascript:;" class="btn default fl ml14 mt15 btnAdd">新增</a>
+					<a href="javascript:;" class="btn default fl ml14 mt15 btnDel">删除</a>
+					<a href="javascript:;" class="btn default fl ml14 mt15 btn_remove">移动到</a>
+					<a href="javascript:;" class="btn default fl ml14 mt15 btn_edit">编辑呼叫权限</a>
+					<a href="javascript:;" class="btn default fl ml14 mt15 btn_visible">设置部门可见性</a>
+					<span class="fl mt20 ml14">
+						<input type="checkbox"/>&nbsp;&nbsp;&nbsp;显示下级
+					</span>
+				</div>
+				<div class="search_right fr">
+					<select class="w90 fl mt15 h25">
+						<option>姓名</option>
+					</select>
+					<input type="text" class="fl mt15 h21 ml14"/>
+					<a href="javascript:;" class="btn default fl ml14 mt15 mr25">搜索</a>
+				</div>
+			</div>
+			<div class="table_list">
+				<table>
+					<tbody>
+						<tr class="odd">
+							<th><input type="checkbox" name="check_all"/></th>
+							<th>姓名</th>
+							<th>账号</th>
+							<th>分机号</th>
+							<th>性别</th>
+							<th>邮箱</th>
+							<th>部门</th>
+							<th>职务</th>
+							<th>状态</th>
+							<th>呼叫权限</th>
+							<th class="w25">操作</th>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="check_only"/></td>
+							<td>犀利哥</td>
+							<td>13888888888</td>
+							<td>1011</td>
+							<td>女</td>
+							<td>11@qq.com</td>
+							<td>产品研发部</td>
+							<td>总经理</td>
+							<td>未激活</td>
+							<td>国内</td>
+							<td>
+							<a href="" class="bj">编辑</a><a href="">详情</a><a href="javascript:;" class="update_pwd">重置密码</a>
+							<select>
+								<option>0</option>
+								<option>1</option>
+								<option>21</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+							</select>
+							<a href="javascript:;" class="visible">可见性</a>
+							<a href="javascript:;" class="tel-visible">可见性2</a>
+							</td>
+						</tr>
+						<tr class="odd">
+							<td><input type="checkbox" name="check_only"/></td>
+							<td>犀利哥</td>
+							<td>13888888888</td>
+							<td>1011</td>
+							<td>女</td>
+							<td>11@qq.com</td>
+							<td>产品研发部</td>
+							<td>总经理</td>
+							<td>未激活</td>
+							<td>国内</td>
+							<td><a href="">编辑</a><a href="">详情</a><a href="">重置密码</a><a href="">上移</a><a href="">下移</a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="check_only"/></td>
+							<td>犀利哥</td>
+							<td>13888888888</td>
+							<td>1011</td>
+							<td>女</td>
+							<td>11@qq.com</td>
+							<td>产品研发部</td>
+							<td>总经理</td>
+							<td>未激活</td>
+							<td>国内</td>
+							<td><a href="">编辑</a><a href="">详情</a><a href="">重置密码</a><a href="">上移</a><a href="">下移</a></td>
+						</tr>
+						<tr class="odd">
+							<td><input type="checkbox" name="check_only"/></td>
+							<td>犀利哥</td>
+							<td>13888888888</td>
+							<td>1011</td>
+							<td>女</td>
+							<td>11@qq.com</td>
+							<td>产品研发部</td>
+							<td>总经理</td>
+							<td>未激活</td>
+							<td>国内</td>
+							<td><a href="">编辑</a><a href="">详情</a><a href="">重置密码</a><a href="">上移</a><a href="">下移</a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="check_only"/></td>
+							<td>犀利哥</td>
+							<td>13888888888</td>
+							<td>1011</td>
+							<td>女</td>
+							<td>11@qq.com</td>
+							<td>产品研发部</td>
+							<td>总经理</td>
+							<td>未激活</td>
+							<td>国内</td>
+							<td><a href="">编辑</a><a href="">详情</a><a href="">重置密码</a><a href="">上移</a><a href="">下移</a></td>
+						</tr>
+						<tr class="odd">
+							<td><input type="checkbox" name="check_only"/></td>
+							<td>犀利哥</td>
+							<td>13888888888</td>
+							<td>1011</td>
+							<td>女</td>
+							<td>11@qq.com</td>
+							<td>产品研发部</td>
+							<td>总经理</td>
+							<td>未激活</td>
+							<td>国内</td>
+							<td><a href="">编辑</a><a href="">详情</a><a href="">重置密码</a><a href="">上移</a><a href="">下移</a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="check_only"/></td>
+							<td>犀利哥</td>
+							<td>13888888888</td>
+							<td>1011</td>
+							<td>女</td>
+							<td>11@qq.com</td>
+							<td>产品研发部</td>
+							<td>总经理</td>
+							<td>未激活</td>
+							<td>国内</td>
+							<td><a href="">编辑</a><a href="">详情</a><a href="">重置密码</a><a href="">上移</a><a href="">下移</a></td>
+						</tr>
+						<tr class="odd">
+							<td><input type="checkbox" name="check_only"/></td>
+							<td>犀利哥</td>
+							<td>13888888888</td>
+							<td>1011</td>
+							<td>女</td>
+							<td>11@qq.com</td>
+							<td>产品研发部</td>
+							<td>总经理</td>
+							<td>未激活</td>
+							<td>国内</td>
+							<td><a href="">编辑</a><a href="">详情</a><a href="">重置密码</a><a href="">上移</a><a href="">下移</a></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="check_only"/></td>
+							<td>犀利哥</td>
+							<td>13888888888</td>
+							<td>1011</td>
+							<td>女</td>
+							<td>11@qq.com</td>
+							<td>产品研发部</td>
+							<td>总经理</td>
+							<td>未激活</td>
+							<td>国内</td>
+							<td><a href="">编辑</a><a href="">详情</a><a href="">重置密码</a><a href="">上移</a><a href="">下移</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="pagination" >
+				<div class="pagination_left fl">显示1-6条/共6条</div>
+				<div class="pagination_right fr">
+					<a href="javascript:;" class="btn default fl ">上一页</a>
+					<ul class="page fl">
+						<li><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="" class="current">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">5</a></li>
+					</ul>
+					<a href="javascript:;" class="btn default fl">下一页</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modify-pwd-box" id="organztionBox">
+		<div class="modify-shadow"></div>
+		<div class="addOranization">
+			<div class="add_header">
+				<span class="mt5 ml5 fl">新增</span>
+				<a href="javascript:;" class="close btnClose"><i class="sprite"></i></a>
+			</div>
+			<div class="add_conter add-conter-scroll">
+				<div class="conter_header">
+					<div class="conterH_left mt20 fl">
+						<div class="left_img"><img src="" width="120px" height="120px"/></div>
+						<a href="javascript:;" class="btn_update ml20 mt10 head_photo">修改头像</a>
+					</div>
+					<div class="conterH_right fr mt20">
+						<div class="form_group">
+							<label class="form_label"><span>*&nbsp;</span>账号/手机号:</label>
+							<input class="form_control" placeholder="请输入手机号"/>
+						</div>
+						<div class="form_group">
+							<label class="form_label"><span>*&nbsp;</span>姓名:</label>
+							<input class="form_control"/>
+						</div>
+						<div class="form_group">
+							<label class="form_label">性别:</label>
+							<input class="form_control w120 mt0" />
+						</div>
+						<div class="form_group">
+							<label class="form_label">部门:</label>
+							<input class="form_control"/>
+						</div>
+						<div class="form_group">
+							<label class="form_label">职位:</label>
+							<input class="form_control"/>
+						</div>
+						<div class="form_group">
+							<label class="form_label">职级:</label>
+							<select class="other">
+						       <option value="0">其他</option>
+						    </select>
+						</div>
+						<div class="form_group ml80">其他部门兼任</div>
+						<div class="form_group ml70 ie_ml70">
+							<input type="text" class="w65"/><input type="text" class="w65"/><a href="javascript:;">更多</a>
+						</div>
+					</div>
+				</div>
+				<div class="conter_conter">
+					<div class="conter_left fl mt15">
+						<!--<div class="form_group">
+							<label class="form_label">英文名:</label>
+							<input class="form_control w120 mt0"/>
+						</div>-->
+						<div class="form_group">
+							<label class="form_label">手机二:</label>
+							<input class="form_control w120 mt0"/>
+						</div>
+						<div class="form_group">
+							<label class="form_label">分机:</label>
+							<input class="form_control w120 mt0"/>
+						</div>
+						<div class="form_group">
+							<label class="form_label">邮箱:</label>
+							<input class="form_control w120 mt0"/>
+						</div>
+					</div>
+					<div class="conter_left fl mt15">
+						<div class="form_group">
+							<label class="form_label">拨号权限:</label>
+							<input class="form_control w120 mt0"/>
+						</div>
+						<div class="form_group">
+							<label class="form_label">办公电话:</label>
+							<input class="form_control w120 mt0"/>
+						</div>
+						<div class="form_group">
+							<label class="form_label">家庭电话:</label>
+							<input class="form_control w120 mt0"/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="add_footer">
+				<div class="fr w40 mt12">
+					<div class="check_group mt5">
+						<input type="checkbox"/>短信发送
+					</div>
+					<div class="check_group mt5">
+						<input type="checkbox"/>邮件发送
+					</div>
+					<a href="javascript:;" class="btn default fl btn_add">添加</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="modify-pwd-box" id="head_photo">
+		<div class="modify-shadow"></div>
+		<div class="addOranization">
+			<div class="add_header">
+				<span class="mt5 ml5 fl">头像上传</span>
+				<a href="javascript:;" class="close head_photo_Close"><i class="sprite"></i></a>
+			</div>
+			<div class="add_conter">
+				<div class="conter_conter">
+					<div class="conter_left fl mt15 ml15" style="width:65%">
+						<span class="mt5 ml5 fl">支持jpg/jpeg/png/gif</span>
+						<div class="form_group">
+							<img src="" width=280 height=280 />
+						</div>
+						<div class="form_group">
+						<input type="file" style="display:none;" />
+						<input type="button" class="up_button" value="上传头像" style="width:280px;height:32px;line-height:24px;" />
+						</div>
+					</div>
+					<div class="conter_left fl mt15" style="width:19%">
+						<div class="form_group">
+							<span class="mt5 ml5 fl">原头像</span>
+							<img src="" width=120 height=120 />
+							
+						</div>
+						<div class="form_group">
+							<span class="mt5 ml5 fl">新头像</span>
+							<img src="" width=120 height=120 />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="add_footer">
+				<div class="fr w40 mt12">
+					<a href="javascript:;" class="btn default fr btn_add">确定</a>
+				</div>
+			</div>
+		</div>
+	</div>	
+	
+	
+	
+	
+	
+
+		<!--部门可见性模态框开始-->
+			<div id="dialog" title="设置部门可见性">
+				<div class="box">
+					<p><span>【融合通信】</span>的可见范围如下：</p>
+					<div class="label-text">部门统一设置的可见范围</div>
+					<ul class="readOnly-text">
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+					</ul>
+					<div class="label-text">新增可见范围</div>
+					<div class="selectbar">
+						<div class="select-range-inner fn-clear">
+							<ul class="selected-list">	
+							</ul>
+							<div class="input-wrapper">
+								<span class="input-tip" style="display: inline-block;"><i class="prefix"></i>选择同事或部门</span>
+								<input class="input-field" type="text" style="display: none;">
+							</div>
+						</div>	
+					</div>	
+				</div>	
+			</div>
+	<!--部门可见性模态框结束-->
+	
+	<!--人员可见性模态框开始-->
+			<div id="dialog2" title="设置可见性">
+				<div class="box">
+					<p><span>【赵红杰】</span>的可见范围如下：</p>
+					<div class="label-text">部门统一设置的可见范围</div>
+					<ul class="readOnly-text">
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+						<li class="selected-item temtreeDemo_2"><span class="item-name">总裁办</span></li>
+					</ul>
+					<div class="label-text">新增可见范围</div>
+					<div class="selectbar">
+						<div class="select-range-inner fn-clear">
+							<ul class="selected-list2">	
+							</ul>
+							<div class="input-wrapper2">
+								<span class="input-tip2" style="display: inline-block;"><i class="prefix"></i>选择同事或部门</span>
+								<input class="input-field2" type="text" style="display: none;">
+							</div>
+						</div>	
+					</div>	
+				</div>		
+			</div>
+	<!--人员可见性结束-->
+	
+	
+		<!--联系方式可见性模态框开始-->
+		<div id="dialog3" title="设置可见性">
+				<div class="contact-box">
+					<p class="title">设置张三的联系方式可见性</p>
+					<div class="table_list" >
+					<table class="content-table">
+						<thead>
+							<tr>
+								<th width="10%">联系方式</th>
+								<th width="30%">对谁可见</th>
+								<th width="45%">操作</th>
+								<th width="15%">与哪个设置相同</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>手机1</td>
+								<td>
+									<p class="rang-see">全员可见</p>
+								</td>
+								<td>
+									<div class="input-wrapper3" style="display: inline-block;">
+										<span class="input-tip3" style="display: inline-block;"><i class="prefix"></i>选择同事或部门</span>
+										<span class="input-field3" style="opacity: 0; display: none;"></span>
+									</div>
+									<a href="javascript:;" class="see-del-btn">查看并删除人员</a>
+									<a href="javascript:;">恢复全员可见</a>
+								</td>
+								<td>同
+									<select class="test">
+										<option>未选</option>
+										<option>手机2</option>
+										<option>办公电话</option>
+										<option>家庭电话</option>
+										<option>邮箱</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>手机2</td>
+								<td>
+									<p><span>经理、</span><span>主管、</span><span>赵xx、</span><span>邢某某</span>等<span>100</span>人</p>
+								</td>
+								<td>
+									<div class="input-wrapper3" style="display: inline-block;">
+										<span class="input-tip3" style="display: inline-block;"><i class="prefix"></i>选择同事或部门</span>
+										<span class="input-field3" style="opacity: 0; display: none;"></span>
+									</div>
+									<a href="javascript:;" class="see-del-btn">查看并删除人员</a>
+									<a href="javascript:;">恢复全员可见</a>
+								</td>
+								<td>同
+									<select class="test">
+										<option>未选</option>
+										<option>手机1</option>
+										<option>办公电话</option>
+										<option>家庭电话</option>
+										<option>邮箱</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>办公电话</td>
+								<td>
+									<p><span>经理、</span><span>主管、</span><span>赵xx、</span><span>邢某某</span>等<span>100</span>人</p>
+								</td>
+								<td>
+									<div class="input-wrapper3" style="display: inline-block;">
+										<span class="input-tip3" style="display: inline-block;"><i class="prefix"></i>选择同事或部门</span>
+										<span class="input-field3" style="opacity: 0; display: none;"></span>
+									</div>
+									<a href="javascript:;" class="see-del-btn">查看并删除人员</a>
+									<a href="javascript:;">恢复全员可见</a>
+								</td>
+								<td>同
+									<select class="test">
+										<option>未选</option>
+										<option>手机1</option>
+										<option>手机2</option>
+										<option>家庭电话</option>
+										<option>邮箱</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>家庭电话</td>
+								<td>
+									<p><span>经理、</span><span>主管、</span><span>赵xx、</span><span>邢某某</span>等<span>100</span>人</p>
+								</td>
+								<td>
+									<div class="input-wrapper3" style="display: inline-block;">
+										<span class="input-tip3" style="display: inline-block;"><i class="prefix"></i>选择同事或部门</span>
+										<span class="input-field3" style="opacity: 0; display: none;"></span>
+									</div>
+									<a href="javascript:;" class="see-del-btn">查看并删除人员</a>
+									<a href="javascript:;">恢复全员可见</a>
+								</td>
+								<td>同
+									<select class="test">
+										<option>未选</option>
+										<option>手机1</option>
+										<option>手机2</option>
+										<option>办公电话</option>
+										<option>邮箱</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>邮箱</td>
+								<td>
+									<p><span>经理、</span><span>主管、</span><span>赵xx、</span><span>邢某某</span>等<span>100</span>人</p>
+								</td>
+								<td>
+									<div class="input-wrapper3" style="display: inline-block;">
+										<span class="input-tip3" style="display: inline-block;"><i class="prefix"></i>选择同事或部门</span>
+										<span class="input-field3" style="opacity: 0; display: none;"></span>
+									</div>
+									<a href="javascript:;" class="see-del-btn">查看并删除人员</a>
+									<a href="javascript:;">恢复全员可见</a>
+								</td>
+								<td>同
+									<select class="test">
+										<option>未选</option>
+										<option>手机1</option>
+										<option>手机2</option>
+										<option>办公电话</option>
+										<option>家庭电话</option>
+									</select>
+								</td>
+							</tr>
+								<tr>
+								<td>分机</td>
+								<td>
+									<p><span>经理、</span><span>主管、</span><span>赵xx、</span><span>邢某某</span>等<span>100</span>人</p>
+								</td>
+								<td>
+									<div class="input-wrapper3" style="display: inline-block;">
+										<span class="input-tip3" style="display: inline-block;"><i class="prefix"></i>选择同事或部门</span>
+										<span class="input-field3" style="opacity: 0; display: none;"></span>
+									</div>
+									<a href="javascript:;" class="see-del-btn">查看并删除人员</a>
+									<a href="javascript:;">恢复全员可见</a>
+								</td>
+								<td>同
+									<select class="test">
+										<option>未选</option>
+										<option>手机1</option>
+										<option>手机2</option>
+										<option>办公电话</option>
+										<option>家庭电话</option>
+									</select>
+								</td>
+							</tr>
+						</tbody>			
+					</table>
+					</div>
+				</div>
+		</div>	
+	<!--联系方式可见性结束-->
+	
+	
+	<!--同步设置联系方式可见性-->
+	<div class="dialog-contact">
+		<p>是否设置邮箱和<span class="contact-way">手机1</span>一致</p>
+		<div class="contact-btn">
+			<a href="javascript:;">取消</a>
+			<a href="javascript:;">确定</a>
+		</div>
+	</div>
+	<!--同步设置联系方式可见性-->
+	
+	<!--部门组织弹出框开始-->
+		<div class="organization-list">
+			
+			<div class="tree_list"> 
+				<ul class="tabs">
+					<li  class="border active by-org">按组织</li>
+					<li class="by-person">按人员</li>
+				</ul>
+				<div>
+					<ul id="treeDemo" class="ztree"></ul>
+				</div>
+				<p class="org-submit">
+					<button type="submit">确定</button>
+				</p>
+			</div>			
+			<div class="search_list">
+				<ul class="tabs">
+					<li class="border by-org">按组织</li>
+					<li class="active by-person">按人员</li>
+				</ul>
+				<div class="wrap_search">
+					<input type="text" placeholder="姓名" class="searchbyname"/>
+				</div>
+				<a href="javascript:void(0)" class="search_cancle">搜索</a>
+				<button class="submit-ok">确定</button>
+				<div class="table_list_org">
+					<table>
+					  <thead>
+						<th><input type="checkbox" class="check-input" id="checkAll"/></th>
+						<th width="20%">姓名</th>
+						<th width="40%">职位</th>
+						<th width="40%">电话</th>
+					  </thead>
+					  <tr>
+						<td><input type="checkbox" name="check-box"/></td>
+						<td>张三</td>
+						<td>开发</td>
+						<td>13499880987</td>
+					  </tr>
+					  <tr>
+						<td><input type="checkbox" name="check-box"/></td>
+						<td>张三</td>
+						<td>开发</td>
+						<td>13499880987</td>
+					  </tr>
+					  <tr>
+						<td><input type="checkbox" name="check-box"/></td>
+						<td>张三</td>
+						<td>开发</td>
+						<td>13499880987</td>
+					  </tr>
+					</table>
+				</div>
+				<div class="pagination" >
+				<div class="pagination_left fl">显示1-6条/共6条</div>
+				<div class="pagination_right fr">
+					<a href="javascript:;" class="btn default fl ">上一页</a>
+					<ul class="page fl">
+						<li><a href="">1</a></li>
+						<li><a href="" class="current">2</a></li>
+						<li><a href="" >3</a></li>
+					</ul>
+					<a href="javascript:;" class="btn default fl">下一页</a>
+				</div>
+				</div>
+				<!--
+				<ul class="search_ul">
+					<li>张三</li>
+					<li>李四</li>
+					<li>王某某</li>
+					<li>张三</li>
+					<li>李四</li>
+					<li>王某某</li>
+				</ul>
+				<p class="org-submit">
+					<button type="submit">确定</button>
+				</p>-->
+				
+			</div>
+		</div>	
+	<!--部门组织弹出框结束-->
+	<!--部门组织弹出框开始-->
+		<div class="organization-list2">
+			
+			<div class="tree_list"> 
+				<ul class="tabs">
+					<li  class="border active by-org">按组织</li>
+					<li class="by-person">按人员</li>
+				</ul>	
+				<div>
+					<ul id="treeDemo2" class="ztree"></ul>
+				</div>
+				<p class="org-submit">
+					<button type="submit">确定</button>
+				</p>
+			</div>			
+			<div class="search_list">
+				<ul class="tabs">
+					<li class="border by-org">按组织</li>
+					<li class="active by-person">按人员</li>
+				</ul>
+				<div class="wrap_search">
+					<input type="text" placeholder="姓名" class="searchbyname"/>
+				</div>
+				<a href="javascript:void(0)" class="search_cancle">搜索</a>
+				<button class="submit-ok">确定</button>
+				<div class="table_list_org">
+					<table>
+					  <thead>
+						<th><input type="checkbox" class="check-input" id="checkAll"/></th>
+						<th width="20%">姓名</th>
+						<th width="40%">职位</th>
+						<th width="40%">电话</th>
+					  </thead>
+					  <tr>
+						<td><input type="checkbox" name="check-box"/></td>
+						<td>张三</td>
+						<td>开发</td>
+						<td>13499880987</td>
+					  </tr>
+					  <tr>
+						<td><input type="checkbox" name="check-box"/></td>
+						<td>张三</td>
+						<td>开发</td>
+						<td>13499880987</td>
+					  </tr>
+					  <tr>
+						<td><input type="checkbox" name="check-box"/></td>
+						<td>张三</td>
+						<td>开发</td>
+						<td>13499880987</td>
+					  </tr>
+					</table>
+				</div>
+				<div class="pagination" >
+				<div class="pagination_left fl">显示1-6条/共6条</div>
+				<div class="pagination_right fr">
+					<a href="javascript:;" class="btn default fl ">上一页</a>
+					<ul class="page fl">
+						<li><a href="">1</a></li>
+						<li><a href="" class="current">2</a></li>
+						<li><a href="" >3</a></li>
+					</ul>
+					<a href="javascript:;" class="btn default fl">下一页</a>
+				</div>
+				</div>
+			</div>
+		</div>	
+	<!--部门组织弹出框结束-->
+	<!--部门组织弹出框开始-->
+		<div class="organization-list3">
+			
+			<div class="tree_list"> 
+				<ul class="tabs-li">
+					<li  class="border active by-org">按组织</li>
+					<li class="border by-person">按人员</li>
+					<li class="by-search">搜索</li>
+				</ul>					
+				<div>
+					<ul id="treeDemo3" class="ztree"></ul>
+				</div>
+				<p class="org-submit">
+					<button type="submit">确定</button>
+				</p>
+			</div>			
+			<div class="search_list">
+				<ul class="tabs-li">
+					<li class="border by-org">按组织</li>
+					<li class="border active by-person">按人员</li>
+					<li class="by-search">搜索</li>
+				</ul>
+				<div class="wrap_search">
+					<input type="text" placeholder="姓名" class="searchbyname"/>
+				</div>
+				<a href="javascript:void(0)" class="search_cancle">搜索</a>
+				<button class="submit-ok">确定</button>
+				<div class="table_list_org">
+					<table>
+					  <thead>
+						<th><input type="checkbox" class="check-input" id="checkAll"/></th>
+						<th width="20%">姓名</th>
+						<th width="40%">职位</th>
+						<th width="40%">电话</th>
+					  </thead>
+					  <tr>
+						<td><input type="checkbox" name="check-box"/></td>
+						<td>张三</td>
+						<td>开发</td>
+						<td>13499880987</td>
+					  </tr>
+					  <tr>
+						<td><input type="checkbox" name="check-box"/></td>
+						<td>张三</td>
+						<td>开发</td>
+						<td>13499880987</td>
+					  </tr>
+					  <tr>
+						<td><input type="checkbox" name="check-box"/></td>
+						<td>张三</td>
+						<td>开发</td>
+						<td>13499880987</td>
+					  </tr>
+					</table>
+				</div>
+				<div class="pagination" >
+				<div class="pagination_left fl">显示1-6条/共6条</div>
+				<div class="pagination_right fr">
+					<a href="javascript:;" class="btn default fl ">上一页</a>
+					<ul class="page fl">
+						<li><a href="">1</a></li>
+						<li><a href="" class="current">2</a></li>
+						<li><a href="" >3</a></li>
+					</ul>
+					<a href="javascript:;" class="btn default fl">下一页</a>
+				</div>
+				</div>					
+			</div>
+			<div class="search_tab">
+				<ul class="tabs-li">
+					<li class="border by-org">按组织</li>
+					<li class="border by-person">按人员</li>
+					<li class="by-search active">搜索</li>
+				</ul>
+				<div class="wrap_search">
+					<input type="text" placeholder="姓名、职位" class="searchbyname"/>
+				</div>
+				<a href="javascript:void(0)" class="search_cancle">搜索</a>
+				<button class="submit-ok">确定</button>
+				<div class="table_list_org">
+					<table>
+					  <thead>
+						<th><input type="checkbox" class="check-input" id="checkAll"/></th>
+						<th width="20%">姓名</th>
+						<th width="40%">职位</th>
+						<th width="40%">电话</th>
+					  </thead>
+					  <tr>
+						<td><input type="checkbox" name="check-box"/></td>
+						<td>张三</td>
+						<td>开发</td>
+						<td>13499880987</td>
+					  </tr>
+					  <tr>
+						<td><input type="checkbox" name="check-box"/></td>
+						<td>张三</td>
+						<td>开发</td>
+						<td>13499880987</td>
+					  </tr>
+					  <tr>
+						<td><input type="checkbox" name="check-box"/></td>
+						<td>张三</td>
+						<td>开发</td>
+						<td>13499880987</td>
+					  </tr>
+					</table>
+				</div>
+				<div class="pagination" >
+				<div class="pagination_left fl">显示1-6条/共6条</div>
+				<div class="pagination_right fr">
+					<a href="javascript:;" class="btn default fl ">上一页</a>
+					<ul class="page fl">
+						<li><a href="">1</a></li>
+						<li><a href="" class="current">2</a></li>
+						<li><a href="" >3</a></li>
+					</ul>
+					<a href="javascript:;" class="btn default fl">下一页</a>
+				</div>
+				</div>					
+			</div>
+		</div>	
+	<!--部门组织弹出框结束-->
+	<!--查看并删除人员弹出框开始-->
+	<div class="see-del-person">
+		<!--按职级选择的-->
+		<p>按职级选择的</p>
+		<div class="select-range-inner1 fn-clear">
+			<ul class="selected-list2">	
+				<li class="selected-item temtreeDemo2_1"><span class="item-name">经理</span><span class="remove-h">×</span></li>
+				<li class="selected-item temtreeDemo3_1"><span class="item-name">主管</span><span class="remove-h">×</span></li>
+				<li class="selected-item temtreeDemo2_1"><span class="item-name">经理</span><span class="remove-h">×</span></li>
+				<li class="selected-item temtreeDemo3_1"><span class="item-name">主管</span><span class="remove-h">×</span></li>
+				<li class="selected-item temtreeDemo2_1"><span class="item-name">经理</span><span class="remove-h">×</span></li>
+				<li class="selected-item temtreeDemo3_1"><span class="item-name">主管</span><span class="remove-h">×</span></li>
+				<li class="selected-item temtreeDemo2_1"><span class="item-name">经理</span><span class="remove-h">×</span></li>
+				<li class="selected-item temtreeDemo3_1"><span class="item-name">主管</span><span class="remove-h">×</span></li>
+				<li class="selected-item temtreeDemo2_1"><span class="item-name">经理</span><span class="remove-h">×</span></li>
+				<li class="selected-item temtreeDemo3_1"><span class="item-name">主管</span><span class="remove-h">×</span></li>
+			</ul>
+		</div>
+		<!--按人员选择的-->
+		<p>按人员选择的</p>
+		<div class="select-range-inner2 fn-clear">
+			<ul class="selected-list2">	
+				<li class="selected-item temtreeDemo2_1"><span class="item-name">张三</span><span class="remove-h">×</span></li>
+				<li class="selected-item temtreeDemo3_1"><span class="item-name">李四</span><span class="remove-h">×</span></li>
+				<li class="selected-item temtreeDemo2_1"><span class="item-name">王某某</span><span class="remove-h">×</span></li>
+				<li class="selected-item temtreeDemo3_1"><span class="item-name">赵六</span><span class="remove-h">×</span></li>
+				<li class="selected-item temtreeDemo2_1"><span class="item-name">张三</span><span class="remove-h">×</span></li>
+				<li class="selected-item temtreeDemo3_1"><span class="item-name">李四</span><span class="remove-h">×</span></li>
+				<li class="selected-item temtreeDemo2_1"><span class="item-name">王某某</span><span class="remove-h">×</span></li>
+				<li class="selected-item temtreeDemo3_1"><span class="item-name">赵六</span><span class="remove-h">×</span></li>
+				<li class="selected-item temtreeDemo2_1"><span class="item-name">张三</span><span class="remove-h">×</span></li>
+			</ul>
+		</div>	
+		<button  class="see-del-submit">确定</button>
+	</div>
+	<!--查看并删除人员弹出框结束-->
+</body>
+</html>

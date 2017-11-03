@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>频道管理</title>
+	<link rel="stylesheet" href="css/main.css"/>
+	<link rel="stylesheet" href="css/newNews.css"/>
+	<link rel="stylesheet" href="css/channel.css"/>
+	<script type="text/javascript" charset="utf-8" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="editor_config.js"></script>
+	<script type="text/javascript" charset="utf-8" src="editor_api.js"></script>
+	<script type="text/javascript" charset="utf-8" src="uploadify/jquery.uploadify.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/notice.js"></script>
+	<link rel="stylesheet" href="css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="js/jquery.ztree.core-3.5.js"></script>
+	<script type="text/javascript" src="js/jquery.ztree.excheck-3.5.js"></script>
+	<script type="text/javascript" src="js/jquery.ztree.exedit-3.5.js"></script>
+	<script type="text/javascript" src="js/channel.js"></script>
+	<link rel="stylesheet" href="css/jquery-ui.css" />
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+</head>
+<body>
+<div class="header">
+		<div class="logo">
+			<a href=""><img src="images/logo.png" class="fl"/></a>
+		</div>
+		<div class="user_info">
+			<i class="sprite people"></i>
+			<span class="fl">账号：liuyingjie</span>
+			<a href="" class="back">退出</a>
+		</div>
+	</div>
+	<div class="container organization">
+		<div class="cont_left">
+			<div class="navigation_left h100 fl">
+				<ul>
+					<li><a href="Organization.html" class=""><i class="sprite orangise ml15"></i><span>组织结构</span></a></li>
+					<li class="visited"><a href="addNews.html"><i class="sprite publish ml15"></i><span>内容发布</span></a></li>
+					<li><a href="admin.html"><i class="sprite system ml15"></i><span>系统设置</span></a></li>
+				</ul>
+			</div>
+			<div class="navigation_right h100 fl">
+				<div class="data_info">
+					<div class="news_list">
+						<div class="title">企业消息</div>
+						<a href="addNews.html">新建消息</a>
+						<a href="newsPublish.html">消息列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">投票消息</div>
+						<a href="addPiao.html">新建投票</a>
+						<a href="newsList.html">投票列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">通知</div>
+						<a href="addNotice.html">新建通知</a>
+						<a href="noticesList.html">通知列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">公告</div>
+						<a href="addAffiche.html">新建公告</a>
+						<a href="afficheList.html">公告列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">新闻</div>
+						<a href="newNews.html">新建新闻</a>
+						<a href="myNewNewsList.html">我创建的</a>
+						<a href="myManageList.html">我管理的</a>
+						<a href="channelManage.html"  class="visited">频道管理</a>
+						<div class="btm_select"></div>
+						<a href="basicManage.html">基本管理</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cont_right rel">
+			<i class="sprite left_icon top296"></i>
+			<p class="notice_title">频道管理</p>
+			<input type="button" value="添加频道" class="btn-addnews"/>
+			<div class="table_list">
+				<table>
+					<thead>
+						<tr>
+							<th width="10%">排序</th>
+							<th width="10%">频道</th>
+							<th width="20%">新闻数量</th>
+							<th width="20%">操作管理</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>频道1</td>
+							<td>120</td>
+							<td><a href="javascript:;"class="modify-channel">[修改]</a><a href="javascript:;" class="delete-channel">删除</a></td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>频道2</td>
+							<td>200</td>
+							<td><a href="javascript:;">[修改]</a><a href="javascript:;">删除</a><a href="javascript:;">上移</a><a href="javascript:;">下移</a></td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>频道3</td>
+							<td>200</td>
+							<td><a href="javascript:;">[修改]</a><a href="javascript:;">删除</a><a href="javascript:;">上移</a><a href="javascript:;">下移</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>	
+		<!--添加频道开始-->
+			<div id="dialog" title="添加频道">
+				<p class="box">频道名称&nbsp;&nbsp;<input type="text"/> &nbsp;1-4个字符</p>	
+			</div>
+		<!--添加频道结束-->
+		<!--修改频道开始-->
+			<div id="dialog1" title="修改频道">
+				<p class="box">频道名称&nbsp;&nbsp;<input type="text"/> &nbsp;1-4个字符</p>	
+			</div>
+		<!--修改频道结束-->
+		<!--删除频道开始-->
+			<div id="dialog2" title="删除频道">
+				<p class="box-channel">确定删除此新闻频道？</p>
+				<p class="box-tip">提醒：删除后，此频道下的所有新闻也会一起删除。若需要保留新闻，请先将新闻转移到其它频道。</p>
+			</div>
+		<!--删除频道结束-->
+		<!--最多频道数提示开始-->
+			<div id="dialog3" title="系统提示">
+				<p class="box">最多可添加8个频道</p>
+			</div>
+		<!--最多频道数提示结束-->
+	</body>	
+</html>

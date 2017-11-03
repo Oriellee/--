@@ -1,0 +1,228 @@
+.bgColor{
+	background-color: #eeeeee;
+}
+.register{
+	background-color: #4cc1d2;
+	height: 55px;
+}
+.register .logo img{
+	margin-top: 5px;
+}
+.reg_head ul{
+	float: left;
+}
+.reg_head li{
+	float: left;
+	height: 55px;
+}
+.reg_head li a{
+	color: #fff;
+	line-height: 55px;
+	display: block;
+	padding: 0px 20px;
+}
+.reg_head .service{
+	border-right: 1px solid #ddd;
+	height: 15px;
+	margin-top: 20px;
+}
+.reg_cont{
+	width: 625px;
+	margin: 0px auto;
+}
+.reg_cont .reg_cont_form{
+	width: 100%;
+	height: 530px;
+	border:1px solid #ddd;
+	background-color: #fff;
+	border-radius: 3px;
+}
+.reg_cont .reg_cont_logo{
+	margin: 35px auto;
+	margin-bottom: 15px;
+	width: 150px;
+}
+.reg_cont .reg_form{
+	margin-top: 70px;
+}
+.reg_group{
+	width: 100%;
+	float: left;
+	margin-bottom: 20px;
+	position: relative;
+}
+.reg_group .reg_label{
+	width:110px;
+	text-align: right;
+	padding-right: 10px;
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	float: left;
+}
+.reg_group .reg_control{
+	width: 455px;
+	height: 30px;
+	border-radius: 3px;
+	border:1px solid #ddd;
+	padding-left: 5px;
+	line-height: 30px;
+	float: left;
+}
+.reg_group .help_line{
+	color:red;
+	position: absolute;
+	display: block;
+	width: 155px;
+	right: 50px;
+	text-align: right;
+	top: 8px;
+}
+.reg_control:focus{
+	border-color: #999;
+	outline: 0;
+}
+.reg_group .border0{
+	border:0px;
+}
+.reg_cont_foot{
+	width: 220px;
+	margin: 50px auto;
+}
+.reg_group button{
+	margin-top: -15px;
+}
+.reg_cont .info{
+	height:140px;
+	padding-top:80px;
+	text-align:center
+}
+.info a{
+	text-decoration: underline;
+	padding-right: 20px;
+}
+.info .pt20{
+	padding-top: 20px;
+}
+.reg_group p a{
+	text-decoration: underline;
+	margin-left: 90px;
+}
+
+.find-pass-con{
+	width: 330px;
+    background: #fff;
+    margin: 0 auto;
+	padding-bottom:30px;
+}
+.find-pass-con .title{
+	width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 15px;
+}
+.find-pass-con .title-num{
+	width: 100%;
+    height: 70px;
+    line-height: 65px;
+    text-align: center;
+    font-size: 15px;
+}
+.find-pass-con .title .num{
+	color:#333;
+	font-size:15px;
+}
+.get-code{
+    display: inline-block;
+    width: 100px;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #4CC1D2;
+    text-align: center;
+    color: #4CC1D2;
+    cursor: pointer;
+}
+.item{
+	width:80%;
+	height:30px;
+	margin-bottom:10px;
+	padding:0 10%
+	}
+.item .phone-num{
+	height: 30px;
+    width: 100%;
+	border:1px solid #ddd;
+}
+.item .phone-num label{
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+}
+.item .phone-num .img-per{
+	background: url("../images/input_icons_num.png") no-repeat 5px 7px;
+}
+.item .phone-num .img-lock{
+	background: url("../images/input_icons_lock.png") no-repeat 6px 5px;
+}
+.item .phone-num  .phone-num-text{
+	margin:8px 0 0 32px;
+	border-style:none;
+	outline:0;
+	width: 220px;
+}
+.verificationCode{
+	 width: 120px;
+    height: 26px;
+    display: inline-block;
+    float: left;
+    margin-right: 8px;
+	outline:none;
+}
+.verificationCode2{
+	 width: 150px;
+    height: 26px;
+    display: inline-block;
+    float: left;
+    margin-right: 8px;
+	outline:none;
+}
+.change-code{
+	display: inline-block;
+    width: 40px;
+    height: 30px;
+    line-height: 30px;
+    float: right;
+	color:#4CC1D2;
+}
+.pass-button-submit{
+	width:100%;
+	height:30px;
+	line-height:30px;
+	border:1px solid #ddd;
+	background:#4CC1D2;
+	color:#fff;
+	margin-top:15px;
+	cursor:pointer;
+	display: block;
+    text-align: center;
+}
+.error-tip,.error-tip-code,.error-tip-passnew,.error-tip-pass{
+    width: 80%;
+    margin: 0 auto;
+    height: 20px;
+    color: red;
+	display:none;
+}
+.item-option{
+	width: 90%;
+    padding: 0 5%;
+    margin-bottom: 20px;
+    margin-top: 10px;
+	height:30px;
+}
+.item-option select{
+	width: 230px;
+    height: 28px;
+}

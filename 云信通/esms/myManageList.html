@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我管理的</title>
+	<link rel="stylesheet" href="css/common_pc.css"/>
+	<link rel="stylesheet" href="css/cont_left_pc.css"/>
+	<link rel="stylesheet" href="css/cont_right_pc.css"/>
+	<link rel="stylesheet" href="css/newNews_pc.css"/>
+	<link rel="stylesheet" href="css/header_pc.css"/>
+	
+	<!--<link rel="stylesheet" href="css/common.css"/>
+	<link rel="stylesheet" href="css/cont_left.css"/>
+	<link rel="stylesheet" href="css/cont_left.css"/>
+	<link rel="stylesheet" href="css/newNews.css"/>
+	<link rel="stylesheet" href="css/header.css"/>-->
+	<link rel="stylesheet" href="css/confirm.css"/>
+	<link rel="stylesheet" href="css/oranization.css"/>
+	<link rel="stylesheet" href="css/news.css"/>
+	<link rel="stylesheet" href="css/system.css"/>
+	<link rel="stylesheet" href="css/register.css"/>
+	<link rel="stylesheet" href="css/IE.css"/>
+	<link rel="stylesheet" href="css/newNews.css"/>
+	<link rel="stylesheet" href="uploadify/uploadify.css"/>
+	<script type="text/javascript" charset="utf-8" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="editor_config.js"></script>
+	<script type="text/javascript" charset="utf-8" src="editor_api.js"></script>
+	<script type="text/javascript" charset="utf-8" src="uploadify/jquery.uploadify.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/voice.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/newNews.js"></script>
+	<link rel="stylesheet" href="datetimepicker/jquery.datetimepicker.css"/>
+	<script type="text/javascript" charset="UTF-8" src="datetimepicker/jquery.datetimepicker.js"></script>
+	<link rel="stylesheet" href="css/jquery-ui.css" />
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+</head>
+<body>
+<div class="header">
+		<div class="logo">
+			<a href=""><img src="images/logo.png" class="fl"/></a>
+		</div>
+		<div class="user_info">
+			<i class="sprite people"></i>
+			<span class="fl">账号：liuyingjie</span>
+			<a href="" class="back">退出</a>
+		</div>
+	</div>
+	<div class="container organization">
+		<div class="cont_left">
+			<div class="navigation_left h100 fl">
+				<ul>
+					<li><a href="Organization.html" class=""><i class="sprite orangise ml15"></i><span>组织结构</span></a></li>
+					<li class="visited"><a href="addNews.html"><i class="sprite publish ml15"></i><span>内容发布</span></a></li>
+					<li><a href="admin.html"><i class="sprite system ml15"></i><span>系统设置</span></a></li>
+				</ul>
+			</div>
+			<div class="navigation_right h100 fl">
+				<div class="data_info">
+					<div class="news_list">
+						<div class="title">企业消息</div>
+						<a href="addNews.html">新建消息</a>
+						<a href="newsPublish.html">消息列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">投票消息</div>
+						<a href="addPiao.html">新建投票</a>
+						<a href="newsList.html">投票列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">通知</div>
+						<a href="addNotice.html">新建通知</a>
+						<a href="noticesList.html">通知列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">公告</div>
+						<a href="addAffiche.html">新建公告</a>
+						<a href="afficheList.html">公告列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">新闻</div>
+						<a href="newNews.html">新建新闻</a>
+						<a href="myNewNewsList.html">我创建的</a>
+						<a href="myManageList.html"   class="visited">我管理的</a>
+						<div class="btm_select"></div>
+						<a href="channelManage.html">频道管理</a>
+						<a href="basicManage.html">基本管理</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cont_right rel">
+			<i class="sprite left_icon top337"></i>
+			<p class="notice_title">我管理的</p>
+			<div class="search_left1 fl">
+					<a href="javascript:;" class="btn default-cor fl ml14 mt15 btnAdd active">待审批</a>
+					<a href="javascript:;" class="btn default-cor fl ml14 mt15 btnDel">已驳回</a>
+					<a href="javascript:;" class="btn default-cor fl ml14 mt15 btn_remove">已撤回</a>
+					<a href="javascript:;" class="btn default-cor fl ml14 mt15 btn_edit last">已发布</a>		
+			</div>
+			<div class="select-news">
+				频道
+				<select class="sel-channel">
+					<option>全部</option>
+					<option>最新</option>
+					<option>最热</option>
+					<option>频道1</option>
+					<option>频道2</option>
+					<option>频道3</option>
+					<option>频道4</option>
+					<option>频道5</option>
+					<option>频道6</option>
+					<option>频道7</option>
+					<option>频道8</option>
+				</select>
+				时间&nbsp;
+				<input placeholder="选择时间" class="h21 endTime mt5" id="startTimes"/>&nbsp;-&nbsp;
+				<input placeholder="选择时间" class="h21 endTime mt5" id="endTimes"/>
+				<input type="text" placeholder="标题/内容" class="sel-text"/>
+				<input type="submit" value="搜索" class="search-btn"/>
+				<input class="btn-addnews" value="新建新闻" type="submit">
+			</div>
+			<!--删除、迁移-->
+			<div class="del-remove1">
+				<a href="#" class="btn-del">删除</a>
+				<a href="#" class="btn-remove">迁移到</a>
+			</div>
+			<!--待审批开始-->
+			<div class="table_list">
+				<table>
+					<tbody>
+						<tr class="odd">
+							<th>编号</th>
+							<th>标题</th>
+							<th>频道</th>
+							<th>时间</th>
+							<th>部门</th>
+							<th>创建人</th>
+							<th>审批者</th>
+							<th>操作</th>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td><a href="newNewsDetails.html" title="北京市知识产法院部署平治东方“单位云服务系统”北京市知识产法院部署平治东方“单位云服务系统">北京市知识产法院部署平治东方“单位云服务系统</a></td>
+							<td>产品</td>
+							<td>2015-08-31 16:08</td>
+							<td>市场部</td>
+							<td>张三</td>
+							<td>赵四</td>
+							<td>
+							<a href="javascript:;" class="publish">通过</a><span class="tg-bh">/</span><a href="javascript:;" class="tg-bh">驳回</a><a href="newNews.html" class="bj">编辑</a>
+							</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td><a href="newNewsDetails.html" title="北京市知识产法院部署平治东方“单位云服务系统”北京市知识产法院部署平治东方“单位云服务系统">北京市知识产法院部署平治东方“单位云服务系统”</a></td>
+							<td>产品</td>
+							<td>2015-08-31 16:08</td>
+							<td>市场部</td>
+							<td>张三</td>
+							<td>赵四</td>
+							<td>
+							<a href="javascript:;" class="publish">通过</a><span class="tg-bh">/</span><a href="javascript:;"  class="tg-bh">驳回</a><a href="newNews.html" class="bj">编辑</a>
+							</td>	
+						</tr>
+						<tr>
+							<td>1</td>
+							<td><a href="newNewsDetails.html" title="北京市知识产法院部署平治东方“单位云服务系统”北京市知识产法院部署平治东方“单位云服务系统">北京市知识产法院部署平治东方“单位云服务系统”</a></td>
+							<td>产品</td>
+							<td>2015-08-31 16:08</td>
+							<td>市场部</td>
+							<td>张三</td>
+							<td>赵四</td>
+							<td>
+							<a href="javascript:;" class="publish">通过</a><span class="tg-bh">/</span><a href="javascript:;"  class="tg-bh">驳回</a><a href="newNews.html" class="bj">编辑</a>
+							</td>	
+						</tr>
+						<tr>
+							<td>1</td>
+							<td><a href="newNewsDetails.html" title="北京市知识产法院部署平治东方“单位云服务系统”北京市知识产法院部署平治东方“单位云服务系统">北京市知识产法院部署平治东方“单位云服务系统”</a></td>
+							<td>产品</td>
+							<td>2015-08-31 16:08</td>
+							<td>市场部</td>
+							<td>张三</td>
+							<td>赵四</td>
+							<td>
+							<a href="javascript:;" class="publish">通过</a><span class="tg-bh">/</span><a href="javascript:;"  class="tg-bh">驳回</a><a href="newNews.html" class="bj">编辑</a>
+							</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td><a href="newNewsDetails.html" title="北京市知识产法院部署平治东方“单位云服务系统”北京市知识产法院部署平治东方“单位云服务系统">北京市知识产法院部署平治东方“单位云服务系统”</a></td>
+							<td>产品</td>
+							<td>2015-08-31 16:08</td>
+							<td>市场部</td>
+							<td>张三</td>
+							<td>赵四</td>
+							<td>
+							<a href="javascript:;" class="publish">通过</a><span class="tg-bh">/</span><a href="javascript:;"  class="tg-bh">驳回</a><a href="newNews.html" class="bj">编辑</a>
+							</td>	
+						</tr>
+						<tr>
+							<td>1</td>
+							<td><a href="newNewsDetails.html" title="北京市知识产法院部署平治东方“单位云服务系统”北京市知识产法院部署平治东方“单位云服务系统">北京市知识产法院部署平治东方“单位云服务系统”</a></td>
+							<td>产品</td>
+							<td>2015-08-31 16:08</td>
+							<td>市场部</td>
+							<td>张三</td>
+							<td>赵四</td>
+							<td>
+						<a href="javascript:;" class="publish">通过</a><span class="tg-bh">/</span><a href="javascript:;"  class="tg-bh">驳回</a><a href="" class="bj">编辑</a>
+							</td>	
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!--待审批结束-->
+			<!--已驳回开始-->
+				<div class="table_list reject-table">
+				<table>
+					<tbody>
+						<tr class="odd">
+							<th>编号</th>
+							<th>标题</th>
+							<th>频道</th>
+							<th>时间</th>
+							<th>部门</th>
+							<th>创建人</th>
+							<th>审批者</th>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td><a href="newNewsDetails.html" title="北京市知识产法院部署平治东方“单位云服务系统”北京市知识产法院部署平治东方“单位云服务系统">北京市知识产法院部署平治东方“单位云服务系统”</a></td>
+							<td>产品</td>
+							<td>2015-08-31 16:08</td>
+							<td>市场部</td>
+							<td>张三</td>
+							<td>赵四</td>	
+						</tr>
+						<tr>
+							<td>1</td>
+							<td><a href="newNewsDetails.html" title="北京市知识产法院部署平治东方“单位云服务系统”北京市知识产法院部署平治东方“单位云服务系统">北京市知识产法院部署平治东方“单位云服务系统”</a></td>
+							<td>产品</td>
+							<td>2015-08-31 16:08</td>
+							<td>市场部</td>
+							<td>张三</td>
+							<td>赵四</td>	
+						</tr>
+						<tr>
+							<td>1</td>
+							<td><a href="newNewsDetails.html" title="北京市知识产法院部署平治东方“单位云服务系统”北京市知识产法院部署平治东方“单位云服务系统">北京市知识产法院部署平治东方“单位云服务系统”</a></td>
+							<td>产品</td>
+							<td>2015-08-31 16:08</td>
+							<td>市场部</td>
+							<td>张三</td>
+							<td>赵四</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td><a href="newNewsDetails.html" title="北京市知识产法院部署平治东方“单位云服务系统”北京市知识产法院部署平治东方“单位云服务系统">北京市知识产法院部署平治东方“单位云服务系统”</a></td>
+							<td>产品</td>
+							<td>2015-08-31 16:08</td>
+							<td>市场部</td>
+							<td>张三</td>
+							<td>赵四</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td><a href="newNewsDetails.html" title="北京市知识产法院部署平治东方“单位云服务系统”北京市知识产法院部署平治东方“单位云服务系统">北京市知识产法院部署平治东方“单位云服务系统”</a></td>
+							<td>产品</td>
+							<td>2015-08-31 16:08</td>
+							<td>市场部</td>
+							<td>张三</td>
+							<td>赵四</td>	
+						</tr>
+						<tr>
+							<td>1</td>
+							<td><a href="newNewsDetails.html" title="北京市知识产法院部署平治东方“单位云服务系统”北京市知识产法院部署平治东方“单位云服务系统">北京市知识产法院部署平治东方“单位云服务系统”</a></td>
+							<td>产品</td>
+							<td>2015-08-31 16:08</td>
+							<td>市场部</td>
+							<td>张三</td>
+							<td>赵四</td>	
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!--已驳回结束-->
+			<!--已撤回开始-->
+				<div class="table_list  approval-table">
+				<table>
+					<tbody>
+						<tr class="odd">
+							<th><input type="checkbox" name="check_all" id="checkAll1"></th>
+							<th>编号</th>
+							<th>标题</th>
+							<th>频道</th>
+							<th>时间</th>
+							<th>部门</th>
+							<th>创建人</th>
+							<th>审批者</th>	
+							<th>操作</th>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="subBox"></td>
+							<td>1</td>
+							<td><a href="newNewsDetails.html" title="北京市知识产法院部署平治东方“单位云服务系统”北京市知识产法院部署平治东方“单位云服务系统">北京市知识产法院部署平治东方“单位云服务系统”</a></td>
+							<td>产品</td>
+							<td>2015-08-31 16:08</td>
+							<td>市场部</td>
+							<td>张三</td>
+							<td>赵四</td>	
+							<td>
+							<a href="newNews.html" class="bj">编辑</a><a href="javascript:;" class="delete">删除</a>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="subBox"></td>
+							<td>1</td>
+							<td><a href="newNewsDetails.html" title="北京市知识产法院部署平治东方“单位云服务系统”北京市知识产法院部署平治东方“单位云服务系统">北京市知识产法院部署平治东方“单位云服务系统”</a></td>
+							<td>产品</td>
+							<td>2015-08-31 16:08</td>
+							<td>市场部</td>
+							<td>张三</td>
+							<td>赵四</td>
+							<td>
+							<a href="newNews.html" class="bj">编辑</a><a href="javascript:;" class="delete">删除</a>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="subBox"></td>
+							<td>1</td>
+							<td><a href="newNewsDetails.html" title="北京市知识产法院部署平治东方“单位云服务系统”北京市知识产法院部署平治东方“单位云服务系统">北京市知识产法院部署平治东方“单位云服务系统”</a></td>
+							<td>产品</td>
+							<td>2015-08-31 16:08</td>
+							<td>市场部</td>
+							<td>张三</td>
+							<td>赵四</td>
+							<td>
+							<a href="newNews.html" class="bj">编辑</a><a href="javascript:;" class="delete">删除</a>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="subBox"></td>
+							<td>1</td>
+							<td><a href="newNewsDetails.html" title="北京市知识产法院部署平治东方“单位云服务系统”北京市知识产法院部署平治东方“单位云服务系统">北京市知识产法院部署平治东方“单位云服务系统”</a></td>
+							<td>产品</td>
+							<td>2015-08-31 16:08</td>
+							<td>市场部</td>
+							<td>张三</td>
+							<td>赵四</td>	
+							<td>
+							<a href="newNews.html" class="bj">编辑</a><a href="javascript:;" class="delete">删除</a>
+							</td>							
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="subBox"></td>
+							<td>1</td>
+							<td><a href="newNewsDetails.html" title="北京市知识产法院部署平治东方“单位云服务系统”北京市知识产法院部署平治东方“单位云服务系统">北京市知识产法院部署平治东方“单位云服务系统”</a></td>
+							<td>产品</td>
+							<td>2015-08-31 16:08</td>
+							<td>市场部</td>
+							<td>张三</td>
+							<td>赵四</td>
+							<td>
+							<a href="newNews.html" class="bj">编辑</a><a href="javascript:;" class="delete">删除</a>
+							</td>								
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="subBox"></td>
+							<td>1</td>
+							<td><a href="newNewsDetails.html" title="北京市知识产法院部署平治东方“单位云服务系统”北京市知识产法院部署平治东方“单位云服务系统">北京市知识产法院部署平治东方“单位云服务系统”</a></td>
+							<td>产品</td>
+							<td>2015-08-31 16:08</td>
+							<td>市场部</td>
+							<td>张三</td>
+							<td>赵四</td>
+							<td>
+							<a href="newNews.html" class="bj">编辑</a><a href="javascript:;" class="delete">删除</a>
+							</td>								
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!--已撤回结束-->
+			<!--已发布开始-->
+				<div class="table_list published-table">
+				<table>
+					<tbody>
+						<tr class="odd">
+							<th><input type="checkbox" name="check_all" id="checkAll1"></th>
+							<th>编号</th>
+							<th>标题</th>
+							<th>频道</th>
+							<th>时间</th>
+							<th>部门</th>
+							<th>创建人</th>
+							<th>审批者</th>	
+							<th>操作</th>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="subBox"></td>
+							<td>1</td>
+							<td><a href="newNewsDetails.html" title="北京市知识产法院部署平治东方“单位云服务系统”北京市知识产法院部署平治东方“单位云服务系统">北京市知识产法院部署平治东方“单位云服务系统”</a></td>
+							<td>产品</td>
+							<td>2015-08-31 16:08</td>
+							<td>市场部</td>
+							<td>张三</td>
+							<td>赵四</td>	
+							<td>
+								<a href="javascript:;" class="ch">撤回</a>
+							</td>
+						</tr>
+							<td><input type="checkbox" name="subBox"></td>
+							<td>1</td>
+							<td><a href="newNewsDetails.html" title="北京市知识产法院部署平治东方“单位云服务系统”北京市知识产法院部署平治东方“单位云服务系统">北京市知识产法院部署平治东方“单位云服务系统”</a></td>
+							<td>产品</td>
+							<td>2015-08-31 16:08</td>
+							<td>市场部</td>
+							<td>张三</td>
+							<td>赵四</td>
+							<td>
+								<a href="javascript:;" class="ch">撤回</a>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="subBox"></td>
+							<td>1</td>
+							<td><a href="newNewsDetails.html" title="北京市知识产法院部署平治东方“单位云服务系统”北京市知识产法院部署平治东方“单位云服务系统">北京市知识产法院部署平治东方“单位云服务系统”</a></td>
+							<td>产品</td>
+							<td>2015-08-31 16:08</td>
+							<td>市场部</td>
+							<td>张三</td>
+							<td>赵四</td>
+							<td>
+								<a href="javascript:;" class="ch">撤回</a>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="subBox"></td>
+							<td>1</td>
+							<td><a href="newNewsDetails.html" title="北京市知识产法院部署平治东方“单位云服务系统”北京市知识产法院部署平治东方“单位云服务系统">北京市知识产法院部署平治东方“单位云服务系统”</a></td>
+							<td>产品</td>
+							<td>2015-08-31 16:08</td>
+							<td>市场部</td>
+							<td>张三</td>
+							<td>赵四</td>	
+							<td>
+								<a href="javascript:;" class="ch">撤回</a>
+							</td>							
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="subBox"></td>
+							<td>1</td>
+							<td><a href="newNewsDetails.html" title="北京市知识产法院部署平治东方“单位云服务系统”北京市知识产法院部署平治东方“单位云服务系统">北京市知识产法院部署平治东方“单位云服务系统”</a></td>
+							<td>产品</td>
+							<td>2015-08-31 16:08</td>
+							<td>市场部</td>
+							<td>张三</td>
+							<td>赵四</td>	
+							<td>
+								<a href="javascript:;" class="ch">撤回</a>
+							</td>							
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="subBox"></td>
+							<td>1</td>
+							<td><a href="newNewsDetails.html" title="北京市知识产法院部署平治东方“单位云服务系统”北京市知识产法院部署平治东方“单位云服务系统">北京市知识产法院部署平治东方“单位云服务系统”</a></td>
+							<td>产品</td>
+							<td>2015-08-31 16:08</td>
+							<td>市场部</td>
+							<td>张三</td>
+							<td>赵四</td>
+							<td>
+								<a href="javascript:;" class="ch">撤回</a>
+							</td>							
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!--已发布结束-->
+			<!--分页-->
+			<div class="pagination">
+				<div class="pagination_left fl">显示1-6条/共6条</div>
+				<div class="pagination_right fr">
+					<a href="javascript:;" class="btn default fl ">上一页</a>
+					<ul class="page fl">
+						<li><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="" class="current">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">5</a></li>
+					</ul>
+					<a href="javascript:;" class="btn default fl">下一页</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--删除模态框开始-->
+			<div id="dialog" title="系统提示">
+				<p class="box">	请先勾选要删除的新闻</p>	
+			</div>
+	<!--删除模态框结束-->
+	<!--频道迁移模态框开始-->
+			<div id="dialog1" title="系统提示">
+				<p class="box1">选择频道&nbsp;&nbsp;
+					<select>
+						<option>请选择</option>
+						<option selected="selected">频道1</option>
+						<option>频道2</option>
+						<option>频道3</option>
+						<option>频道4</option>
+						<option>频道5</option>
+						<option>频道6</option>
+						<option>频道7</option>
+						<option>频道8</option>
+					</select>
+				</p>	
+			</div>
+	<!--频道迁移模态框结束-->
+	<!--删除某一条新闻开始-->
+			<div id="dialog2" title="系统提示">
+				<p class="box2">确定删除新闻？</p>	
+			</div>
+	<!--删除某一条新闻结束-->
+	<!--发布某一条新闻开始-->
+			<div id="dialog3" title="系统提示">
+				<p class="box3">确定发布新闻？</p>	
+			</div>
+	<!--发布某一条新闻结束-->
+	<!--撤回某一条新闻开始-->
+			<div id="dialog4" title="系统提示">
+				<p class="box3">确定撤回新闻？</p>	
+			</div>
+	<!--撤回某一条新闻结束-->
+	<!--驳回理由开始-->
+		<div id="dialog5">
+			<p class="reason">驳回理由</p>
+			<p class="reason-tip">请选择驳回理由</p>
+			<ul class="reason-lsit">
+				<li><input type="radio" name="bh-reason"/>A.频道选择不对，或标题不符合</li>
+				<li><input type="radio" name="bh-reason"/>B.内容敏感，或非正面积极向上</li>
+				<li><input type="radio" name="bh-reason" class="other"/>C.其它，请填写(50字以内)：</li>	
+			</ul>
+			<div class="other-reason">
+				<textarea></textarea>
+			</div>
+		</div>
+	<!--驳回理由结束-->
+	<script type="text/javascript">
+		$('#startTimes').datetimepicker({
+		});
+		$('#endTimes').datetimepicker({
+		});
+	</script>
+</body>
+</html>

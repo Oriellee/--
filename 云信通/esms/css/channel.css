@@ -1,0 +1,8 @@
+.cont_right .table_list{width:90%}
+table th, table td,.table_list tr,.table_list table{border:0!important}
+.table_list tr{border-bottom:1px dotted #ddd!important}
+.table_list table a{color:#3487E2;margin-right:10px;outline: none;}
+.btn-addnews{margin-top:20px;margin-left:50px}
+.box{margin-top: 25px;text-align: center;}
+.box-channel{margin:10px 0;text-align:center;}
+.box-tip{color:red;padding:0 15px;line-height:20px;}

@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我创建的-pc</title>
+	<link rel="stylesheet" href="css/addNotice-pc.css"/>
+	<script type="text/javascript" charset="utf-8" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/My97DatePicker/WdatePicker.js"></script>
+	<script type="text/javascript" src="js/addNotice-pc.js"></script>
+	<script type="text/javascript" src="js/placeholder.js"></script>
+	<!--页面滚动条样式-->
+    <link rel="stylesheet" href="js/mCustomScrollbar/jquery.mCustomScrollbar.css" type="text/css">
+    <link rel="stylesheet" href="js/mCustomScrollbar/jquery.mCustomScrollbarReset.css" type="text/css">
+    <script type="text/javascript" src="js/mCustomScrollbar/jquery.mCustomScrollbar.js"></script>	
+	<script>
+	$(document).ready(function(){
+			$(".table_list .xScroll").mCustomScrollbar({
+				axis:"x",
+				theme:"3d-thick"
+			});
+			
+		});
+
+	</script>
+</head>
+<body>
+	<div class="wrapper">	
+		<div class="item2">
+			<a href="javascript:;" class="selectBtn">全部</a>
+			<a href="javascript:;">草稿</a>
+			<a href="javascript:;">被驳回</a>
+			<a href="javascript:;">审批中</a>
+			<a href="javascript:;">已发布</a>
+		</div>
+		<div class="item-bar" style="min-height:40px;height:auto">
+			<span class="channel">频道：</span>
+			<dl class="select small"> 
+			<dt title="value">请选择频道</dt><!--title用于存储选值-->
+			<div class="option">
+				<dd>选项一</dd> 
+				<dd>选项二</dd> 
+				<dd>选项三</dd> 
+				<dd>选项四</dd> 
+				<dd>选项五</dd> 
+			</div>
+		</dl>
+		<span class="time">时间：</span>
+		<input class="Wdate wdate-time" type="text" onclick="WdatePicker()" placeholder="请选择时间">—
+		<input class="Wdate wdate-time" type="text" onclick="WdatePicker()" placeholder="请选择时间"> 
+		<input type="text" placeholder="标题/内容" class="tCon"/>
+		<a href="javascript:;" class="seaechBtn">搜索</a>
+		<!--删除、迁移-->
+			<div class="del-remove1">
+				<a href="#" class="btn-del">删除</a>
+			</div>
+		</div>
+		<!--全部-->
+		<div class="table table_list">
+		<div class="xScroll">
+			<table  border="1">
+				<thead>
+					<tr>
+						<td>
+							<div class="checkboxFive H">
+								<input type="checkbox" value="1" id="checkboxFiveInput11" />
+								<label for="checkboxFiveInput11"  name="check_all"></label>
+							</div>
+						</td>
+						<td>编号</td>
+						<td>标题</td>
+						<td>频道</td>
+						<td>时间</td>
+						<td>部门</td>
+						<td>创建人</td>
+						<td>审批者</td>
+						<td>操作</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<div class="checkboxFive H">
+								<input type="checkbox" value="1" id="checkboxFiveInput12" name="subBox" />
+								<label for="checkboxFiveInput12"></label>
+							</div>
+						</td>
+						<td>1</td>
+						<td>奔跑吧</td>
+						<td>市场</td>
+						<td>2017-4-10 12:09:112017-4-10 12:09:112017-4-1012:09:11</td>
+						<td>测试部</td>
+						<td>张三</td>
+						<td>李四</td>
+						<td><a href="javascript:;">编辑</a>&nbsp;&nbsp;<a href="javascript:;" class="publish-btn">发布</a>&nbsp;&nbsp;<a href="javascript:;"class="delete-btn">删除</a></td>
+					</tr>
+					<tr>
+						<td>
+							<div class="checkboxFive H">
+								<input type="checkbox" value="1" id="checkboxFiveInput13" name="subBox" />
+								<label for="checkboxFiveInput13"></label>
+							</div>
+						</td>
+						<td>1</td>
+						<td>奔跑吧</td>
+						<td>市场</td>
+						<td>2017-4-10 12:09:11</td>
+						<td>测试部</td>
+						<td>张三</td>
+						<td>李四</td>
+						<td><a href="javascript:;">编辑</a>&nbsp;&nbsp;<a href="javascript:;">发布</a>&nbsp;&nbsp;<a href="javascript:;">删除</a></td>
+					</tr>
+					<tr>
+						<td>
+							<div class="checkboxFive H">
+								<input type="checkbox" value="1" id="checkboxFiveInput14" name="subBox" />
+								<label for="checkboxFiveInput14"></label>
+							</div>
+						</td>
+						<td>1</td>
+						<td>奔跑吧</td>
+						<td>市场</td>
+						<td>2017-4-10 12:09:11</td>
+						<td>测试部</td>
+						<td>张三</td>
+						<td>李四</td>
+						<td><a href="javascript:;">编辑</a>&nbsp;&nbsp;<a href="javascript:;">发布</a>&nbsp;&nbsp;<a href="javascript:;">删除</a></td>
+					</tr>
+					<tr>
+						<td>
+							<div class="checkboxFive H">
+								<input type="checkbox" value="1" id="checkboxFiveInput15" name="subBox" />
+								<label for="checkboxFiveInput15"></label>
+							</div>
+						</td>
+						<td>1</td>
+						<td>奔跑吧</td>
+						<td>市场</td>
+						<td>2017-4-10 12:09:11</td>
+						<td>测试部</td>
+						<td>张三</td>
+						<td>李四</td>
+						<td><a href="javascript:;">编辑</a>&nbsp;&nbsp;<a href="javascript:;">发布</a>&nbsp;&nbsp;<a href="javascript:;">删除</a></td>
+					</tr>
+				</tbody>
+			</table>
+			</div>
+			<div class="pagination">
+				<div class="pagination_right fr">
+					<a href="javascript:;" class="btn default fl ">上一页</a>
+					<ul class="page fl">
+						<li><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="" class="current">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">5</a></li>
+					</ul>
+					<a href="javascript:;" class="btn default fl">下一页</a>
+				</div>
+			</div>
+		</div>
+		<!--草稿-->
+			<div class="table table_list dsp">
+			<div class="xScroll">
+			<table  border="1">
+				<thead>
+					<tr>
+					<td>
+							<div class="checkboxFive H">
+								<input type="checkbox" value="1" id="checkbox11" />
+								<label for="checkbox11"  name="check_all"></label>
+							</div>
+						</td>
+						<td>编号</td>
+						<td>标题</td>
+						<td>频道</td>
+						<td>时间</td>
+						<td>部门</td>
+						<td>创建人</td>
+						<td>审批者</td>
+						<td>操作</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<div class="checkboxFive H">
+								<input type="checkbox" value="1" id="checkbox12" name="subBox" />
+								<label for="checkbox12"></label>
+							</div>
+						</td>
+						<td>1</td>
+						<td>奔跑吧</td>
+						<td>市场</td>
+						<td>2017-4-10 12:09:11</td>
+						<td>测试部</td>
+						<td>张三</td>
+						<td>李四</td>
+						<td><a href="javascript:;">编辑</a>&nbsp;&nbsp;<a href="javascript:;"class="publish-btn">发布</a>&nbsp;&nbsp;<a href="javascript:;"class="delete-btn">删除</a></td>
+					</tr>
+					<tr>
+						<td>
+							<div class="checkboxFive H">
+								<input type="checkbox" value="1" id="checkbox13" name="subBox" />
+								<label for="checkbox13"></label>
+							</div>
+						</td>
+						<td>1</td>
+						<td>奔跑吧</td>
+						<td>市场</td>
+						<td>2017-4-10 12:09:11</td>
+						<td>测试部</td>
+						<td>张三</td>
+						<td>李四</td>
+						<td><a href="javascript:;">编辑</a>&nbsp;&nbsp;<a href="javascript:;">发布</a>&nbsp;&nbsp;<a href="javascript:;">删除</a></td>
+					</tr>
+					<tr>
+						<td>
+							<div class="checkboxFive H">
+								<input type="checkbox" value="1" id="checkbox14" name="subBox" />
+								<label for="checkbox14"></label>
+							</div>
+						</td>
+						<td>1</td>
+						<td>奔跑吧</td>
+						<td>市场</td>
+						<td>2017-4-10 12:09:11</td>
+						<td>测试部</td>
+						<td>张三</td>
+						<td>李四</td>
+						<td><a href="javascript:;">编辑</a>&nbsp;&nbsp;<a href="javascript:;">发布</a>&nbsp;&nbsp;<a href="javascript:;">删除</a></td>
+					</tr>
+					<tr>
+						<td>
+							<div class="checkboxFive H">
+								<input type="checkbox" value="1" id="checkbox15" name="subBox" />
+								<label for="checkbox15"></label>
+							</div>
+						</td>
+						<td>1</td>
+						<td>奔跑吧</td>
+						<td>市场</td>
+						<td>2017-4-10 12:09:11</td>
+						<td>测试部</td>
+						<td>张三</td>
+						<td>李四</td>
+						<td><a href="javascript:;">编辑</a>&nbsp;&nbsp;<a href="javascript:;">发布</a>&nbsp;&nbsp;<a href="javascript:;">删除</a></td>
+					</tr>
+				</tbody>
+			</table>
+			</div>
+			<div class="pagination">
+				<div class="pagination_right fr">
+					<a href="javascript:;" class="btn default fl ">上一页</a>
+					<ul class="page fl">
+						<li><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="" class="current">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">5</a></li>
+					</ul>
+					<a href="javascript:;" class="btn default fl">下一页</a>
+				</div>
+			</div>
+		</div>
+		<!--被驳回-->
+			<div class="table table_list ybh">
+			<div class="xScroll">
+			<table  border="1">
+				<thead>
+					<tr>
+						<td>
+							<div class="checkboxFive H">
+								<input type="checkbox" value="1" id="checkboxFive11" />
+								<label for="checkboxFive11"  name="check_all"></label>
+							</div>
+						</td>
+						<td>编号</td>
+						<td>标题</td>
+						<td>频道</td>
+						<td>时间</td>
+						<td>部门</td>
+						<td>创建人</td>
+						<td>审批者</td>
+						<td>查看原因</td>
+						<td>操作</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<div class="checkboxFive H">
+								<input type="checkbox" value="1" id="checkboxFive12" name="subBox" />
+								<label for="checkboxFive12"></label>
+							</div>
+						</td>
+						<td>1</td>
+						<td>奔跑吧</td>
+						<td>市场</td>
+						<td>2017-4-10 12:09:11</td>
+						<td>测试部</td>
+						<td>张三</td>
+						<td>李四</td>
+						<td>频道选择不对，或标题不符合</td>
+						<td><a href="javascript:;">编辑</a>&nbsp;&nbsp;<a href="javascript:;"class="delete-btn">删除</a></td>
+					</tr>
+					<tr>
+						<td>
+							<div class="checkboxFive H">
+								<input type="checkbox" value="1" id="checkboxFive13" name="subBox" />
+								<label for="checkboxFive13"></label>
+							</div>
+						</td>
+						<td>1</td>
+						<td>奔跑吧</td>
+						<td>市场</td>
+						<td>2017-4-10 12:09:11</td>
+						<td>测试部</td>
+						<td>张三</td>
+						<td>李四</td>
+						<td>频道选择不对，或标题不符合</td>
+						<td><a href="javascript:;">编辑</a>&nbsp;&nbsp;<a href="javascript:;">删除</a></td>
+					</tr>
+					<tr>
+						<td>
+							<div class="checkboxFive H">
+								<input type="checkbox" value="1" id="checkboxFive14" name="subBox" />
+								<label for="checkboxFive14"></label>
+							</div>
+						</td>
+						<td>1</td>
+						<td>奔跑吧</td>
+						<td>市场</td>
+						<td>2017-4-10 12:09:11</td>
+						<td>测试部</td>
+						<td>张三</td>
+						<td>李四</td>
+						<td>频道选择不对，或标题不符合</td>
+						<td><a href="javascript:;">编辑</a>&nbsp;&nbsp;<a href="javascript:;">删除</a></td>
+					</tr>
+					<tr>
+						<td>
+							<div class="checkboxFive H">
+								<input type="checkbox" value="1" id="checkboxFive15" name="subBox" />
+								<label for="checkboxFive15"></label>
+							</div>
+						</td>
+						<td>1</td>
+						<td>奔跑吧</td>
+						<td>市场</td>
+						<td>2017-4-10 12:09:11</td>
+						<td>测试部</td>
+						<td>张三</td>
+						<td>李四</td>
+						<td>频道选择不对，或标题不符合</td>
+						<td><a href="javascript:;">编辑</a>&nbsp;&nbsp;<a href="javascript:;">删除</a></td>
+					</tr>
+				</tbody>
+			</table>
+			</div>
+			<div class="pagination">
+				<div class="pagination_right fr">
+					<a href="javascript:;" class="btn default fl ">上一页</a>
+					<ul class="page fl">
+						<li><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="" class="current">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">5</a></li>
+					</ul>
+					<a href="javascript:;" class="btn default fl">下一页</a>
+				</div>
+			</div>
+		</div>
+		<!--审批中-->
+		<div class="table table_list ych">
+		<div class="xScroll">
+			<table  border="1">
+				<thead>
+					<tr>
+						<td>
+							<div class="checkboxFive H">
+								<input type="checkbox" value="1" id="checkA1l" />
+								<label for="checkA1l"  name="check_all"></label>
+							</div>
+						</td>
+						<td>编号</td>
+						<td>标题</td>
+						<td>频道</td>
+						<td>时间</td>
+						<td>部门</td>
+						<td>创建人</td>
+						<td>审批者</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<div class="checkboxFive H">
+								<input type="checkbox" value="1" id="checkA1l1" name="subBox" />
+								<label for="checkA1l1"></label>
+							</div>
+						</td>
+						<td>1</td>
+						<td>奔跑吧</td>
+						<td>市场</td>
+						<td>2017-4-10 12:09:11</td>
+						<td>测试部</td>
+						<td>张三</td>
+						<td>李四</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="checkboxFive H">
+								<input type="checkbox" value="1" id="checkA1l2" name="subBox" />
+								<label for="checkA1l2"></label>
+							</div>
+						</td>
+						<td>1</td>
+						<td>奔跑吧</td>
+						<td>市场</td>
+						<td>2017-4-10 12:09:11</td>
+						<td>测试部</td>
+						<td>张三</td>
+						<td>李四</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="checkboxFive H">
+								<input type="checkbox" value="1" id="checkA1l3" name="subBox" />
+								<label for="checkA1l3"></label>
+							</div>
+						</td>
+						<td>1</td>
+						<td>奔跑吧</td>
+						<td>市场</td>
+						<td>2017-4-10 12:09:11</td>
+						<td>测试部</td>
+						<td>张三</td>
+						<td>李四</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="checkboxFive H">
+								<input type="checkbox" value="1" id="checkA1l4" name="subBox" />
+								<label for="checkA1l4"></label>
+							</div>
+						</td>
+						<td>1</td>
+						<td>奔跑吧</td>
+						<td>市场</td>
+						<td>2017-4-10 12:09:11</td>
+						<td>测试部</td>
+						<td>张三</td>
+						<td>李四</td>
+					</tr>
+				</tbody>
+			</table>
+			</div>
+			<div class="pagination">
+				<div class="pagination_right fr">
+					<a href="javascript:;" class="btn default fl ">上一页</a>
+					<ul class="page fl">
+						<li><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="" class="current">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">5</a></li>
+					</ul>
+					<a href="javascript:;" class="btn default fl">下一页</a>
+				</div>
+			</div>
+		</div>
+		<!--已发布-->
+		<div class="table table_list yfb">
+		<div class="xScroll">
+			<table  border="1">
+				<thead>
+					<tr>
+						<td>
+							<div class="checkboxFive H">
+								<input type="checkbox" value="1" id="checkInput11" />
+								<label for="checkInput11"  name="check_all"></label>
+							</div>
+						</td>
+						<td>编号</td>
+						<td>标题</td>
+						<td>频道</td>
+						<td>时间</td>
+						<td>部门</td>
+						<td>创建人</td>
+						<td>审批者</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<div class="checkboxFive H">
+								<input type="checkbox" value="1" id="checkInput12" name="subBox" />
+								<label for="checkInput12"></label>
+							</div>
+						</td>
+						<td>1</td>
+						<td>奔跑吧</td>
+						<td>市场</td>
+						<td>2017-4-10 12:09:11</td>
+						<td>测试部</td>
+						<td>张三</td>
+						<td>李四</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="checkboxFive H">
+								<input type="checkbox" value="1" id="checkInput13" name="subBox" />
+								<label for="checkInput13"></label>
+							</div>
+						</td>
+						<td>1</td>
+						<td>奔跑吧</td>
+						<td>市场</td>
+						<td>2017-4-10 12:09:11</td>
+						<td>测试部</td>
+						<td>张三</td>
+						<td>李四</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="checkboxFive H">
+								<input type="checkbox" value="1" id="checkInput14" name="subBox" />
+								<label for="checkInput14"></label>
+							</div>
+						</td>
+						<td>1</td>
+						<td>奔跑吧</td>
+						<td>市场</td>
+						<td>2017-4-10 12:09:11</td>
+						<td>测试部</td>
+						<td>张三</td>
+						<td>李四</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="checkboxFive H">
+								<input type="checkbox" value="1" id="checkInput15" name="subBox" />
+								<label for="checkInput15"></label>
+							</div>
+						</td>
+						<td>1</td>
+						<td>奔跑吧</td>
+						<td>市场</td>
+						<td>2017-4-10 12:09:11</td>
+						<td>测试部</td>
+						<td>张三</td>
+						<td>李四</td>
+					</tr>
+				</tbody>
+			</table>
+			</div>
+			<div class="pagination">
+				<div class="pagination_right fr">
+					<a href="javascript:;" class="btn default fl ">上一页</a>
+					<ul class="page fl">
+						<li><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="" class="current">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">5</a></li>
+					</ul>
+					<a href="javascript:;" class="btn default fl">下一页</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	 <!--删除新闻-->
+	 <div class="deleteNews">
+		<a class="close" href="javascript:;">×</a>
+		<p>确定要删除已勾选的新闻？</p>
+		<div class="bottom2">
+			<a href="javascript:;" class="publish">确定</a>
+			<a href="javascript:;" class="save">取消</a>
+		</div>
+	 </div>
+	 <!--先勾选要删除的新闻-->
+	  <div class="deleteTip">
+		<a class="close" href="javascript:;">×</a>
+		<p>请先勾选要删除的新闻！</p>
+		<div class="bottom2">
+			<a href="javascript:;" class="publish">确定</a>
+		</div>
+	 </div>
+	  <!--发布新闻-->
+	 <div class="returnNews">
+		<a class="close" href="javascript:;">×</a>
+		<p>确定要发布新闻？</p>
+		<div class="bottom2">
+			<a href="javascript:;" class="publish">确定</a>
+			<a href="javascript:;" class="save">取消</a>
+		</div>
+	 </div>
+	 
+	 <div class="cover"></div>
+</body>
+</html>

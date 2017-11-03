@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>通知详情页</title>
+	 <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no">
+	<link type="text/css" rel="stylesheet" href="../css/informDetail.css"/>
+	<script type="text/javascript" charset="utf-8" src="../js/voice.js"></script>
+	<style>
+		body{display:none;}
+		.message_info{margin-top:0}
+	</style>
+   <script>
+	$(function(){
+		var deviceWidth = document.documentElement.clientWidth;
+		if(deviceWidth > 640) deviceWidth = 640;
+		document.documentElement.style.fontSize = deviceWidth / 6.4 + 'px';
+		$("body").show();
+	}); 
+  </script>
+</head>
+<body>
+	<div class="message_info">
+		<div class="message_left">
+			<p class="title">中秋假通知中秋节放假通知</p>
+			<p class="messageform"><span>08-05 14:34</span><span>来自人力资源部</span></p>
+			<p class="send_rang"><a href="#">发送范围</a></p>
+			<div class="message_right">
+				<a href="#" class="confirm confirmed">立即确认</a>
+			</div>
+		</div>
+		
+		<div class="clear-float"></div>
+	</div>
+	
+	<!--中间内容部分开始-->
+	<div class="content">
+		<!--图文混排开始-->
+		<div class="con_text_img">
+			根据国务院办公厅通知精神，现将2015年中秋节、国庆节放假安排通知如下：
+
+　　			中秋节：9月26日（周六）、9月27日(星期日)放假，共2天。9月28日（周一）上班。
+　　
+			国庆节：10月1日(星期四)至10月7日(星期三)放假调休，共7天。10月8日（周四）上班。10月10日(星期六)上班。
+			<img src="../images/date.png" class="date" border="0">
+		</div>
+		<!--图文混排结束-->
+		
+		<!--图片列表开始-->
+		<ul class="con_img">
+			<li class=""><a href="#"><img src="../images/img1.png" width="100%" border="0"></a></li>
+			<li class=""><a href="#"><img src="../images/1.png" width="100%" border="0"></a></li>
+			<li class=""><a href="#"><img src="../images/2.png" width="100%"></a></li>
+			<li class=""><a href="#"><img src="../images/4.png" width="100%"></a></li>
+			<li class=""><a href="#"><img src="../images/5.png" width="100%"></a></li>
+			<li class=""><a href="#"><img src="../images/6.png" width="100%"></a></li>
+			<li class=""><a href="#"><img src="../images/img1.png" width="100%"></a></li>
+			<li class=""><a href="#"><img src="../images/img1.png" width="100%"></a></li>
+			<li class=""><a href="#"><img src="../images/img1.png" width="100%"></a></li>
+			<li class=""><a href="#"><img src="../images/img1.png" width="100%"></a></li>
+			<li class=""><a href="#"><img src="../images/img1.png" width="100%"></a></li>
+			<li class=""><a href="#"><img src="../images/img1.png" width="100%"></a></li>
+			<li class=""><a href="#"><img src="../images/img1.png" width="100%"></a></li>
+			<li class=""><a href="#"><img src="../images/img1.png" width="100%"></a></li>
+		</ul>
+		<!--图片列表结束-->
+		
+		<!--清除浮动的空标签-->
+		<div class="space"></div>
+		
+		<!--音频开始-->
+		<div class="audio_box">
+			<audio src="../mp3/1.mp3" preload="auto"></audio>
+			<button id="bf" class="bf"></button>
+			<div class="longtime-div">
+				<p class="ly">录音</p>
+				<p class="longtime">总时长<span>4</span>秒</p>
+			</div>	
+		</div>
+		<div class="audio_box">
+			<audio src="../mp3/1.mp3" preload="auto"></audio>
+			<button id="bf" class="bf"></button>
+			<div class="longtime-div">
+				<p class="ly">录音</p>
+				<p class="longtime">总时长<span>4</span>秒</p>
+			</div>	
+		</div>
+		<!--音频结束-->
+		<!--附件开始-->
+		<div class="accessory">
+			<a href="#">文件名称.docx</a>
+			<a href="#">文件名称.docx</a>
+		</div>
+		<!--附件结束-->
+		<div class="space-bottom"></div>
+	</div>
+	<!--中间内容部分结束-->
+	
+	<!--底部开始-->
+	<ul class="bottom">
+		<li class="reply">
+			<a href="#"><img src="../images/reply.png" border="0"/>&nbsp;&nbsp;回复&nbsp;<span>99+</span></a>
+		</li>	
+		<li class="praise">
+			<a href="#"><img src="../images/praise.png" border="0"/>&nbsp;&nbsp;赞&nbsp;<span>99+</span></a>
+		</li>
+		<li class="read">
+			<a href="#"><img src="../images/read.png" border="0"/>&nbsp;&nbsp;已读&nbsp;<span>99+/12345</span></a>
+		</li>
+	</ul>
+	<!--底部结束-->
+</body>
+</html>

@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>会议纪要</title>
+	 <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no">
+	<link type="text/css" rel="stylesheet" href="../css/newLeaveApply-pc.css"/>
+	<script type="text/javascript" src="../js/meetingInformDetail.js"></script>
+	<style>
+		body{display:none;}
+	</style>
+   <script>
+	$(function(){
+		var deviceWidth = document.documentElement.clientWidth;
+		if(deviceWidth > 640) deviceWidth = 640;
+		document.documentElement.style.fontSize = deviceWidth / 6.4 + 'px';
+		$("body").show();
+	
+		//点击导出按钮
+		$(".export").click(function(){
+		
+		$(".tip").show();
+		setTimeout(function () {
+        $(".tip").hide();
+    }, 1500);
+	});
+	}); 
+  </script>
+</head>
+<body>
+	<div class="meeting-theme">
+		<label>会议主题：</label>
+		<span>云信通需求讨论</span>
+	</div>
+	<div class="start-time">
+		<label>开始时间：</label>
+		<span>2016-12-1 14:00</span>
+	</div>
+	<div class="start-time">
+		<label>会议地点：</label>
+		<span>第二会议室</span>
+	</div>
+	<!--<div class="org-person">
+		<label>&nbsp;&nbsp;&nbsp;组织人：</label>
+		<span>王文礼</span>
+	</div>-->
+	<div class="act-person">
+		<p>参加人员：</p>
+		<div class="person-list">张三、李四、赵六、迟金全、吴丹、赵红杰、李妮、陈文杰、何健、张辛苑、张三、李四、赵六、迟金全、吴丹、赵红杰、李妮、陈文杰、何健、张辛苑</div>
+		<div class="person-list-all">张三、李四、赵六、迟金全、吴丹、赵红杰、李妮、陈文杰、何健、张辛苑、张三、李四、赵六、迟金全、吴丹、赵红杰、李妮、陈文杰、何健、张辛苑</div>
+	</div>
+	<div class="meeting-sum">
+		<p class="title">纪要内容：</p>
+		<div class="content">
+			1、明确了审批涉及到的业务流程；<br/>
+			2、明确了日程的功能点；<br/>
+			可进入详情设计环节<br/>
+		</div>
+		<div  class="accessory">
+			<div class="accessory-one">
+				<img src="../images/doc.png"/>
+				<div class="right">
+					<p>3.1需求评审会议_会议纪要.doc</p>
+					<p>60.9KB</p>
+				</div>
+			</div>
+			<div class="accessory-one">
+				<img src="../images/pdf.png"/>
+				<div class="right">
+					<p>3.1需求评审会议_会议纪要.pdf</p>
+					<p>60.9KB</p>
+				</div>
+			</div>
+			<div class="accessory-one">
+				<img src="../images/pdf.png"/>
+				<div class="right">
+					<p>3.1需求评审会议_会议纪要.pdf</p>
+					<p>60.9KB</p>
+				</div>
+			</div>
+			<div class="accessory-one">
+				<img src="../images/pdf.png"/>
+				<div class="right">
+					<p>3.1需求评审会议_会议纪要.pdf</p>
+					<p>60.9KB</p>
+				</div>
+			</div>
+			<div class="accessory-one">
+				<img src="../images/pdf.png"/>
+				<div class="right">
+					<p>3.1需求评审会议_会议纪要.pdf</p>
+					<p>60.9KB</p>
+				</div>
+			</div>
+			<div class="accessory-one">
+				<img src="../images/pdf.png"/>
+				<div class="right">
+					<p>3.1需求评审会议_会议纪要.pdf</p>
+					<p>60.9KB</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="space-bottom"></div>
+	
+	<!--<div class="export">导出</div>-->
+	<ul class="bottom">	
+		<li class="read">
+			<a href="#"><img src="../images/read.png" border="0">&nbsp;&nbsp;已读&nbsp;<span>99+/12345</span></a>
+		</li>
+		<li class="export">导出</li>
+	</ul>
+	<div class="tip">请在PC端导出</div>
+</body>
+</html>

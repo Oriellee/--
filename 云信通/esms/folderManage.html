@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文件夹管理</title>
+	<link rel="stylesheet" href="css/common.css"/>
+	<link rel="stylesheet" href="css/cont_left.css"/>
+	<link rel="stylesheet" href="css/cont_right.css"/>
+	<link rel="stylesheet" href="css/header.css"/>
+	
+
+	<link rel="stylesheet" href="css/confirm.css"/>
+	<link rel="stylesheet" href="css/oranization.css"/>
+	<link rel="stylesheet" href="css/news.css"/>
+	<link rel="stylesheet" href="css/system.css"/>
+	<link rel="stylesheet" href="css/register.css"/>
+	<link rel="stylesheet" href="css/IE.css"/>
+	<link rel="stylesheet" href="css/folder.css"/>
+	<script type="text/javascript" charset="utf-8" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="editor_config.js"></script>
+	<script type="text/javascript" charset="utf-8" src="editor_api.js"></script>
+	<script type="text/javascript" charset="utf-8" src="uploadify/jquery.uploadify.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css" />
+	<script type="text/javascript" src="js/jquery.datetimepicker.js"></script>
+	<link rel="stylesheet" href="css/jquery-ui.css" />
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/folder.js"></script>
+</head>
+<body>
+<div class="header">
+		<div class="logo">
+			<a href=""><img src="images/logo.png" class="fl"/></a>
+		</div>
+		<div class="user_info">
+			<i class="sprite people"></i>
+			<span class="fl">账号：liuyingjie</span>
+			<a href="" class="back">退出</a>
+		</div>
+	</div>
+	<div class="container organization">
+		<div class="cont_left">
+			<div class="navigation_left h100 fl">
+				<ul>
+					<li><a href="Organization.html" class=""><i class="sprite orangise ml15"></i><span>组织结构</span></a></li>
+					<li><a href="addNews.html"><i class="sprite publish ml15"></i><span>内容发布</span></a></li>
+					<li class="visited"><a href="folderManage.html"><i class="sprite4  ml15"></i><span>应用</span></a></li>
+					<li><a href="newImport.html"><i class="sprite2 ml15"></i><span>辅助功能</span></a></li>
+					<li><a href="useNumber.html"><i class="sprite3 ml15"></i><span>服务查看</span></a></li>
+					<li><a href="admin.html"><i class="sprite system ml15"></i><span>系统设置</span></a></li>
+				</ul>
+			</div>
+			<div class="navigation_right h100 fl">
+				<div class="data_info">
+					<div class="news_list">
+						<div class="title">单位文件柜</div>
+						<a href="addNews.html"  class="visited">文件夹管理</a><!--管理员进入显示此菜单-->
+						<div class="btm_select"></div>
+						<a href="addNews.html" style="display:none;" class="visited">文件上传与下载</a><!--上传者进入显示此菜单-->
+						<a href="addNews.html" style="display:none;" class="visited">文件下载</a><!--普通员工进入显示此菜单-->
+						<div class="title">会议管理</div>
+						<a href="meetingType.html">会议类型</a>
+						<div class="title">申请流程</div>
+						<a href="processManage.html">流程管理</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cont_right rel">
+			<i class="sprite left_icon top296"></i>
+			<!--管理员进入显示此部分-->
+			<div class="navigation_search">
+				<div class="search_left fl">
+					<div class="fl mt15 ml14 mr5 pr">
+						<a href="javascript:;" class="btn default btnAddFolder">新建文件夹</a>
+						<button href="javascript:;" class="btn default btnDelFolder disabledBg" disabled>删除</button>
+					</div>
+				</div>
+			</div>
+			<!--管理员进入显示此部分-->
+			
+			<!--上传者进入显示此部分-->
+			<p class="upload-title">
+			请点击文件夹进入，下载上传所需文件
+			</p>
+			<!--上传者进入显示此部分-->
+			<div class="table_list">
+				<table>
+					<tbody>
+						<tr class="odd">
+							<th></th>
+							<th>文件夹名</th>
+							<th>创建人</th>
+							<th>大小</th>
+							<th>时间</th>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="check_only"></td>	
+							<td><img src="images/folder.png"/><a href="fileManage.html">人力资源部文件</a></td>
+							<td>管理员</td>
+							<td>12M</td>
+							<td>2016-5-24 12:09</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="check_only"></td>	
+							<td><img src="images/folder.png"/><a href="fileManage.html">销售部文件</a></td>
+							<td>管理员</td>
+							<td>12M</td>
+							<td>2016-5-24 12:09</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="check_only"></td>	
+							<td><img src="images/folder.png"/><a href="fileManage.html">财务部文件</a></td>
+							<td>管理员</td>
+							<td>12M</td>
+							<td>2016-5-24 12:09</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="check_only"></td>	
+							<td><img src="images/folder.png"/><a href="fileManage.html">财务部文件</a></td>
+							<td>管理员</td>
+							<td>12M</td>
+							<td>2016-5-24 12:09</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="check_only"></td>	
+							<td><img src="images/folder.png"/><a href="fileManage.html">财务部文件</a></td>
+							<td>管理员</td>
+							<td>12M</td>
+							<td>2016-5-24 12:09</td>
+						</tr>
+						
+					</tbody>
+				</table>
+			</div>
+			<div class="pagination">
+				<div class="pagination_left fl">显示1-6条/共6条</div>
+				<div class="pagination_right fr">
+					<a href="javascript:;" class="btn default fl ">上一页</a>
+					<ul class="page fl">
+						<li><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="" class="current">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">5</a></li>
+					</ul>
+					<a href="javascript:;" class="btn default fl">下一页</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="dialogNew" title="新建文件夹">
+		<p class="folder-name">文件夹名称</p>
+		<input type="text" class="folder-text"/>
+	</div>
+	<div id="dialog2" title="删除文件夹">
+		<p class="del-folder-tip">您确定要删除所选文件夹及里面的文件吗？</p>
+	</div>
+
+	
+</body>
+</html>

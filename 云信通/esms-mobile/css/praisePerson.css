@@ -1,0 +1,25 @@
+html,body,div,span,ul,li,p,img,input{margin:0;padding:0;}
+a{text-decoration:none;}
+li{list-style-type:none}
+body{max-width:640px;min-width:320px;width:100%;margin:0 auto;font-family:"微软雅黑";padding-bottom:0.2rem;background:#fafafa;}
+.personList{width: 100%;min-height: 1.8rem;background:#fff;}
+.personList li{float: left;width: 25%;height: 1.6rem;text-align: center;padding-top: 0.2rem;color: #737373;}
+.personList li span{display: block;margin-top: 0.1rem;}
+.personList li img{margin: 0 auto;display: block;border-radius: 50%;width: 1.02rem;height: 1.02rem;}
+.space{clear:both;height:0.2rem;width:100%;border-top:1px solid #e1e1e1;}
+.btn{max-width: 640px;min-width: 320px;width:100%; height:1rem;position: fixed;bottom: 0;z-index: 100;}
+.btn a{display:block;width:5.65rem;height:0.8rem;line-height:0.8rem;margin:0 auto;background:#ffa92e;border-radius:5px;color:#fff;text-align:center;}
+@media screen and (min-width: 400px) {
+	.personList li{font-size:16px;}
+	.btn a{font-size:22px;}
+}
+
+@media screen and (min-width:321px) and (max-width:400px){
+    .personList li{font-size:15px;}
+	.btn a{font-size:20px;}
+}
+
+@media screen and (max-width:321px){
+   .personList li{font-size:12px;}
+   .btn a{font-size:18px;}
+}

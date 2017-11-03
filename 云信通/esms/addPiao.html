@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新建投票</title>
+	<link rel="stylesheet" href="css/main.css"/>
+	<link rel="stylesheet" href="datetimepicker/jquery.datetimepicker.css"/>
+	<script type="text/javascript" charset="UTF-8" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="datetimepicker/jquery.datetimepicker.js"></script>
+</head>
+<body>
+<div class="header">
+		<div class="logo">
+			<a href=""><img src="images/logo.png" class="fl"/></a>
+		</div>
+		<div class="user_info">
+			<i class="sprite people"></i>
+			<span class="fl">账号：liuyingjie</span>
+			<a href="" class="back">退出</a>
+		</div>
+	</div>
+	<div class="container organization">
+		<div class="cont_left">
+			<div class="navigation_left h100 fl">
+				<ul>
+					<li><a href="Organization.html" class=""><i class="sprite orangise ml15"></i><span>组织结构</span></a></li>
+					<li class="visited"><a href="addNews.html"><i class="sprite publish ml15"></i><span>内容发布</span></a></li>
+					<li><a href="admin.html"><i class="sprite system ml15"></i><span>系统设置</span></a></li>
+				</ul>
+			</div>
+			<div class="navigation_right h100 fl">
+				<div class="data_info">
+					<div class="news_list">
+						<div class="title">企业消息</div>
+						<a href="addNews.html" >新建消息</a>
+						<a href="newsPublish.html">消息列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">投票消息</div>
+						<a href="addPiao.html" class="visited">新建投票</a>
+						<div class="btm_select"></div>
+						<a href="newsList.html">投票列表</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cont_right rel">
+			<i class="sprite left_icon top164"></i>
+			<div class="dashed"></div>
+			<div class="h_form">
+				<div class="formGroup">
+					<label class="form_label bold">投票主题:</label>
+					<input type="text" class="form_control"/>
+				</div>
+				<div class="formGroup">
+					<label class="form_label bold">投票类型:</label>
+					<div class="form_radio fl"><input type="radio"/>投票为多选</div><div class="form_radio"><input type="radio"/>投票为单选</div>
+				</div>
+				<div class="formGroup pr">
+					<label class="form_label bold">投票截止时间</label>
+					<input type="text" placeholder="" class="h21 endTime mt5"  id="endTimes">
+					<img src="images/date.png" class="endTimes_img">
+				</div>
+				<div class="formGroup">
+					<label class="form_label bold">选项设置(最多设置6个选项)</label>
+				</div>
+				<div class="formGroup" style="margin-top:25px;">
+					<label class="w40">选项一:</label>
+					<input type="text" class="form_control"/>
+				</div>
+				<div class="formGroup">
+					<label class="w40">选项二:</label>
+					<input type="text" class="form_control"/>
+				</div>
+				<div class="formGroup">
+					<label class="w40">选项三:</label>
+					<input type="text" class="form_control"/>
+					<a href="">删除</a>
+				</div>
+				<div class="formGroup">
+					<a href="" class="addCondition">添加选项</a>
+				</div>
+				<div class="formGroup">
+					<label class="w40">其他:</label>
+					<input type="text" class="form_control h100"/>
+				</div>
+				<div class="formGroup">
+					<label class="form_label h50"><a href="javascript:;" class="btn default w6 fl mr20 ml60">预览</a><a href="javascript:;" class="btn default w6 fl">发送</a></label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$('#endTimes').datetimepicker({
+		});
+		$('.endTimes_img').click(function(){
+			$('#endTimes').datetimepicker('show');
+		});
+	</script>
+</body>
+</html>

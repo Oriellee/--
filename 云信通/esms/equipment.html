@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>设备管理</title>
+	<link rel="stylesheet" href="css/main.css"/>
+	<link rel="stylesheet" href="css/accountSet.css"/>
+	<link rel="stylesheet" href="css/jquery-ui.css" />
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/accountSet.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<style>
+	
+</style>
+</head>
+<body class="admin">
+<div class="header">
+		<div class="logo">
+			<a href=""><img src="images/logo.png" class="fl"/></a>
+		</div>
+		<div class="user_info">
+			<i class="sprite people"></i>
+			<span class="fl">账号：liuyingjie</span>
+			<a href="" class="back">退出</a>
+		</div>
+	</div>
+	<div class="container organization">
+		<div class="cont_left">
+			<div class="navigation_left h100 fl">
+				<ul>
+					<li><a href="fastQuery.html"><i class="sprite5 publish ml15"></i><span>通讯录查询</span></a></li>
+					<li><a href="Organization.html" class=""><i class="sprite orangise ml15"></i><span>组织结构</span></a></li>
+					<li><a href="addNews.html"><i class="sprite publish ml15"></i><span>内容发布</span></a></li>
+					<li><a href="folderManage.html"><i class="sprite4  ml15"></i><span>应用</span></a></li>
+					<li><a href="newImport.html"><i class="sprite2 ml15"></i><span>辅助功能</span></a></li>
+					<li><a href="useNumber.html"><i class="sprite3 ml15"></i><span>服务查看</span></a></li>
+					<li><a href="noticeDeptSort.html"><i class="sprite6 ml15"></i><span>统计分析</span></a></li>
+					<li class="visited"><a href="accountManage.html"><i class="sprite system ml15"></i><span>帐号与设备</span></a></li>
+					<li><a href="admin.html"><i class="sprite system ml15"></i><span>系统设置</span></a></li>
+				</ul>
+			</div>
+			<div class="navigation_right h100 fl">
+				<div class="data_info">
+					<div class="news_list">
+						<div class="title">帐号与设备</div>
+						<a href="accountManage.html" >帐号管理</a>							
+						<a href="equipment.html"  class="visited">设备管理</a>
+						<div class="btm_select"></div>	
+						<a href="loginLog.html">登录日志</a>	
+										
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cont_right rel">
+			<i class="sprite left_icon top52"></i>
+			<div class="title-head">
+				<input type="text"  class="searchBy" placeholder="姓名(支持拼音)/手机号/帐号"/><a href="javascript:;" class="btn default fl">搜索</a>
+				<a href="javascript:;" class="btn default ff">所有黑名单设备</a>
+			</div>
+			<!--设备ID的解释-->
+			<div class="bubble-box arrow-bottom"> 
+				<div class="wrap">设备ID：手机为IMEI或MEID，电脑为MAC地址。</div> 
+			</div> 
+			<!--设备ID的解释-->
+			<div class="table_list">
+				<table>
+					<thead>
+						<tr class="odd">
+							<th>姓名</th>
+							<th>帐号</th>
+							<th>部门</th>
+							<th>职务</th>
+							<th>设备</th>
+							<th>设备ID<img src="images/bubble.png" class="setId"/></th>
+							<th>状态</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><a href="javascript:;" class="name">张浩</a></td>
+							<td>15809876543</td>
+							<td>云信通-产品部</td>
+							<td>产品经理</td>
+							<td><img src="images/phone.png" class="setPhone"/>Honor PLK-TL01H</td> 
+							<td>00-00-00-00-00-00-00-00-E0</td> 							
+							<td>已加入黑名单</td>
+							<td><a href="javascript:;" class="unlock">解绑设备</a><a href="javascript:;" class="add-blacklist">加入黑名单</a></td>
+						</tr>
+						<tr>
+							<td><a href="javascript:;" class="name">张浩</a></td>
+							<td>15809876543</td>
+							<td>云信通-产品部</td>
+							<td>产品经理</td>
+							<td><img src="images/pC.png" class="setPc"/>华硕 R557L</td>
+							<td>235456789011234</td> 
+							<td>禁用</td>
+							<td><a href="javascript:;" class="unlock">解绑设备</a><a href="javascript:;" class="remove-blacklist">取消黑名单</a></td>
+						</tr>
+						<tr>
+							<td><a href="javascript:;" class="name">张浩</a></td>
+							<td>15809876543</td>
+							<td>云信通-产品部</td>
+							<td>产品经理</td>
+							<td><img src="images/phone.png" class="setPhone"/>iPhone 6s A1700</td>
+							<td>596745678901236</td> 
+							<td>正常试用</td>
+							<td><a href="javascript:;" class="unlock">解绑设备</a><a href="javascript:;" class="add-blacklist">加入黑名单</a></td>
+						</tr>	
+					</tbody>
+				</table>
+			</div>
+			<div class="pagination">
+				<div class="pagination_left fl">显示1-6条/共6条</div>
+				<div class="pagination_right fr">
+					<a href="javascript:;" class="btn default fl ">上一页</a>
+					<ul class="page fl">
+						<li><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="" class="current">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">5</a></li>
+					</ul>
+					<a href="javascript:;" class="btn default fl">下一页</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="confirm" style="display:none">
+		<div class="conf_header">
+			<a href='javascript:;' class='btnClose close'><i class='sprite'></i></a>
+		</div>
+		<div class="conf_conter fl" style="line-height:0px;text-align:left">
+			<div class="fl w70 mt40 ">
+				<div class="fl mr15"><input type="checkbox" name="" class="fl mr5"/>组织架构</div>
+				<div class="fl"><input type="checkbox" name="" class="fl mr5"/>内容发布</div>
+			</div>
+			<div class="fl w70 mt20">
+				目标:
+				<select>
+					<option>请输入账号关键字</option>
+					<option>请输入账号关键字</option>
+				</select>
+			</div>
+		</div>
+		<div class="conf_footer fl">
+			<a href="javascript:;" class="btn default fl btnOk btnAdmin">添加</a>
+		</div>
+	</div>
+<!--加入黑名单-->
+	<div id="add-blacklist" title="加入黑名单">
+		<p class="lock-text">确定要将设备华硕 R577L（张豪）加入黑名单吗？</p>
+		<p class="zhu">注：加入黑名单后，将清除该设备上的数据，同时账号被强制退出，再也不能正常登录。</p>
+	</div>
+	<div id="admin-pwd" title="管理员密码">
+		<p>请输入管理员密码</p>
+		<input type="password"/>
+		<p class="pwd-wrong">密码错误（<span>1</span>/<span>2</span>）</p>
+	</div>
+<!--加入黑名单-->
+<!--取消黑名单-->
+	<div id="remove-blacklist" title="取消黑名单">
+		<p class="lock-text">取消后，账号在该设备上将正常登录</p>
+	</div>
+	<div id="admin-pwd" title="管理员密码">
+		<p>请输入管理员密码</p>
+		<input type="password"/>
+		<p class="pwd-wrong">密码错误（<span>1</span>/<span>2</span>）</p>
+	</div>
+<!--取消黑名单-->
+<!--解绑设备-->
+	<div id="dialog-unbund" title="解绑设备">
+		<p  class="lock-text">解绑后，最新登录的同类型设备将自动被绑定。</p>
+	</div>
+<!--解绑设备-->
+<!--吐司提示框-->
+<p class="toast"></p>
+
+<!--查看个人信息弹出框开始-->
+	<div id="dialog" title="查看" style="display:none;">
+		<div class="addOranization" id="userinfo" style="top:61%;position: relative;height:400px;">	
+		<form id="postuser">	 
+		<div class="add_conter add-conter-scroll">
+			<div class="conter_header">
+				<div class="conterH_left mt20 fl"><!--onerror="javascript:this.src='http://test.eqihua.com:8080/PZDF_MS/static/images/icon/defaultidphoto/m.jpg';" -->
+					<div class="left_img">
+						<img src="http://test.eqihua.com:8080/PZDF_MS/static/images/icon/defaultidphoto/m.jpg" width="120px" height="120px" id="cur_photo">
+					</div>
+					<input type="hidden" name="user_icon" id="user_icon" value="/static/images/icon/defaultidphoto/m.jpg">
+					<input type="hidden" name="editype" id="editype" value="view">
+					<input type="hidden" name="defaultIconm" id="defaultIconm" value="http://test.eqihua.com:8080/PZDF_MS/static/images/icon/defaultidphoto/m.jpg">
+					<input type="hidden" name="defaultIconf" id="defaultIconf" value="http://test.eqihua.com:8080/PZDF_MS/static/images/icon/defaultidphoto/f.jpg">
+					<input type="hidden" name="defaultIconm_" id="defaultIconm_" value="/static/images/icon/defaultidphoto/m.jpg">
+					<input type="hidden" name="defaultIconf_" id="defaultIconf_" value="/static/images/icon/defaultidphoto/f.jpg">					
+				</div>
+				<div class="conterH_right fr mt20">
+					<div class="form_group">
+						<label class="form_label"><span>*&nbsp;</span>账号/手机号:</label>
+						<input class="form_control" placeholder="请输入手机号" name="mobile" value="18812345678" readonly="">
+						<input type="hidden" name="account" id="account" value="18812345678100127">
+					</div>
+					<div class="form_group">
+						<label class="form_label"><span>*&nbsp;</span>姓名:</label>
+						<input class="form_control" name="name" id="username" value="测试账号8" readonly="">
+					</div>
+					<div class="form_group">
+						<label class="form_label">性别:</label>&nbsp;&nbsp;
+						<input type="radio" name="gender" value="0" disabled="">男 
+						<input type="radio" name="gender" value="1" checked="" disabled="">女
+						<input type="radio" name="gender" value="2" disabled="">保密 
+					</div>
+					<div class="form_group">
+						<label class="form_label">部门:</label>
+						<input class="form_control" name="dept" id="deptname" value="测试部" readonly="">
+													<input type="hidden" name="userID" id="userID" value="221790" readonly="">
+												<input type="hidden" name="deptid" value="23042" id="deptid">
+						<input type="hidden" name="compID" value="100127" id="compID">
+						
+						<input type="hidden" name="opratetype" id="opratetype" value="view">
+													<input type="hidden" name="employeesjson" id="employeesjson" value="[{&quot;id&quot;:345057,&quot;compID&quot;:100127,&quot;deptID&quot;:23042,&quot;userID&quot;:221790,&quot;sortOrder&quot;:1,&quot;deleted&quot;:0,&quot;createtime&quot;:&quot;2016-11-10 10:10:25.0&quot;,&quot;updatetime&quot;:&quot;2016-11-10 10:14:03.0&quot;,&quot;firstDept&quot;:1,&quot;job&quot;:&quot;职员&quot;}]">
+											</div>
+					<div class="form_group">
+						<label class="form_label">职位:</label>
+						<input class="form_control" name="position" value="职员" id="position" readonly="">
+					</div>
+					<div class="form_group">
+						<label class="form_label">职级:</label>
+						<select class="other" name="levelID" disabled="">
+						  <option value="0">其他</option>
+						  						  <option value="1"></option>
+						  						</select>
+					</div>
+					<div class="form_group">
+						<label class="form_label">登录用户:</label>
+						<select class="other" name="userState" disabled="" id="userState">
+						  <option value="0" selected="">是</option>
+						  <option value="1">否</option>
+						</select>
+						<input type="hidden" name="oldUserState" id="oldUserState" value="0">
+					</div>
+					<div class="form_group ml80" style="display:block">
+					<input type="checkbox" name="morePosition" id="morePosition">其他部门兼任</div>
+					<div class="form_group ml70 ie_ml70" id="div_morePosition" style="display:none">
+
+					</div>
+				</div>
+			</div>
+			<div class="conter_conter">
+				<div class="conter_left fl mt15">	
+					<div class="form_group">
+						<label class="form_label">手机二:</label>
+						<input class="form_control w120 mt0" name="phone1" value="" readonly="">
+					</div>
+					<div class="form_group">
+						<label class="form_label">分机:</label>
+						<input class="form_control w120 mt0" name="phoneExt" value="" readonly="">
+					</div>
+					<div class="form_group">
+						<label class="form_label">邮箱:</label>
+						<input class="form_control w120 mt0" name="email" value="" readonly="">
+					</div>
+				</div>
+				<div class="conter_left fl mt15">	
+					<div class="form_group">
+						<label class="form_label">办公电话:</label>
+						<input class="form_control w120 mt0" name="phone2" value="" readonly="">
+					</div>
+					<div class="form_group">
+						<label class="form_label">家庭电话:</label>
+						<input class="form_control w120 mt0" name="phone3" value="" readonly="">
+					</div>
+					<label class="form_label">密码:</label>
+					<input class="form_control w120 mt0" value="111111" readonly="">
+				</div>
+			</div>
+		</div>
+	</div>
+	</form>		
+</div>
+</div>
+<!--查看个人信息弹出框结束-->
+</body>
+</html>

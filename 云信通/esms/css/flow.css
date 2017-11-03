@@ -1,0 +1,57 @@
+.content{margin-left:60px!important;}
+.item .sp-tip{float:left;}
+.item .knowPer{float: left;margin-top: 8px;}
+.btnAddFolder{
+	float: left;
+    margin-right: 30px;
+}
+.btnDelFolder,.btnUploadFolder,.btnDownloadFolder{
+	float:left;
+	border-style: none;
+	outline:none;
+	margin-left:20px;
+}
+.btnEditType,.btnDel{color:#3D83E9;margin-left:5px;}
+.del-tip{line-height: 100px;text-align: center;}
+.return{color:#3487E2}
+.item{padding:20px 40px 0;clear:both;}
+.item input{height: 20px;width: 400px;}
+.item select{height: 24px;width: 400px;}
+.item textarea{width:500px;height: 80px;vertical-align: top;resize: none;}
+.input-tip .prefix {width: 16px;height: 16px; background: url(../images/add.png) no-repeat;background-size: 10px 10px;display: inline-block; background-position: 0 6px;}
+.item a{color:#3D83E9}
+.grey-tip{color: #aaa;display: inline-block;}
+.publish-save{margin-top:40px;margin-left:100px!important;clear:both;}
+.publish-btn {width: 70px;height: 30px;border-radius: 5px;outline: 0;border: 0;background: #4acee1;border: 1px solid #B1A7A7;color: #fff; margin-right: 50px;margin-left: 250px;}
+.cancel-btn{width: 70px;height: 30px;border-radius: 5px;outline: 0;border: 0;border: 1px solid #B1A7A7;}
+.item-name{display: inline-block;background: #0090C6;line-height: 26px; height: 26px;margin-right: 1px;color: #fff;padding: 0 8px;}
+.remove-h {display: inline-block; width: 14px;background: #0090C6;color: #fff;line-height: 26px;font-size: 12px; text-align: center;}
+.errorTip{color: red;display: inline-block;margin-left: 20px;display:none;}
+#dialog{display:none;}
+.remove-h{cursor:pointer;}
+.ztree{margin-top:12px;}
+.organization-list {
+    width: 260px;
+    height: 350px;
+    position: absolute;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.15);
+    z-index: 1000;
+    background: #fff;
+    display: none;
+    border-radius: 2px;
+	top: 244px;
+    left: 385px;
+}
+.org-submit {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+.org-submit button {
+    width: 50px;
+    height: 24px;
+    border-style: none;
+    background: #4acee1;
+    color: #fff;
+}

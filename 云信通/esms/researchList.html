@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>调查列表</title>
+	<link rel="stylesheet" href="css/common.css"/>
+	<link rel="stylesheet" href="css/cont_left.css"/>
+	<link rel="stylesheet" href="css/cont_right.css"/>
+	
+	<!--<link rel="stylesheet" href="css/common_pc.css"/>
+	<link rel="stylesheet" href="css/cont_left_pc.css"/>
+	<link rel="stylesheet" href="css/cont_right_pc.css"/>-->
+	<link rel="stylesheet" href="css/header.css"/>
+	<link rel="stylesheet" href="css/confirm.css"/>
+	<link rel="stylesheet" href="css/oranization.css"/>
+	<link rel="stylesheet" href="css/news.css"/>
+	<link rel="stylesheet" href="css/system.css"/>
+	<link rel="stylesheet" href="css/register.css"/>
+	<link rel="stylesheet" href="css/IE.css"/>
+	<link rel="stylesheet" href="css/notice.css"/>
+	<link rel="stylesheet" href="uploadify/uploadify.css"/>
+	<script type="text/javascript" charset="utf-8" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="editor_config.js"></script>
+	<script type="text/javascript" charset="utf-8" src="editor_api.js"></script>
+	<script type="text/javascript" src="js/jquery.datetimepicker.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/research.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css" />
+	<script type="text/javascript" charset="utf-8" src="uploadify/jquery.uploadify.js"></script>
+</head>
+<body>
+<div class="header">
+		<div class="logo">
+			<a href=""><img src="images/logo.png" class="fl"/></a>
+		</div>
+		<div class="user_info">
+			<i class="sprite people"></i>
+			<span class="fl">账号：liuyingjie</span>
+			<a href="" class="back">退出</a>
+		</div>
+	</div>
+	<div class="container organization">
+		<div class="cont_left">
+			<div class="navigation_left h100 fl">
+				<ul>
+					<li><a href="Organization.html" class=""><i class="sprite orangise ml15"></i><span>组织结构</span></a></li>
+					<li class="visited"><a href="addNews.html"><i class="sprite publish ml15"></i><span>内容发布</span></a></li>
+					<li><a href="admin.html"><i class="sprite system ml15"></i><span>系统设置</span></a></li>
+				</ul>
+			</div>
+			<div class="navigation_right h100 fl">
+				<div class="data_info">
+					<div class="news_list">
+						<div class="title">企业消息</div>
+						<a href="addNews.html">新建消息</a>
+						<a href="newsPublish.html">消息列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">投票消息</div>
+						<a href="addPiao.html">新建投票</a>
+						<a href="newsList.html">投票列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">通知</div>
+						<a href="addNotice.html">新建通知</a>
+						<a href="noticesList.html">通知列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">公告</div>
+						<a href="addAffiche.html">新建公告</a>
+						<a href="afficheList.html">公告列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">新闻</div>
+						<a href="newNews.html">新建新闻</a>
+						<a href="myNewNewsList.html">我创建的</a>
+						<a href="myManageList.html">我管理的</a>
+						<a href="channelManage.html">频道管理</a>
+						<a href="basicManage.html">基本管理</a>
+					</div>
+					<div class="news_list">
+						<div class="title">调查管理</div>
+						<a href="addResearch.html">新建调查</a>
+						<a href="researchList.html"   class="visited">调查列表</a>
+						<div class="btm_select"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cont_right rel">
+			<i class="sprite left_icon top337"></i>
+			<p class="notice_title">调查列表</p>
+			<div class="show-notice-list">
+				<div class="left">
+					<p>显示：</p>
+					<a href="javascript:;" class="selected yfb">已发布&nbsp;(<span>2</span>)</a>
+					<a href="javascript:;" class="wfb">已撤回&nbsp;(<span>1</span>)</a>
+					<a href="javascript:;">草稿&nbsp;(<span>2</span>)</a>
+				</div>
+				<div class="right">
+					时间范围：
+					<input type="text" placeholder="选择日期" class="h21 endTime mt5" id="endtime" name="endtime"/>
+					<img src="images/date.png" class="endTimes_img"/> <span class="zhi">至</span>
+					<input type="text" placeholder="选择日期" class="h21 endTime mt5" id="endtime1" name="endtime"/> 
+					<img src="images/date.png" class="endTimes_img1"/>
+
+					<input type="text" class="search-text" placeholder="搜索主题"/>
+					<input type="submit" class="search-btn" value=" "/>
+				</div>
+			</div>
+			<!--已发布列表开始-->
+			<div class="published">
+				<div class="publisted-list">
+					<div class="publist-con">
+						<div class="basic-info">
+							<a href="researchDetails.html"><img src="images/per-icon.png"/></a>
+							<div class="name-time"><p><a href="researchDetails.html">管理员</a></p><p>12：00</p></div>
+						</div>
+						<p class="notice-title"><a href="researchDetails.html">调查主题</a></p>
+						<p class="vote-condition"><span class="sel-type">单选</span>&nbsp;&nbsp;（<span class="toupiao-type">实名投票<span>）&nbsp;&nbsp; <span class="toupiao-condition">投票正在进行</span>&nbsp;&nbsp;  截止时间：05-08 24:00<span class="total-vote">共5票</span></p>
+						</div>
+					<div class="bottom">
+						<a href="#">撤回</a>
+					</div>
+				</div>
+			
+				<div class="publisted-list">
+					<div class="publist-con">
+						<div class="basic-info">
+							<a href="researchDetails.html"><img src="images/per-icon.png"/></a>
+							<div class="name-time"><p><a href="researchDetails.html">管理员</a></p><p>12：00</p></div>
+						</div>
+						<p class="notice-title"><a href="researchDetails.html">调查主题</a></p>
+						<p class="vote-condition"><span class="sel-type">多选</span>&nbsp;&nbsp;（<span class="toupiao-type">匿名投票<span>）&nbsp;&nbsp; <span class="toupiao-condition">投票已结束</span>&nbsp;&nbsp;  截止时间：05-08 24:00<span class="total-vote">共5票</span></p>
+						</div>
+					<div class="bottom">
+						<a href="#">撤回</a>
+					</div>
+				</div>
+				<!--分页-->
+				<div class="pagination">
+				<div class="pagination_left fl">显示1-6条/共6条</div>
+				<div class="pagination_right fr">
+					<a href="javascript:;" class="btn default fl ">上一页</a>
+					<ul class="page fl">
+						<li><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="" class="current">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">5</a></li>
+					</ul>
+					<a href="javascript:;" class="btn default fl">下一页</a>
+				</div>
+				</div>
+			</div>
+			<!--已发布列表结束-->
+			
+			<!--已撤回列表开始-->
+			<div class="un-published">
+				<div class="publisted-list">
+					<div class="publist-con">
+						<div class="basic-info">
+							<a href="researchDetails.html"><img src="images/per-icon.png"/></a>
+							<div class="name-time"><p><a href="researchDetails.html">管理员</a></p><p>12：00</p></div>
+						</div>
+						<p class="notice-title"><a href="researchDetails.html">调查主题</a></p>
+						<p class="vote-condition"><span class="sel-type">单选</span>&nbsp;&nbsp;（<span class="toupiao-type">实名投票<span>）&nbsp;&nbsp; <span class="toupiao-condition">投票正在进行</span>&nbsp;&nbsp;  截止时间：05-08 24:00<span class="total-vote">共5票</span></p>
+						</div>
+					<div class="bottom">
+						<a href="#">撤回</a>
+					</div>
+				</div>
+				
+				<!--分页-->
+				<div class="pagination">
+				<div class="pagination_left fl">显示1-6条/共6条</div>
+				<div class="pagination_right fr">
+					<a href="javascript:;" class="btn default fl ">上一页</a>
+					<ul class="page fl">
+						<li><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="" class="current">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">5</a></li>
+					</ul>
+					<a href="javascript:;" class="btn default fl">下一页</a>
+				</div>
+				</div>
+			</div>		
+			<!--已撤回列表结束-->
+			
+			<!--草稿开始-->
+			<div class="draft">
+				<div class="publisted-list">
+					<div class="publist-con">
+						<div class="basic-info">
+							<a href="researchDetails.html"><img src="images/per-icon.png"/></a>
+							<div class="name-time"><p><a href="researchDetails.html">管理员</a></p><p>12：00</p></div>
+						</div>
+						<p class="notice-title"><a href="researchDetails.html">草稿箱的调查主题</a></p>
+						<p class="vote-condition"><span class="sel-type">单选</span>&nbsp;&nbsp;（<span class="toupiao-type">实名投票<span>）&nbsp;&nbsp; <span class="toupiao-condition">投票正在进行</span>&nbsp;&nbsp;  截止时间：05-08 24:00<span class="total-vote">共5票</span></p>
+						</div>
+					<div class="bottom">
+						<a href="#">撤回</a>
+					</div>
+				</div>
+			
+				<div class="publisted-list">
+					<div class="publist-con">
+						<div class="basic-info">
+							<a href="researchDetails.html"><img src="images/per-icon.png"/></a>
+							<div class="name-time"><p><a href="researchDetails.html">管理员</a></p><p>12：00</p></div>
+						</div>
+						<p class="notice-title"><a href="researchDetails.html">调查主题</a></p>
+						<p class="vote-condition"><span class="sel-type">多选</span>&nbsp;&nbsp;（<span class="toupiao-type">匿名投票<span>）&nbsp;&nbsp; <span class="toupiao-condition">投票已结束</span>&nbsp;&nbsp;  截止时间：05-08 24:00<span class="total-vote">共5票</span></p>
+						</div>
+					<div class="bottom">
+						<a href="#">撤回</a>
+					</div>
+				</div>
+				<!--分页-->
+				<div class="pagination">
+				<div class="pagination_left fl">显示1-6条/共6条</div>
+				<div class="pagination_right fr">
+					<a href="javascript:;" class="btn default fl ">上一页</a>
+					<ul class="page fl">
+						<li><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="" class="current">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">5</a></li>
+					</ul>
+					<a href="javascript:;" class="btn default fl">下一页</a>
+				</div>
+				</div>
+			</div>
+			
+			<!--草稿结束-->
+		</div>
+	</div>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#endtime').datetimepicker({
+			dateFormat : 'mm-dd-yy',
+			timeFormat : 'hh:mm:ss'
+		});
+		$('#endtime1').datetimepicker({
+			dateFormat : 'mm-dd-yy',
+			timeFormat : 'hh:mm:ss'
+		});
+		$('.endTimes_img').click(function() {
+			$('#endtime').datetimepicker('show');
+		});
+
+		$('.endTimes_img1').click(function() {
+			$('#endtime1').datetimepicker('show');
+		});
+
+	});	
+</script>
+</body>
+</html>

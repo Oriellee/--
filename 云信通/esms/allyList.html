@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>盟友列表</title>
+	<link rel="stylesheet" href="css/main.css"/>
+	<link rel="stylesheet" href="css/ally.css"/>
+	<link rel="stylesheet" href="uploadify/uploadify.css"/>
+	<script type="text/javascript" charset="utf-8" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="editor_config.js"></script>
+	<script type="text/javascript" charset="utf-8" src="editor_api.js"></script>
+	<script type="text/javascript" charset="utf-8" src="uploadify/jquery.uploadify.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/ally.js"></script>
+	<link rel="stylesheet" href="css/jquery-ui.css" />
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+</head>
+<body>
+<div class="header">
+		<div class="logo">
+			<a href=""><img src="images/logo.png" class="fl"/></a>
+		</div>
+		<div class="user_info">
+			<i class="sprite people"></i>
+			<span class="fl">账号：liuyingjie</span>
+			<a href="" class="back">退出</a>
+		</div>
+	</div>
+	<div class="container organization">
+		<div class="cont_left">
+			<div class="navigation_left h100 fl">
+				<ul>
+					<li><a href="Organization.html" class=""><i class="sprite orangise ml15"></i><span>组织结构</span></a></li>
+					<li class="visited"><a href="addNews.html"><i class="sprite publish ml15"></i><span>内容发布</span></a></li>
+					<li><a href="admin.html"><i class="sprite system ml15"></i><span>系统设置</span></a></li>
+				</ul>
+			</div>
+			<div class="navigation_right h100 fl">
+				<div class="data_info">
+					<div class="news_list">
+						<div class="title">企业消息</div>
+						<a href="addNews.html">新建消息</a>
+						<a href="newsPublish.html">消息列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">投票消息</div>
+						<a href="addPiao.html">新建投票</a>
+						<a href="newsList.html">投票列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">通知</div>
+						<a href="addNotice.html">新建通知</a>
+						<a href="noticesList.html">通知列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">公告</div>
+						<a href="addAffiche.html">新建公告</a>
+						<a href="afficheList.html">公告列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">新闻</div>
+						<a href="newNews.html">新建新闻</a>
+						<a href="myNewNewsList.html">我创建的</a>
+						<a href="myManageList.html">我管理的</a>
+						<a href="channelManage.html">频道管理</a>
+						<a href="basicManage.html">基本管理</a>
+					</div>
+					<div class="news_list">
+						<div class="title">调查管理</div>
+						<a href="addResearch.html">新建调查</a>
+						<a href="researchList.html">调查列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">盟友风采</div>
+						<a href="addAlly.html" >添加盟友</a>
+						<a href="allyList.html" class="visited">盟友列表</a>
+						<div class="btm_select"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+			<div class="cont_right rel">
+			<i class="sprite left_icon top52"></i>
+			<p class="title">盟友风采</p>
+			<div class="title-head">
+				<a href="javascript:;" class="btn default btnAddAlly">添加盟友</a>
+				<a href="javascript:;" class="btn default btnAddDel">删除</a>
+				<span class="condition">状态：</span>
+				<select>
+					<option>全部</option>
+					<option>已发布</option>
+					<option>已撤回</option>
+					<option>草稿</option>
+				</select>
+				<div class="f-right">
+					<input placeholder="姓名、公司名、行业"/>
+					<a href="javascript:;" class="btn default ">搜索</a>
+				</div>
+				
+			</div>
+			<div class="table_list">
+				<table>
+					<thead>
+						<tr class="odd">
+							<th><input type="checkbox" id="checkAll"/></th>
+							<th>姓名</th>
+							<th>职务</th>
+							<th>公司</th>
+							<th>行业</th>
+							<th>时间</th>
+							<th>状态</th>
+							<th>排序</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input type="checkbox" name="subBox"/></td>
+							<td><a href="allyMien.html" class="name">任正非</a></td>
+							<td>董事长</td>
+							<td>华为技术有限公司</td>
+							<td>互联网、教育、电子</td>
+							<td>2017-01-12 11:00:01</td>
+							<td>已发布</td>
+							<td><input class="px" value="30"/></td>
+							<td><a href="javascript:;" class="">编辑</a><a href="javascript:;" class="recall">撤回</a><a href="javascript:;" class="join-notice">发入会公告</a></td>
+						</tr>	
+						<tr>
+							<td><input type="checkbox" name="subBox"/></td>
+							<td><a href="allyMien.html" class="name">李彦宏</a></td>
+							<td>董事长</td>
+							<td>百度网络技术有限公司</td>
+							<td>教育、环保</td>
+							<td>2017-01-12 11:00:01</td>
+							<td>已发布</td>
+							<td><input class="px" value="40"/></td>
+							<td><a href="javascript:;" class="">编辑</a><a href="javascript:;" class="recall">撤回</a><a href="javascript:;" class="join-notice">发入会公告</a></td>
+						</tr>		
+						<tr>
+							<td><input type="checkbox" name="subBox"/></td>
+							<td><a href="allyMien.html" class="name">李彦宏</a></td>
+							<td>董事长</td>
+							<td>百度网络技术有限公司</td>
+							<td>教育、环保</td>
+							<td>2017-01-12 11:00:01</td>
+							<td>草稿</td>
+							<td><input class="px" value="50"/></td>
+							<td><a href="javascript:;" class="">编辑</a><a href="javascript:;" class="publish">发布</a><a href="javascript:;" class="join-notice">发入会公告</a></td>
+						</tr>									
+					</tbody>
+				</table>
+			</div>
+			<div class="pagination">
+				<div class="pagination_left fl">显示1-6条/共6条</div>
+				<div class="pagination_right fr">
+					<a href="javascript:;" class="btn default fl ">上一页</a>
+					<ul class="page fl">
+						<li><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="" class="current">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">5</a></li>
+					</ul>
+					<a href="javascript:;" class="btn default fl">下一页</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--撤回列表-->
+	<div id="dialog-recall" title="撤回">
+		<p  class="dialog-text">确认要撤回吗？</p>
+	</div>
+    <!--撤回列表-->
+	<!--删除列表-->
+	<div id="dialog-del" title="删除">
+		<p  class="dialog-text">确认要删除吗？</p>
+	</div>
+    <!--删除列表-->
+	<!--发布-->
+	<div id="dialog-publish" title="发布">
+		<p  class="dialog-text">确认要发布吗？</p>
+	</div>
+    <!--发布-->
+	<!--入会公告-->
+	<div id="dialog-notice" title="公告">
+		<div class="dialog-item">
+			<span>公告题目：</span>
+			<input value="欢迎xx加入盟友大家庭！"/>
+			<span class="red">请填入公告题目</span>
+		</div>
+		<div class="dialog-item">
+			<span>公告摘要：</span>
+			<textarea placeholder="必填"></textarea>
+			<span class="red">请填入公告摘要</span>
+		</div>
+	</div>
+	<!--入会公告-->
+</body>
+</html>

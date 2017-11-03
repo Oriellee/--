@@ -1,0 +1,80 @@
+.btnAddFolder{
+	float: left;
+    margin-right: 30px;
+}
+.btnDelFolder,.btnUploadFolder,.btnDownloadFolder{
+	float:left;
+	border-style: none;
+	outline:none;
+	margin-left:20px;
+}
+.disabledBg{
+	background:#ddd
+}
+.disabledBg:hover{
+	background:#ddd
+}
+.folder-name{
+	height:48px;line-height:48px;
+	padding-left:20px;
+}
+.folder-text{
+	width:300px;
+	height:30px;
+	outline:none;
+	margin-left:20px;
+}
+.del-folder-tip{
+	height:100px;
+	line-height:100px;
+	width:100%;
+	text-align:center;
+}
+#dialog,#dialog2{display:none;}
+.table_list img{
+	vertical-align: middle;
+    float: left;
+    margin-left: 10px;
+}
+.table_list td,.table_list th{border-left:0;}
+.upload-title{
+	width: 98%;
+    height: 40px;
+    padding-left: 2%;
+    line-height: 40px;
+    font-size: 14px;
+    border-bottom: 1px solid #999;
+	font-weight: bold;
+	display:none;
+}
+.file-title{
+	width: 98%;
+    height: 40px;
+    padding-left: 2%;
+    line-height: 40px;
+    font-size: 14px;
+    border-bottom: 1px solid #999;
+}
+.file-title a{
+	color:#3487E2;
+}
+.dept-name-file{margin-left:10px;}
+.upload-input{
+	margin-left: -59px;
+    width: 30px;
+    height: 25px;
+    opacity: 0;
+	float:left;
+}
+.swfupload{
+	left: 16px;
+    width: 60px;
+ }
+.del-btn{color:#3487E2!important}
+.table-height{height: 242px;overflow-y: scroll;}
+.tips{height:40px;margin-top:10px;}
+.tips p{color: #ccc;height:25px;}
+.add-file{background: #4acee1;border-style: none;width: 70px;height: 24px;color: #fff!important;margin: 10px;font-family: "微软雅黑"!important;display: block;line-height: 24px;
+    text-align: center;}
+.add-file-input{margin-left: -81px;width: 66px;opacity: 0}
+.upload-error{color:red!important;}

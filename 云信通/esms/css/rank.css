@@ -1,0 +1,24 @@
+.rank_title{width:98%;height:40px;padding-left:2%;line-height:40px;font-size:14px;border-bottom:1px solid #999;}
+.rankSet{width:100%;height:560px;}
+.rankSet .rankMenu{width:160px;height:540px;float:left;background:#F0F0F0;padding-top:20px;overflow-y: scroll;}
+.rankMenu li{height:40px;line-height:40px;text-align:center;}
+.rankCont{margin-left:160px;height:560px;padding-top:20px;}
+.rankMenu li .selected {color:rgb(104, 198, 241)}
+.rankMenu li a:hover{color:rgb(104, 198, 241)}
+.button_list{width:80%;height:40px;padding:20px 0 0 20px;margin-left:10%;margin-bottom:20px;}
+.button_list li{width:20%;height:40px;float:left;line-height:40px;text-align:center;}
+.button_list li a{width: 70px;height: 25px;border-style: none;background:#4acee1;color:#fff;cursor:pointer;outline:0;line-height:25px;display:inline-block;}
+.rank_name{width:92%;height:40px;line-height:40px;margin-left:4%;margin-right:4%}
+.rank_name label{width:70px;height:40px;display:inline-block;text-align:left;float:left;}
+.rank_name span{width:100px;height:40px;}
+.return{color:blue;}
+.rank_name textarea{margin-top:13px;width:500px;height:80px;overflow-y:scroll}
+.box{height: 70px;line-height: 58px;text-align: center}
+#dialog,#dialog1{display:none;}
+.describe{height:134px;}
+.rankCont button{background-color: #4acee1;border-style:none;margin-left:110px;}
+.cont_right .table_list{width: 90%;margin: 22px auto;height: 100%;}
+table th, table td, .table_list tr, .table_list table{border: 0!important;}
+.table_list tr {border-bottom: 1px dotted #ddd!important;}
+.table_list table a {color: #3487E2;margin-right: 10px;outline: none;}
+.runkName{padding-left:4px;}

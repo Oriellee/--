@@ -1,0 +1,73 @@
+html,body,div,span,ul,li,p,img,input{margin:0;padding:0;}
+a{text-decoration:none;}
+li{list-style-type:none}
+body{max-width:640px;min-width:320px;width:100%;margin:0 auto;font-family:"微软雅黑";padding-bottom:0.2rem;background:#fafafa;}
+body ul li{height: auto;line-height: 1.1rem;background: #fff;border-bottom: 1px solid #e1e1e1;padding-left: 3%;}
+body ul li .img{width:0.7rem;height:0.7rem;border-radius:50%;margin-top:0.2rem;float: left;clear:both;}
+.person{float:left;height:0.55rem;margin-left:0.2rem;width:5.15em;color:#a4a4a4}
+.person .name{display: inline-block;height: 0.5rem;float: left;line-height: 0.6rem;max-width: 1.2rem;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+.person .time{display: inline-block;float: right;height: 0.5rem;line-height: 0.6rem;}
+.content{line-height: 0.5rem;word-break: break-all; word-wrap:break-word;width: 5.15rem;margin-left: 0.9rem;min-height: 0.96rem;padding-bottom: 0.1rem;}
+.del{border-style: none;background: #fff;}
+.delete{height:0.34rem;line-height:0.24rem;text-align:right;margin-bottom:0.1rem}
+.delete button{background: #fff;border-style: none;}
+.delete img{width:0.24rem;height:0.24rem;vertical-align: middle;margin-right: 0.1rem}
+.delete a{color:#999999;outline:none;}
+.space{clear:both;height:10px;}
+.bottom{width: 100%;height: 0.9rem;position: fixed;bottom: 0;background: #fff;z-index: 100;clear: both;
+max-width: 640px;border-top:1px solid #e1e1e1;line-height:0.9rem;}
+.bottom input{width:5.18rem;height:0.56rem;margin-left:0.2rem;border: 1px solid #ebebeb;border-radius: 5px;
+background: #f0f0f0;padding-left:0.1rem;color:#4b4b4b;border-style:none;outline:none;}
+.bottom a{color:#4b4b4b;display:inline-block;margin-left:0.1rem;}
+.bottom-top{height:0.7rem;}
+#dialog{display:none}
+#dialog .box2{text-align:center;}
+.ui-dialog .ui-dialog-titlebar {padding: .05em 0.1em!important}
+.ui-dialog .ui-dialog-buttonpane {padding:0!important; margin-top: .1em!important;}
+.ui-dialog{padding:0.1rem!important;}
+.ui-dialog .ui-dialog-buttonpane button{margin-left:0.4rem!important;}
+.loadMore{width:100%;text-align:center;height:0.7rem;line-height:0.7rem;color:#666;}
+.person .dept{display: inline-block;float: left;height: 0.5rem;line-height: 0.6rem;margin-left: 0.2rem;width: 2rem;
+white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+.errorLi{text-align:center;}
+
+body ul li .errorLi,body ul li .errorLi a,.waitLi{font-size: 16px;text-align: center;}
+.bg-color{float:left;width:0.7rem;height:0.7rem;border-radius: 50%;margin-top: 0.2rem;}
+.bg-color p{width: 0.7rem;height: 0.7rem;line-height: 0.7rem;text-align: center;color: #fff;}
+.delete button{background: #fff;border-style: none; outline: none;}
+
+@media screen and (min-width: 400px) {
+	.person .name{font-size:19px;}
+	.bg-color p{font-size:18px;}
+	.content{font-size:19px;}
+	.person .time,.person .dept{font-size:16px;}
+	.delete{font-size:16px;}
+	.bottom{font-size:16px;}
+	.bottom input{font-size:16px;}
+	#dialog .box2,.ui-button-text,.ui-dialog-title{font-size:14px;}	
+	.loadMore,.errorLi{font-size:16px;}
+}
+
+@media screen and (min-width:321px) and (max-width:400px){
+  .person .name{font-size:18px;}
+  .bg-color p{font-size:16px;}
+  .content{font-size:18px;}
+  .person .time,.person .dept{font-size:14px;}
+  .delete{font-size:14px;}
+  .bottom{font-size:14px;}
+  .bottom input{font-size:14px;}
+  #dialog .box2,.ui-button-text,.ui-dialog-title{font-size:14px;}
+  .loadMore,.errorLi{font-size:14px;}
+}
+
+@media screen and (max-width:321px){
+  .person .name{font-size:16px;}
+  .bg-color p{font-size:13px;}
+  .content{font-size:16px;}
+  .person .time,.person .dept{font-size:13px;}
+  .delete{font-size:12px;}
+  .bottom{font-size:12px;}
+  .bottom input{font-size:12px;}
+  #dialog .box2,.ui-button-text,.ui-dialog-title{font-size:12px;}
+  .loadMore,.errorLi{font-size:13px;}
+}

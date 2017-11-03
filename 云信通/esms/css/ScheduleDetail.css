@@ -1,0 +1,81 @@
+html,body,div,span,ul,li,p,img,input,button{margin:0;padding:0;font-family:"微软雅黑";}
+a{text-decoration:none;}
+li{list-style-type:none}
+html{font-size:1rem;}
+body{max-width:640px;min-width:320px;width:100%;margin:0 auto;padding-bottom:0.2rem;}
+.message_info{width:100%;min-height:1.35rem;border-bottom: 1px dashed #D6D1D1;}
+.message_left{width:100%;min-height:1.35rem;float:left;}
+.original{min-height:1.3rem;}
+.message_left .title{min-height:0.3rem;margin-top:0.1rem;padding:0 0.2rem;color:#424242;font-weight: bold;word-break: break-all;word-wrap: break-word;}
+.message_left .messageform{height:0.35rem;line-height:0.35rem;padding-left:0.2rem;color:#9a9a9a}
+.message_right{width:28.125%;height:0.8rem;float:left;}
+.clear-float{clear:both;}
+.send_rang{width:71.775%;height:0.37rem;margin-top: 0.07rem;float:left;margin-bottom:0.1rem;}
+.send_rang a{display:block;background:url(../images/rang.png)  #e4e4e4 no-repeat;width:1.0rem;
+height:0.4rem;margin-left:0.2rem;border-radius:3px;line-height:0.405rem;color:#5d5d5d;background-position: 0.1rem center;background-size:0.17rem;
+padding-left:0.3rem}
+.message_right .confirm{display:block;width:1rem;height:0.38rem;line-height:0.38rem;background:#ffa92e;color:#fff;border-radius:5px;margin:0 auto;text-align:center;margin-top:0.15rem;}
+.message_right .confirmed{background:#d6d1d1;color:#9a9a9a}
+.content{width:100%;height:auto;margin:0 auto;}
+.con_text_img{padding:0 0.2rem;word-wrap: break-word;word-break: break-all;line-height: 0.4rem;}
+.con_text_img img{margin:0.1rem 0 0;max-width: 100%;}
+.bf,.zt{width: 0.5rem;height: 0.5rem;border-radius: 5px;background: url(../images/voice.png) no-repeat;border-style: none;outline: none;float: left;background-size:100%}
+.longtime-div {display: inline-block;margin-left: 0.25rem;height: 0.4rem;line-height: 0.4rem;float:left;}
+.audio_box{margin-top: 0.1rem;height: 0.5rem;width: 2.5rem;border: 1px solid #ccc;border-radius: 5px;margin-left:0.2rem;}
+.longtime-div .ly {height: 20px;line-height: 31px;}
+.longtime-div .longtime, .longtime-div .longtime span {height: 20px;color: #999;}
+.zt {background: url(../images/bfing.gif) no-repeat; background-size:100%;}
+ul.con_img{width:6.2rem;min-height:1.28rem;padding-right:0.2rem;margin:0 auto}
+.con_img li{float:left;width:1.04rem;height:1.04rem;margin-left:0.2rem;margin-top:0.2rem}
+.con_img li a{display:inline-block;width: 1.04rem;height: 1.04rem}
+.con_img li a img{width:1.04rem;height:1.04rem;}
+.space{width:6.4rem;height:0.1rem;clear:both;}
+.bottom{width:98%;position:fixed;bottom:0;background:#fff;z-index:100;clear:both;padding:0 1%;max-width:640px;border-top:1px solid #E4E4E4}
+.bottom li{height: 0.65rem;line-height: 0.65rem;float:left;text-align:center;}
+.bottom .reply,.bottom .praise{width:28%;}
+.bottom .read,.bottom .join{width:44%;}
+.bottom a{color:#5f5f5f;}
+.reply a img{width:0.42rem;height:0.4rem;vertical-align: middle;}
+.read a img{width:0.42rem;height:0.4rem;vertical-align: middle;}
+.join a img{width:0.33rem;height:0.36rem;vertical-align: middle;}
+.praise a img{width:0.4rem;height:0.34rem;vertical-align: middle;}
+.accessory{width:100%;height:auto;margin-top:0.1rem;border-top:1px dashed #E4E4E4;padding-top: 0.1rem;}
+.accessory a{display: block;line-height:0.4rem;margin-left: 0.2rem;color: #5f5f5f}
+.sign a img {width: 0.28rem;height: 0.26rem;vertical-align: middle;}
+.two{width:50%!important;}
+.one{width:100%!important;}
+.space-bottom{width: 6.4rem;height: 0.55rem;}
+
+.line-text{width:1.7rem;float:left;text-align:center;}
+.cut-off {margin-top:0.8rem;}
+.cutline{border-top: 1px solid #dddddd;}
+.reply-btn{width:6.4rem;height:0.8rem;background:#fafafa;border-bottom:1px solid #dcdcdc;position:fixed;top:0}
+.reply-btn ul{margin-left:0.13rem;padding-top:0.11rem;}
+.reply-btn ul li{width: 1.2rem;height: 0.35rem;float: left;}
+.reply-btn ul li button{width:0.8rem;height:0.35rem;background:#37c3f8;color:#fff;border:0;border-style:none;border-radius:5px;}
+.reply-btn p{clear: both;height: 0.3rem;line-height: 0.42rem;margin-left: 0.14rem;color:#5f5f5f}
+.reply-answer{margin-bottom: -0.8rem;display:none;width:6.4rem;min-height:0.65rem;background:#f9f9f9;border-bottom:1px solid #dcdcdc;}
+
+.startTime,.endTime,.remind{padding: 0 0.2rem 0.08rem;color: #828282;}
+.place{padding: 0 0.2rem 0.25rem;color: #828282;}
+.meetingPlace, .meetingType {padding: 0 0.2rem 0.08rem;color: #828282;}
+
+@media screen and (min-width: 400px) {
+	body{font-size:20px;}
+	.message_info{font-size:21px;}
+	.messageform{font-size:16px;}
+	.send_rang a{font-size:15px;}
+	.message_right .confirm{font-size:18px;}
+	.con_text_img{font-size:20px;}
+	.longtime-div .ly{font-size:16px;}
+	.longtime-div p,.longtime-div p span{font-size:14px;}
+	.bottom{font-size:17px;}
+	.accessory a{font-size:19px;}
+	.reply-btn ul li button{font-size:17px;}
+	.reply-btn p{font-size:16px;}
+	.reply-answer .idea span{font-size:20px;}
+	.refuse-btn .publish,.refuse-btn .cancel,.refuse-content textarea,.refuse-reason .footer{font-size:16px;}
+	.reply-answer .refuse-reason-text{font-size:17px;}
+	.startTime, .endTime, .place, .meetingPlace, .meetingType, .org ,.remind{font-size: 18px;}
+	.time-out{font-size:18px;}
+}

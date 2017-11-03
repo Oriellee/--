@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新建新闻</title>
+	<link rel="stylesheet" href="css/common_pc.css"/>
+	<link rel="stylesheet" href="css/cont_left_pc.css"/>
+	<link rel="stylesheet" href="css/cont_right_pc.css"/>
+	<link rel="stylesheet" href="css/header_pc.css"/>
+	
+	<!--<link rel="stylesheet" href="css/common.css"/>
+	<link rel="stylesheet" href="css/cont_left.css"/>
+	<link rel="stylesheet" href="css/cont_right.css"/>
+	<link rel="stylesheet" href="css/header.css"/>-->
+	<link rel="stylesheet" href="css/confirm.css"/>
+	<link rel="stylesheet" href="css/oranization.css"/>
+	<link rel="stylesheet" href="css/news.css"/>
+	<link rel="stylesheet" href="css/system.css"/>
+	<link rel="stylesheet" href="css/register.css"/>
+	<link rel="stylesheet" href="css/IE.css"/>
+	<link rel="stylesheet" href="css/notice.css"/>
+	<link rel="stylesheet" href="css/newNews.css"/>
+	<script type="text/javascript" charset="utf-8" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="editor_config.js"></script>
+	<script type="text/javascript" charset="utf-8" src="editor_api.js"></script>
+	<script type="text/javascript" charset="utf-8" src="uploadify/jquery.uploadify.js"></script>
+	<link rel="stylesheet" href="css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="js/jquery.ztree.core-3.5.js"></script>
+	<script type="text/javascript" src="js/jquery.ztree.excheck-3.5.js"></script>
+	<script type="text/javascript" src="js/jquery.ztree.exedit-3.5.js"></script>
+	<script type="text/javascript" src="js/newNews.js"></script>
+	<link rel="stylesheet" href="css/jquery-ui.css" />
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/placeholder.js"></script>
+</head>
+<body>
+<div class="header">
+		<div class="logo">
+			<a href=""><img src="images/logo.png" class="fl"/></a>
+		</div>
+		<div class="user_info">
+			<i class="sprite people"></i>
+			<span class="fl">账号：liuyingjie</span>
+			<a href="" class="back">退出</a>
+		</div>
+	</div>
+	<div class="container organization">
+		<div class="cont_left">
+			<div class="navigation_left h100 fl">
+				<ul>
+					<li><a href="Organization.html" class=""><i class="sprite orangise ml15"></i><span>组织结构</span></a></li>
+					<li class="visited"><a href="addNews.html"><i class="sprite publish ml15"></i><span>内容发布</span></a></li>
+					<li><a href="admin.html"><i class="sprite system ml15"></i><span>系统设置</span></a></li>
+				</ul>
+			</div>
+			<div class="navigation_right h100 fl">
+				<div class="data_info">
+					<div class="news_list">
+						<div class="title">企业消息</div>
+						<a href="addNews.html">新建消息</a>
+						<a href="newsPublish.html">消息列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">投票消息</div>
+						<a href="addPiao.html">新建投票</a>
+						<a href="newsList.html">投票列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">通知</div>
+						<a href="addNotice.html">新建通知</a>
+						<a href="noticesList.html">通知列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">公告</div>
+						<a href="addAffiche.html">新建公告</a>
+						<a href="afficheList.html">公告列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">新闻</div>
+						<a href="newNews.html" class="visited">新建新闻</a>
+						<div class="btm_select"></div>
+						<a href="myNewNewsList.html">我创建的</a>
+						<a href="myManageList.html">我管理的</a>
+						<a href="channelManage.html">频道管理</a>
+						<a href="basicManage.html">基本管理</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cont_right rel">
+			<i class="sprite left_icon top296"></i>
+			<p class="notice_title">新建新闻</p>
+			<div class="channel-select">
+			<select class="select-channel">
+				<option>请选择频道</option>
+				<option selected="selected">频道1</option>
+				<option>频道2</option>
+				<option>频道3</option>
+				<option>频道4</option>
+				<option>频道5</option>
+				<option>频道6</option>
+				<option>频道7</option>
+				<option>频道8</option>
+			</select>
+			</div>
+			<span class="title-error-tip">请选择频道</span>
+			<div class="title_text">
+				<textarea placeholder="请填写标题"></textarea>
+			</div>
+			<span class="title-error-tip">请输入标题</span>
+			<div class="content">
+				<label>请填写内容</label>
+				<textarea></textarea>
+			</div>
+			<span class="conent-error-tip">内容不为空</span>
+			<!--富文本编辑器-->
+			<div class="edit">
+			
+			</div>
+			<!--发布人-->
+			<div class="publish-name">
+				发布人：<span>张三</span>
+			</div>
+			<!--封面图片开始-->
+			<div class="selectbar">
+				<div class="select-range-inner fn-clear">
+					<ul class="selected-list">	
+						<img src="images/demo.png" class="cover-img"/>
+					</ul>
+					<div class="input-wrapper">
+						<span class="input-tip" style="display: inline-block;"><i class="prefix"></i>封面图片</span>
+					</div>
+					<div class="select-img-tip">推荐分辨率132*112，支持.jpg、.jpeg、.bmp、png格式。</div>
+				</div>	
+			</div>
+			<span class="img-error-tip">请上传封面图片</span>
+			<!--封面图片结束-->
+					
+			<!--确认 置顶 回复 点赞-->
+			<div class="btn-list">
+
+				<input type="checkbox" checked="checked"/> 允许评论
+				<input type="checkbox" checked="checked"/> 允许点赞
+				<input type="checkbox" class="top"/> 设置置顶
+			</div>
+			<ul class="time-list">
+				<li><input type="radio" name="zd-date" class="date-sub gd"/><span>1天</span></li>
+				<li><input type="radio" name="zd-date" class="date-sub gd"/><span>2天</span></li>
+				<li><input type="radio" name="zd-date" class="date-sub gd"/><span>3天</span></li>
+				<li><input type="radio" name="zd-date" class="date-sub gd"/><span>1周</span></li>
+				<li><input type="radio" name="zd-date" class="date-sub zdy"/><span>自定义</span></li>
+				<li class="time-show"><span>2015-10-23 </span>到
+					<input type="text" placeholder="选择日期" class="h21 endTime mt5" id="endtime1" name="endtime"/> 
+				</li>
+			</ul>
+			<!--发布、保存-->
+			<div class="publish-save">
+				<input type="submit" value="保存" class="save-btn"/>
+				<input type="submit" value="发布" class="publish-btn"/>
+			</div>
+		</div>
+	</div>
+	<!--上传封面图片弹出框开始-->
+	<div id="dialog6" title="封面图片上传">
+		<div class="img-show">
+		
+		</div>
+		<p class="upload-img"><label>上传封面</label><input type="file" value="" onchange="uploadImg()"style="filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);"/></p>
+	</div>
+	<!--上传封面图片弹出框结束-->
+	<div class="toast">提交成功</div>
+</body>
+</html>

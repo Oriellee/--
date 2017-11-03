@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新建通知</title>
+	<!--<link rel="stylesheet" href="css/common_pc.css"/>
+	<link rel="stylesheet" href="css/cont_left_pc.css"/>
+	<link rel="stylesheet" href="css/cont_right_pc.css"/>
+	<link rel="stylesheet" href="css/header_pc.css"/>-->
+	
+	<link rel="stylesheet" href="css/common.css"/>
+	<link rel="stylesheet" href="css/cont_left.css"/>
+	<link rel="stylesheet" href="css/cont_right.css"/>
+	<link rel="stylesheet" href="css/header.css"/>
+	<link rel="stylesheet" href="css/confirm.css"/>
+	<link rel="stylesheet" href="css/oranization.css"/>
+	<link rel="stylesheet" href="css/news.css"/>
+	<link rel="stylesheet" href="css/system.css"/>
+	<link rel="stylesheet" href="css/register.css"/>
+	<link rel="stylesheet" href="css/IE.css"/>
+	<link rel="stylesheet" href="css/notice.css"/>
+	<script type="text/javascript" charset="utf-8" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="editor_config.js"></script>
+	<script type="text/javascript" charset="utf-8" src="editor_api.js"></script>
+	<script type="text/javascript" charset="utf-8" src="uploadify/jquery.uploadify.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/notice.js"></script>
+	<link rel="stylesheet" href="css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="js/jquery.ztree.core-3.5.js"></script>
+	<script type="text/javascript" src="js/jquery.ztree.excheck-3.5.js"></script>
+	<script type="text/javascript" src="js/jquery.ztree.exedit-3.5.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css" />
+	<script type="text/javascript" src="js/jquery.datetimepicker.js"></script>
+	<script type="text/javascript" src="js/placeholder.js"></script>	
+  
+</script>
+</head>
+<body>
+<div class="header">
+		<div class="logo">
+			<a href=""><img src="images/logo.png" class="fl"/></a>
+		</div>
+		<div class="user_info">
+			<i class="sprite people"></i>
+			<span class="fl">账号：liuyingjie</span>
+			<a href="" class="back">退出</a>
+		</div>
+	</div>
+	<div class="container organization">
+		<div class="cont_left">
+			<div class="navigation_left h100 fl">
+				<ul>
+					<li><a href="Organization.html" class=""><i class="sprite orangise ml15"></i><span>组织结构</span></a></li>
+					<li class="visited"><a href="addNews.html"><i class="sprite publish ml15"></i><span>内容发布</span></a></li>
+					<li><a href="admin.html"><i class="sprite system ml15"></i><span>系统设置</span></a></li>
+				</ul>
+			</div>
+			<div class="navigation_right h100 fl">
+				<div class="data_info">
+					<div class="news_list">
+						<div class="title">企业消息</div>
+						<a href="addNews.html">新建消息</a>
+						<a href="newsPublish.html">消息列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">投票消息</div>
+						<a href="addPiao.html">新建投票</a>
+						<a href="newsList.html">投票列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">通知</div>
+						<a href="addNotice.html" class="visited">新建通知</a>
+						<div class="btm_select"></div>
+						<a href="noticesList.html">通知列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">公告</div>
+						<a href="addAffiche.html">新建公告</a>
+						<a href="afficheList.html">公告列表</a>
+					</div>
+					<div class="news_list">
+						<div class="title">新闻</div>
+						<a href="newNews.html">新建新闻</a>
+						<a href="myNewNewsList.html">我创建的</a>
+						<a href="myManageList.html">我管理的</a>
+						<a href="channelManage.html">频道管理</a>
+						<a href="basicManage.html">频道管理</a>
+					</div>
+				</div>
+			</div> 
+		</div>
+		<div class="cont_right rel">
+			<i class="sprite left_icon top296"></i>
+			<p class="notice_title">新建通知</p>
+			<ul class="notice-type">
+				<li><a href="addMeetingNotice.html">会议通知</a></li>
+				<li><a href="addActivityNotice.html">活动通知</a></li>
+				<li class="select"><a href="addNotice.html">其他通知</a></li>
+			</ul>
+			<div class="title_text">
+				<textarea placeholder="请填写标题"></textarea>
+			</div>
+			<span class="title-error-tip msg-error"><label>请输入标题</label></span>
+			<div class="content">
+				<label>请填写内容</label>
+				<textarea></textarea>
+			</div>
+			<span class="conent-error-tip msg-error"><label>内容不为空</label></span>
+			<!--富文本编辑器-->
+			<div class="edit">
+			
+			</div>
+			<!--附件-->
+			<div class="accessory">
+				<p class="add_accessory"><img src="images/accessory_icon.png">添加附件</p>
+				<input type="file" class="select-file"/>
+				<ul class="file-list">
+					<li class="file-name">
+						<img src="images/doc.gif"/>
+						<a href="javascript:;" class="link-a">13675936_105344041000_2.png（486KB）</a><a href="javascript:;" class="file-remove-l">×</a>
+					</li>
+					<li class="file-name">
+						<img src="images/ppt.gif"/>
+						<a href="javascript:;" class="link-a">13675936_105344041000_2.png（486KB）</a><a href="javascript:;" class="file-remove-l">×</a>
+					</li>
+				</ul>
+				<p class="file_total">共添加了<span>3</span>个文件，总大小<span>123</span>KB <span class="del_all">全部删除</span></p>
+			</div>
+			<!--附件结束-->
+			<!--选人开始-->
+			<div class="selectbar">
+				<div class="select-range-inner fn-clear">
+					<ul class="selected-list">	
+					</ul>
+					<div class="input-wrapper">
+						<span class="input-tip" style="display: inline-block;"><i class="prefix"></i>选择同事或部门</span>
+							<input class="input-field" type="text" style="display: none;">
+					</div>
+				</div>	
+			</div>
+			<span class="img-error-tip msg-error"><label>请选择发送范围</label></span>
+			<!--选人结束-->
+					
+			<!--确认 置顶 回复 点赞-->
+			<div class="btn-list">
+				<input type="checkbox" checked="checked"/> 需要确认
+				<input type="checkbox" class="top"/> 置顶
+				<input type="checkbox"/> 允许回复
+				<input type="checkbox" checked="checked"/> 允许点赞
+			</div>
+			<ul class="time-list">
+				<li><input type="radio" name="zd-date" class="date-sub gd"/><span>1天</span></li>
+				<li><input type="radio" name="zd-date" class="date-sub gd"/><span>2天</span></li>
+				<li><input type="radio" name="zd-date" class="date-sub gd"/><span>3天</span></li>
+				<li><input type="radio" name="zd-date" class="date-sub gd"/><span>1周</span></li>
+				<li><input type="radio" name="zd-date" class="date-sub zdy"/><span>自定义</span></li>
+				<li class="time-show"><span>2015-10-23 </span>到
+					<input type="text" placeholder="选择日期" class="h21 endTime mt5" id="endtime1" name="endtime"/> 
+				</li>
+			</ul>
+			<!--发布、保存-->
+			<div class="publish-save">
+				<input type="submit" value="保存" class="save-btn"/>
+				<input type="submit" value="发布" class="publish-btn"/>
+			</div>
+			<p class="save-tip">已成功保存到草稿箱</p>
+		</div>
+	</div>
+	<!--选同事弹出框开始-->
+		<div class="organization-list">
+			<div class="tree_list">
+				<div class="search_org">
+					<input type="text" class="dept_name" placeholder="部门"/>
+					<a href="javascript:void(0)" class="search_btn">搜索</a>
+				</div>
+				<div>
+					<ul id="treeDemo" class="ztree"></ul>
+				</div>
+				<p class="org-submit">
+					<button type="submit">确定</button>
+				</p>
+			</div>			
+			<div class="search_list">
+				<div class="wrap_search">
+					<input type="text" placeholder="姓名、手机号" class="searchbyname"/>
+					<span class="img_cancle"></span>
+				</div>
+				
+				<a href="javascript:void(0)" class="search_cancle">取消</a>
+				<ul class="search_ul">
+					<li>李巍</li>
+					<li>李妮</li>
+					<li>李四</li>
+				</ul>
+				<p class="org-submit">
+					<button type="submit">确定</button>
+				</p>
+			</div>
+		</div>
+	<!--选同事弹出框结束-->
+	<div class="toast">提交成功</div>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$('#endtime1').datetimepicker({
+			dateFormat : 'mm-dd-yy',
+			timeFormat : 'hh:mm:ss'
+		});
+
+		$('.endTimes_img1').click(function() {
+			$('#endtime1').datetimepicker('show');
+		});
+
+	});
+</script>
+</body>
+</html>

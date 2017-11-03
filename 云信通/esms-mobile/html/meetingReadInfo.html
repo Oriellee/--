@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>会议报名情况</title>
+    <meta charset="utf-8">
+    
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="../css/readInfo.css">
+	<!--组件依赖js begin-->
+	<script type="text/javascript" src="../js/zepto.js"></script>
+	<script type="text/javascript" src="../js/zepto.extend.js"></script>
+	<script type="text/javascript" src="../js/zepto.ui.js"></script>
+	<script type="text/javascript" src="../js/zepto.iscroll.js"></script>
+	<script type="text/javascript" src="../js/widget/navigator.js"></script>
+	<script type="text/javascript" src="../js/widget/navigator.iscroll.js"></script>
+	<!--组件依赖js end-->
+	<script type="text/javascript" src="../js/meetingReadInfo.js"></script>
+	<style>
+		body{display:none;}
+	</style>
+	<script>
+	$(function() {
+		var deviceWidth = document.documentElement.clientWidth;
+		if (deviceWidth > 640)
+			deviceWidth = 640;
+		document.documentElement.style.fontSize = deviceWidth / 6.4 + 'px';
+		$("body").show();
+		
+		//页签切换
+		$(".head ul li").click(function(){
+			$(".head ul li").removeClass("active");
+			$(this).addClass("active");
+			var index = $(this).index();
+			$(".readInfoList").find("ul").hide();
+			$(".readInfoList").find("ul").eq(index).show();
+		});
+	        $('#nav-smartSetup').navigator();    //smart setup方式创建 推荐方式
+			
+		//默认头像颜色设置
+		$(".bg-color").each(function(arr){
+			var arr = ['#ff9852','#70b45a','#11b7f5','#fdcc09','#4683d5','#fe7c7b'];
+			var n = getRandom(6);
+			var color = arr[n];
+		   $(this).css("background",color);
+		})
+	  
+	});
+	//生成随机数
+	function getRandom(n){
+        return Math.floor(Math.random()*n)
+       }
+	</script>
+  </head>
+  <body>
+   	<div class="head" id="nav-smartSetup">
+   		<ul >
+   			<li class="active"><a href="#">未读<span>(99+)</span></a></li>
+      	 	<li><a href="#">参加<span>(99+)</span></a></li>
+      	    <li><a href="#">请假<span>(99+)</span></a></li>
+       	    <li><a href="#">待定<span>(99+)</span></a></li>
+            <li><a href="#">未答复<span>(99+)</span></a></li>
+			<li class="smallLi"><a href="#" ></a></li>
+   		</ul>
+   	</div>
+   	<div class="readInfoList">
+   		<!-- 未读 -->
+   		<ul class="unread">
+   			<li>
+				<div  class="bg-color"><p>张三</p></div>
+				<div class="name-dept">
+					<p class="name"><span class="name-p">李巍</span>&nbsp;&nbsp;<span class="rank">项目总监</span></p>
+					<p class="dept">单位云事业部单位云事业部单位云事业部单位云事业部</p>
+				</div>
+				<button class="phone"></button>
+				<button class="operate"></button>
+			</li>
+			<li>
+				<div  class="bg-color"><p>张三</p></div>
+				<div class="name-dept">
+					<p class="name"><span class="name-p">高鹏高鹏高鹏高鹏</span>&nbsp;&nbsp;<span class="rank">测试主管测试主管测试主管测试主管测试主管</span></p>
+					<p class="dept">单位云事业部单位云事业部单位云事业部单位云事业部</p>
+				</div>
+				<button class="phone"></button>
+				<button class="operate"></button>
+			</li>
+			<li>
+				<div  class="bg-color"><p>张三</p></div>
+				<div class="name-dept">
+					<p class="name"><span class="name-p">高鹏</span>&nbsp;&nbsp;<span class="rank">测试主管</span></p>
+					<p class="dept">单位云事业部单位云事业部单位云事业部单位云事业部</p>
+				</div>
+				<button class="phone"></button>
+				<button class="operate"></button>
+			</li>
+			<li>
+				<div  class="bg-color"><p>张三</p></div>
+				<div class="name-dept">
+					<p class="name"><span class="name-p">高鹏</span>&nbsp;&nbsp;<span class="rank">测试主管测试主管测试主管测试主管测试主管span></p>
+					<p class="dept">单位云事业部</p>
+				</div>
+				<button class="phone"></button>
+				<button class="operate"></button>
+			</li>
+			<li>
+				<div  class="bg-color"><p>张三</p></div>
+				<div class="name-dept">
+					<p class="name"><span class="name-p">高鹏</span>&nbsp;&nbsp;<span class="rank">测试主管</span></p>
+					<p class="dept">单位云事业部</p>
+				</div>
+				<button class="phone"></button>
+				<button class="operate"></button>
+			</li>
+			<li>
+				<div  class="bg-color"><p>张三</p></div>
+				<div class="name-dept">
+					<p class="name"><span class="name-p">高鹏</span>&nbsp;&nbsp;<span class="rank">测试主管</span></p>
+					<p class="dept">单位云事业部</p>
+				</div>
+				<button class="phone"></button>
+				<button class="operate"></button>
+			</li>
+			<li>
+				<div  class="bg-color"><p>张三</p></div>
+				<div class="name-dept">
+					<p class="name"><span class="name-p">高鹏</span>&nbsp;&nbsp;<span class="rank">测试主管</span></p>
+					<p class="dept">单位云事业部</p>
+				</div>
+				<button class="phone"></button>
+				<button class="operate"></button>
+			</li>
+			<li>
+				<div  class="bg-color"><p>张三11</p></div>
+				<div class="name-dept">
+					<p class="name"><span class="name-p">高鹏</span>&nbsp;&nbsp;<span class="rank">测试主管</span></p>
+					<p class="dept">单位云事业部</p>
+				</div>
+				<button class="phone"></button>
+				<button class="operate"></button>
+			</li>
+   		</ul>
+   		
+   		<!-- 参加-->
+   		<ul class="join">
+   			<li>
+				<div  class="bg-color"><p>张三</p></div>
+				<div class="name-dept">
+					<p class="name"><span class="name-p">李巍</span>&nbsp;&nbsp;<span class="rank">项目总监</span></p>
+					<p class="dept">单位云事业部</p>
+				</div>
+				<button class="phone"></button>
+				<button class="operate"></button>
+			</li>
+			<li>
+				<div  class="bg-color"><p>张三</p></div>
+				<div class="name-dept">
+					<p class="name"><span class="name-p">李巍李巍李巍李巍</span>&nbsp;&nbsp;<span class="rank">项目总监项目总监项目总监项目总监</span></p>
+					<p class="dept">单位云事业部单位云事业部单位云事业部单位云事业部</p>
+				</div>
+				<button class="phone"></button>
+				<button class="operate"></button>
+			</li>
+   		</ul>
+   		
+   		<!-- 不参加 -->
+   		<ul class="unjoin">
+   			<li>
+				<div  class="bg-color"><p>张三</p></div>
+				<div class="name-dept-unjoin">
+					<p class="name"><span class="name-p">李巍</span>&nbsp;&nbsp;<span class="rank">项目总监</span></p>
+					<p class="dept">单位云事业部</p>
+				</div>
+				<button class="phone"></button>
+				<button class="operate"></button>
+				<p class="refuse-reason">出差中，客户需求较多。逐条梳理确需求较多认中。出差中，客户需求较多。逐条梳理确认中。逐条需求较多梳理确认中。出差需求较多中，客户需求较多需求较多。逐条梳理确认中。</p>
+			</li>
+			<li>
+				<div  class="bg-color"><p>张三</p></div>
+				<div class="name-dept-unjoin">
+					<p class="name"><span class="name-p">李巍</span>&nbsp;&nbsp;<span class="rank">项目总监</span></p>
+					<p class="dept">单位云事业部</p>
+				</div>
+				<button class="phone"></button>
+				<button class="operate"></button>
+				<p class="refuse-reason">出为参加差中，客户需为参加客户求较多。逐条梳客户理为参加确认中。出差客户中，客户为参加为参加客户需求较多。</p>
+			</li>
+   		</ul>
+   		
+   		<!-- 待定 -->
+   		<ul class="undetermined">
+   			<li>
+				<div  class="bg-color"><p>张三</p></div>
+				<div class="name-dept-unjoin">
+					<p class="name"><span class="name-p">李巍</span>&nbsp;&nbsp;<span class="rank">项目总监</span></p>
+					<p class="dept">单位云事业部</p>
+				</div>
+				<button class="phone"></button>
+				<button class="operate"></button>
+			</li>
+			<li>
+				<div  class="bg-color"><p>张三</p></div>
+				<div class="name-dept-unjoin">
+					<p class="name"><span class="name-p">李巍</span>&nbsp;&nbsp;<span class="rank">项目总监</span></p>
+					<p class="dept">单位云事业部</p>
+				</div>
+				<button class="phone"></button>
+				<button class="operate"></button>
+			</li>
+   		</ul>
+   		
+   		<!-- 未答复 -->
+   		<ul class="unreply">
+   			<li>
+				<div  class="bg-color"><p>张三</p></div>
+				<div class="name-dept-unjoin">
+					<p class="name"><span class="name-p">李巍</span>&nbsp;&nbsp;<span class="rank">项目总监</span></p>
+					<p class="dept">单位云事业部</p>
+				</div>
+				<button class="phone"></button>
+				<button class="operate"></button>
+			</li>
+			<li>
+				<div  class="bg-color"><p>张三</p></div>
+				<div class="name-dept-unjoin">
+					<p class="name"><span class="name-p">李巍</span>&nbsp;&nbsp;<span class="rank">项目总监</span></p>
+					<p class="dept">单位云事业部</p>
+				</div>
+				<button class="phone"></button>
+				<button class="operate"></button>
+			</li>
+			<li>
+				<div  class="bg-color"><p>张三</p></div>
+				<div class="name-dept-unjoin">
+					<p class="name"><span class="name-p">李巍</span>&nbsp;&nbsp;<span class="rank">项目总监</span></p>
+					<p class="dept">单位云事业部</p>
+				</div>
+				<button class="phone"></button>
+				<button class="operate"></button>
+			</li>
+   		</ul>
+   		<div class="space"></div>
+   	</div>
+   	<div class="bottom">
+   		<div>
+			<a href="javascript:;" class="set-join">设为参加</a>
+			<a href="javascript:;" class="set-unjoin">设为请假</a>
+			<a href="javascript:;" class="set-undetermined">设为待定</a>
+		</div>
+		<a href="javascript:;" class="cancel">取消</a>
+   	</div>
+	<!--设为请假的理由-->
+	<div class="refuse-reason-box">
+		<div class="reason-box">
+			<div class="refuse-btn">
+				<span class="title">设为请假-请假事由</span>		
+			</div>
+			<div class="refuse-content">
+				<textarea placeholder="填写请假事由（非必填。最多200字）"></textarea>
+			</div>
+			<div class="refuse-bottom">
+				<span class="cancel">取消</span>
+				<a href="javascript:;" class="publish">确定</a>
+			</div>
+		</div>
+	</div>
+	<div class="overlay"></div>
+	
+  </body>
+</html>

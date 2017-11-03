@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>企业信息</title>
+	<link rel="stylesheet" href="css/main.css"/>
+	<link rel="stylesheet" href="uploadify/uploadify.css"/>
+	<script type="text/javascript" charset="utf-8" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="uploadify/jquery.uploadify.js"></script>
+	<link rel="stylesheet" href="css/rank.css"/>
+	<style>
+		.uploadify-button{
+			background-color: #4acee1;
+			color: #ffffff;
+			border:0px;
+			margin-left: 70px;
+			*margin-left: 10px;
+			margin-top: 10px;
+			*float: left;
+		}
+		.uploadify-button-text{
+			color: #ffffff;
+		}
+	</style>
+</head>
+<body>
+<div class="header">
+		<div class="logo">
+			<a href=""><img src="images/logo.png" class="fl"/></a>
+		</div>
+		<div class="user_info">
+			<i class="sprite people"></i>
+			<span class="fl">账号：liuyingjie</span>
+			<a href="" class="back">退出</a>
+		</div>
+	</div>
+	<div class="container organization">
+		<div class="cont_left">
+			<div class="navigation_left h100 fl">
+				<ul>
+					<li><a href="Organization.html" class=""><i class="sprite orangise ml15"></i><span>组织结构</span></a></li>
+					<li><a href="addNews.html"><i class="sprite publish ml15"></i><span>内容发布</span></a></li>
+					<li class="visited"><a href="admin.html"><i class="sprite system ml15"></i><span>系统设置</span></a></li>
+				</ul>
+			</div>
+			<div class="navigation_right h100 fl">
+				<div class="data_info">
+					<div class="news_list">
+						<a href="admin.html" >管理员</a>
+						<a href="pwdSafety.html" >密码与安全</a>
+						<a href="safetyCe.html">安全策略</a>
+						<a href="safetyCe.html" >日志管理</a>
+						<a href="systemInfo.html">企业信息</a>
+						<a href="rankSet.html" class="visited">职级设置</a>
+						<a href="authorityManage.html">权限管理</a>
+						<div class="btm_select"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cont_right rel">
+			<i class="sprite left_icon top174"></i>
+			<p class="rank_title">职级设置</p>
+			<div class="rankSet">
+				<ul class="rankMenu">
+					<li><a href="#" class="selected">董事</a></li>
+					<li><a href="#">总工程师</a></li>
+					<li><a href="#">副总经理</a></li>
+					<li><a href="#">财务总监</a></li>
+					<li><a href="#">工会主席</a></li>
+				</ul>
+				<div class="rankCont">
+					<p class="rank_name">
+						<label>新建职级</label>
+						<a href="rankSet.html" class="return">[返回]</a>
+					</p>
+					<p class="rank_name">
+						<label>职级名称：</label>
+						<input type="text"/>
+					</p>
+					<p class="rank_name describe">
+						<label>职级描述：</label>
+						<textarea placeholder="输入文本..."></textarea>
+					</p>
+					<button class="btn">提交</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+	 　　   $('#file_upload').uploadify({
+	       　　 'swf'      :'uploadify/uploadify.swf',
+	     　　　 'uploader':'uploadify/uploadify.php',
+	     		'buttonText':'上传'
+	    　　});
+　　　	});
+	</script>
+</body>
+</html>

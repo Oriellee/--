@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>请假记录</title>
+	 <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no">
+	<link type="text/css" rel="stylesheet" href="../css/leaveRecords-pc.css"/>
+	<script type="text/javascript" src="../js/meetingInformDetail.js"></script>
+	<style>
+		body{display:none;}
+	</style>
+   <script>
+	$(function(){
+		var deviceWidth = document.documentElement.clientWidth;
+		if(deviceWidth > 640) deviceWidth = 640;
+		document.documentElement.style.fontSize = deviceWidth / 6.4 + 'px';
+		$("body").show();　
+	}); 
+  </script>
+</head>
+<body>
+	<div class="title"><label>会议主题：</label><span>云信通需求讨论会</span></div>
+	<div class="select">
+		<span>全部</span>
+		<img src="../images/arrows-down.png"/>
+	</div>
+	
+		<div class="records-list">
+		<div class="operate-detail">
+			<div class="icon bg-color">
+				<p>张三</p>
+			</div>
+			<div class="name">张三</div>
+			<div class="operate">
+				<p class="condition orage">审批中</p>
+				<p class="opt-btn"><a href="javascript:;">操作</a></p>
+			</div>
+		</div>
+		<p class="record-reason">客户来访，不能参加</p>
+		<p class="time">10-21 12:40</p>
+	</div>
+	<div class="records-list">
+		<div class="operate-detail">
+			<div class="icon bg-color">
+				<p>张三</p>
+			</div>
+			<div class="name">张三</div>
+			<div class="operate">
+				<p class="condition red">不同意</p>
+			</div>
+		</div>
+		<p class="record-reason">出差中，不能及时赶回。出差中，不能及时赶回。出差中，不能及时赶回。出差中，不能及时赶回。出差中，不能及时赶回。出差中，不能及时赶回。</p>
+		<p class="time">10-21 12:40</p>
+	</div>
+	<div class="records-list">
+		<div class="operate-detail">
+			<div class="icon bg-color">
+				<p>张三</p>
+			</div>
+			<div class="name">张三</div>
+			<div class="operate">
+				<p class="condition green">同意</p>
+			</div>
+		</div>
+		<p class="record-reason">出差中，不能及时赶回。出差中，不能及时赶回。出差中，不能及时赶回。出差中，不能及时赶回。出差中，不能及时赶回。出差中，不能及时赶回。</p>
+		<p class="time">10-21 12:40</p>
+	</div>
+	<!--按条件检索-->
+	<ul class="search-all">
+		<li><span>全部</span><img src="../images/sel-one.png"/></li>
+		<li><span>审批中</span><img src="../images/sel-one.png" style="display:none"/></li>
+		<li><span>同意</span><img src="../images/sel-one.png" style="display:none"/></li>
+		<li><span>不同意</span><img src="../images/sel-one.png" style="display:none"/></li>
+	</ul>
+	<!--审批操作-->
+	<div class="bottom" >
+   		<div>
+			<a href="javascript:;" class="yes">同意</a>
+			<a href="javascript:;" class="no">不同意</a>
+		</div>
+		<a href="javascript:;" class="cancel">取消</a>
+   	</div>
+	<div class="overlay"></div>
+	
+	<!--审批不同意理由-->
+	<div class="refuse-reason-box" >
+		<div class="reason-box">
+			<div class="refuse-btn">			
+				<span class="tit">审批意见-不同意</span>				
+			</div>
+			<div class="refuse-content" >
+				<textarea id="textarea"></textarea>
+			</div>
+			<div class="refuse-bottom">
+				<span class="cancel">取消</span>
+				<a href="javascript:;" class="publish">确定</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
